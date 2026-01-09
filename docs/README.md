@@ -5,7 +5,6 @@
 | ドキュメント | 内容 |
 |-------------|------|
 | [structure.md](workspace/structure.md) | ディレクトリ構造・階層説明 |
-| [skills.md](workspace/skills.md) | 利用可能なSkill一覧 |
 
 ---
 

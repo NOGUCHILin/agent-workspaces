@@ -7,8 +7,7 @@
 - repo/は独自git管理（親の.gitignoreで除外済み）
 - 親のCLAUDE.md設定を継承する
 
-## Claude Code使い方を調べる時
+## 参照ドキュメント
 
-1. docs/ 内を先に確認せよ（@docs/README.md）
-2. 不足時のみ外部検索
-3. 新情報を得たら docs/ に追記せよ
+- 構造説明: @docs/workspace/structure.md
+- Claude Code参考: @docs/reference/
