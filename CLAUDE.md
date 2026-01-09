@@ -7,7 +7,6 @@
 - repo/は独自git管理（親の.gitignoreで除外済み）
 - 親のCLAUDE.md設定を継承する
 
-## 参照ドキュメント
+## 参照
 
-- 構造説明: @docs/workspace/structure.md
 - Claude Code参考: @docs/reference/
