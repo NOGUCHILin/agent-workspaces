@@ -4,44 +4,44 @@ Claude Codeで複数プロジェクト・ブランチを管理するワークス
 
 ## 参考ドキュメント
 
-### 外部リンク → ローカル
-
-| 外部 | ローカル |
-|------|---------|
-| [Best Practices](https://www.anthropic.com/engineering/claude-code-best-practices) | [docs/workflows.md](docs/workflows.md) |
-| [Overview](https://code.claude.com/docs/en/overview) | [docs/claude-code-overview.md](docs/claude-code-overview.md) |
-| [GitHub](https://github.com/anthropics/claude-code) | [docs/github-readme.md](docs/github-readme.md) |
-
-### 機能別ドキュメント
+### claude-code-docs/（code.claude.com）
 
 | ドキュメント | 内容 |
 |-------------|------|
-| [docs/quickstart.md](docs/quickstart.md) | クイックスタート |
-| [docs/memory.md](docs/memory.md) | CLAUDE.md・メモリ管理 |
-| [docs/settings.md](docs/settings.md) | 設定ファイル |
-| [docs/cli-reference.md](docs/cli-reference.md) | CLIコマンド |
-| [docs/mcp.md](docs/mcp.md) | MCP連携 |
-| [docs/hooks.md](docs/hooks.md) | Hooks |
+| [claude-code-overview.md](docs/claude-code-docs/claude-code-overview.md) | 概要・インストール |
+| [quickstart.md](docs/claude-code-docs/quickstart.md) | クイックスタート |
+| [memory.md](docs/claude-code-docs/memory.md) | CLAUDE.md・メモリ管理 |
+| [settings.md](docs/claude-code-docs/settings.md) | 設定ファイル |
+| [cli-reference.md](docs/claude-code-docs/cli-reference.md) | CLIコマンド |
+| [mcp.md](docs/claude-code-docs/mcp.md) | MCP連携 |
+| [hooks.md](docs/claude-code-docs/hooks.md) | Hooks |
 
-### エンジニアリングブログ（docs/engineering/）
+### claude-code-engineering/（anthropic.com/engineering）
 
 | ドキュメント | 内容 |
 |-------------|------|
-| [long-running-agents.md](docs/engineering/long-running-agents.md) | 長時間エージェントのハーネス |
-| [advanced-tool-use.md](docs/engineering/advanced-tool-use.md) | 高度なツール使用 |
-| [code-execution-mcp.md](docs/engineering/code-execution-mcp.md) | MCPでのコード実行 |
-| [claude-code-sandboxing.md](docs/engineering/claude-code-sandboxing.md) | サンドボックス化 |
-| [agent-skills.md](docs/engineering/agent-skills.md) | Agent Skills |
-| [claude-agent-sdk.md](docs/engineering/claude-agent-sdk.md) | Agent SDK |
-| [context-engineering.md](docs/engineering/context-engineering.md) | コンテキストエンジニアリング |
-| [postmortem.md](docs/engineering/postmortem.md) | 障害事後分析 |
-| [writing-tools-for-agents.md](docs/engineering/writing-tools-for-agents.md) | エージェント向けツール設計 |
-| [desktop-extensions.md](docs/engineering/desktop-extensions.md) | Desktop Extensions |
-| [multi-agent-research-system.md](docs/engineering/multi-agent-research-system.md) | マルチエージェントシステム |
-| [think-tool.md](docs/engineering/think-tool.md) | Thinkツール |
-| [swe-bench-sonnet.md](docs/engineering/swe-bench-sonnet.md) | SWE-bench結果 |
-| [building-effective-agents.md](docs/engineering/building-effective-agents.md) | 効果的なエージェント構築 |
-| [contextual-retrieval.md](docs/engineering/contextual-retrieval.md) | Contextual Retrieval |
+| [workflows.md](docs/claude-code-engineering/workflows.md) | 推奨ワークフロー |
+| [long-running-agents.md](docs/claude-code-engineering/long-running-agents.md) | 長時間エージェントのハーネス |
+| [advanced-tool-use.md](docs/claude-code-engineering/advanced-tool-use.md) | 高度なツール使用 |
+| [code-execution-mcp.md](docs/claude-code-engineering/code-execution-mcp.md) | MCPでのコード実行 |
+| [claude-code-sandboxing.md](docs/claude-code-engineering/claude-code-sandboxing.md) | サンドボックス化 |
+| [agent-skills.md](docs/claude-code-engineering/agent-skills.md) | Agent Skills |
+| [claude-agent-sdk.md](docs/claude-code-engineering/claude-agent-sdk.md) | Agent SDK |
+| [context-engineering.md](docs/claude-code-engineering/context-engineering.md) | コンテキストエンジニアリング |
+| [postmortem.md](docs/claude-code-engineering/postmortem.md) | 障害事後分析 |
+| [writing-tools-for-agents.md](docs/claude-code-engineering/writing-tools-for-agents.md) | エージェント向けツール設計 |
+| [desktop-extensions.md](docs/claude-code-engineering/desktop-extensions.md) | Desktop Extensions |
+| [multi-agent-research-system.md](docs/claude-code-engineering/multi-agent-research-system.md) | マルチエージェントシステム |
+| [think-tool.md](docs/claude-code-engineering/think-tool.md) | Thinkツール |
+| [swe-bench-sonnet.md](docs/claude-code-engineering/swe-bench-sonnet.md) | SWE-bench結果 |
+| [building-effective-agents.md](docs/claude-code-engineering/building-effective-agents.md) | 効果的なエージェント構築 |
+| [contextual-retrieval.md](docs/claude-code-engineering/contextual-retrieval.md) | Contextual Retrieval |
+
+### github/（github.com/anthropics/claude-code）
+
+| ドキュメント | 内容 |
+|-------------|------|
+| [github-readme.md](docs/github/github-readme.md) | リポジトリ概要 |
 
 ## ディレクトリ構造
 
