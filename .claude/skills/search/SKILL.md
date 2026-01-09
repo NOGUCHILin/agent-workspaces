@@ -29,9 +29,11 @@ description: 情報を検索する。「調べて」「検索して」「最新�
 ## Gemini CLI
 
 ```bash
-gemini -p "検索クエリ"
-gemini -p "site:reddit.com 検索クエリ"  # Reddit検索
+gemini "検索クエリ 情報源のURLも教えて"
+gemini "site:reddit.com 検索クエリ 情報源のURLも教えて"  # Reddit検索
 ```
+
+**重要**: `-p`フラグは非推奨。位置引数を使用すること。
 
 ## Playwright MCP → Grok
 
