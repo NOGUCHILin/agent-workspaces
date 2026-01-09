@@ -27,4 +27,6 @@ projects/{project-name}/worktrees/{branch-name}/
 
 ## Claude Code使い方を調べる時
 
-@docs/README.md を参照せよ。
+1. docs/ 内を先に確認せよ（@docs/README.md）
+2. 不足時のみ外部検索
+3. 新情報を得たら docs/ に追記せよ
