@@ -1,107 +1,50 @@
 ---
 name: search
-description: 情報を検索する。「調べて」「検索して」「最新情報」と言われた時に使用。目的に応じてContext7/Gemini CLI/Playwright MCPを自動選択。
+description: 情報を検索する。「調べて」「検索して」「最新情報」と言われた時に使用。2軸（鮮度×深さ）でツールを自動選択。
 ---
 
 # 検索の原則
 
-- 情報を「与える」のではなく「アクセスさせる」アプローチ
-- grepや検索ツールで必要なものを動的に引き出す（トークン47%削減）
-- サブエージェント並行化で効率化
-- プロンプトは明確・構造化（XML/ステップバイステップ）
+- 情報を「与える」のではなく「アクセスさせる」
+- grepや検索ツールで動的に引き出す（トークン47%削減）
+- 2軸（鮮度×深さ）でツール選択
 
-# ツール選択テーブル
+# 2軸分類システム
 
-| 目的 | 1st選択 | フォールバック |
-|------|---------|----------------|
-| ライブラリAPI・使い方 | Context7 MCP | Gemini CLI |
-| 速報・トレンド（数時間以内） | Playwright MCP → Grok | - |
-| 技術比較・選定 | Gemini CLI | WebSearch |
-| エラー解決 | Gemini CLI | WebSearch |
-| 意見・体験談 | Gemini CLI (`site:reddit.com`) | Playwright → Reddit/X |
-| コード実例 | Context7 MCP | Gemini CLI → GitHub |
+## 軸1: 情報の鮮度
 
-# 目的別の検索戦略
+| 鮮度 | 説明 | ツール |
+|------|------|--------|
+| リアルタイム | 数時間以内の速報 | Grok |
+| 最新 | 数日〜数週間 | Gemini CLI / WebSearch |
+| 安定 | 公式ドキュメント | Context7 |
 
-## 1. ライブラリドキュメント
+## 軸2: 探索の深さ
 
-**戦略**: ハイブリッド検索（grep → semantic search）
-- まずgrepでキーワードフィルタリング
-- semantic searchで関連ドキュメント絞り込み
-- MCPでドキュメントをインデックス化
+| 深さ | 説明 | ツール |
+|------|------|--------|
+| ピンポイント | API名、エラー文、特定の答え | Context7 / grep |
+| 広範囲 | 比較、選定、概要把握 | Gemini CLI |
+| 発見的 | トレンド、意見、未知の情報 | Grok / Reddit |
 
-**プロンプト例**:
-```
-ライブラリXのAPIを検索し、関連ファイルをgrepでフィルタリング。
-例: 'grep -r "function_name" docs/'を実行後、semantic searchで確認。
-```
+## 統合マトリクス
 
-**ツール**: Context7 MCP → grep/semantic search → LlamaParse（複雑なドキュメント）
+| | ピンポイント | 広範囲 | 発見的 |
+|---|-------------|--------|--------|
+| **リアルタイム** | Grok | Grok | Grok |
+| **最新** | Gemini CLI | Gemini CLI | Gemini (`site:reddit.com`) |
+| **安定** | Context7 | Context7 → Gemini | - |
 
-## 2. エラー解決
+# クエリ判定ガイド
 
-**戦略**: ReActループ（Reason + Act）
-- エラーログを入力として分析
-- 複数ツール並行（grep + ブラウザ検索）
-- 失敗モードを分類してルート原因特定
-
-**プロンプト例**:
-```
-エラーXを分析。
-1. ログをgrepで検索
-2. 関連コードを読み込み
-3. 修正案を提案し、テスト実行
-失敗したら再試行。前回の失敗: Y。
-```
-
-**ツール**: CLIツール（grep, cat） + ブラウザ（browserbasehq） + Haikuで高速検証
-
-## 3. 最新トレンド
-
-**戦略**: セマンティック検索 + 時間フィルタ
-- `since:YYYY-MM-DD`でフィルタ
-- サブエージェントで並行検索（ArXiv + Wikipedia + X）
-- 多角的ソース収集でバイアス回避
-
-**プロンプト例**:
-```
-最新トレンドZを検索。since:2025-01-01でフィルタ。
-複数ソースから要約し、バイアスを指摘。
-```
-
-**ツール**: Playwright → Grok（リアルタイム）、perplexity、ExaAI
-
-## 4. 体験談・意見
-
-**戦略**: キーワード + 感情フィルタ
-- `min_faves:10`, `filter:replies`で品質フィルタ
-- マルチエージェントでレビュー分類
-- exclude_usernamesでバイアス回避
-
-**プロンプト例**:
-```
-体験談を検索し、肯定的/否定的意見を分類。
-例: 'topic OR alternative filter:replies min_faves:10'
-```
-
-**ツール**: Gemini CLI (`site:reddit.com`) → Playwright → X/Reddit
-
-## 5. コード実例
-
-**戦略**: ファイルツリー探索 + grep + テスト駆動
-- テストを先に書いてコード検証
-- サブエージェントで並行実行
-- `@file`でスコープ指定
-
-**プロンプト例**:
-```
-コード例を生成。
-1. テストを書け
-2. コードを実行しパスするまでイテレート
-@file でスコープ指定
-```
-
-**ツール**: Context7 MCP → code_execution → Sonnet 4.5（高精度）
+| キーワード | 鮮度 | 深さ | ツール |
+|-----------|------|------|--------|
+| 「〜の使い方」「〜メソッド」 | 安定 | ピンポイント | Context7 |
+| エラーメッセージ | 最新 | ピンポイント | Gemini CLI |
+| 「〜 vs 〜」「比較」 | 最新 | 広範囲 | Gemini CLI |
+| 「最新」「今」「トレンド」 | リアルタイム | 発見的 | Grok |
+| 「使ってみた」「感想」 | 最新 | 発見的 | Gemini (`site:reddit.com`) |
+| 「インストール」「設定」 | 安定 | ピンポイント | Context7 |
 
 # 各ツールの使い方
 
@@ -122,6 +65,14 @@ gemini "site:reddit.com 検索クエリ 情報源のURLも教えて"
 
 ## WebSearch
 Gemini CLIレート制限時のフォールバック
+
+# フォールバック
+
+| 1st | 失敗時 |
+|-----|--------|
+| Context7 | Gemini CLI |
+| Gemini CLI | WebSearch |
+| Grok | - (代替なし) |
 
 # 注意事項
 
