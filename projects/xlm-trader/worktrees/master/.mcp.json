@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "bash",
+      "args": [
+        "/Users/noguchilin/.claude/scripts/playwright-mcp.sh"
+      ]
+    }
+  }
+}
