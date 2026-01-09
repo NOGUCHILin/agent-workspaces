@@ -1,0 +1,13 @@
+# Lychee設定ファイル
+
+# 除外パターン
+exclude = [
+  "^/en/",           # code.claude.com への絶対パス
+  "^https?://",      # 外部URL（オフラインチェック時）
+]
+
+# オフラインモード
+offline = true
+
+# プログレス非表示
+no_progress = true
