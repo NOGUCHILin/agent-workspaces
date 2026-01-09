@@ -4,7 +4,7 @@ set -e
 PROJECT=$1
 BRANCH=$2
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-WORKSPACE_ROOT="$(cd "$SCRIPT_DIR/../../.." && pwd)"
+WORKSPACE_ROOT="$(cd "$SCRIPT_DIR/../../../.." && pwd)"
 
 # 引数チェック
 if [ -z "$PROJECT" ] || [ -z "$BRANCH" ]; then
