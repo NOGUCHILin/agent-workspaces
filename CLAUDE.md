@@ -23,6 +23,26 @@ Claude Codeで複数プロジェクト・ブランチを管理するワークス
 | [docs/mcp.md](docs/mcp.md) | MCP連携 |
 | [docs/hooks.md](docs/hooks.md) | Hooks |
 
+### エンジニアリングブログ（docs/engineering/）
+
+| ドキュメント | 内容 |
+|-------------|------|
+| [long-running-agents.md](docs/engineering/long-running-agents.md) | 長時間エージェントのハーネス |
+| [advanced-tool-use.md](docs/engineering/advanced-tool-use.md) | 高度なツール使用 |
+| [code-execution-mcp.md](docs/engineering/code-execution-mcp.md) | MCPでのコード実行 |
+| [claude-code-sandboxing.md](docs/engineering/claude-code-sandboxing.md) | サンドボックス化 |
+| [agent-skills.md](docs/engineering/agent-skills.md) | Agent Skills |
+| [claude-agent-sdk.md](docs/engineering/claude-agent-sdk.md) | Agent SDK |
+| [context-engineering.md](docs/engineering/context-engineering.md) | コンテキストエンジニアリング |
+| [postmortem.md](docs/engineering/postmortem.md) | 障害事後分析 |
+| [writing-tools-for-agents.md](docs/engineering/writing-tools-for-agents.md) | エージェント向けツール設計 |
+| [desktop-extensions.md](docs/engineering/desktop-extensions.md) | Desktop Extensions |
+| [multi-agent-research-system.md](docs/engineering/multi-agent-research-system.md) | マルチエージェントシステム |
+| [think-tool.md](docs/engineering/think-tool.md) | Thinkツール |
+| [swe-bench-sonnet.md](docs/engineering/swe-bench-sonnet.md) | SWE-bench結果 |
+| [building-effective-agents.md](docs/engineering/building-effective-agents.md) | 効果的なエージェント構築 |
+| [contextual-retrieval.md](docs/engineering/contextual-retrieval.md) | Contextual Retrieval |
+
 ## ディレクトリ構造
 
 ```
