@@ -29,7 +29,7 @@ fi
 
 # ディレクトリ作成
 echo "Creating worktree structure..."
-mkdir -p "$WORKTREE_DIR"/{.claude,docs,repo}
+mkdir -p "$WORKTREE_DIR"/{.claude,docs/specs,repo}
 
 # CLAUDE.md作成
 cat > "$WORKTREE_DIR/CLAUDE.md" << EOF
@@ -44,6 +44,20 @@ cat > "$WORKTREE_DIR/CLAUDE.md" << EOF
 ## 作業メモ
 
 （作業中のメモをここに）
+EOF
+
+# .mcp.json作成（Playwright MCP設定）
+cat > "$WORKTREE_DIR/.mcp.json" << EOF
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "bash",
+      "args": [
+        "$WORKSPACE_ROOT/.claude/scripts/playwright-mcp.sh"
+      ]
+    }
+  }
+}
 EOF
 
 # git worktree追加
