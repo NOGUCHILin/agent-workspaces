@@ -7,8 +7,9 @@ description: AI画像生成を支援する。「画像作って」「バナー�
 
 1. 目的・用途をヒアリング
 2. 適切なツール選択
-3. プロンプト作成支援
+3. プロンプト作成支援（4層構造）
 4. 参考画像の要否を確認
+5. **イテレーション**（1変数ずつ変更して改善）
 
 # ツール選択（2026年1月ランキング）
 
@@ -25,6 +26,19 @@ description: AI画像生成を支援する。「画像作って」「バナー�
 1. Geminiアプリ/ウェブで「Create images」
 2. モデルを「Thinking」に切り替え（Pro版必要）
 3. プロンプト入力 → 生成
+
+# プロンプト4層構造（汎用）
+
+| 層 | 内容 | 例 |
+|---|------|-----|
+| 1. Subject | 主題（何を描くか） | "Golden retriever puppy" |
+| 2. Description | 文脈・詳細 | "running in a park, cherry blossoms" |
+| 3. Style | 美的方向性 | "photorealistic, golden hour, soft lighting" |
+| 4. Constraints | 除外・技術指定 | "no blur, 4K, --ar 16:9" |
+
+## イテレーション戦略
+- **1回1変数**: 色、距離、ポーズ、背景のうち1つだけ変更
+- **成功パターン記録**: 良かったプロンプトは保存して再利用
 
 # 日本風バナー広告のプロンプト構成
 
@@ -67,7 +81,21 @@ High resolution, professional design.
 Use image A for background style, image B for character pose, image C for color palette.
 ```
 
-# Tips
+# ネガティブプロンプト（除外指定）
+
+```
+blurry, low quality, distorted proportions, watermark, text artifacts, extra limbs
+```
+
+# ツール別Tips
+
+| ツール | Tips |
+|--------|------|
+| Midjourney | `--ar 16:9`（比率）、`--v 7`（バージョン）、`--s 250`（スタイライズ） |
+| Stable Diffusion | 重み付け `(keyword:1.5)`、ネガティブプロンプト必須 |
+| Nano Banana | 日本語プロンプトOK、テキスト指定が得意 |
+
+# 一般Tips
 
 - 解像度: 「high resolution, 4K」追加
 - スタイル: 「minimalist Japanese web banner style」

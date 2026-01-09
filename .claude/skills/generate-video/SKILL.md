@@ -3,12 +3,16 @@ name: generate-video
 description: AI動画生成を支援する。「動画作って」「ビデオ生成」「映像作成」と言われた時に使用。Sora/Runway/Pika/Klingの選択とプロンプト作成をサポート。
 ---
 
-# ワークフロー
+# ワークフロー（4フェーズ）
 
-1. 目的・用途をヒアリング
-2. 適切なツール選択（下記テーブル参照）
-3. プロンプト作成支援
-4. 生成 → 必要に応じて編集
+| フェーズ | 内容 |
+|---------|------|
+| 1. Pre-production | 目的ヒアリング、ビートシート/ストーリーボード作成、スタイル統一 |
+| 2. Low-res探索 | **720p**で3-5バリエーション生成、アーティファクト記録 |
+| 3. Refinement | 1変数ずつ調整（"enhance shadow depth"等）、成功プロンプト保存 |
+| 4. Post-processing | アップスケール、色補正、音声ミキシング |
+
+**重要**: 720p生成→アップスケールが**ネイティブ4Kより高品質**（75%が支持）
 
 # ツール選択（2026年1月ランキング）
 
@@ -74,12 +78,33 @@ cinematic style, soft natural lighting, 4K quality
 - **スタイル指定**: cinematic, documentary, anime style
 - **長さ指定**: 5 seconds, 15 seconds
 
+# マルチモデルワークフロー（高品質）
+
+1. **キーフレーム生成**: Midjourney v7でスタイル・構図を固定
+2. **モーション合成**: Veo 3/Runway で開始・終了フレーム間を補間
+3. **アップスケール**: Topaz Video AI（Proteusモデル）で4K化
+
+# キーワード集
+
+| カテゴリ | キーワード例 |
+|----------|-------------|
+| Lighting | golden hour, soft diffused, dramatic side, backlit, rim, neon glow |
+| Atmosphere | misty, foggy, cinematic, ethereal, dreamlike, crisp |
+| Camera | pan, zoom, tracking shot, aerial view, dolly, crane, handheld |
+| Movement | slow motion, time-lapse, freeze frame, speed ramp |
+
+# ネガティブプロンプト
+
+```
+blurry, low quality, artifacts, watermark, morphing, flickering, jittery motion
+```
+
 # 選定の判断基準
 
 | 基準 | 確認ポイント |
 |------|-------------|
-| 品質レベル | プロ品質 → Sora/Runway |
-| 予算 | 無料/低コスト → Pika |
-| 納期 | 即日 → Pika、時間あり → Sora |
+| 品質レベル | プロ品質 → Veo 3/Sora |
+| 予算 | 低コスト → Kling AI |
+| 音声必要 | あり → Veo 3 |
 | 編集の有無 | 編集も必要 → Runway |
 | 商用利用 | 各ツールの規約確認必須 |
