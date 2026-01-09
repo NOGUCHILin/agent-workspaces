@@ -6,20 +6,6 @@
 
 `projects/{project-name}/worktrees/` を作成せよ。
 
-## ワークツリー追加時
-
-以下の構造で作成せよ:
-```
-projects/{project-name}/worktrees/{branch-name}/
-  ├── CLAUDE.md
-  ├── .claude/
-  ├── docs/
-  └── repo/
-```
-
-- ワークツリー名はブランチ名と同一にせよ
-- repo/内で `git worktree add . {branch-name}` を実行せよ
-
 ## repo/内で作業時
 
 - repo/は独自git管理（親の.gitignoreで除外済み）
