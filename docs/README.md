@@ -1,13 +1,5 @@
 # ドキュメント一覧
 
-## workspace/（このワークスペース固有）
-
-| ドキュメント | 内容 |
-|-------------|------|
-| [structure.md](workspace/structure.md) | ディレクトリ構造・階層説明 |
-
----
-
 ## reference/（参考資料）
 
 ### claude-code-docs/（code.claude.com）

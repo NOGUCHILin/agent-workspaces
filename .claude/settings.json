@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "lychee --offline --no-progress docs/workspace/ docs/README.md 2>/dev/null || true"
+            "command": "lychee --offline --no-progress docs/README.md"
           }
         ]
       }
