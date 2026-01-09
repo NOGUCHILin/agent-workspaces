@@ -3,7 +3,7 @@
     "playwright": {
       "command": "bash",
       "args": [
-        "/Users/noguchilin/.claude/scripts/playwright-mcp.sh"
+        "/Users/noguchilin/claude-code-workspaces/.claude/scripts/playwright-mcp.sh"
       ]
     }
   }
