@@ -1,92 +1,30 @@
 # claude-code-workspaces
 
-Claude Codeで複数プロジェクト・ブランチを管理するワークスペース
+複数プロジェクト・ブランチを管理するワークスペース
 
-## 参考ドキュメント
+## プロジェクト追加時
 
-### claude-code-docs/（code.claude.com）
+`projects/{project-name}/worktrees/` を作成せよ。
 
-| ドキュメント | 内容 |
-|-------------|------|
-| [claude-code-overview.md](docs/claude-code-docs/claude-code-overview.md) | 概要・インストール |
-| [quickstart.md](docs/claude-code-docs/quickstart.md) | クイックスタート |
-| [memory.md](docs/claude-code-docs/memory.md) | CLAUDE.md・メモリ管理 |
-| [settings.md](docs/claude-code-docs/settings.md) | 設定ファイル |
-| [cli-reference.md](docs/claude-code-docs/cli-reference.md) | CLIコマンド |
-| [mcp.md](docs/claude-code-docs/mcp.md) | MCP連携 |
-| [hooks.md](docs/claude-code-docs/hooks.md) | Hooks |
+## ワークツリー追加時
 
-### claude-code-engineering/（anthropic.com/engineering）
-
-| ドキュメント | 内容 |
-|-------------|------|
-| [workflows.md](docs/claude-code-engineering/workflows.md) | 推奨ワークフロー |
-| [long-running-agents.md](docs/claude-code-engineering/long-running-agents.md) | 長時間エージェントのハーネス |
-| [advanced-tool-use.md](docs/claude-code-engineering/advanced-tool-use.md) | 高度なツール使用 |
-| [code-execution-mcp.md](docs/claude-code-engineering/code-execution-mcp.md) | MCPでのコード実行 |
-| [claude-code-sandboxing.md](docs/claude-code-engineering/claude-code-sandboxing.md) | サンドボックス化 |
-| [agent-skills.md](docs/claude-code-engineering/agent-skills.md) | Agent Skills |
-| [claude-agent-sdk.md](docs/claude-code-engineering/claude-agent-sdk.md) | Agent SDK |
-| [context-engineering.md](docs/claude-code-engineering/context-engineering.md) | コンテキストエンジニアリング |
-| [postmortem.md](docs/claude-code-engineering/postmortem.md) | 障害事後分析 |
-| [writing-tools-for-agents.md](docs/claude-code-engineering/writing-tools-for-agents.md) | エージェント向けツール設計 |
-| [desktop-extensions.md](docs/claude-code-engineering/desktop-extensions.md) | Desktop Extensions |
-| [multi-agent-research-system.md](docs/claude-code-engineering/multi-agent-research-system.md) | マルチエージェントシステム |
-| [think-tool.md](docs/claude-code-engineering/think-tool.md) | Thinkツール |
-| [swe-bench-sonnet.md](docs/claude-code-engineering/swe-bench-sonnet.md) | SWE-bench結果 |
-| [building-effective-agents.md](docs/claude-code-engineering/building-effective-agents.md) | 効果的なエージェント構築 |
-| [contextual-retrieval.md](docs/claude-code-engineering/contextual-retrieval.md) | Contextual Retrieval |
-
-### github/（github.com/anthropics/claude-code）
-
-| ドキュメント | 内容 |
-|-------------|------|
-| [github-readme.md](docs/github/github-readme.md) | リポジトリ概要 |
-
-## ディレクトリ構造
-
+以下の構造で作成せよ:
 ```
-projects/
-  {project-name}/
-    worktrees/
-      {branch-name}/
-        CLAUDE.md      # ブランチ固有設定
-        .claude/       # Claude設定
-        docs/          # ドキュメント
-        repo/          # git worktree（.gitignore対象）
+projects/{project-name}/worktrees/{branch-name}/
+  ├── CLAUDE.md
+  ├── .claude/
+  ├── docs/
+  └── repo/
 ```
 
-## 運用ルール
+- ワークツリー名はブランチ名と同一にせよ
+- repo/内で `git worktree add . {branch-name}` を実行せよ
 
-| ルール | 内容 |
-|--------|------|
-| ワークツリー名 | ブランチ名と同一 |
-| repo/ | .gitignore対象（各自のgit管理） |
-| 設定継承 | User → Workspace → Project → Branch |
+## repo/内で作業時
 
-## CLAUDE.mdに書くべきこと
+- repo/は独自git管理（親の.gitignoreで除外済み）
+- 親のCLAUDE.md設定を継承する
 
-| 項目 | 例 |
-|------|-----|
-| Bashコマンド | よく使うコマンドと説明 |
-| コアファイル | 重要なファイルの場所と役割 |
-| コードスタイル | `ES modules使用` |
-| テスト方法 | 実行方法、アプローチ |
-| リポジトリ規則 | ブランチ命名、merge vs rebase |
-| 開発環境 | 必要なツール、バージョン |
-| 警告・注意点 | プロジェクト固有の罠 |
+## Claude Code使い方を調べる時
 
-## CLAUDE.mdに書くべきでないこと
-
-| 項目 | 理由 |
-|------|------|
-| 大量の未検証コンテンツ | 効果確認せず追加しない |
-| 冗長・自明な情報 | コンテキスト浪費 |
-| 無関係な内容 | |
-
-## ベストプラクティス
-
-- 具体的に: `"Use 2-space indentation"` > `"Format code properly"`
-- 簡潔に: 箇条書きでシンプルに
-- 反復テスト: 効果を確認しながら追加
-- 定期見直し: プロジェクト進化に合わせて更新
+@docs/README.md を参照せよ。
