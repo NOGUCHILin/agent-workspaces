@@ -7,6 +7,7 @@ Claude Codeで複数プロジェクト・ブランチを管理するワークス
 - [Claude Code Best Practices](https://www.anthropic.com/engineering/claude-code-best-practices)
 - [Claude Code Docs](https://code.claude.com/docs/en/overview)
 - [GitHub](https://github.com/anthropics/claude-code)
+- [ワークフロー](docs/workflows.md) - 推奨ワークフロー4パターン
 
 ## ディレクトリ構造
 
