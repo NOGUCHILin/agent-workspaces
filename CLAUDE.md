@@ -2,10 +2,6 @@
 
 複数プロジェクト・ブランチを管理するワークスペース
 
-## プロジェクト追加時
-
-`projects/{project-name}/worktrees/` を作成せよ。
-
 ## repo/内で作業時
 
 - repo/は独自git管理（親の.gitignoreで除外済み）
