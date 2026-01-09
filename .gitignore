@@ -1,0 +1,2 @@
+# Exclude worktrees contents (each project has its own git)
+projects/*/worktrees/*
