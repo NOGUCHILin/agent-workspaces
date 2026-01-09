@@ -34,8 +34,9 @@ projects/{project-name}/
 └── worktrees/
     └── {branch-name}/
         ├── CLAUDE.md      # ブランチ固有の設定
+        ├── .mcp.json      # Playwright MCP設定（自動生成）
         ├── .claude/       # ブランチ固有のrules/skills
-        ├── docs/          # ブランチ固有のドキュメント
+        ├── docs/specs/    # 仕様書（Kiro形式）
         └── repo/          # git worktree（実際のコード）
 ```
 
