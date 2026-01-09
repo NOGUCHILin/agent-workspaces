@@ -29,6 +29,8 @@ Agent Skillsは、Claudeが特殊タスクを処理するためのモジュラ�
 | 2 | SKILL.md全内容 | 関連性判断時 |
 | 3+ | reference.md, forms.md等 | 必要時のみ |
 
+**ホットリロード（v2.1.0+）**: Skillファイル保存時に自動反映、再起動不要
+
 ---
 
 ## 実例: PDF Skill
