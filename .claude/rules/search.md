@@ -5,7 +5,7 @@
 | 目的 | 1st選択 | フォールバック |
 |------|---------|----------------|
 | ライブラリAPI・使い方 | Context7 MCP | Gemini CLI |
-| 速報・トレンド（数時間以内） | Playwright → X | - |
+| 速報・トレンド（数時間以内） | Playwright → Grok (x.com/i/grok) | - |
 | 技術比較・選定 | Gemini CLI | WebSearch |
 | エラー解決 | Gemini CLI | WebSearch |
 | 意見・体験談 | Gemini (`site:reddit.com`) | Playwright → Reddit |
