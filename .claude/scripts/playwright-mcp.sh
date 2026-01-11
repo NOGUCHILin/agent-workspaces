@@ -49,4 +49,19 @@ with open('$PREFS_FILE', 'w') as f:
   fi
 fi
 
-exec /opt/homebrew/bin/mcp-server-playwright --user-data-dir "$USER_DATA_DIR" "$@"
+# Playwright MCPパスを自動検出
+if [ -x "/opt/homebrew/bin/mcp-server-playwright" ]; then
+  PLAYWRIGHT_MCP="/opt/homebrew/bin/mcp-server-playwright"
+elif [ -x "/usr/local/bin/mcp-server-playwright" ]; then
+  PLAYWRIGHT_MCP="/usr/local/bin/mcp-server-playwright"
+else
+  PLAYWRIGHT_MCP="$(which mcp-server-playwright 2>/dev/null || echo "")"
+fi
+
+if [ -z "$PLAYWRIGHT_MCP" ]; then
+  echo "Error: mcp-server-playwright not found" >&2
+  echo "Install: npm install -g @anthropic-ai/mcp-server-playwright" >&2
+  exit 1
+fi
+
+exec "$PLAYWRIGHT_MCP" --user-data-dir "$USER_DATA_DIR" "$@"
