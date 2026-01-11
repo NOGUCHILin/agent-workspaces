@@ -5,12 +5,18 @@ description: プロジェクトとワークツリーを作成・管理する。�
 
 # 使用手順
 
-## ワークツリー追加時
+## 新規プロジェクト作成時
 
 1. プロジェクト名をヒアリング
+2. リポジトリURLをヒアリング
+3. ブランチ名をヒアリング（デフォルト: master/main）
+4. `scripts/setup.sh <project> <branch> <repo-url>` を実行
+
+## 既存プロジェクトにworktree追加時
+
+1. プロジェクト名を確認
 2. ブランチ名をヒアリング
-3. `scripts/setup.sh <project> <branch>` を実行
-4. 結果を報告
+3. `scripts/setup.sh <project> <branch>` を実行（URLは不要）
 
 ## 構造検証のみ実行時
 
@@ -20,12 +26,28 @@ description: プロジェクトとワークツリーを作成・管理する。�
 # コマンド
 
 ```bash
-# プロジェクト+ワークツリー作成（プロジェクトがなければ自動作成）
-.claude/skills/manage-workspace/scripts/setup.sh <project-name> <branch-name>
+# 新規プロジェクト作成（最初のworktree = clone）
+.claude/skills/manage-workspace/scripts/setup.sh myproject master https://github.com/user/repo.git
 
-# 構造検証（全体または特定プロジェクト）
+# 既存プロジェクトにworktree追加（2つ目以降）
+.claude/skills/manage-workspace/scripts/setup.sh myproject feature-x
+
+# 構造検証
 .claude/skills/manage-workspace/scripts/validate.sh [project-name]
 ```
+
+# git worktree の仕組み
+
+```
+projects/myproject/worktrees/
+├── master/repo/      ← 最初にclone（.git本体がここ）
+├── feature-x/repo/   ← worktree（軽量、高速切替）
+└── bugfix-y/repo/    ← worktree（軽量、高速切替）
+```
+
+- 最初のworktree: `git clone` で作成（.git本体を持つ）
+- 2つ目以降: `git worktree add` で作成（軽量）
+- メリット: ディスク節約、ブランチ切替が高速
 
 # 作成される構造
 
@@ -45,4 +67,4 @@ projects/{project-name}/
 - projects/配下の構造が正しいか
 - 必須ディレクトリ（.claude, docs, repo）の存在
 - CLAUDE.mdの存在
-- ワークツリー名とブランチ名の一致
+- git worktreeの状態
