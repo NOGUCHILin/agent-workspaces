@@ -1,3 +1,4 @@
 # Exclude only repo/ directories (actual git worktrees)
 # CLAUDE.md, .claude/, docs/ are tracked for branch-specific settings
 projects/*/worktrees/*/repo/
+.mcp.json
