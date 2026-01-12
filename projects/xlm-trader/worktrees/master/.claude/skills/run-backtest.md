@@ -1,34 +1,10 @@
-# description: バックテスト実行。「バックテストして」「検証して」「過去データで確認」で発動
-
-## 重要
-
-新規バックテストスクリプトを作成しないこと。以下の既存スクリプトを使用する。
-
-## 実行手順
+# description: バックテスト。「バックテストして」「検証」で発動
 
 ```bash
 cd /Users/noguchilin/claude-code-workspaces/projects/xlm-trader/worktrees/master/repo
 python backtester.py
 ```
 
-## 出力内容
-
-- 期間: 過去90日
-- 初期残高 / 最終残高
-- リターン率
-- 取引回数 / 勝率
-- プロフィットファクター
-- 最大ドローダウン
-- シャープレシオ
-
-## オプション
-
-グリッドサーチ（閾値最適化）:
-```bash
-python backtest_grid.py
-```
-
-月別分析:
-```bash
-python backtest_monthly.py
-```
+オプション:
+- `python backtest_grid.py` - 閾値グリッドサーチ
+- `python backtest_monthly.py` - 月別分析
