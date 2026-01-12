@@ -2,6 +2,20 @@
 
 Branch-specific Claude Code settings for master branch.
 
+## スクリプト管理ルール（最重要）
+
+**新規Pythonスクリプト作成禁止**。既存スクリプトで対応すること。
+
+| 用途 | 使用スクリプト |
+|------|---------------|
+| バックテスト | backtester.py |
+| モデル訓練 | train_model.py |
+| モデル分析 | analyze_model.py |
+| 週次レポート | weekly_report.py |
+| 設定 | config.py（単一真実源） |
+
+詳細は `.claude/skills/` のSkillを参照。
+
 ## CI/CDルール（必須）
 
 コード変更時は以下を遵守:
@@ -39,16 +53,3 @@ supabase db diff        # スキーマ差分
 supabase db push        # マイグレーション適用
 ```
 
-## Auto-backtest
-
-description: 自動バックテストを実行。開始日と終了日を指定してバックテストを自動化します。
-
-```python
-start_date: str = "2020-01-01" # バックテスト開始日 (YYYY-MM-DD)
-end_date: str = "2026-01-12"   # バックテスト終了日 (YYYY-MM-DD)
-```
-
-```bash
-cd repo
-python backtest.py --start_date {start_date} --end_date {end_date}
-```
