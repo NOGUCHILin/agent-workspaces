@@ -5,6 +5,4 @@ cd /Users/noguchilin/claude-code-workspaces/projects/xlm-trader/worktrees/master
 python backtester.py
 ```
 
-オプション:
-- `python backtest_grid.py` - 閾値グリッドサーチ
-- `python backtest_monthly.py` - 月別分析
+グリッドサーチは `Backtester.optimize_thresholds()` メソッドで実行可能。

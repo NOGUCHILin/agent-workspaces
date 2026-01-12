@@ -8,13 +8,13 @@ Branch-specific Claude Code settings for master branch.
 
 | 用途 | 使用スクリプト |
 |------|---------------|
-| バックテスト | backtester.py |
-| モデル訓練 | train_model.py |
-| モデル分析 | analyze_model.py |
-| 週次レポート | weekly_report.py |
+| 本番Bot | trader.py |
 | 設定 | config.py（単一真実源） |
-
-詳細は `.claude/skills/` のSkillを参照。
+| モデル訓練 | train_model.py（RF/XGB選択可） |
+| バックテスト | backtester.py（グリッドサーチ内蔵） |
+| モデル分析 | analyze_model.py |
+| 戦略最適化 | optimize_strategy.py |
+| 週次レポート | weekly_report.py |
 
 ## CI/CDルール（必須）
 
