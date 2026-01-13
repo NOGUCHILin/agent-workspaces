@@ -27,13 +27,18 @@ cp .mcp.json.example .mcp.json
 
 **注意**: User Token(`xoxp-`)を使う場合も`SLACK_BOT_TOKEN`変数に設定
 
-### 2. Playwright MCP
+### 2. agent-browser（ブラウザ自動化）
 
 ```bash
-npm install -g @anthropic-ai/mcp-server-playwright
+npm install  # package.jsonに含まれている
 ```
 
-パスは自動検出されます（Mac/Linux対応）
+使用方法:
+```bash
+npx agent-browser open https://example.com
+npx agent-browser snapshot -i
+npx agent-browser click @e1
+```
 
 ### 3. Gemini CLI（検索スキル用）
 
@@ -50,12 +55,14 @@ gemini auth
 ```
 .mcp.json           # MCP設定（.gitignore済み）
 .mcp.json.example   # テンプレート
+package.json        # agent-browser等の依存関係
 .claude/
   scripts/
     setup.sh        # セットアップスクリプト
-    playwright-mcp.sh # Playwright wrapper
   skills/           # スキル定義
+    agent-browser/  # ブラウザ自動化スキル
   rules/            # ルール定義
+    agent-browser.md # ブラウザ操作ルール
   settings.json     # hooks設定
 ```
 
@@ -64,5 +71,5 @@ gemini auth
 | 問題 | 対処 |
 |------|------|
 | Slack MCP接続失敗 | トークン確認、`claude mcp list`で状態確認 |
-| Playwright見つからない | `npm install -g @anthropic-ai/mcp-server-playwright` |
+| agent-browser見つからない | `npm install` を実行 |
 | 権限エラー | `chmod +x .claude/scripts/*.sh` |

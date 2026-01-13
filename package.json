@@ -1,0 +1,27 @@
+{
+  "name": "claude-code-workspaces",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NOGUCHILin/claude-code-workspaces.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/NOGUCHILin/claude-code-workspaces/issues"
+  },
+  "homepage": "https://github.com/NOGUCHILin/claude-code-workspaces#readme",
+  "dependencies": {
+    "agent-browser": "^0.4.4"
+  }
+}
