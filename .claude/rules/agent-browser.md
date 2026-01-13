@@ -8,19 +8,21 @@
 
 ## 基本ワークフロー
 
+**注意: 常に `--headed` を付けてブラウザを表示する**
+
 ```bash
-npx agent-browser open <url>      # ページを開く
-npx agent-browser snapshot -i     # インタラクティブ要素を取得（@e1, @e2...）
-npx agent-browser click @e1       # refで要素をクリック
-npx agent-browser fill @e2 "text" # refで入力
-npx agent-browser close           # ブラウザを閉じる
+npx agent-browser open <url> --headed  # ページを開く（表示モード）
+npx agent-browser snapshot -i          # インタラクティブ要素を取得（@e1, @e2...）
+npx agent-browser click @e1            # refで要素をクリック
+npx agent-browser fill @e2 "text"      # refで入力
+npx agent-browser close                # ブラウザを閉じる
 ```
 
 ## セッション（複数ブラウザ）
 
 ```bash
-npx agent-browser --session agent1 open site-a.com
-npx agent-browser --session agent2 open site-b.com
+npx agent-browser --session agent1 open site-a.com --headed
+npx agent-browser --session agent2 open site-b.com --headed
 ```
 
 ## 認証状態の保存・復元
