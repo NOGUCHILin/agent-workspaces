@@ -1,0 +1,3 @@
+# agent-browser セッション自動設定
+# ディレクトリ名をセッション名として使用
+export AGENT_BROWSER_SESSION="${PWD##*/}"

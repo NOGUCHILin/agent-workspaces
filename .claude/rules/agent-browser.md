@@ -18,11 +18,17 @@ npx agent-browser fill @e2 "text"      # refで入力
 npx agent-browser close                # ブラウザを閉じる
 ```
 
-## セッション（複数ブラウザ）
+## セッション（ワークツリーごとに自動分離）
+
+各ワークツリーは環境変数`AGENT_BROWSER_SESSION`で自動的に別セッションを使用。
+**`--session`オプションは不要**（環境変数で自動設定済み）
 
 ```bash
-npx agent-browser --session agent1 open site-a.com --headed
-npx agent-browser --session agent2 open site-b.com --headed
+# セッション確認
+npx agent-browser session list
+
+# 手動で別セッションを使う場合のみ指定
+npx agent-browser --session custom-session open site.com --headed
 ```
 
 ## 認証状態の保存・復元

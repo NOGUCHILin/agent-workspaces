@@ -35,10 +35,22 @@ npm install  # package.jsonに含まれている
 
 使用方法:
 ```bash
-npx agent-browser open https://example.com
+npx agent-browser open https://example.com --headed
 npx agent-browser snapshot -i
 npx agent-browser click @e1
 ```
+
+#### ワークツリーごとのセッション分離
+
+各ワークツリーで別々のブラウザを使用するため、`.envrc`を設定:
+
+```bash
+# repo/your-project/ で
+cp ../repo/.envrc.example .envrc
+direnv allow
+```
+
+これにより`AGENT_BROWSER_SESSION`がディレクトリ名に自動設定される。
 
 ### 3. Gemini CLI（検索スキル用）
 
@@ -56,6 +68,8 @@ gemini auth
 .mcp.json           # MCP設定（.gitignore済み）
 .mcp.json.example   # テンプレート
 package.json        # agent-browser等の依存関係
+repo/
+  .envrc.example    # ワークツリー用セッション設定テンプレート
 .claude/
   scripts/
     setup.sh        # セットアップスクリプト
