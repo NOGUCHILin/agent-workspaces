@@ -1,4 +1,4 @@
-# applebuyers - main
+# applebuyers_application - main
 
 ブランチ固有の設定をここに記載
 
