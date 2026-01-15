@@ -29,6 +29,7 @@ SYNC_TARGETS=(
     ".claude/skills/manage-workspace"
     ".claude/skills/sync-template"
     ".claude/skills/check-status"
+    ".claude/scripts"
     ".claude/rules"
     "docs"
     "CLAUDE.md"

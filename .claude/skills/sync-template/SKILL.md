@@ -1,3 +1,8 @@
+---
+name: sync-template
+description: テンプレートリポジトリに設定を同期する。「テンプレートに反映」「テンプレートリポジトリに同期」と言われた時に使用。
+---
+
 # sync-template スキル
 
 テンプレートリポジトリ（claude-code-worktrees）に設定を同期する。
@@ -24,6 +29,8 @@
 |------|------|
 | `.claude/skills/manage-workspace` | worktree作成スキル |
 | `.claude/skills/sync-template` | このスキル自体 |
+| `.claude/skills/check-status` | 状態確認スキル |
+| `.claude/scripts` | 共通スクリプト (setup-mcp.sh等) |
 | `.claude/rules` | 共通ルール |
 | `docs/` | ドキュメント |
 | `CLAUDE.md` | プロジェクト説明 |
