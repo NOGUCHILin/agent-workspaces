@@ -45,8 +45,8 @@ npx agent-browser click @e1
 各ワークツリーで別々のブラウザを使用するため、`.envrc`を設定:
 
 ```bash
-# repo/your-project/ で
-cp ../repo/.envrc.example .envrc
+# projects/your-project/ で
+cp ../.envrc.example .envrc
 direnv allow
 ```
 
@@ -68,7 +68,7 @@ gemini auth
 .mcp.json           # MCP設定（.gitignore済み）
 .mcp.json.example   # テンプレート
 package.json        # agent-browser等の依存関係
-repo/
+projects/
   .envrc.example    # ワークツリー用セッション設定テンプレート
 .claude/
   scripts/

@@ -14,25 +14,74 @@ check_worktree() {
 
     # 必須ディレクトリ確認
     for dir in .claude docs repo; do
-        if [ ! -d "$worktree_path/$dir" ]; then
+        if [ ! -d "$worktree_path/$dir" ] && [ ! -L "$worktree_path/$dir" ]; then
             echo "  ERROR: Missing directory '$dir' in $worktree_name"
             ((ERRORS++))
         fi
     done
 
     # CLAUDE.md確認
-    if [ ! -f "$worktree_path/CLAUDE.md" ]; then
+    if [ ! -f "$worktree_path/CLAUDE.md" ] && [ ! -L "$worktree_path/CLAUDE.md" ]; then
         echo "  ERROR: Missing CLAUDE.md in $worktree_name"
         ((ERRORS++))
     fi
 
-    # repo内のgit確認
+    # repo内のgit確認（.gitはファイルであるべき、ディレクトリではない）
     if [ -d "$worktree_path/repo" ]; then
-        if [ ! -d "$worktree_path/repo/.git" ] && [ ! -f "$worktree_path/repo/.git" ]; then
+        if [ -f "$worktree_path/repo/.git" ]; then
+            # 正常: worktreeの.gitはファイル
+            if ! grep -q "^gitdir:" "$worktree_path/repo/.git" 2>/dev/null; then
+                echo "  ERROR: repo/.git is not a valid gitdir file in $worktree_name"
+                ((ERRORS++))
+            fi
+        elif [ -d "$worktree_path/repo/.git" ]; then
+            echo "  WARNING: repo/.git is a directory (should be gitdir file) in $worktree_name"
+            ((WARNINGS++))
+        else
             echo "  WARNING: No git in repo/ of $worktree_name"
             ((WARNINGS++))
         fi
     fi
+
+    # .mcp.json確認
+    if [ -f "$worktree_path/.mcp.json" ]; then
+        if ! python3 -c "import json; json.load(open('$worktree_path/.mcp.json'))" 2>/dev/null; then
+            echo "  ERROR: Invalid JSON in .mcp.json of $worktree_name"
+            ((ERRORS++))
+        fi
+    else
+        echo "  WARNING: Missing .mcp.json in $worktree_name"
+        ((WARNINGS++))
+    fi
+
+    # .claude/rules/ 確認
+    if [ ! -d "$worktree_path/.claude/rules" ]; then
+        echo "  WARNING: Missing .claude/rules/ in $worktree_name"
+        ((WARNINGS++))
+    elif [ -z "$(ls -A "$worktree_path/.claude/rules" 2>/dev/null)" ]; then
+        echo "  WARNING: .claude/rules/ is empty in $worktree_name"
+        ((WARNINGS++))
+    fi
+
+    # 余計なファイル/ディレクトリ確認（worktree直下）
+    local allowed_items="repo .claude docs CLAUDE.md .mcp.json .DS_Store"
+    for item in "$worktree_path"/*; do
+        [ -e "$item" ] || continue
+        local item_name=$(basename "$item")
+        if ! echo "$allowed_items" | grep -qw "$item_name"; then
+            echo "  WARNING: Unexpected item '$item_name' in $worktree_name"
+            ((WARNINGS++))
+        fi
+    done
+    for item in "$worktree_path"/.*; do
+        [ -e "$item" ] || continue
+        local item_name=$(basename "$item")
+        [[ "$item_name" == "." || "$item_name" == ".." ]] && continue
+        if ! echo "$allowed_items" | grep -qw "$item_name"; then
+            echo "  WARNING: Unexpected item '$item_name' in $worktree_name"
+            ((WARNINGS++))
+        fi
+    done
 }
 
 check_project() {
@@ -41,12 +90,38 @@ check_project() {
 
     echo "Checking project: $project_name"
 
+    # .bare ディレクトリ確認
+    if [ ! -d "$project_path/.bare" ]; then
+        echo "  ERROR: Missing '.bare' directory (not using bare repo structure)"
+        ((ERRORS++))
+    fi
+
     # worktrees ディレクトリ確認
     if [ ! -d "$project_path/worktrees" ]; then
         echo "  ERROR: Missing 'worktrees' directory"
         ((ERRORS++))
         return
     fi
+
+    # 余計なファイル/ディレクトリ確認（プロジェクト直下）
+    local allowed_project_items=".bare worktrees .DS_Store .claude"
+    for item in "$project_path"/*; do
+        [ -e "$item" ] || continue
+        local item_name=$(basename "$item")
+        if ! echo "$allowed_project_items" | grep -qw "$item_name"; then
+            echo "  WARNING: Unexpected item '$item_name' in project root"
+            ((WARNINGS++))
+        fi
+    done
+    for item in "$project_path"/.*; do
+        [ -e "$item" ] || continue
+        local item_name=$(basename "$item")
+        [[ "$item_name" == "." || "$item_name" == ".." ]] && continue
+        if ! echo "$allowed_project_items" | grep -qw "$item_name"; then
+            echo "  WARNING: Unexpected item '$item_name' in project root"
+            ((WARNINGS++))
+        fi
+    done
 
     # 各ワークツリーを確認
     local worktree_count=0

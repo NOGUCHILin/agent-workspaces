@@ -36,34 +36,40 @@ description: プロジェクトとワークツリーを作成・管理する。�
 .claude/skills/manage-workspace/scripts/validate.sh [project-name]
 ```
 
-# git worktree の仕組み
+# git worktree の仕組み（.bare構造）
 
 ```
-projects/myproject/worktrees/
-├── master/repo/      ← 最初にclone（.git本体がここ）
-├── feature-x/repo/   ← worktree（軽量、高速切替）
-└── bugfix-y/repo/    ← worktree（軽量、高速切替）
+projects/myproject/
+├── .bare/                ← git本体（全worktreeで共有）
+└── worktrees/
+    ├── master/repo/      ← worktree（対等）
+    ├── feature-x/repo/   ← worktree（対等）
+    └── bugfix-y/repo/    ← worktree（対等）
 ```
 
-- 最初のworktree: `git clone` で作成（.git本体を持つ）
-- 2つ目以降: `git worktree add` で作成（軽量）
-- メリット: ディスク節約、ブランチ切替が高速
+- .bare: `git clone --bare` で作成（git本体）
+- 全worktree: `git worktree add` で作成（対等、どれも削除可能）
+- メリット: ディスク節約、ブランチ切替が高速、安全に削除可能
 
 # 作成される構造
 
 ```
 projects/{project-name}/
+├── .bare/             # git本体（bare repository）
 └── worktrees/
-    └── {branch-name}/
-        ├── CLAUDE.md      # ブランチ固有の設定
-        ├── .mcp.json      # Playwright MCP設定（自動生成）
+    └── {branch-name}/    ← ここがワークスペース（Claude Codeで開く）
+        ├── .git           # repo/.gitへの参照（git認識用）
+        ├── CLAUDE.md      # ブランチ固有の設定（テンプレート）
         ├── .claude/       # ブランチ固有のrules/skills
         ├── docs/specs/    # 仕様書（Kiro形式）
         └── repo/          # git worktree（実際のコード）
 ```
 
+**重要**: worktree/{branch-name}/をワークスペースとして開く。repo/ではない。
+
 # 検証項目
 
+- .bareディレクトリの存在
 - projects/配下の構造が正しいか
 - 必須ディレクトリ（.claude, docs, repo）の存在
 - CLAUDE.mdの存在

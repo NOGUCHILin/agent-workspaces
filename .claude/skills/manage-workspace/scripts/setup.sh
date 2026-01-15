@@ -12,7 +12,7 @@ if [ -z "$PROJECT" ] || [ -z "$BRANCH" ]; then
     echo "Usage: setup.sh <project-name> <branch-name> [repo-url]"
     echo ""
     echo "Examples:"
-    echo "  # 新規プロジェクト（clone）"
+    echo "  # 新規プロジェクト（.bare構造で作成）"
     echo "  setup.sh myproject master https://github.com/user/myproject.git"
     echo ""
     echo "  # 既存プロジェクトに worktree 追加"
@@ -21,6 +21,7 @@ if [ -z "$PROJECT" ] || [ -z "$BRANCH" ]; then
 fi
 
 PROJECT_DIR="$WORKSPACE_ROOT/projects/$PROJECT"
+BARE_DIR="$PROJECT_DIR/.bare"
 WORKTREE_DIR="$PROJECT_DIR/worktrees/$BRANCH"
 
 # 既存ワークツリー確認
@@ -29,58 +30,41 @@ if [ -d "$WORKTREE_DIR" ]; then
     exit 1
 fi
 
-# プロジェクト内の既存worktreeを探す（.gitがあるディレクトリ）
-find_main_repo() {
-    for dir in "$PROJECT_DIR"/worktrees/*/repo; do
-        if [ -d "$dir/.git" ] || [ -f "$dir/.git" ]; then
-            echo "$dir"
-            return 0
-        fi
-    done
-    return 1
-}
-
-MAIN_REPO=$(find_main_repo || echo "")
+# テンプレートディレクトリ
+TEMPLATE_DIR="$SCRIPT_DIR/../templates"
 
 # ディレクトリ作成
 echo "Creating worktree structure..."
-mkdir -p "$WORKTREE_DIR"/{.claude,docs/specs}
+mkdir -p "$WORKTREE_DIR"/{.claude/rules,docs/specs,docs/_templates}
 
 # CLAUDE.md作成
-cat > "$WORKTREE_DIR/CLAUDE.md" << EOF
-# $PROJECT - $BRANCH
+sed -e "s/{{PROJECT}}/$PROJECT/g" -e "s/{{BRANCH}}/$BRANCH/g" \
+    "$TEMPLATE_DIR/CLAUDE.md" > "$WORKTREE_DIR/CLAUDE.md"
 
-ブランチ固有の設定をここに記載
+# rulesコピー
+cp "$TEMPLATE_DIR/rules/"*.md "$WORKTREE_DIR/.claude/rules/"
 
-## このブランチの目的
+# settings.jsonコピー
+cp "$TEMPLATE_DIR/settings.json" "$WORKTREE_DIR/.claude/settings.json"
 
-（記載してください）
+# .mcp.jsonコピー
+cp "$TEMPLATE_DIR/.mcp.json" "$WORKTREE_DIR/.mcp.json"
 
-## 作業メモ
+# テンプレートコピー（specs用）
+cp "$TEMPLATE_DIR/01-requirements.md" "$WORKTREE_DIR/docs/_templates/"
+cp "$TEMPLATE_DIR/02-design.md" "$WORKTREE_DIR/docs/_templates/"
+cp "$TEMPLATE_DIR/03-tasks.md" "$WORKTREE_DIR/docs/_templates/"
+mkdir -p "$WORKTREE_DIR/docs/_templates/research"
+cp "$TEMPLATE_DIR/research/_template.md" "$WORKTREE_DIR/docs/_templates/research/"
 
-（作業中のメモをここに）
-EOF
-
-# .mcp.json作成（Playwright MCP設定）
-cat > "$WORKTREE_DIR/.mcp.json" << EOF
-{
-  "mcpServers": {
-    "playwright": {
-      "command": "bash",
-      "args": [
-        "$WORKSPACE_ROOT/.claude/scripts/playwright-mcp.sh"
-      ]
-    }
-  }
-}
-EOF
+echo "Created templates and rules"
 
 # Git操作
-if [ -z "$MAIN_REPO" ]; then
-    # 最初のworktree → clone必要
+if [ ! -d "$BARE_DIR" ]; then
+    # .bareがない → 新規プロジェクト
     if [ -z "$REPO_URL" ]; then
         echo ""
-        echo "Error: This is the first worktree for project '$PROJECT'."
+        echo "Error: This is a new project '$PROJECT'."
         echo "Please provide the repository URL:"
         echo ""
         echo "  setup.sh $PROJECT $BRANCH <repo-url>"
@@ -90,27 +74,38 @@ if [ -z "$MAIN_REPO" ]; then
         exit 1
     fi
 
-    echo "Cloning repository..."
-    git clone "$REPO_URL" "$WORKTREE_DIR/repo"
+    echo "Creating .bare repository..."
+    mkdir -p "$PROJECT_DIR"
+    git clone --bare "$REPO_URL" "$BARE_DIR"
 
-    # 指定ブランチに切り替え
-    cd "$WORKTREE_DIR/repo"
-    if git show-ref --verify --quiet "refs/heads/$BRANCH"; then
-        git checkout "$BRANCH"
-    elif git show-ref --verify --quiet "refs/remotes/origin/$BRANCH"; then
-        git checkout -b "$BRANCH" "origin/$BRANCH"
-    else
-        echo "Note: Branch '$BRANCH' not found, staying on default branch"
-    fi
-else
-    # 既存repoからworktree作成
-    echo "Creating worktree from: $MAIN_REPO"
+    # bare repoの設定を調整
+    cd "$BARE_DIR"
+    git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
+    git fetch origin
+
+    echo "Creating first worktree..."
     mkdir -p "$WORKTREE_DIR/repo"
 
-    cd "$MAIN_REPO"
+    # worktree追加
+    if git show-ref --verify --quiet "refs/heads/$BRANCH"; then
+        git worktree add "$WORKTREE_DIR/repo" "$BRANCH"
+    elif git show-ref --verify --quiet "refs/remotes/origin/$BRANCH"; then
+        git worktree add "$WORKTREE_DIR/repo" "$BRANCH"
+    else
+        # デフォルトブランチを取得
+        DEFAULT_BRANCH=$(git symbolic-ref --short HEAD 2>/dev/null || echo "main")
+        git worktree add "$WORKTREE_DIR/repo" "$DEFAULT_BRANCH"
+        echo "Note: Branch '$BRANCH' not found, using '$DEFAULT_BRANCH'"
+    fi
+else
+    # .bareがある → worktree追加
+    echo "Adding worktree from .bare..."
+    cd "$BARE_DIR"
 
     # リモートから最新情報取得
     git fetch --all 2>/dev/null || true
+
+    mkdir -p "$WORKTREE_DIR/repo"
 
     # worktree追加
     if git show-ref --verify --quiet "refs/heads/$BRANCH"; then
@@ -133,4 +128,4 @@ echo "Validating structure..."
 echo ""
 echo "Done! Created: $WORKTREE_DIR"
 echo ""
-echo "Next: cd $WORKTREE_DIR/repo"
+echo "Next: cd $WORKTREE_DIR"
