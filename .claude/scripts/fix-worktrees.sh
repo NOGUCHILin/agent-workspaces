@@ -32,9 +32,11 @@ for project_dir in "$WORKSPACE_ROOT"/projects/*/; do
         mkdir -p "$claude_dir"
 
         # symlinkを修正（正しいパス: ../../.claude/）
-        rm -f "$claude_dir/rules" "$claude_dir/skills" 2>/dev/null || true
+        # 既存のディレクトリも削除（-rf）
+        rm -rf "$claude_dir/rules" "$claude_dir/skills" "$claude_dir/scripts" 2>/dev/null || true
         ln -sf "../../.claude/rules" "$claude_dir/rules"
         ln -sf "../../.claude/skills" "$claude_dir/skills"
+        ln -sf "../../../../.claude/scripts" "$claude_dir/scripts"
 
         # settings.jsonがなければ作成
         if [ ! -f "$claude_dir/settings.json" ] || [ "$(cat "$claude_dir/settings.json" 2>/dev/null)" = "{}" ]; then

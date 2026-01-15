@@ -50,8 +50,10 @@ fi
 
 # worktree → project へのシンボリックリンク作成
 # worktree/.claude/ から project/.claude/ へ: ../../.claude/
+# worktree/.claude/ からワークスペースルート/.claude/scripts へ: ../../../../.claude/scripts
 ln -sf "../../.claude/rules" "$WORKTREE_DIR/.claude/rules"
 ln -sf "../../.claude/skills" "$WORKTREE_DIR/.claude/skills"
+ln -sf "../../../../.claude/scripts" "$WORKTREE_DIR/.claude/scripts"
 
 # CLAUDE.md作成
 sed -e "s/{{PROJECT}}/$PROJECT/g" -e "s/{{BRANCH}}/$BRANCH/g" \

@@ -6,7 +6,7 @@
 2. 作業中のタスクがあれば続行、なければ次のアクションを提案
 
 ```bash
-# 仕様状況確認
+# 仕様状況確認（worktreeルートで実行）
 .claude/scripts/scan-specs.sh
 ```
 
