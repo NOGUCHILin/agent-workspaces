@@ -1,18 +1,29 @@
 # {{PROJECT}} - {{BRANCH}}
 
-## 🚀 セッション開始時
+## 🚀 セッション開始時（必須）
 
-1. 仕様状況を確認
-2. 作業中のタスクがあれば続行、なければ次のアクションを提案
+**「こんにちは」「計画は？」「何をすべき？」等と言われたら、必ず以下を実行:**
 
 ```bash
-# 仕様状況確認（worktreeルートで実行）
 .claude/scripts/scan-specs.sh
 ```
+
+### 結果に応じたアクション
+
+| 状態 | アクション |
+|------|-----------|
+| 仕様なし | 「仕様を作成しましょう」→ `create-spec.sh` |
+| draft あり | 「要件定義から始めましょう」 |
+| in_progress あり | 「続きを進めましょう」→ 該当ファイルを開く |
+| 全て completed | 「次の仕様を作成しますか？」 |
+
+---
 
 ## このブランチの目的
 
 （ブランチ作成時に記入してください）
+
+---
 
 ## 仕様管理
 
@@ -20,14 +31,6 @@
 
 ```bash
 .claude/scripts/scan-specs.sh
-```
-
-出力例:
-```
-Feature                        | Requirements | Design       | Tasks
------------------------------- | ------------ | ------------ | ------------
-001-auth-integration           | in_progress  | draft        | draft
-002-payment-feature            | completed    | in_progress  | draft
 ```
 
 ### 新規仕様の作成
@@ -47,6 +50,8 @@ status: in_progress  # draft → in_progress → completed
 updated: 2026-01-16
 ---
 ```
+
+---
 
 ## 仕様書の場所
 
