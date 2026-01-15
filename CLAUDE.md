@@ -2,6 +2,54 @@
 
 複数プロジェクト・ブランチを管理するワークスペース
 
+---
+
+## 🚀 セッション開始時
+
+**ユーザーが「こんにちは」「何ができる?」等と言ったら、まず状態を確認して報告:**
+
+```bash
+# 状態確認
+.claude/skills/check-status/scripts/scan-status.sh
+```
+
+### 報告例
+
+```
+【ワークスペース: claude-code-workspaces】
+複数のプロジェクト・ブランチを並行管理するワークスペースです。
+
+📊 現在の状態:
+- プロジェクト: 2個 (applebuyers_application, xlm-trader)
+- アクティブworktree: 12個
+- セットアップ: 完了
+
+🔧 できること:
+1. 新規プロジェクト/worktree作成
+2. 各worktreeの作業状況確認
+3. テンプレートリポジトリへの同期
+
+💡 次のアクション:
+- 特定のworktreeで作業を開始しますか?
+- 新しいプロジェクトを追加しますか?
+```
+
+### 未セットアップの場合
+
+```
+このワークスペースはまだセットアップが完了していません。
+
+📋 セットアップ手順:
+1. cp .mcp.json.example .mcp.json
+2. .mcp.jsonを編集してSlackトークン等を設定
+3. プロジェクト追加:
+   .claude/skills/manage-workspace/scripts/setup.sh <project> <branch> <repo-url>
+
+セットアップを進めますか?
+```
+
+---
+
 ## ワークスペース設計原則
 
 | 概念 | パス | 役割 |
