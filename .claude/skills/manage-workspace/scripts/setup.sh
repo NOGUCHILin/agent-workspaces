@@ -49,8 +49,9 @@ if [ ! -d "$PROJECT_CLAUDE_DIR/rules" ]; then
 fi
 
 # worktree → project へのシンボリックリンク作成
-ln -sf "../../../.claude/rules" "$WORKTREE_DIR/.claude/rules"
-ln -sf "../../../.claude/skills" "$WORKTREE_DIR/.claude/skills"
+# worktree/.claude/ から project/.claude/ へ: ../../.claude/
+ln -sf "../../.claude/rules" "$WORKTREE_DIR/.claude/rules"
+ln -sf "../../.claude/skills" "$WORKTREE_DIR/.claude/skills"
 
 # CLAUDE.md作成
 sed -e "s/{{PROJECT}}/$PROJECT/g" -e "s/{{BRANCH}}/$BRANCH/g" \

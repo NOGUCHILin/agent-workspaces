@@ -1,4 +1,9 @@
-# 要件定義: {{BRANCH}}
+---
+status: draft
+updated: {{DATE}}
+---
+
+# 要件定義: {{FEATURE}}
 
 ## 背景
 

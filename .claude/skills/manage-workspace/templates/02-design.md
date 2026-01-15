@@ -1,4 +1,9 @@
-# 設計: {{BRANCH}}
+---
+status: draft
+updated: {{DATE}}
+---
+
+# 設計: {{FEATURE}}
 
 ## 概要
 

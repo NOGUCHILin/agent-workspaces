@@ -1,4 +1,9 @@
-# タスク: {{BRANCH}}
+---
+status: draft
+updated: {{DATE}}
+---
+
+# タスク: {{FEATURE}}
 
 ## 実装タスク
 
