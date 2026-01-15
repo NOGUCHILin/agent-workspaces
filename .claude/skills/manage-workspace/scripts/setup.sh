@@ -32,23 +32,36 @@ fi
 
 # テンプレートディレクトリ
 TEMPLATE_DIR="$SCRIPT_DIR/../templates"
+SHARED_DIR="$WORKSPACE_ROOT/_shared"
 
 # ディレクトリ作成
 echo "Creating worktree structure..."
-mkdir -p "$WORKTREE_DIR"/{.claude/rules,docs/specs,docs/_templates}
+mkdir -p "$WORKTREE_DIR"/{.claude,docs/specs,docs/_templates}
+
+# プロジェクト共通設定ディレクトリ作成（初回のみ）
+PROJECT_CLAUDE_DIR="$PROJECT_DIR/.claude"
+if [ ! -d "$PROJECT_CLAUDE_DIR/rules" ]; then
+    echo "Creating shared settings from _shared/..."
+    mkdir -p "$PROJECT_CLAUDE_DIR"
+    # _shared/からコピー（project単位でカスタマイズ可能）
+    cp -r "$SHARED_DIR/rules" "$PROJECT_CLAUDE_DIR/" 2>/dev/null || true
+    cp -r "$SHARED_DIR/skills" "$PROJECT_CLAUDE_DIR/" 2>/dev/null || true
+fi
+
+# worktree → project へのシンボリックリンク作成
+ln -sf "../../../.claude/rules" "$WORKTREE_DIR/.claude/rules"
+ln -sf "../../../.claude/skills" "$WORKTREE_DIR/.claude/skills"
 
 # CLAUDE.md作成
 sed -e "s/{{PROJECT}}/$PROJECT/g" -e "s/{{BRANCH}}/$BRANCH/g" \
     "$TEMPLATE_DIR/CLAUDE.md" > "$WORKTREE_DIR/CLAUDE.md"
 
-# rulesコピー
-cp "$TEMPLATE_DIR/rules/"*.md "$WORKTREE_DIR/.claude/rules/"
-
 # settings.jsonコピー
 cp "$TEMPLATE_DIR/settings.json" "$WORKTREE_DIR/.claude/settings.json"
 
-# .mcp.jsonコピー
-cp "$TEMPLATE_DIR/.mcp.json" "$WORKTREE_DIR/.mcp.json"
+# .mcp.json作成（変数置換）
+sed -e "s|{{HOME}}|$HOME|g" -e "s/{{BRANCH}}/$BRANCH/g" \
+    "$TEMPLATE_DIR/.mcp.json" > "$WORKTREE_DIR/.mcp.json"
 
 # テンプレートコピー（specs用）
 cp "$TEMPLATE_DIR/01-requirements.md" "$WORKTREE_DIR/docs/_templates/"
