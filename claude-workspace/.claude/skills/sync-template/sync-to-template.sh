@@ -27,11 +27,10 @@ git clone --depth 1 "$TEMPLATE_REPO" "$TEMP_DIR"
 
 # 2. 同期対象ファイル/ディレクトリ
 
-# claude-workspaceからclaude-workspace/へコピー
+# claude-workspaceからclaude-workspace/へコピー（.mcp.jsonは除外、別途生成）
 SYNC_TARGETS_TO_CLAUDE_WORKSPACE=(
     ".claude"
     "CLAUDE.md"
-    ".mcp.json"
 )
 
 # ワークスペースルートからルートへコピー
@@ -71,7 +70,28 @@ for target in "${SYNC_TARGETS_FROM_ROOT[@]}"; do
     fi
 done
 
-# 6. ルートにリダイレクト用CLAUDE.mdを作成
+# 6. claude-workspace/.mcp.jsonを生成（トークン不要なMCPのみ）
+echo "Generating clean .mcp.json..."
+cat > "$TEMP_DIR/claude-workspace/.mcp.json" << 'EOF'
+{
+  "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@0.0.54",
+        "--user-data-dir={{HOME}}/.playwright-profiles/claude-workspace"
+      ]
+    }
+  }
+}
+EOF
+echo "  Generated: claude-workspace/.mcp.json (Context7 + Playwright)"
+
+# 8. ルートにリダイレクト用CLAUDE.mdを作成
 cat > "$TEMP_DIR/CLAUDE.md" << 'EOF'
 # claude-code-worktrees
 
@@ -88,13 +108,26 @@ claude
 
 1. このリポジトリをclone
 2. `claude-workspace/`に移動
-3. `.mcp.json.example`をコピーして設定
-4. Claude Codeを起動
+3. Claude Codeを起動（Context7・Playwrightは設定済み）
+
+### Slack連携が必要な場合
+
+`.mcp.json`にSlack設定を追加:
+```json
+"slack": {
+  "command": "npx",
+  "args": ["-y", "@modelcontextprotocol/server-slack"],
+  "env": {
+    "SLACK_BOT_TOKEN": "<YOUR_SLACK_TOKEN>",
+    "SLACK_TEAM_ID": "<YOUR_TEAM_ID>"
+  }
+}
+```
 
 詳細は [docs/SETUP.md](docs/SETUP.md) を参照。
 EOF
 
-# 7. projects/は含めない（空のREADMEのみ）
+# 9. projects/は含めない（空のREADMEのみ）
 mkdir -p "$TEMP_DIR/projects"
 cat > "$TEMP_DIR/projects/README.md" << 'EOF'
 # Projects
@@ -116,7 +149,7 @@ claude-workspace/.claude/skills/manage-workspace/scripts/setup.sh <project-name>
 詳細は [docs/SETUP.md](../docs/SETUP.md) を参照。
 EOF
 
-# 7. コミット＆プッシュ
+# 10. コミット＆プッシュ
 cd "$TEMP_DIR"
 git add -A
 
