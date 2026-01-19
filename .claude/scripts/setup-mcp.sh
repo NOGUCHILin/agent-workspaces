@@ -6,8 +6,8 @@ set -e
 # 引数なしで全ワークツリーに設定
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-WORKSPACE_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
-TEMPLATE="$WORKSPACE_ROOT/.claude/skills/manage-workspace/templates/.mcp.json"
+WORKSPACE_ROOT="$(cd "$SCRIPT_DIR/../../.." && pwd)"
+TEMPLATE="$WORKSPACE_ROOT/claude-workspace/.claude/skills/manage-workspace/templates/.mcp.json"
 
 setup_mcp() {
     local worktree_path="$1"
