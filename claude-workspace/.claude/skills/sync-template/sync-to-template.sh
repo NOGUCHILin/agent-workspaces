@@ -25,18 +25,16 @@ echo "=== Syncing to template repository ==="
 echo "Cloning template repository..."
 git clone --depth 1 "$TEMPLATE_REPO" "$TEMP_DIR"
 
-# 2. 同期対象ファイル/ディレクトリ（claude-workspaceからコピー）
-SYNC_TARGETS_FROM_CLAUDE_WORKSPACE=(
-    ".claude/skills/manage-workspace"
-    ".claude/skills/sync-template"
-    ".claude/skills/check-status"
-    ".claude/scripts"
-    ".claude/rules"
+# 2. 同期対象ファイル/ディレクトリ
+
+# claude-workspaceからclaude-workspace/へコピー
+SYNC_TARGETS_TO_CLAUDE_WORKSPACE=(
+    ".claude"
     "CLAUDE.md"
     ".mcp.json"
 )
 
-# ワークスペースルートからコピー
+# ワークスペースルートからルートへコピー
 SYNC_TARGETS_FROM_ROOT=(
     "docs"
     "_shared"
@@ -45,22 +43,21 @@ SYNC_TARGETS_FROM_ROOT=(
     "package.json"
 )
 
-# 3. 既存ファイルを削除（同期対象のみ）
+# 3. 既存ファイルを削除
 echo "Preparing sync targets..."
-for target in "${SYNC_TARGETS_FROM_CLAUDE_WORKSPACE[@]}"; do
-    rm -rf "$TEMP_DIR/$target"
-done
+rm -rf "$TEMP_DIR/claude-workspace"
 for target in "${SYNC_TARGETS_FROM_ROOT[@]}"; do
     rm -rf "$TEMP_DIR/$target"
 done
+rm -rf "$TEMP_DIR/.claude" "$TEMP_DIR/CLAUDE.md"  # 旧構造を削除
 
-# 4. ファイルをコピー（claude-workspaceから）
-echo "Copying files from claude-workspace..."
-for target in "${SYNC_TARGETS_FROM_CLAUDE_WORKSPACE[@]}"; do
+# 4. claude-workspace/ディレクトリを作成してコピー
+echo "Copying files to claude-workspace/..."
+mkdir -p "$TEMP_DIR/claude-workspace"
+for target in "${SYNC_TARGETS_TO_CLAUDE_WORKSPACE[@]}"; do
     if [ -e "$CLAUDE_WORKSPACE/$target" ]; then
-        mkdir -p "$TEMP_DIR/$(dirname "$target")"
-        cp -r "$CLAUDE_WORKSPACE/$target" "$TEMP_DIR/$target"
-        echo "  Copied: $target"
+        cp -r "$CLAUDE_WORKSPACE/$target" "$TEMP_DIR/claude-workspace/$target"
+        echo "  Copied: claude-workspace/$target"
     fi
 done
 
@@ -74,7 +71,30 @@ for target in "${SYNC_TARGETS_FROM_ROOT[@]}"; do
     fi
 done
 
-# 6. projects/は含めない（空のREADMEのみ）
+# 6. ルートにリダイレクト用CLAUDE.mdを作成
+cat > "$TEMP_DIR/CLAUDE.md" << 'EOF'
+# claude-code-worktrees
+
+複数プロジェクト・ブランチを管理するワークスペーステンプレート
+
+**Claude Codeを起動する場所は `claude-workspace/` です。**
+
+```bash
+cd claude-workspace
+claude
+```
+
+## セットアップ
+
+1. このリポジトリをclone
+2. `claude-workspace/`に移動
+3. `.mcp.json.example`をコピーして設定
+4. Claude Codeを起動
+
+詳細は [docs/SETUP.md](docs/SETUP.md) を参照。
+EOF
+
+# 7. projects/は含めない（空のREADMEのみ）
 mkdir -p "$TEMP_DIR/projects"
 cat > "$TEMP_DIR/projects/README.md" << 'EOF'
 # Projects
@@ -83,8 +103,14 @@ cat > "$TEMP_DIR/projects/README.md" << 'EOF'
 
 ## 使い方
 
+claude-workspace/でClaude Codeを起動して:
+```
+新しいプロジェクトを追加して
+```
+
+または手動で:
 ```bash
-.claude/skills/manage-workspace/scripts/setup.sh <project-name> <branch> <repo-url>
+claude-workspace/.claude/skills/manage-workspace/scripts/setup.sh <project-name> <branch> <repo-url>
 ```
 
 詳細は [docs/SETUP.md](../docs/SETUP.md) を参照。
