@@ -40,6 +40,15 @@
 
 このワークスペースはPlaywright MCP専用環境です。
 
+### ブラウザ起動時の認証
+
+**「ブラウザを開いて」と言われたら、以下のGoogleアカウントでログイン状態を確認:**
+
+- アカウント: `eguchinatsu@japanconsulting.co.jp`
+- 認証情報: `.claude/credentials/google.json`
+
+認証が切れている場合は https://accounts.google.com でログインしてからユーザーの操作を行う。
+
 ### 用途
 
 - Google Ads管理
@@ -57,6 +66,40 @@
 ### プロファイル保存場所
 
 `~/.playwright-profiles/claude-workspace/`
+
+---
+
+## 発送関連スキル
+
+### 送り状作成 (`create-shipping-label`)
+
+B2クラウドで宅急便コンパクトの送り状を作成しPDFダウンロード。
+
+```
+ユーザー: 送り状作って
+ユーザー: ラベル作成して
+```
+
+**ワークフロー:**
+1. B2クラウド発行画面 → 「宅急便コンパクト」選択
+2. お届け先情報入力（電話番号、郵便番号、住所、名前）
+3. ご依頼主: アップルバイヤーズ秋葉原
+4. 品名: SKU番号、荷扱い: 精密機器
+5. 登録 → 印刷 → PDFダウンロード
+
+### 発送完了通知 (`notify-shipment`)
+
+送り状PDFから追跡番号を抽出→Notion記入→Slack送信。
+
+```
+ユーザー: 発送通知して
+ユーザー: 追跡番号をNotionに記入して
+```
+
+**ワークフロー:**
+1. PyPDF2でPDFから追跡番号抽出（`4694-XXXX-XXXX`形式）
+2. Notionの発送予定ページで該当SKUの備考欄に追跡番号を記入
+3. SlackのapplebueyrsチャンネルにPDFを添付送信
 
 ---
 
