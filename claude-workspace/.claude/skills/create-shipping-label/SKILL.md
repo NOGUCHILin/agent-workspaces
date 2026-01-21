@@ -68,11 +68,52 @@ URL: https://newb2web.kuronekoyamato.co.jp/create
 
 ### 7. PDFをダウンロード
 
-1. 印刷プレビュー画面が開く
-2. 「ダウンロード」ボタンをクリック
-3. PDFがダウンロードされる
-   - 保存先: `.playwright-mcp/UMINXXXXXXXXX`
-   - ファイル名形式: `UMIN` + 10桁の番号
+印刷プレビューはiframe内に表示され、通常のスナップショットでは読み取れない。
+`browser_run_code` を使用してPDFを直接ダウンロードする。
+
+#### 方法1: iframeのsrcからダウンロード（推奨）
+
+```javascript
+async (page) => {
+  // iframeのsrc属性からPDF URLを取得
+  const iframeSrc = await page.locator('iframe').getAttribute('src');
+  // 例: /b2/p/B2_OKURIJYO?issue_no=UMIN0002382100&fileonly=1
+
+  const pdfUrl = 'https://newb2web.kuronekoyamato.co.jp' + iframeSrc;
+
+  // ダウンロードイベントを待機
+  const downloadPromise = page.waitForEvent('download');
+
+  // ダウンロードリンクを作成してクリック
+  await page.evaluate((url) => {
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'shipping-label.pdf';
+    link.click();
+  }, pdfUrl);
+
+  const download = await downloadPromise;
+  return {
+    path: await download.path(),
+    filename: download.suggestedFilename()
+  };
+}
+```
+
+#### 方法2: 再発行画面からダウンロード
+
+発行済みの送り状をダウンロードする場合：
+
+1. メインメニュー → 「再発行」
+2. 送り状番号で検索
+3. 選択 → 「印刷内容の確認へ」
+4. 「発行開始」→ 上記の方法でダウンロード
+
+#### ダウンロード結果
+
+- 保存先: `.playwright-mcp/UMINXXXXXXXXX.pdf`
+- ファイル名形式: `UMIN` + 10桁の番号 + `.pdf`
+- 例: `UMIN0002382100.pdf`
 
 ## フォーム要素のref（参考）
 
