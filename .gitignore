@@ -3,3 +3,10 @@
 projects/*/worktrees/*/repo/
 .mcp.json
 !.mcp.json.example
+
+# Personal projects (not shared)
+workspaces/*/projects/
+
+# Personal overrides (not shared)
+*.local.md
+*.local.json
