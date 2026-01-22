@@ -2,31 +2,31 @@
 
 複数プロジェクト・ブランチを管理するワークスペーステンプレート
 
-**Claude Codeを起動する場所は `claude-workspace/` です。**
+## 使い方
+
+自分のワークスペースでClaude Codeを起動:
 
 ```bash
-cd claude-workspace
+cd workspaces/<your-username>
 claude
 ```
 
-## セットアップ
+## 構造
 
-1. このリポジトリをclone
-2. `claude-workspace/`に移動
-3. Claude Codeを起動（Context7・Playwrightは設定済み）
-
-### Slack連携が必要な場合
-
-`.mcp.json`にSlack設定を追加:
-```json
-"slack": {
-  "command": "npx",
-  "args": ["-y", "@modelcontextprotocol/server-slack"],
-  "env": {
-    "SLACK_BOT_TOKEN": "<YOUR_SLACK_TOKEN>",
-    "SLACK_TEAM_ID": "<YOUR_TEAM_ID>"
-  }
-}
 ```
+claude-code-worktrees/
+├── _shared/           # 共有スキル・ルール
+│   ├── skills/
+│   └── rules/
+├── workspaces/        # ユーザー別ワークスペース
+│   ├── eguchinatsu/
+│   └── sasoli0502/
+├── projects/          # プロジェクト（git worktree）
+└── docs/              # ドキュメント
+```
+
+## 新規ユーザー追加
+
+`workspaces/`に自分のディレクトリを作成してください。
 
 詳細は [docs/SETUP.md](docs/SETUP.md) を参照。
