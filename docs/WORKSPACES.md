@@ -8,11 +8,13 @@ claude-code-worktrees/
 │   ├── skills/
 │   └── rules/
 ├── workspaces/
-│   ├── sasoli0502/       ← さそりさん用
-│   │   ├── claude-workspace/  ← Claude Code起動場所
-│   │   └── projects/          ← 個人プロジェクト（.gitignore）
+│   ├── sasoli0502/       ← さそりさん用（ここでClaude Code起動）
+│   │   ├── .claude/      ← _shared/ へのシンボリックリンク
+│   │   ├── CLAUDE.md
+│   │   └── projects/     ← 個人プロジェクト（.gitignore）
 │   └── eguchinatsu/      ← 夏さん用
-│       ├── claude-workspace/
+│       ├── .claude/
+│       ├── CLAUDE.md
 │       └── projects/
 ├── claude-workspace/     ← テンプレート（参考用）
 └── docs/
@@ -24,7 +26,7 @@ claude-code-worktrees/
 
 ```bash
 git clone https://github.com/NOGUCHILin/claude-code-worktrees.git
-cd claude-code-worktrees/workspaces/<your-username>/claude-workspace
+cd claude-code-worktrees/workspaces/<your-username>
 claude
 ```
 
