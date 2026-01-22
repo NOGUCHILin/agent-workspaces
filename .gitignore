@@ -10,3 +10,6 @@ workspaces/*/projects/
 # Personal overrides (not shared)
 *.local.md
 *.local.json
+
+# Playwright MCP work files
+claude-workspace/.playwright-mcp/
