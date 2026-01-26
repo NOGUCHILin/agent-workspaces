@@ -19,6 +19,9 @@ if [[ ! -d "repos" ]]; then
   exit 1
 fi
 
+# ユーザー名をワークスペースディレクトリ名から取得
+USERNAME=$(basename "$(pwd)")
+
 REPO_DIR="repos/$REPO_NAME"
 
 if [[ -d "$REPO_DIR" ]]; then
@@ -38,10 +41,39 @@ mkdir -p worktrees
 # デフォルトブランチのworktreeを作成
 git --git-dir=.bare worktree add "worktrees/$BRANCH" "$BRANCH"
 
+# worktreeに.mcp.jsonを配置
+create_mcp_json() {
+  local worktree_path="$1"
+  local branch_name="$2"
+  local profile_name="${USERNAME}-${REPO_NAME}-${branch_name}"
+
+  cat > "$worktree_path/.mcp.json" << EOF
+{
+  "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@0.0.54",
+        "--user-data-dir=/Users/${USERNAME}/.playwright-profiles/${profile_name}"
+      ]
+    }
+  }
+}
+EOF
+}
+
+create_mcp_json "worktrees/$BRANCH" "$BRANCH"
+
 echo ""
 echo "Repository added: $REPO_DIR"
 echo "Worktree created: $REPO_DIR/worktrees/$BRANCH"
+echo "MCP config: $REPO_DIR/worktrees/$BRANCH/.mcp.json"
 echo ""
 echo "To create a new worktree:"
 echo "  cd $REPO_DIR"
 echo "  git --git-dir=.bare worktree add worktrees/<branch-name> -b <branch-name>"
+echo "  # Then run: ../../scripts/add-mcp.sh <branch-name>"
