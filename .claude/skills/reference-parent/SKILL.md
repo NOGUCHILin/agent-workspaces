@@ -1,9 +1,13 @@
 ---
 name: reference-parent
-description: 親プロジェクト（my-claude-code-worktrees）の構造・パターンを参照して、一貫性のある開発をサポート。「他のプロジェクトはどうなってる？」「一貫性をチェックして」と言われた時に使用。
+description: 親プロジェクト（my-claude-code-worktrees）の構造・パターンを参照して、claude-code-worktreesの開発・改善をサポート。「他のプロジェクトはどうなってる？」「一貫性をチェックして」と言われた時に使用。
 ---
 
-# 親プロジェクト参照スキル
+# claude-code-worktrees改善のための親プロジェクト参照
+
+## 目的
+
+親プロジェクト（my-claude-code-worktrees）の設計パターン・ベストプラクティスを学び、claude-code-worktreesの開発・改善に活かす。
 
 ## 親プロジェクトのパス
 
@@ -11,106 +15,90 @@ description: 親プロジェクト（my-claude-code-worktrees）の構造・パ�
 /Users/noguchilin/my-claude-code-worktrees/
 ```
 
-## 構造確認コマンド
+## 改善のための参照ポイント
 
-### 全体構造
+### 1. 共有リソースの仕組み（_shared/）
+
+親プロジェクトは`_shared/`でルール・スキルを共有している。
+
 ```bash
-ls -la /Users/noguchilin/my-claude-code-worktrees/
-```
+# 共有ルールを確認
+cat /Users/noguchilin/my-claude-code-worktrees/_shared/rules/claude-code-config.md
 
-### 他プロジェクト一覧
-```bash
-ls /Users/noguchilin/my-claude-code-worktrees/projects/
-```
-
-### 特定プロジェクトの構造確認
-```bash
-# worktree構造
-ls -la /Users/noguchilin/my-claude-code-worktrees/projects/{project}/worktrees/{branch}/
-
-# MCP設定
-cat /Users/noguchilin/my-claude-code-worktrees/projects/{project}/worktrees/{branch}/.mcp.json
-
-# Claude Code設定
-cat /Users/noguchilin/my-claude-code-worktrees/projects/{project}/worktrees/{branch}/.claude/settings.json
-```
-
-### 共有リソース
-```bash
-# 共有ルール
-ls /Users/noguchilin/my-claude-code-worktrees/_shared/rules/
-
-# 共有スキル
+# 共有スキルを確認
 ls /Users/noguchilin/my-claude-code-worktrees/_shared/skills/
-
-# claude-workspaceの設定（参考）
-ls /Users/noguchilin/my-claude-code-worktrees/claude-workspace/.claude/
 ```
 
-## 一貫性チェック項目
+**claude-code-worktreesへの応用:**
+- `repo/workspaces/_shared/`を作成して各ユーザー間でルール・スキルを共有できるようにする
 
-### 1. worktree構造
-各プロジェクトは以下の構造であるべき：
-```
-projects/{name}/
-├── .bare/           # bareリポジトリ
-├── .claude/         # プロジェクトレベル設定（任意）
-└── worktrees/
-    └── {branch}/
-        ├── .claude/     # Claude Code設定
-        ├── .mcp.json    # MCP設定
-        ├── CLAUDE.md    # 説明
-        └── repo/        # リポジトリ本体
+### 2. MCP設定のパターン
+
+```bash
+# 他プロジェクトのMCP設定を参考にする
+cat /Users/noguchilin/my-claude-code-worktrees/projects/xlm-trader/worktrees/master/.mcp.json
 ```
 
-### 2. MCP設定パターン
-```json
-{
-  "mcpServers": {
-    "context7": { ... },
-    "playwright": {
-      "args": ["@playwright/mcp@0.0.54", "--user-data-dir=/Users/{user}/.playwright-profiles/{project}-{branch}"]
-    }
-  }
-}
+**ベストプラクティス:**
+- Playwrightプロファイルは`{project}-{branch}`形式で競合を防ぐ
+- context7は全プロジェクトで共通
+
+### 3. hooks設定のパターン
+
+```bash
+# 他プロジェクトのhooks設定を参考にする
+cat /Users/noguchilin/my-claude-code-worktrees/projects/xlm-trader/worktrees/master/.claude/settings.json
 ```
 
-### 3. hooks設定パターン
-```json
-{
-  "hooks": {
-    "PreToolUse": [{"matcher": "Edit|Write", "hooks": [{"type": "command", "command": ".claude/scripts/auto-pull.sh"}]}],
-    "PostToolUse": [{"matcher": "Edit|Write", "hooks": [{"type": "command", "command": ".claude/scripts/auto-commit.sh"}]}]
-  }
-}
+**ベストプラクティス:**
+- PreToolUse: 編集前にpull
+- PostToolUse: 編集後にcommit & push（オーナー以外）
+
+### 4. worktree構造のパターン
+
+```bash
+# 正しい構造の例
+ls -la /Users/noguchilin/my-claude-code-worktrees/projects/xlm-trader/worktrees/master/
 ```
+
+**標準構造:**
+```
+worktrees/{branch}/
+├── .claude/     # Claude Code設定
+├── .mcp.json    # MCP設定
+├── CLAUDE.md    # 説明
+└── repo/        # リポジトリ本体
+```
+
+## 改善チェックリスト
+
+claude-code-worktreesを改善する際に確認すべき項目：
+
+### 構造
+- [ ] worktree直下はClaude Code設定用、repo/にリポジトリ本体
+- [ ] 各ユーザーワークスペースに.claude/settings.jsonがある
+- [ ] MCP設定でPlaywrightプロファイルが競合しない
+
+### 共有
+- [ ] _shared/でユーザー間共有リソースを管理
+- [ ] テンプレートが最新の構造を反映している
+
+### 自動化
+- [ ] 自動pull/commit/pushが正しく動作する
+- [ ] setup-workspace.shがテンプレートを正しくコピーする
 
 ## 比較コマンド
 
-### MCP設定を比較
+### 親プロジェクトとclaude-code-worktreesの構造比較
+```bash
+echo "=== 親 ===" && ls /Users/noguchilin/my-claude-code-worktrees/
+echo "=== claude-code-worktrees ===" && ls repo/
+```
+
+### 他プロジェクトのスキル一覧（参考にできるもの）
 ```bash
 for p in /Users/noguchilin/my-claude-code-worktrees/projects/*/worktrees/*/; do
-  echo "--- $p ---"
-  cat "$p.mcp.json" 2>/dev/null | head -15
+  skills=$(ls "$p.claude/skills/" 2>/dev/null | tr '\n' ', ')
+  [[ -n "$skills" ]] && echo "$(basename $(dirname $(dirname $p))): $skills"
 done
-```
-
-### settings.jsonを比較
-```bash
-for p in /Users/noguchilin/my-claude-code-worktrees/projects/*/worktrees/*/; do
-  echo "--- $p ---"
-  cat "$p.claude/settings.json" 2>/dev/null
-done
-```
-
-## このプロジェクトの特殊性
-
-claude-code-worktreesは他のプロジェクトと異なり、内部にマルチユーザーワークスペース構造を持つ：
-
-```
-repo/workspaces/{username}/
-├── .claude/         # ユーザー固有設定
-├── .mcp.json
-├── CLAUDE.md
-└── repos/           # ユーザーが管理するリポジトリ群
 ```
