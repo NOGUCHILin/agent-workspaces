@@ -23,8 +23,9 @@ fi
 # テンプレートをコピー
 cp -r "$TEMPLATE_DIR" "$WORKSPACE_DIR"
 
-# CLAUDE.mdのプレースホルダーを置換
+# プレースホルダーを置換
 sed -i '' "s/{username}/$USERNAME/g" "$WORKSPACE_DIR/CLAUDE.md"
+sed -i '' "s/{username}/$USERNAME/g" "$WORKSPACE_DIR/.mcp.json"
 
 echo "Created workspace: $WORKSPACE_DIR"
 echo "Next: cd $WORKSPACE_DIR && ../scripts/add-repo.sh <repo-url>"
