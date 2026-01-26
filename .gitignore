@@ -1,0 +1,9 @@
+# 各ユーザーのリポジトリ内容（別リモートを持つ）
+workspaces/*/repos/*/.bare/
+workspaces/*/repos/*/worktrees/
+
+# OS
+.DS_Store
+
+# 認証状態
+auth-state.json
