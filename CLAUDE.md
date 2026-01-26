@@ -1,67 +1,75 @@
-# claude-code-worktrees - master
+# claude-code-worktrees
+
+マルチユーザー対応のworktree開発環境
 
 ## 🚀 セッション開始時（必須）
 
-**「こんにちは」「計画は？」「何をすべき？」等と言われたら、必ず以下を実行:**
+**セッション開始時、必ず以下を実行してユーザーのワークスペースを確認:**
 
 ```bash
-.claude/scripts/scan-specs.sh
+# ユーザー名を取得
+USER_NAME=$(git config user.name | tr ' ' '-' | tr '[:upper:]' '[:lower:]')
+echo "User: $USER_NAME"
+
+# ワークスペース確認
+ls -d workspaces/$USER_NAME 2>/dev/null && echo "✓ Workspace exists" || echo "✗ Workspace not found"
 ```
 
 ### 結果に応じたアクション
 
 | 状態 | アクション |
 |------|-----------|
-| 仕様なし | 「仕様を作成しましょう」→ `create-spec.sh` |
-| draft あり | 「要件定義から始めましょう」 |
-| in_progress あり | 「続きを進めましょう」→ 該当ファイルを開く |
-| 全て completed | 「次の仕様を作成しますか？」 |
+| Workspace exists | 「ワークスペースに移動しますか？」→ `cd workspaces/$USER_NAME` |
+| Workspace not found | 「ワークスペースを作成しましょう」→ `/setup-workspace` スキルを実行 |
 
 ---
 
-## このブランチの目的
+## 使い方
 
-（ブランチ作成時に記入してください）
-
----
-
-## 仕様管理
-
-### 仕様確認
+### 1. 新規ユーザー（初回のみ）
 
 ```bash
-.claude/scripts/scan-specs.sh
+/setup-workspace
 ```
 
-### 新規仕様の作成
+対話的にワークスペースを作成します。
+
+### 2. リポジトリ追加
+
+ワークスペースに移動後:
+```bash
+../../scripts/add-repo.sh <repo-url> [branch]
+```
+
+### 3. worktreeで作業
 
 ```bash
-.claude/scripts/create-spec.sh <feature-name>
-```
-
-→ `docs/specs/{NNN}-{feature-name}/` が作成される
-
-### ステータス更新
-
-各仕様ファイルの先頭フロントマターを更新:
-```yaml
----
-status: in_progress  # draft → in_progress → completed
-updated: 2026-01-16
----
+cd repos/<repo-name>/worktrees/<branch>
 ```
 
 ---
 
-## 仕様書の場所
+## ディレクトリ構造
 
-| ファイル | 内容 |
-|----------|------|
-| `docs/specs/{NNN}-{feature}/01-requirements.md` | 要件定義 |
-| `docs/specs/{NNN}-{feature}/02-design.md` | 設計 |
-| `docs/specs/{NNN}-{feature}/03-tasks.md` | タスク |
-| `docs/specs/{NNN}-{feature}/research/` | 調査結果 |
+```
+claude-code-worktrees/
+├── .claude/                  # 共有設定・hooks
+├── scripts/                  # セットアップスクリプト
+├── workspaces/
+│   ├── _template/           # テンプレート
+│   └── {username}/          # 各ユーザーのワークスペース
+│       ├── .claude/         # ユーザー固有設定
+│       ├── CLAUDE.md
+│       └── repos/           # 管理するリポジトリ群
+│           └── {repo}/
+│               ├── .bare/
+│               └── worktrees/
+```
 
-## 作業メモ
+---
 
-（作業中のメモをここに）
+## オーナー向け
+
+リポジトリオーナー（NOGUCHILin）のみ:
+- 他ユーザーの作業は自動コミット＆プッシュされる
+- 自分の作業は手動コミット
