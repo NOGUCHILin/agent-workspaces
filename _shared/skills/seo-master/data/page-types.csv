@@ -1,0 +1,9 @@
+page_type,keywords,patterns,optimal_schema,required_elements,llm_focus,cta_style,description
+informational-hub,"ガイド,解説,まとめ,とは,方法,やり方,仕組み,一覧","guide,how-to,overview,list","Article,FAQPage,BreadcrumbList","H1,H2x5+,FAQ5+,内部リンク10+",high,soft,"情報提供が目的。ユーザーは学習・理解を求めている。LLM引用を最優先。"
+comparison,"比較,ランキング,おすすめ,どっち,vs,違い","compare,ranking,versus,best","ItemList,Product,Review","比較表,pros-cons,評価基準",medium,medium,"複数選択肢の比較検討。意思決定サポートが目的。"
+transactional-cv,"買取,申込,査定,見積,売る,依頼,注文,購入","buy,sell,order,apply,quote","Product,Offer,FAQPage","CTA,価格表,信頼バッジ,FAQ",low,strong,"即時コンバージョンが目的。価格・手続き情報を優先。"
+brand,"会社,店舗,about,運営,スタッフ,アクセス","about,company,store,team","Organization,LocalBusiness","NAP,レビュー,沿革,理念",medium,navigation,"ブランド認知・信頼構築が目的。E-E-A-T強化。"
+product-detail,"スペック,仕様,レビュー,口コミ,評判","product,review,specs","Product,Review,AggregateRating","製品画像,スペック表,レビュー,関連製品",medium,medium,"製品詳細情報。購入検討者向け。"
+local-service,"地域名,近く,店舗,営業時間,アクセス","near,local,store,hours","LocalBusiness,Service","地図,営業時間,電話番号,口コミ",low,strong,"地域密着サービス。来店・問い合わせ誘導。"
+news-update,"ニュース,最新,速報,発表,リリース","news,update,release,announcement","NewsArticle,Event","日付,著者,引用元",high,soft,"最新情報提供。鮮度が重要。"
+tutorial-howto,"手順,ステップ,チュートリアル,設定,インストール","tutorial,steps,setup,install","HowTo,FAQPage","ステップ番号,画像,所要時間",high,soft,"手順説明。完了までガイド。"
