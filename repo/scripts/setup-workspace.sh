@@ -20,8 +20,8 @@ if [[ -d "$WORKSPACE_DIR" ]]; then
   exit 1
 fi
 
-# テンプレートをコピー
-cp -r "$TEMPLATE_DIR" "$WORKSPACE_DIR"
+# テンプレートをコピー（シンボリックリンクを保持）
+cp -R "$TEMPLATE_DIR" "$WORKSPACE_DIR"
 
 # プレースホルダーを置換
 sed -i '' "s/{username}/$USERNAME/g" "$WORKSPACE_DIR/CLAUDE.md"
