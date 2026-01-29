@@ -1,0 +1,4 @@
+.claude/auth/
+
+# Google Sheets API認証情報
+.claude/skills/assessment/credentials.json

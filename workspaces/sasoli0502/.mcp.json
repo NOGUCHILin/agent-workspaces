@@ -7,8 +7,8 @@
     "playwright": {
       "command": "npx",
       "args": [
-        "@playwright/mcp@0.0.54",
-        "--user-data-dir=/Users/sasoli0502/.playwright-profiles/sasoli0502"
+        "@playwright/mcp@0.0.59",
+        "--user-data-dir=C:/Users/koyom/.playwright-profiles/sasoli0502"
       ]
     }
   }
