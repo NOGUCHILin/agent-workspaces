@@ -23,6 +23,7 @@
 | LINE開いて、LINEチャット | `/open-line` |
 | 仮査定催促、仮査定後催促 | `/karisatei-saisoku` |
 | 本査定催促、本査定後催促 | `/honsatei-saisoku` |
+| 梱包キット催促、キット催促 | `/konpokit-saisoku` |
 | お疲れ様、終わり、ブラウザ閉じて | `/close-browser` |
 | おはようございます、おはよう | `/good-morning` |
 
