@@ -1,5 +1,10 @@
 # HEARTBEAT.md
 
+## Git同期（毎回最初に実行）
+
+1. `git pull --rebase origin HEAD` で最新取得
+2. 変更があれば `git add -A && git commit -m "auto: changes by nakamura-misaki" && git push`
+
 ## 定期チェック（2-4回/日）
 
 - [ ] Slack未読確認
