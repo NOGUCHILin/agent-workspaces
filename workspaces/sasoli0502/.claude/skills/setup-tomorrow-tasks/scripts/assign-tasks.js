@@ -4,7 +4,7 @@
  * シフト表を読み取り、Notionタスクに担当者を自動設定する
  */
 
-const NOTION_TOKEN = process.env.NOTION_TOKEN || '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';
+const NOTION_TOKEN = process.env.NOTION_TOKEN;
 const NOTION_DATABASE_ID = '16983ea4-7788-80b0-b834-c5d077724297';
 
 // タスクと役割の対応マッピング

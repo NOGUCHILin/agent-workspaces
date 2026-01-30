@@ -4,7 +4,7 @@
  * BM販売価格変更、座席分担、在庫管理棚卸を削除
  */
 
-const NOTION_TOKEN = process.env.NOTION_TOKEN || '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';
+const NOTION_TOKEN = process.env.NOTION_TOKEN;
 const NOTION_DATABASE_ID = '16983ea4-7788-80b0-b834-c5d077724297';
 
 // 削除対象のタスク名

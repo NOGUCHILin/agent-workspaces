@@ -1,0 +1,307 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e5]:
+        - heading "kintone" [level=1] [ref=e6]
+        - link "ロゴ" [ref=e8] [cursor=pointer]:
+          - /url: /k/
+          - img [ref=e9]
+      - generic [ref=e12]:
+        - link "野口器" [ref=e13] [cursor=pointer]:
+          - /url: /k/#/people/user/noguchisara%40japanconsulting.co.jp
+          - img [ref=e14]
+          - generic "野口器" [ref=e15]
+        - button "アカウントメニュー" [ref=e19] [cursor=pointer]:
+          - img "アカウントメニュー" [ref=e20]:
+            - img [ref=e21]
+    - navigation [ref=e24]:
+      - list [ref=e26]:
+        - listitem [ref=e27]:
+          - button "サイドメニュー" [ref=e9400] [cursor=pointer]:
+            - img "サイドメニュー" [ref=e9401]:
+              - img [ref=e9403]
+        - listitem [ref=e36]:
+          - link "ポータル" [ref=e39] [cursor=pointer]:
+            - /url: /k/#/portal
+            - img "ポータル" [ref=e40]:
+              - img [ref=e42]
+        - listitem [ref=e44]:
+          - link "通知一覧(100件以上の未読)" [ref=e48] [cursor=pointer]:
+            - /url: /k/#/ntf/mention
+            - img "通知一覧" [ref=e49]:
+              - generic [ref=e50]:
+                - img [ref=e51]
+                - generic [ref=e53]: 99+
+        - listitem [ref=e54]:
+          - button "ブックマーク" [ref=e9408] [cursor=pointer]:
+            - img "ブックマーク" [ref=e9409]:
+              - img [ref=e9411]
+      - generic [ref=e63]:
+        - list [ref=e64]:
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem [ref=e65]:
+            - button "設定" [ref=e70] [cursor=pointer]:
+              - img "設定" [ref=e71]:
+                - img [ref=e72]
+          - listitem [ref=e74]:
+            - button "ヘルプ" [ref=e79] [cursor=pointer]:
+              - img "ヘルプ" [ref=e80]:
+                - img [ref=e81]
+        - generic [ref=e9414]:
+          - combobox "アプリ内検索" [ref=e9415]
+          - button "検索" [ref=e9418] [cursor=pointer]:
+            - img "検索" [ref=e9419]:
+              - img [ref=e9421]
+  - generic [ref=e94]:
+    - generic [ref=e95]:
+      - img [ref=e96]
+      - heading "買取販売リスト(iPhone,iPad)" [level=2]:
+        - link "買取販売リスト(iPhone,iPad)" [ref=e97] [cursor=pointer]:
+          - /url: /k/11/
+    - generic [ref=e98]:
+      - generic [ref=e99]:
+        - generic [ref=e102]:
+          - generic "現在位置" [ref=e104]:
+            - list [ref=e7444]:
+              - listitem [ref=e7445]:
+                - link "ポータル" [ref=e7446] [cursor=pointer]:
+                  - /url: /k/#/portal
+              - listitem [ref=e7447]
+              - listitem [ref=e7448]:
+                - generic [ref=e7449]: "アプリ:"
+                - link "買取販売リスト(iPhone,iPad)" [ref=e7450] [cursor=pointer]:
+                  - /url: /k/11/
+              - listitem [ref=e7451]
+              - listitem [ref=e7452]:
+                - generic [ref=e7453]: "レコード:"
+                - generic "339234" [ref=e7454]
+          - button "お気に入り" [ref=e118] [cursor=pointer]
+        - generic [ref=e9423]: ✅ 価格保証解除済み（2026/1/26に解除）
+        - generic [ref=e123]:
+          - generic [ref=e124]:
+            - button "前のレコードに移動する" [ref=e125] [cursor=pointer]
+            - button "次のレコードに移動する" [ref=e126] [cursor=pointer]
+          - menuitem "レコードを追加する" [ref=e127] [cursor=pointer]:
+            - generic [ref=e128]: レコードを追加する
+          - menuitem "レコードを編集する" [ref=e129]:
+            - generic [ref=e130]: レコードを編集する
+          - menuitem "レコードを再利用する" [ref=e131] [cursor=pointer]:
+            - generic [ref=e132]: レコードを再利用する
+          - generic [ref=e133]:
+            - link "アプリを設定" [ref=e134] [cursor=pointer]:
+              - /url: /k/admin/app/flow?app=11#section=form
+              - generic [ref=e135]: アプリを設定
+            - button "アプリ設定メニュー" [ref=e136]
+          - button "オプション" [ref=e137] [cursor=pointer]
+      - generic [ref=e9424]:
+        - generic [ref=e9426]:
+          - generic [ref=e9427]: 価格保証解除日時
+          - generic [ref=e9428]: 2026-01-26 14:13
+        - group [ref=e9430]:
+          - button "レコード関連" [ref=e9431] [cursor=pointer]
+        - separator [ref=e9434]
+        - generic [ref=e9439]: ユーザー情報
+        - generic [ref=e9440]:
+          - generic [ref=e9441]:
+            - generic [ref=e9442]: 買取媒体
+            - generic [ref=e9443]: 自社サイト
+          - generic [ref=e9444]:
+            - generic [ref=e9445]: メッセージ媒体
+            - generic [ref=e9446]: LINE
+          - generic [ref=e9448]: 梱包キット情報廃止
+          - generic [ref=e9451]: リンク廃止
+          - generic [ref=e9454]: LINE_ID廃止
+        - generic [ref=e9456]:
+          - generic [ref=e9457]:
+            - generic [ref=e9458]: ユーザーネーム
+            - generic [ref=e9459]: yüna
+          - generic [ref=e9460]:
+            - generic [ref=e9461]: ユーザー氏名
+            - generic [ref=e9462]: 矢野優奈
+          - generic [ref=e9463]:
+            - generic [ref=e9464]: ユーザー氏名（カナ）
+            - generic [ref=e9465]: ヤノユウナ
+          - generic [ref=e9466]:
+            - generic [ref=e9467]: 電話番号
+            - generic [ref=e9468]: "08085273431"
+          - generic [ref=e9470]: メールアドレス
+        - generic [ref=e9472]:
+          - generic [ref=e9473]:
+            - generic [ref=e9474]: 郵便番号
+            - generic [ref=e9475]: "3300071"
+          - generic [ref=e9476]:
+            - generic [ref=e9477]: 住所廃止
+            - generic [ref=e9478]: 埼玉県さいたま市浦和区上木崎2-11-16レインボー上木崎2-302
+          - generic [ref=e9479]:
+            - generic [ref=e9480]: 本人確認書類
+            - list [ref=e9482]:
+              - listitem [ref=e9483]:
+                - img "line_oa_chat_260127_184850.jpg (241 KB)" [ref=e9484] [cursor=pointer]
+          - generic [ref=e9486]: 郵便番号（数値のみ）廃止
+        - generic [ref=e9488]:
+          - generic [ref=e9489]:
+            - generic [ref=e9490]: 都道府県
+            - generic [ref=e9491]: 埼玉県
+          - generic [ref=e9492]:
+            - generic [ref=e9493]: 市区町村
+            - generic [ref=e9494]: さいたま市浦和区
+          - generic [ref=e9495]:
+            - generic [ref=e9496]: 町・番地
+            - generic [ref=e9497]: 上木崎2-11-16
+          - generic [ref=e9498]:
+            - generic [ref=e9499]: 建物・部屋番号等
+            - generic [ref=e9500]: レインボー上木崎2-302
+          - generic [ref=e9501]:
+            - generic [ref=e9502]: 集荷受付日時
+            - generic [ref=e9503]: 2026-01-26 14:17
+          - generic [ref=e9504]:
+            - generic [ref=e9505]: 集荷希望日
+            - generic [ref=e9506]: 2026-01-27
+          - generic [ref=e9507]:
+            - generic [ref=e9508]: 集荷希望時間
+            - generic [ref=e9509]: 18時～21時
+          - generic [ref=e9510]:
+            - generic [ref=e9511]: 集荷台数
+            - generic [ref=e9512]: "1"
+        - group [ref=e9514]:
+          - button "支払情報" [ref=e9515] [cursor=pointer]
+        - separator [ref=e9518]
+        - generic [ref=e9523]: 連絡・進捗
+        - generic [ref=e9524]:
+          - generic [ref=e9525]:
+            - generic [ref=e9526]: 進捗
+            - generic [ref=e9527]: 本査定開始
+          - generic [ref=e9529]: 特記事項
+        - generic [ref=e9531]:
+          - generic [ref=e9532]:
+            - generic [ref=e9533]: 修理者
+            - list [ref=e9535]
+          - generic [ref=e9536]:
+            - generic [ref=e9537]: 検品者
+            - list [ref=e9539]
+        - generic [ref=e9540]:
+          - generic [ref=e9542]: メッセージ生成
+          - generic [ref=e9545]: 条件価格
+          - generic [ref=e9548]: メッセージ１
+          - generic [ref=e9551]: メッセージ２
+        - separator [ref=e9555]
+        - generic [ref=e9556]:
+          - generic [ref=e9560]: 端末情報
+          - generic [ref=e9561]:
+            - generic [ref=e9562]: システムバージョン
+            - generic [ref=e9563]: "3"
+        - generic [ref=e9564]:
+          - generic [ref=e9565]:
+            - generic [ref=e9566]: 機種
+            - generic [ref=e9567]: iPhone 13
+          - generic [ref=e9568]:
+            - generic [ref=e9569]: 容量
+            - generic [ref=e9570]: 128GB
+          - generic [ref=e9571]:
+            - generic [ref=e9572]: 色
+            - generic [ref=e9573]: ミッドナイト
+          - generic [ref=e9575]: モデル番号
+          - generic [ref=e9577]:
+            - generic [ref=e9578]: 3utools画像
+            - list [ref=e9580]:
+              - listitem [ref=e9581]:
+                - img "スクリーンショット-2026-01-29-115552.png (186 KB)" [ref=e9582] [cursor=pointer]
+        - generic [ref=e9583]:
+          - generic [ref=e9585]: キャリア
+          - generic [ref=e9588]: シムロック
+          - generic [ref=e9591]: ネットワーク利用制限
+          - generic [ref=e9594]: IMEI
+          - generic [ref=e9597]: 3utools読込
+        - generic [ref=e9599]:
+          - generic [ref=e9601]: 新品・未開封
+          - generic [ref=e9603]:
+            - generic [ref=e9604]: 表面の状態
+            - generic [ref=e9605]: まったく劣化がない
+          - generic [ref=e9606]:
+            - generic [ref=e9607]: 背面の状態
+            - generic [ref=e9608]: まったく劣化がない
+          - generic [ref=e9609]:
+            - generic [ref=e9610]: 側面の状態
+            - generic [ref=e9611]: ちいさな傷などがある
+          - generic [ref=e9612]:
+            - generic [ref=e9613]: ランク
+            - generic [ref=e9614]: 美品
+          - generic [ref=e9616]: バッテリー最大容量
+          - generic [ref=e9619]: 備考
+        - generic [ref=e9621]:
+          - generic [ref=e9623]: 付属品確認
+          - generic [ref=e9625]:
+            - generic [ref=e9626]: 箱
+            - generic [ref=e9627]: 中古品あり
+          - generic [ref=e9628]:
+            - generic [ref=e9629]: 充電ケーブル
+            - generic [ref=e9630]: なし
+          - generic [ref=e9631]:
+            - generic [ref=e9632]: 充電アダプタ
+            - generic [ref=e9633]: 元々なし
+          - generic [ref=e9634]:
+            - generic [ref=e9635]: 説明書・シムピン
+            - generic [ref=e9636]: なし
+          - generic [ref=e9637]:
+            - generic [ref=e9638]: イヤフォン
+            - generic [ref=e9639]: 元々なし
+        - generic [ref=e9640]:
+          - generic [ref=e9642]: 不具合など
+          - generic [ref=e9645]: 修理
+          - generic [ref=e9649]:
+            - generic [ref=e9652]: ・iPhone X以降は【FaceID・イヤースピーカー・インカメラ不良】は不具合から選ぶ
+            - generic [ref=e9653]: ・iPhone 14・14 Plus・15・15 Plusは【画面修理】以外はすべて不具合を選ぶ
+            - generic [ref=e9654]: （iPhone 14 Pro・15 Proは大丈夫）
+            - generic [ref=e9655]: ・iPhone 16シリーズはすべて不具合を選ぶ
+        - generic [ref=e9658]: 査定時確認項目１
+        - generic [ref=e9660]:
+          - generic [ref=e9662]: 査定確認
+          - generic [ref=e9665]: 整備時確認項目２
+        - group [ref=e9668]:
+          - button "ランク説明" [ref=e9669] [cursor=pointer]
+        - generic [ref=e9671]:
+          - generic [ref=e9672]: 査定写真（これ使って）
+          - generic [ref=e9673]:
+            - list
+        - separator [ref=e9676]
+        - generic [ref=e9681]: 価格情報
+        - generic [ref=e9682]:
+          - generic [ref=e9684]: 価格設定
+          - generic [ref=e9686]:
+            - generic [ref=e9687]: 最高提示価格
+            - generic [ref=e9688]: "30000"
+          - generic [ref=e9689]:
+            - generic [ref=e9690]: 最低提示価格
+            - generic [ref=e9691]: "30000"
+          - generic [ref=e9693]: 最終買取価格
+          - generic [ref=e9696]: 買取日
+        - generic [ref=e9698]:
+          - generic [ref=e9700]: 価格設定（高額）
+          - generic [ref=e9702]:
+            - generic [ref=e9703]: 最高提示価格（高額）
+            - generic [ref=e9704]: "34000"
+          - generic [ref=e9705]:
+            - generic [ref=e9706]: 最低提示価格（高額）
+            - generic [ref=e9707]: "34000"
+          - generic [ref=e9708]:
+            - generic [ref=e9709]: データベース選択
+            - generic [ref=e9710]: 2023/09/27
+        - separator [ref=e9713]
+        - separator [ref=e9716]
+        - group [ref=e9718]:
+          - button "販売" [ref=e9719] [cursor=pointer]
+        - group [ref=e9721]:
+          - button "メタ" [ref=e9722] [cursor=pointer]
+      - tablist [ref=e440]:
+        - tab "変更履歴" [ref=e441]
+  - generic [ref=e9390]:
+    - generic [ref=e9391]:
+      - generic [ref=e9392]: エラー
+      - list [ref=e9393]:
+        - listitem [ref=e9394]: レコードを再読み込みしてください。編集中に、ほかのユーザーがレコードを更新しました。
+        - listitem [ref=e9395]: (GAIA_UN03 Ll2mLuxY659IAh0b1Ulr)
+    - link [ref=e9396] [cursor=pointer]:
+      - /url: javascript:void(0)
