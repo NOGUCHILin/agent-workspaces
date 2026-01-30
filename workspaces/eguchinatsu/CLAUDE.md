@@ -21,6 +21,8 @@
 | open-backmarket | バックマーケット販売者管理ページを開く |
 | open-shipping-schedule | Notion発送予定を今日の日付で開く |
 | notion-tag-copy | Notionテーブルでタグを下のセルにコピペ |
+| backmarket-create-label | BM注文のB2送り状作成（PDFなし） |
+| backmarket-ship | BM発送完了連絡（追跡番号入力） |
 
 ## プロジェクト管理
 
@@ -77,5 +79,5 @@
 ## 未完了タスク
 
 ### 江口那都
-（タスクなし）
+- Back Market発送完了CSVインポート機能を作成する（B2クラウド＋BM注文データ突き合わせ）
 </pending-tasks>
