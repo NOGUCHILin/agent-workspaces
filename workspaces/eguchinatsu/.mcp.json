@@ -7,9 +7,11 @@
     "playwright": {
       "command": "npx",
       "args": [
-        "@playwright/mcp@0.0.54",
-        "--user-data-dir=/Users/eguchinatsu/.playwright-profiles/eguchinatsu"
-      ]
+        "@playwright/mcp@0.0.54"
+      ],
+      "env": {
+        "PLAYWRIGHT_BROWSERS_PATH": "c:\\Users\\black\\.playwright-browsers"
+      }
     }
   }
 }
