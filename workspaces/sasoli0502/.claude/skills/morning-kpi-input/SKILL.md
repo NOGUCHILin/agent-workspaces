@@ -12,9 +12,12 @@ description: 朝の金額KPI入力。LINE Official Account Managerから配信�
 **スキル実行時に、まずユーザーに以下の選択肢を提示すること（AskUserQuestion）:**
 
 - **高速モード（推奨）**: `morning_kpi_fast.py` を使用。Playwright高速化ルール準拠（リソースブロック・動的待機・セッション再利用）で処理する。
+  **重要: ターミナルから対話モードで実行すること**（認証入力・SMS認証のため）
   ```
-  uv run python scripts/morning_kpi_fast.py
-  uv run python scripts/morning_kpi_fast.py --dry-run  # 確認のみ
+  cd .claude/skills/morning-kpi-input
+  uv run python scripts/morning_kpi_fast.py              # 通常実行
+  uv run python scripts/morning_kpi_fast.py --dry-run    # データ収集のみ（入力しない）
+  uv run python scripts/morning_kpi_fast.py --auto-confirm  # 確認プロンプトなし
   ```
 - **通常モード**: 以下の手順に沿って手動 or `morning_kpi.py` で処理する。
 
