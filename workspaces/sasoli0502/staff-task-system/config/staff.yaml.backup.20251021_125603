@@ -1,0 +1,123 @@
+# スタッフマスタデータ
+# 最終更新: 2025-10-15
+# 編集時注意: このファイルは scripts/validate.py で検証されます
+
+staff:
+  細谷:
+    full_name: "細谷さん"
+    employee_id: "EMP001"
+    skills:
+      査定:
+        level: 3              # 1=初級, 2=中級, 3=上級
+        speed_factor: 1.2     # 1.0が標準、1.2は20%速い
+        certification: true
+      検品:
+        level: 3
+        speed_factor: 1.0
+        certification: false
+      出品:
+        level: 2
+        speed_factor: 0.9
+        certification: false
+    constraints:
+      max_tasks_per_day: 20
+      preferred_task_types: [査定, 検品]
+      unavailable_dates: []
+    notes: "査定のエキスパート。複雑な案件優先。"
+
+  江口:
+    full_name: "江口さん"
+    employee_id: "EMP002"
+    skills:
+      査定:
+        level: 2
+        speed_factor: 1.0
+        certification: false
+      検品:
+        level: 3
+        speed_factor: 1.1
+        certification: true
+      出品:
+        level: 2
+        speed_factor: 1.0
+        certification: false
+    constraints:
+      max_tasks_per_day: 20
+      preferred_task_types: [検品, 出品]
+      unavailable_dates: []
+    notes: "検品が得意。丁寧な作業。"
+
+  シャシャ:
+    full_name: "シャシャさん"
+    employee_id: "EMP003"
+    skills:
+      査定:
+        level: 2
+        speed_factor: 0.9
+        certification: false
+      検品:
+        level: 2
+        speed_factor: 1.0
+        certification: false
+      出品:
+        level: 3
+        speed_factor: 1.3
+        certification: true
+    constraints:
+      max_tasks_per_day: 20
+      preferred_task_types: [出品]
+      unavailable_dates: []
+    notes: "出品作業のスペシャリスト。"
+
+  佐々木:
+    full_name: "佐々木さん"
+    employee_id: "EMP004"
+    skills:
+      査定:
+        level: 2
+        speed_factor: 1.0
+        certification: false
+      検品:
+        level: 2
+        speed_factor: 1.0
+        certification: false
+      出品:
+        level: 2
+        speed_factor: 1.0
+        certification: false
+    constraints:
+      max_tasks_per_day: 20
+      preferred_task_types: []
+      unavailable_dates: []
+    notes: "オールラウンダー。バランス型。"
+
+  雜賀:
+    full_name: "雜賀さん"
+    employee_id: "EMP005"
+    skills:
+      査定:
+        level: 3
+        speed_factor: 1.0
+        certification: true
+      修理:
+        level: 3
+        speed_factor: 1.3
+        certification: true
+    constraints:
+      max_tasks_per_day: 15    # 修理は時間がかかるため少なめ
+      preferred_task_types: [修理]
+      unavailable_dates: []
+    notes: "修理専門。高難度修理を優先アサイン。"
+
+# グローバル設定
+settings:
+  working_hours:
+    start: "09:00"
+    lunch_start: "12:00"
+    lunch_end: "13:00"
+    end: "18:00"
+  default_task_duration:  # 分単位
+    査定: 15
+    検品: 20
+    出品: 10
+    修理: 60

@@ -1,0 +1,148 @@
+staff:
+  江口:
+    full_name: 江口 那都
+    nickname: なっちゃん
+    employee_id: EMP002
+    constraints:
+      max_tasks_per_day: 20
+      preferred_task_types:
+      - 検品
+      - 出品
+      unavailable_dates: []
+    notes: 検品が得意。丁寧な作業。
+  雜賀:
+    full_name: 雜賀 晴士
+    nickname: はるし
+    employee_id: EMP005
+    constraints:
+      max_tasks_per_day: 15
+      preferred_task_types:
+      - 修理
+      unavailable_dates: []
+    notes: 修理専門。高難度修理を優先アサイン。
+  野口:
+    full_name: 野口 器
+    nickname: さら
+    employee_id: EMP006
+    constraints:
+      max_tasks_per_day: 20
+      preferred_task_types: []
+      unavailable_dates: []
+    notes: ''
+  佐々木:
+    full_name: 佐々木 悠斗
+    nickname: ゆうと
+    employee_id: EMP004
+    constraints:
+      max_tasks_per_day: 20
+      preferred_task_types: []
+      unavailable_dates: []
+      unavailable_times:
+        - name: 法人販売
+          start: "15:30"
+          end: "16:30"
+          duration_minutes: 60
+    notes: オールラウンダー。バランス型。法人販売担当（15:30-16:30）。
+  須加尾:
+    full_name: 須加尾 蓮
+    nickname: れん
+    employee_id: EMP007
+    constraints:
+      max_tasks_per_day: 20
+      preferred_task_types: []
+      unavailable_dates: []
+    notes: ''
+  高橋:
+    full_name: 高橋 諒
+    nickname: りょう
+    employee_id: EMP008
+    constraints:
+      max_tasks_per_day: 20
+      preferred_task_types: []
+      unavailable_dates: []
+    notes: ''
+  島田:
+    full_name: 島田 博文
+    nickname: ひろふみ
+    employee_id: EMP009
+    constraints:
+      max_tasks_per_day: 20
+      preferred_task_types: []
+      unavailable_dates: []
+    notes: ''
+  平山:
+    full_name: 平山 優大
+    nickname: ゆうだい
+    employee_id: EMP010
+    constraints:
+      max_tasks_per_day: 20
+      preferred_task_types: []
+      unavailable_dates: []
+    notes: ''
+  細谷:
+    full_name: 細谷 尚央
+    nickname: たかひろ
+    employee_id: EMP001
+    constraints:
+      max_tasks_per_day: 20
+      preferred_task_types:
+      - 査定
+      - 検品
+      unavailable_dates: []
+    notes: 査定のエキスパート。複雑な案件優先。
+  NANT:
+    full_name: NANT YOON THIRI ZAW OO
+    nickname: シャシャ
+    employee_id: EMP011
+    constraints:
+      max_tasks_per_day: 20
+      preferred_task_types: []
+      unavailable_dates: []
+    notes: ''
+  原:
+    full_name: 原 紅映
+    nickname: くれは
+    employee_id: EMP012
+    constraints:
+      max_tasks_per_day: 20
+      preferred_task_types: []
+      unavailable_dates: []
+    notes: ''
+  本間:
+    full_name: 本間 久隆
+    nickname: ひさたか
+    employee_id: EMP013
+    constraints:
+      max_tasks_per_day: 20
+      preferred_task_types: []
+      unavailable_dates: []
+    notes: ''
+  創:
+    full_name: 野口 創
+    nickname: そう
+    employee_id: EMP003
+    constraints:
+      max_tasks_per_day: 20
+      preferred_task_types:
+      - 査定
+      - 修理
+      - 法人販売
+      unavailable_dates: []
+    notes: 査定・修理のエキスパート。法人販売・店舗対応の専門家。
+settings:
+  working_hours:
+    start: "10:00"
+    lunch_start: "13:00"
+    lunch_end: "14:00"
+    end: "19:00"
+  common_unavailable_times:
+    - name: 棚卸し
+      start: "18:15"
+      end: "19:00"
+      duration_minutes: 45
+      applies_to_all: true
+  default_task_duration:
+    査定: 15
+    検品: 20
+    出品: 10
+    修理: 60

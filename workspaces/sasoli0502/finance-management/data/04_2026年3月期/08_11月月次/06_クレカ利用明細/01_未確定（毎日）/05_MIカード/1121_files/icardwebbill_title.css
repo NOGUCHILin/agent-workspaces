@@ -1,0 +1,48 @@
+@charset "Shift_JIS";
+
+/* ----------------------------------
+content
+---------------------------------- */
+.mirevo_content {
+  padding: 5px 0 0 0;
+  font-family: Verdana, Arial, "Hiragino Kaku Gothic Pro", "ƒqƒ‰ƒMƒmŠpƒS Pro W3", Osaka, Meiryo, "ƒƒCƒŠƒI", "MS P Gothic", "‚l‚r ‚oƒSƒVƒbƒN", sans-serif;}
+  .mirevo_content a:hover {
+    -ms-filter: "alpha(opacity=70)";
+    filter: alpha(opacity=70);
+    opacity: .7; }
+
+.mirevo_content h1 {
+  position: relative;
+  width: auto;
+  height: auto;
+  margin: 20px auto 0;
+  padding: 0 15px 10px 0;
+  background: none;
+  font-size: 26px;
+  }
+  .mirevo_content h1:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    margin: auto;
+    border-radius: 50%;
+    content: ""; }
+
+  .mirevo_content .mirevo_pagepath li {
+    display: inline;
+    margin-left: 4px;
+    font-size: 10px;
+    font-weight: normal }
+    .mirevo_content .mirevo_pagepath li:first-child {
+      margin-left: 0; }
+    .mirevo_content .mirevo_pagepath li a {
+      color: #333; }
+  .mirevo_content .mirevo_pagepath li + li:before {
+    display: inline-block;
+    margin-right: 4px;
+    content: ">"; }
+

@@ -1,0 +1,306 @@
+staff_skills:
+  江口:
+    返信: {}
+    振込ﾒｯｾ: {}
+    催促: {}
+    査定結果: {}
+    返送交渉: {}
+    梱包キット作成: {}
+    開封: {}
+    ｱｸﾃｨﾍﾞｰﾄ: {}
+    査定:
+      certification: false
+      time_per_task: 15
+      tasks_per_hour: 4.0
+      tasks_per_day: 32
+    成約仕分: {}
+    検品:
+      certification: true
+      time_per_task: 18.2
+      tasks_per_hour: 3.3
+      tasks_per_day: 26
+    出品:
+      certification: false
+      time_per_task: 10
+      tasks_per_hour: 6.0
+      tasks_per_day: 48
+    KPI入力: {}
+    実残高入力: {}
+    座席決定: {}
+    タスク設定: {}
+    発送準備: {}
+    送り状作成: {}
+    進捗変更: {}
+    発送完了連絡: {}
+    品質管理: {}
+    電話対応: {}
+    店舗準備: {}
+    店舗査定: {}
+    店舗修理受付: {}
+    店舗修理お渡し: {}
+  雜賀:
+    返信: {}
+    振込ﾒｯｾ: {}
+    催促: {}
+    梱包キット作成: {}
+    開封: {}
+    査定:
+      certification: true
+      time_per_task: 15
+      tasks_per_hour: 4.0
+      tasks_per_day: 32
+    成約仕分: {}
+    出品:
+      certification: false
+      time_per_task: 10
+      tasks_per_hour: 6.0
+      tasks_per_day: 48
+    修理:
+      certification: true
+      time_per_task: 46.2
+      tasks_per_hour: 1.3
+      tasks_per_day: 10
+    パーツ注文: {}
+    KPI入力: {}
+    BM在庫確認: {}
+    発送準備: {}
+    送り状作成: {}
+    進捗変更: {}
+    電話対応: {}
+    店舗準備: {}
+    店舗査定: {}
+    店舗修理受付: {}
+    店舗修理お渡し: {}
+  野口:
+    返信: {}
+    修理:
+      certification: false
+      time_per_task: 60
+      tasks_per_hour: 1.0
+      tasks_per_day: 8
+  佐々木:
+    返信: {}
+    振込ﾒｯｾ: {}
+    査定結果: {}
+    返送交渉: {}
+    梱包キット作成: {}
+    開封: {}
+    ｱｸﾃｨﾍﾞｰﾄ: {}
+    査定:
+      certification: false
+      time_per_task: 15
+      tasks_per_hour: 4.0
+      tasks_per_day: 32
+    成約仕分: {}
+    検品:
+      certification: false
+      time_per_task: 20
+      tasks_per_hour: 3.0
+      tasks_per_day: 24
+    出品:
+      certification: false
+      time_per_task: 10
+      tasks_per_hour: 6.0
+      tasks_per_day: 48
+    KPI入力: {}
+    座席決定: {}
+    タスク設定: {}
+    BM在庫確認: {}
+    発送準備: {}
+    送り状作成: {}
+    進捗変更: {}
+    発送完了連絡: {}
+    新品価格変更: {}
+    品質管理: {}
+    電話対応: {}
+    ﾑｽﾋﾞｰ撮影: {}
+    ﾑｽﾋﾞｰ出品: {}
+    店舗準備: {}
+    店舗査定: {}
+    店舗修理受付: {}
+    店舗修理お渡し: {}
+    法人販売: {}
+  須加尾:
+    梱包キット作成: {}
+    開封: {}
+    ｱｸﾃｨﾍﾞｰﾄ: {}
+    査定:
+      certification: false
+      time_per_task: 15
+      tasks_per_hour: 4.0
+      tasks_per_day: 32
+    BM在庫確認: {}
+    発送準備: {}
+    ﾑｽﾋﾞｰ撮影: {}
+    ﾑｽﾋﾞｰ出品: {}
+  高橋:
+    梱包キット作成: {}
+    開封: {}
+    査定:
+      certification: false
+      time_per_task: 15
+      tasks_per_hour: 4.0
+      tasks_per_day: 32
+    成約仕分: {}
+    修理:
+      certification: false
+      time_per_task: 60
+      tasks_per_hour: 1.0
+      tasks_per_day: 8
+    パーツ注文: {}
+    BM在庫確認: {}
+    発送準備: {}
+  島田:
+    返信: {}
+    振込ﾒｯｾ: {}
+    催促: {}
+    梱包キット作成: {}
+    開封: {}
+    ｱｸﾃｨﾍﾞｰﾄ: {}
+    査定:
+      certification: false
+      time_per_task: 15
+      tasks_per_hour: 4.0
+      tasks_per_day: 32
+    成約仕分: {}
+    修理:
+      certification: false
+      time_per_task: 60
+      tasks_per_hour: 1.0
+      tasks_per_day: 8
+    BM在庫確認: {}
+    発送準備: {}
+    送り状作成: {}
+    進捗変更: {}
+    発送完了連絡: {}
+    電話対応: {}
+    ﾑｽﾋﾞｰ撮影: {}
+    ﾑｽﾋﾞｰ出品: {}
+    店舗準備: {}
+    店舗査定: {}
+    店舗修理受付: {}
+    店舗修理お渡し: {}
+  平山:
+    返信: {}
+    振込ﾒｯｾ: {}
+    催促: {}
+    梱包キット作成: {}
+    開封: {}
+    査定:
+      certification: false
+      time_per_task: 15
+      tasks_per_hour: 4.0
+      tasks_per_day: 32
+    BM在庫確認: {}
+    発送準備: {}
+    送り状作成: {}
+    進捗変更: {}
+    発送完了連絡: {}
+    電話対応: {}
+    店舗準備: {}
+    店舗査定: {}
+    店舗修理受付: {}
+    店舗修理お渡し: {}
+  細谷:
+    梱包キット作成: {}
+    開封: {}
+    ｱｸﾃｨﾍﾞｰﾄ: {}
+    査定:
+      certification: true
+      time_per_task: 12.5
+      tasks_per_hour: 4.8
+      tasks_per_day: 38
+    検品:
+      certification: false
+      time_per_task: 20
+      tasks_per_hour: 3.0
+      tasks_per_day: 24
+    出品:
+      certification: false
+      time_per_task: 11.1
+      tasks_per_hour: 5.41
+      tasks_per_day: 43
+    BM在庫確認: {}
+    発送準備: {}
+    ﾑｽﾋﾞｰ撮影: {}
+    ﾑｽﾋﾞｰ出品: {}
+  NANT:
+    梱包キット作成: {}
+    開封: {}
+    ｱｸﾃｨﾍﾞｰﾄ: {}
+    査定:
+      certification: false
+      time_per_task: 15
+      tasks_per_hour: 4.0
+      tasks_per_day: 32
+    成約仕分: {}
+    検品:
+      certification: false
+      time_per_task: 20
+      tasks_per_hour: 3.0
+      tasks_per_day: 24
+    出品:
+      certification: false
+      time_per_task: 10
+      tasks_per_hour: 6.0
+      tasks_per_day: 48
+    BM在庫確認: {}
+    発送準備: {}
+    ﾑｽﾋﾞｰ撮影: {}
+    ﾑｽﾋﾞｰ出品: {}
+  原:
+    返信: {}
+    振込ﾒｯｾ: {}
+    催促: {}
+    開封: {}
+    ｱｸﾃｨﾍﾞｰﾄ: {}
+    査定:
+      certification: false
+      time_per_task: 15
+      tasks_per_hour: 4.0
+      tasks_per_day: 32
+    成約仕分: {}
+    検品:
+      certification: false
+      time_per_task: 20
+      tasks_per_hour: 3.0
+      tasks_per_day: 24
+    出品:
+      certification: false
+      time_per_task: 10
+      tasks_per_hour: 6.0
+      tasks_per_day: 48
+    送り状作成: {}
+    進捗変更: {}
+    電話対応: {}
+  本間: {}
+  創:
+    査定:
+      certification: false
+      time_per_task: 15
+      tasks_per_hour: 4.0
+      tasks_per_day: 32
+    修理:
+      certification: false
+      time_per_task: 60
+      tasks_per_hour: 1.0
+      tasks_per_day: 8
+    返信: {}
+    振込メッセ: {}
+    催促: {}
+    梱包キット作成: {}
+    開封: {}
+    成約仕分: {}
+    発送準備: {}
+    送り状作成: {}
+    パーツ注文: {}
+    タスク設定: {}
+    BM在庫確認: {}
+    進捗変更: {}
+    電話対応: {}
+    ムスビー出品: {}
+    店舗準備: {}
+    店舗査定: {}
+    店舗修理受付: {}
+    店舗修理お渡し: {}
+    法人販売: {}
