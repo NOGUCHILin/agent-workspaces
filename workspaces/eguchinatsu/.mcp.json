@@ -1,8 +1,15 @@
 {
   "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"]
+    },
     "playwright": {
       "command": "npx",
-      "args": ["-y", "@playwright/mcp"]
+      "args": [
+        "@playwright/mcp@0.0.54",
+        "--user-data-dir=/Users/eguchinatsu/.playwright-profiles/eguchinatsu"
+      ]
     }
   }
 }

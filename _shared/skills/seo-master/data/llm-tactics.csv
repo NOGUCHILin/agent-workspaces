@@ -1,0 +1,11 @@
+tactic,priority,implementation,check_method,ai_platforms,description
+structured-answer,p0,"H2を質問形式に。直後に50-100字で直接回答。詳細は後続段落で展開。","H2パターン確認,冒頭文字数","ChatGPT,Perplexity,Google AIO","AIが引用しやすい構造。最重要施策。"
+faq-schema,p0,"FAQPage JSON-LDを5問以上実装。質問は実際の検索クエリ形式。回答は150-300字。","Schema.org検証,FAQ数カウント","Google AIO,ChatGPT","AI Overviewでの表示率向上。CTR 30-50%増。"
+fact-density,p1,"150-200語ごとに統計・数値を配置。出典明記。","数値出現頻度,引用元カウント","Perplexity,Claude","信頼性向上。引用されやすさ向上。"
+citation-markup,p1,"引用元にaccessDate、URLを明記。著者名・発行年を含める。","frontmatter確認,引用タグ検証","Perplexity,Claude","E-E-A-T強化。学術的信頼性。"
+author-schema,p1,"Person Schemaで著者情報。expertise、jobTitle、sameAs（SNS）を含める。","Schema検証,著者ページ存在","Google AIO,ChatGPT","E-E-A-T強化。専門性証明。"
+date-freshness,p2,"dateModified を30日以内に維持。Last Updated表示。更新履歴セクション追加。","meta確認,表示日付チェック","Perplexity,Google AIO","鮮度シグナル。古い情報は引用されにくい。"
+brand-mention,p2,"ブランド名+属性を自然な文脈で繰り返し言及。共起関係を構築。","ブランド名出現頻度,文脈分析","ChatGPT,Claude","LLM学習データへの影響。ブランド認知向上。"
+tl-dr,p2,"主要H2の下に1-2文のTL;DR（要約）を配置。独立して意味が通る形式。","TL;DRパターン検出","ChatGPT,Perplexity","抜粋されやすい構造。スニペット最適化。"
+table-data,p3,"比較データは表形式で構造化。HTMLテーブル+適切なheader。","table要素検出,構造検証","Google AIO,Perplexity","構造化データとして認識されやすい。"
+list-format,p3,"手順・ポイントは番号付きリストまたは箇条書き。3-7項目が最適。","リスト要素検出,項目数カウント","ChatGPT,Claude","スキャンしやすい。引用しやすい。"

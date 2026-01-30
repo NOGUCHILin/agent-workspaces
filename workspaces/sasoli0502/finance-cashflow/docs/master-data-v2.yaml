@@ -1,0 +1,244 @@
+# クレジットカード運用最適化システム - マスターデータ
+# 最終更新: 2025-11-06
+
+# =============================================================================
+# カード情報
+# =============================================================================
+cards:
+  # 請求書カード払い可能なカード
+  - id: amazon
+    name: Amazon Mastercard
+    brand: Mastercard
+    closing_day: 31  # 月末締め（31=月末）
+    payment_day_offset: 26  # 翌月26日支払い
+    payment_month_offset: 1  # 1ヶ月後
+    credit_limit: 2000000  # 200万円
+    invoice_card_payment: true
+    application_days_offset: 4  # 申請から4営業日後に着金
+
+  - id: mi
+    name: MIカード
+    brand: Visa
+    closing_day: 5
+    payment_day_offset: 26  # 当月26日支払い
+    payment_month_offset: 0  # 当月
+    credit_limit: 1000000  # 100万円
+    invoice_card_payment: true
+    application_days_offset: 4
+
+  - id: toyota
+    name: トヨタファイナンス
+    brand: Visa
+    closing_day: 5
+    payment_day_offset: 2  # 翌月2日支払い
+    payment_month_offset: 1
+    credit_limit: 1200000  # 120万円
+    invoice_card_payment: true
+    application_days_offset: 4
+
+  - id: shinkin_visa
+    name: しんきんVisa
+    brand: Visa
+    closing_day: 15
+    payment_day_offset: 10  # 翌月10日支払い
+    payment_month_offset: 1
+    credit_limit: 1600000  # 160万円
+    invoice_card_payment: true
+    application_days_offset: 4
+
+  - id: shinkin_jcb
+    name: しんきんJCB
+    brand: JCB
+    closing_day: 15
+    payment_day_offset: 10  # 翌月10日支払い
+    payment_month_offset: 1
+    credit_limit: 1000000  # 100万円
+    invoice_card_payment: true
+    application_days_offset: 4
+
+  - id: jfr
+    name: JFR（大丸）
+    brand: Visa
+    closing_day: 15
+    payment_day_offset: 10  # 翌月10日支払い
+    payment_month_offset: 1
+    credit_limit: 1000000  # 100万円
+    invoice_card_payment: true
+    application_days_offset: 4
+
+  # 請求書カード払い不可のカード
+  - id: amex
+    name: アメックス
+    brand: Amex
+    closing_day: 22
+    payment_day_offset: 10  # 翌月10日支払い
+    payment_month_offset: 1
+    credit_limit: 6350000  # 635万円
+    invoice_card_payment: false
+
+  - id: saison
+    name: セゾン
+    brand: Amex
+    closing_day: 10
+    payment_day_offset: 4  # 翌月4日支払い
+    payment_month_offset: 1
+    credit_limit: 7000000  # 700万円
+    invoice_card_payment: false
+
+  - id: gpc
+    name: GPC（ゴールドポイントカード+）
+    brand: Visa
+    closing_day: 31  # 月末締め
+    payment_day_offset: 26  # 翌月26日支払い
+    payment_month_offset: 1
+    credit_limit: 500000  # 50万円
+    invoice_card_payment: false  # システム制限
+
+# =============================================================================
+# 固定費（請求書カード払い）
+# =============================================================================
+fixed_invoice_payments:
+  - id: uniho
+    name: ユニホー
+    category: 地代家賃
+    amount: 250000  # 25万円
+    invoice_arrival_day: 10  # 毎月10日到着
+    payment_deadline_day: 31  # 月末支払い
+    desired_payment_day: 31  # 毎月末着金を目標に申請
+    is_splittable: false  # 分割不可
+
+  - id: donki
+    name: ドンキ
+    category: 地代家賃
+    amount: 250000  # 25万円
+    invoice_arrival_day: 1  # 毎月1日到着
+    payment_deadline_day: 31  # 月末支払い
+    desired_payment_day: 31  # 毎月末着金を目標に申請
+    is_splittable: false
+
+
+# =============================================================================
+# 変動費（請求書カード払い）- 毎月入力が必要
+# =============================================================================
+variable_invoice_payments:
+  - id: jo_san
+    name: 徐さん
+    category: 仕入
+    typical_amount: 1500000  # 150万円（目安）
+    invoice_arrival_day: 10  # 毎月10日頃到着
+    payment_deadline_day: null  # 設定なし
+    is_splittable: true  # 分割可能
+    note: "分割可能（例: 100万 + 50万）"
+
+  - id: yamato
+    name: ヤマト
+    category: 荷造運賃
+    typical_amount: 1200000  # 120万円（目安）
+    invoice_arrival_day: 1
+    payment_deadline_day: 26
+    is_splittable: false  # 分割不可
+
+  - id: bizbi
+    name: ビズビ
+    category: 仕入
+    typical_amount: 100000  # 10万円（目安）
+    invoice_arrival_day: 1
+    payment_deadline_day: 31
+    is_splittable: false
+
+# =============================================================================
+# 固定費（通常クレカ払い）
+# =============================================================================
+fixed_regular_payments:
+  - id: communication
+    name: 通信費
+    category: 通信費
+    amount: 730000  # 73万円
+    note: "AWS, Notion, Google Workspace, ChatGPT, 各種SaaS等"
+    current_card: amex  # 現在主にアメックスで支払い（54.3万円）+ しんきんJCB/VISA等
+    preferred_card: null  # システムが最適化
+
+# =============================================================================
+# 変動費（通常クレカ払い）- 毎月入力が必要
+# =============================================================================
+variable_regular_payments:
+  - id: line_ad
+    name: LINE広告
+    category: 広告宣伝費
+    typical_amount: 30000  # 3万円（目安）
+    current_card: amazon  # 三井住友カード（Amazon）で支払い
+    note: "以前は73万円、今月から大幅減"
+
+  - id: supplies
+    name: 備品・消耗品費
+    category: 備品・消耗品費
+    typical_amount: 200000  # 20万円（目安）
+    current_card: saison  # セゾン (10.2万) + アメックス (9.7万) 等で分散
+
+  - id: fees
+    name: 支払手数料
+    category: 支払手数料
+    typical_amount: 110000  # 11万円（目安）
+    current_card: amex  # アメックス (7万) + セゾン (2.5万) 等で分散
+
+# =============================================================================
+# 広告チャージ（自動計算）
+# =============================================================================
+ad_charges:
+  - id: google_ads
+    name: Google広告
+    category: 仮払金
+    daily_amount: 90000  # 1日9万円
+    current_cards:  # 9月実績: 複数カードに分散（10万円ずつチャージ）
+      - shinkin_jcb: 800000  # 80万円
+      - mi: 1200000  # 120万円
+      - amex: 700000  # 70万円
+      - saison: 1000000  # 100万円
+      - toyota: 1190000  # 119万円
+    note: "10万円ずつチャージ、複数カードに分散"
+
+  - id: yahoo_ads
+    name: Yahoo広告
+    category: 仮払金
+    daily_amount: 10000  # 1日1万円
+    current_card: null  # 9月実績では未確認
+    note: "9月実績で見当たらず、要確認"
+
+# =============================================================================
+# 最適化設定
+# =============================================================================
+optimization_settings:
+  # 優先順位（1が最優先）
+  priorities:
+    - id: 1
+      name: 支払猶予の最大化
+      weight: 100
+
+    - id: 2
+      name: 支払期限を守る
+      weight: 90
+
+    - id: 3
+      name: 運用のシンプルさ
+      weight: 50
+
+    - id: 4
+      name: カード枠の有効活用
+      weight: 40
+
+  # 処理順序
+  allocation_order:
+    - type: fixed_invoice_payments
+      description: "固定費（請求書カード払い）を優先配分"
+
+    - type: variable_invoice_payments
+      description: "変動費（請求書カード払い）を配分"
+
+    - type: fixed_regular_payments
+      description: "固定費（通常クレカ払い）を配分"
+
+    - type: variable_regular_payments
+      description: "変動費（通常クレカ払い）を配分"
+
+    - type: ad_charges
+      description: "広告チャージを残り枠で調整"

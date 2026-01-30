@@ -1,0 +1,812 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e5]:
+        - heading "kintone" [level=1] [ref=e6]
+        - link "ロゴ" [ref=e8] [cursor=pointer]:
+          - /url: /k/
+          - img [ref=e9]
+      - generic [ref=e12]:
+        - link "野口器" [ref=e13] [cursor=pointer]:
+          - /url: /k/#/people/user/noguchisara%40japanconsulting.co.jp
+          - img [ref=e14]
+          - generic "野口器" [ref=e15]
+        - button "アカウントメニュー" [ref=e19] [cursor=pointer]:
+          - img "アカウントメニュー" [ref=e20]:
+            - img [ref=e21]
+    - navigation [ref=e24]:
+      - list [ref=e26]:
+        - listitem [ref=e27]:
+          - button "サイドメニュー" [ref=e8084] [cursor=pointer]:
+            - img "サイドメニュー" [ref=e8085]:
+              - img [ref=e8087]
+        - listitem [ref=e36]:
+          - link "ポータル" [ref=e39] [cursor=pointer]:
+            - /url: /k/#/portal
+            - img "ポータル" [ref=e40]:
+              - img [ref=e42]
+        - listitem [ref=e44]:
+          - link "通知一覧(100件以上の未読)" [ref=e48] [cursor=pointer]:
+            - /url: /k/#/ntf/mention
+            - img "通知一覧" [ref=e49]:
+              - generic [ref=e50]:
+                - img [ref=e51]
+                - generic [ref=e53]: 99+
+        - listitem [ref=e54]:
+          - button "ブックマーク" [ref=e8092] [cursor=pointer]:
+            - img "ブックマーク" [ref=e8093]:
+              - img [ref=e8095]
+      - generic [ref=e63]:
+        - list [ref=e64]:
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem [ref=e65]:
+            - button "設定" [ref=e70] [cursor=pointer]:
+              - img "設定" [ref=e71]:
+                - img [ref=e72]
+          - listitem [ref=e74]:
+            - button "ヘルプ" [ref=e79] [cursor=pointer]:
+              - img "ヘルプ" [ref=e80]:
+                - img [ref=e81]
+        - generic [ref=e8098]:
+          - combobox "アプリ内検索" [ref=e8099]
+          - button "検索" [ref=e8102] [cursor=pointer]:
+            - img "検索" [ref=e8103]:
+              - img [ref=e8105]
+  - generic [ref=e94]:
+    - generic [ref=e95]:
+      - img [ref=e96]
+      - heading "買取販売リスト(iPhone,iPad)" [level=2]:
+        - link "買取販売リスト(iPhone,iPad)" [ref=e97] [cursor=pointer]:
+          - /url: /k/11/
+    - generic [ref=e98]:
+      - generic [ref=e102]:
+        - generic "現在位置" [ref=e104]:
+          - list [ref=e7444]:
+            - listitem [ref=e7445]:
+              - link "ポータル" [ref=e7446] [cursor=pointer]:
+                - /url: /k/#/portal
+            - listitem [ref=e7447]
+            - listitem [ref=e7448]:
+              - generic [ref=e7449]: "アプリ:"
+              - link "買取販売リスト(iPhone,iPad)" [ref=e7450] [cursor=pointer]:
+                - /url: /k/11/
+            - listitem [ref=e7451]
+            - listitem [ref=e7452]:
+              - generic [ref=e7453]: "レコード:"
+              - generic "339234" [ref=e7454]
+        - button "お気に入り" [ref=e118] [cursor=pointer]
+      - generic [ref=e8112]:
+        - generic [ref=e8114]:
+          - generic [ref=e8115]: 価格保証解除日時
+          - generic [ref=e8117]:
+            - textbox [ref=e8118]: 2026-01-26
+            - textbox [ref=e8120]: 14:13
+        - group [ref=e8122]:
+          - button "レコード関連" [ref=e8123] [cursor=pointer]
+        - separator [ref=e8126]
+        - generic [ref=e8131]: ユーザー情報
+        - generic [ref=e8132]:
+          - generic [ref=e8133]:
+            - generic [ref=e8134]: 買取媒体
+            - listbox [ref=e8137]:
+              - option "自社サイト" [selected] [ref=e8138]
+          - generic [ref=e8140]:
+            - generic [ref=e8141]: メッセージ媒体
+            - listbox [ref=e8144]:
+              - option "LINE" [selected] [ref=e8145]
+          - generic [ref=e8147]:
+            - generic [ref=e8148]: 梱包キット情報廃止
+            - textbox [ref=e8151]
+          - generic [ref=e8152]:
+            - generic [ref=e8153]: リンク廃止
+            - textbox [ref=e8156]
+          - generic [ref=e8157]:
+            - generic [ref=e8158]: LINE_ID廃止
+            - textbox [ref=e8161]
+        - generic [ref=e8162]:
+          - generic [ref=e8163]:
+            - generic [ref=e8164]: ユーザーネーム
+            - textbox [ref=e8167]: yüna
+          - generic [ref=e8168]:
+            - generic [ref=e8169]: ユーザー氏名
+            - textbox [ref=e8172]: 矢野優奈
+          - generic [ref=e8173]:
+            - generic [ref=e8174]: ユーザー氏名（カナ）
+            - textbox [ref=e8177]: ヤノユウナ
+          - generic [ref=e8178]:
+            - generic [ref=e8179]: 電話番号
+            - textbox [ref=e8182]: "08085273431"
+          - generic [ref=e8183]:
+            - generic [ref=e8184]: メールアドレス
+            - textbox [ref=e8187]
+        - generic [ref=e8188]:
+          - generic [ref=e8189]:
+            - generic [ref=e8190]: 郵便番号
+            - textbox [ref=e8193]: "3300071"
+          - generic [ref=e8194]:
+            - generic [ref=e8195]: 住所廃止
+            - textbox [ref=e8198]: 埼玉県さいたま市浦和区上木崎2-11-16レインボー上木崎2-302
+          - generic [ref=e8199]:
+            - generic [ref=e8200]: 本人確認書類
+            - generic [ref=e8202]:
+              - generic [ref=e8204]:
+                - generic "line_oa_chat_260127_184850.jpg" [ref=e8205]
+                - button [ref=e8207] [cursor=pointer]
+                - generic [ref=e8208]: 241 KB
+                - img "line_oa_chat_260127_184850.jpg" [ref=e8210] [cursor=pointer]
+              - link "参照 Choose File" [ref=e8211] [cursor=pointer]:
+                - /url: javascript:void(0)
+                - text: 参照
+                - button "Choose File" [ref=e8213]
+              - paragraph [ref=e8214]: (最大1 GB)
+          - generic [ref=e8215]:
+            - generic [ref=e8216]: 郵便番号（数値のみ）廃止
+            - textbox [ref=e8221]
+        - generic [ref=e8222]:
+          - generic [ref=e8223]:
+            - generic [ref=e8224]: 都道府県
+            - textbox [ref=e8227]: 埼玉県
+          - generic [ref=e8228]:
+            - generic [ref=e8229]: 市区町村
+            - textbox [ref=e8232]: さいたま市浦和区
+          - generic [ref=e8233]:
+            - generic [ref=e8234]: 町・番地
+            - textbox [ref=e8237]: 上木崎2-11-16
+          - generic [ref=e8238]:
+            - generic [ref=e8239]: 建物・部屋番号等
+            - textbox [ref=e8242]: レインボー上木崎2-302
+          - generic [ref=e8243]:
+            - generic [ref=e8244]: 集荷受付日時
+            - generic [ref=e8246]:
+              - textbox [ref=e8247]: 2026-01-26
+              - textbox [ref=e8249]: 14:17
+          - generic [ref=e8250]:
+            - generic [ref=e8251]: 集荷希望日
+            - textbox [ref=e8254]: 2026-01-27
+          - generic [ref=e8255]:
+            - generic [ref=e8256]: 集荷希望時間
+            - listbox [ref=e8259]:
+              - option "18時～21時" [selected] [ref=e8260]
+          - generic [ref=e8262]:
+            - generic [ref=e8263]: 集荷台数
+            - textbox [ref=e8268]: "1"
+        - group [ref=e8270]:
+          - button "支払情報" [ref=e8271] [cursor=pointer]
+        - separator [ref=e8274]
+        - generic [ref=e8279]: 連絡・進捗
+        - generic [ref=e8280]:
+          - generic [ref=e8281]:
+            - generic [ref=e8282]: 進捗
+            - listbox [ref=e8285]:
+              - option "本査定開始" [selected] [ref=e8286]
+          - generic [ref=e8288]:
+            - generic [ref=e8289]: 特記事項
+            - textbox [ref=e8292]
+        - generic [ref=e8294]:
+          - generic [ref=e8295]:
+            - generic [ref=e8296]: 修理者
+            - generic [ref=e8298]:
+              - generic "組織やグループから選択" [ref=e8299]
+              - textbox [ref=e8303]
+          - generic [ref=e8305]:
+            - generic [ref=e8306]: 検品者
+            - generic [ref=e8308]:
+              - generic "組織やグループから選択" [ref=e8309]
+              - textbox [ref=e8313]
+        - generic [ref=e8315]:
+          - generic [ref=e8316]:
+            - generic [ref=e8317]: メッセージ生成
+            - listbox [ref=e8320]:
+              - option "本査定完了メッセージ" [selected] [ref=e9389]
+          - generic [ref=e8323]:
+            - generic [ref=e8324]: 条件価格
+            - textbox [ref=e8327]: iPhone 13 128GB ミッドナイト 箱中古品あり 充電コードなし 充電アダプタ元々なし 説明書・シムピンなし イヤフォン元々なし 総合ランク【目立つ傷あり】バッテリーの劣化 現在の高額買取価格（本査定１ヶ月後振込）：21000円〜21000円 現在の特急買取価格（本査定翌平日又は翌々平日振込）：18200円〜18200円 レコード番号：339234
+          - generic [ref=e8329]:
+            - generic [ref=e8330]: メッセージ１
+            - textbox [active] [ref=e8333]: yüna様 お世話になっております。 本査定が完了いたしました。 査定結果は以下のようになりました。 iPhone 13 128GB ミッドナイト 箱中古品あり 充電コードなし 充電アダプタ元々なし 説明書・シムピンなし イヤフォン元々なし 総合ランク【目立つ傷あり】バッテリーの劣化 現在の高額買取価格（本査定１ヶ月後振込）：21000円 現在の特急買取価格（本査定翌平日又は翌々平日振込）：18200円 レコード番号：339234 画像のように側面に複数の傷が確認されましたので、【目立つ傷あり】の評価となりました。 また、バッテリーの劣化が確認されましたため減額が入っております。 以下のリンクよりメッセージを作成しお送りいただければ、お振込できます。 https://liff.line.me/1660989663-ZW3ODB2O?recordNumber=339234 ※口座情報に間違いがあった場合、振込日時に遅れが出てしまいますので、正しい情報をお送りくださいませ。 また、査定金額にご満足いただけない場合は、ご返送することも可能です。 いかがでしょうか？
+          - generic [ref=e8335]:
+            - generic [ref=e8336]: メッセージ２
+            - textbox [ref=e8339]
+        - separator [ref=e8343]
+        - generic [ref=e8344]:
+          - generic [ref=e8348]: 端末情報
+          - generic [ref=e8349]:
+            - generic [ref=e8350]: システムバージョン*
+            - generic [ref=e8352]:
+              - generic [ref=e8353]:
+                - radio "1" [ref=e8354] [cursor=pointer]
+                - generic [ref=e8355] [cursor=pointer]: "1"
+              - generic [ref=e8356]:
+                - radio "2" [ref=e8357] [cursor=pointer]
+                - generic [ref=e8358] [cursor=pointer]: "2"
+              - generic [ref=e8359]:
+                - radio "3" [checked] [ref=e8360] [cursor=pointer]
+                - generic [ref=e8361] [cursor=pointer]: "3"
+        - generic [ref=e8362]:
+          - generic [ref=e8363]:
+            - generic [ref=e8364]: 機種
+            - listbox [ref=e8367]:
+              - option "iPhone 13" [selected] [ref=e8368]
+          - generic [ref=e8370]:
+            - generic [ref=e8371]: 容量
+            - listbox [ref=e8374]:
+              - option "128GB" [selected] [ref=e8375]
+          - generic [ref=e8377]:
+            - generic [ref=e8378]: 色
+            - listbox [ref=e8381]:
+              - option "ミッドナイト" [selected] [ref=e8382]
+          - generic [ref=e8384]:
+            - generic [ref=e8385]: モデル番号
+            - textbox [ref=e8388]
+          - generic [ref=e8389]:
+            - generic [ref=e8390]: 3utools画像
+            - generic [ref=e8392]:
+              - generic [ref=e8394]:
+                - generic "スクリーンショット-2026-01-29-115552.png" [ref=e8395]
+                - button [ref=e8397] [cursor=pointer]
+                - generic [ref=e8398]: 186 KB
+                - img "スクリーンショット-2026-01-29-115552.png" [ref=e8400] [cursor=pointer]
+              - link "参照 Choose File" [ref=e8401] [cursor=pointer]:
+                - /url: javascript:void(0)
+                - text: 参照
+                - button "Choose File" [ref=e8403]
+              - paragraph [ref=e8404]: (最大1 GB)
+        - generic [ref=e8405]:
+          - generic [ref=e8406]:
+            - generic [ref=e8407]: キャリア
+            - listbox [ref=e8410]:
+              - option "-----" [selected] [ref=e8411]
+          - generic [ref=e8413]:
+            - generic [ref=e8414]: シムロック
+            - listbox [ref=e8417]:
+              - option "シムフリー" [selected] [ref=e8824]
+          - generic [ref=e8420]:
+            - generic [ref=e8421]: ネットワーク利用制限
+            - listbox [ref=e8424]:
+              - option "-----" [selected] [ref=e8425]
+          - generic [ref=e8427]:
+            - generic [ref=e8428]: IMEI
+            - textbox [ref=e8431]
+          - generic [ref=e8432]:
+            - generic [ref=e8433]: 3utools読込
+            - generic [ref=e8436]:
+              - checkbox "完了" [ref=e8437] [cursor=pointer]
+              - generic [ref=e8438] [cursor=pointer]: 完了
+        - generic [ref=e8439]:
+          - generic [ref=e8440]:
+            - generic [ref=e8441]: 新品・未開封
+            - generic [ref=e8444]:
+              - checkbox "はい" [ref=e8445] [cursor=pointer]
+              - generic [ref=e8446] [cursor=pointer]: はい
+          - generic [ref=e8447]:
+            - generic [ref=e8448]: 表面の状態
+            - listbox [ref=e8451]:
+              - option "ちいさな傷などがある" [selected] [ref=e8786]
+          - generic [ref=e8454]:
+            - generic [ref=e8455]: 背面の状態
+            - listbox [ref=e8458]:
+              - option "使用感がある" [selected] [ref=e8800]
+          - generic [ref=e8461]:
+            - generic [ref=e8462]: 側面の状態
+            - listbox [ref=e8465]:
+              - option "目立つ傷などがある" [selected] [ref=e8815]
+          - generic [ref=e8468]:
+            - generic [ref=e8469]: ランク
+            - listbox [ref=e8472]:
+              - option "目立つ傷あり" [selected] [ref=e8816]
+          - generic [ref=e8475]:
+            - generic [ref=e8476]: バッテリー最大容量
+            - generic [ref=e8478]:
+              - textbox [ref=e8481]: "77"
+              - generic [ref=e8482]: "%"
+          - generic [ref=e8483]:
+            - generic [ref=e8484]: 備考
+            - textbox [ref=e8487]
+        - generic [ref=e8488]:
+          - generic [ref=e8489]:
+            - generic [ref=e8490]: 付属品確認
+            - generic [ref=e8493]:
+              - checkbox "全なし" [ref=e8494] [cursor=pointer]
+              - generic [ref=e8495] [cursor=pointer]: 全なし
+          - generic [ref=e8496]:
+            - generic [ref=e8497]: 箱
+            - listbox [ref=e8500]:
+              - option "中古品あり" [selected] [ref=e8501]
+          - generic [ref=e8503]:
+            - generic [ref=e8504]: 充電ケーブル
+            - listbox [ref=e8507]:
+              - option "なし" [selected] [ref=e8508]
+          - generic [ref=e8510]:
+            - generic [ref=e8511]: 充電アダプタ
+            - listbox [ref=e8514]:
+              - option "元々なし" [selected] [ref=e8515]
+          - generic [ref=e8517]:
+            - generic [ref=e8518]: 説明書・シムピン
+            - listbox [ref=e8521]:
+              - option "なし" [selected] [ref=e8522]
+          - generic [ref=e8524]:
+            - generic [ref=e8525]: イヤフォン
+            - listbox [ref=e8528]:
+              - option "元々なし" [selected] [ref=e8529]
+        - generic [ref=e8531]:
+          - generic [ref=e8532]:
+            - generic [ref=e8533]: 不具合など
+            - menu [ref=e8536]:
+              - menuitemcheckbox "表示やタッチ操作の劣化" [ref=e8537] [cursor=pointer]:
+                - generic [ref=e8538]: 表示やタッチ操作の劣化
+              - menuitemcheckbox "バッテリーの劣化" [checked] [ref=e8539] [cursor=pointer]:
+                - generic [ref=e8540]: バッテリーの劣化
+              - menuitemcheckbox "TouchIDやFaceIDの故障" [ref=e8541] [cursor=pointer]:
+                - generic [ref=e8542]: TouchIDやFaceIDの故障
+              - menuitemcheckbox "アウトカメラの故障" [ref=e8543] [cursor=pointer]:
+                - generic [ref=e8544]: アウトカメラの故障
+              - menuitemcheckbox "バイブレーション不具合" [ref=e8545] [cursor=pointer]:
+                - generic [ref=e8546]: バイブレーション不具合
+              - menuitemcheckbox "サイドボタンの故障" [ref=e8547] [cursor=pointer]:
+                - generic [ref=e8548]: サイドボタンの故障
+              - menuitemcheckbox "端末上部の不具合" [ref=e8549] [cursor=pointer]:
+                - generic [ref=e8550]: 端末上部の不具合
+              - menuitemcheckbox "端末下部の不具合" [ref=e8551] [cursor=pointer]:
+                - generic [ref=e8552]: 端末下部の不具合
+              - menuitemcheckbox "Wi-FiやBluetoothの不具合" [ref=e8553] [cursor=pointer]:
+                - generic [ref=e8554]: Wi-FiやBluetoothの不具合
+              - menuitemcheckbox "フラッシュの故障" [ref=e8555] [cursor=pointer]:
+                - generic [ref=e8556]: フラッシュの故障
+              - menuitemcheckbox "正常に起動しない" [ref=e8557] [cursor=pointer]:
+                - generic [ref=e8558]: 正常に起動しない
+              - menuitemcheckbox "初期化できない" [ref=e8559] [cursor=pointer]:
+                - generic [ref=e8560]: 初期化できない
+              - menuitemcheckbox "ネットワーク利用制限" [ref=e8561] [cursor=pointer]:
+                - generic [ref=e8562]: ネットワーク利用制限
+              - menuitemcheckbox "水没歴あり" [ref=e8563] [cursor=pointer]:
+                - generic [ref=e8564]: 水没歴あり
+              - menuitemcheckbox "その他" [ref=e8565] [cursor=pointer]:
+                - generic [ref=e8566]: その他
+          - generic [ref=e8567]:
+            - generic [ref=e8568]: 修理
+            - menu [ref=e8571]:
+              - menuitemcheckbox "画面修理" [ref=e8572] [cursor=pointer]:
+                - generic [ref=e8573]: 画面修理
+              - menuitemcheckbox "ドック修理" [ref=e8574] [cursor=pointer]:
+                - generic [ref=e8575]: ドック修理
+              - menuitemcheckbox "インカメラ修理" [ref=e8576] [cursor=pointer]:
+                - generic [ref=e8577]: インカメラ修理
+              - menuitemcheckbox "アウトカメラ修理" [ref=e8578] [cursor=pointer]:
+                - generic [ref=e8579]: アウトカメラ修理
+              - menuitemcheckbox "タプティックエンジン修理" [ref=e8580] [cursor=pointer]:
+                - generic [ref=e8581]: タプティックエンジン修理
+              - menuitemcheckbox "バッテリー交換" [ref=e8582] [cursor=pointer]:
+                - generic [ref=e8583]: バッテリー交換
+              - menuitemcheckbox "アウトカメラガラス交換" [ref=e8584] [cursor=pointer]:
+                - generic [ref=e8585]: アウトカメラガラス交換
+          - generic [ref=e8588]:
+            - generic [ref=e8591]: ・iPhone X以降は【FaceID・イヤースピーカー・インカメラ不良】は不具合から選ぶ
+            - generic [ref=e8592]: ・iPhone 14・14 Plus・15・15 Plusは【画面修理】以外はすべて不具合を選ぶ
+            - generic [ref=e8593]: （iPhone 14 Pro・15 Proは大丈夫）
+            - generic [ref=e8594]: ・iPhone 16シリーズはすべて不具合を選ぶ
+        - generic [ref=e8596]:
+          - generic [ref=e8597]: 査定時確認項目１
+          - generic [ref=e8599]:
+            - generic [ref=e8600]:
+              - checkbox "充電可否" [ref=e8601] [cursor=pointer]
+              - generic [ref=e8602] [cursor=pointer]: 充電可否
+            - generic [ref=e8603]:
+              - checkbox "Wi-Fi接続" [ref=e8604] [cursor=pointer]
+              - generic [ref=e8605] [cursor=pointer]: Wi-Fi接続
+            - generic [ref=e8606]:
+              - checkbox "Bluetooth" [ref=e8607] [cursor=pointer]
+              - generic [ref=e8608] [cursor=pointer]: Bluetooth
+            - generic [ref=e8609]:
+              - checkbox "Touch/FaceID機能" [ref=e8610] [cursor=pointer]
+              - generic [ref=e8611] [cursor=pointer]: Touch/FaceID機能
+            - generic [ref=e8612]:
+              - checkbox "バッテリー最大容量" [ref=e8613] [cursor=pointer]
+              - generic [ref=e8614] [cursor=pointer]: バッテリー最大容量
+            - generic [ref=e8615]:
+              - checkbox "フラッシュ" [ref=e8616] [cursor=pointer]
+              - generic [ref=e8617] [cursor=pointer]: フラッシュ
+            - generic [ref=e8618]:
+              - checkbox "カメラ" [ref=e8619] [cursor=pointer]
+              - generic [ref=e8620] [cursor=pointer]: カメラ
+            - generic [ref=e8621]:
+              - checkbox "ビデオ・音声" [ref=e8622] [cursor=pointer]
+              - generic [ref=e8623] [cursor=pointer]: ビデオ・音声
+            - generic [ref=e8624]:
+              - checkbox "True Tone" [ref=e8625] [cursor=pointer]
+              - generic [ref=e8626] [cursor=pointer]: True Tone
+        - generic [ref=e8627]:
+          - generic [ref=e8628]:
+            - generic [ref=e8629]: 査定確認
+            - generic [ref=e8632]:
+              - checkbox "全完了" [ref=e8633] [cursor=pointer]
+              - generic [ref=e8634] [cursor=pointer]: 全完了
+          - generic [ref=e8635]:
+            - generic [ref=e8636]: 整備時確認項目２
+            - generic [ref=e8638]:
+              - generic [ref=e8639]:
+                - checkbox "充電時発熱" [ref=e8640] [cursor=pointer]
+                - generic [ref=e8641] [cursor=pointer]: 充電時発熱
+              - generic [ref=e8642]:
+                - checkbox "タッチ操作" [ref=e8643] [cursor=pointer]
+                - generic [ref=e8644] [cursor=pointer]: タッチ操作
+              - generic [ref=e8645]:
+                - checkbox "画面発色" [ref=e8646] [cursor=pointer]
+                - generic [ref=e8647] [cursor=pointer]: 画面発色
+              - generic [ref=e8648]:
+                - checkbox "画面浮き" [ref=e8649] [cursor=pointer]
+                - generic [ref=e8650] [cursor=pointer]: 画面浮き
+              - generic [ref=e8651]:
+                - checkbox "全ボタン操作" [ref=e8652] [cursor=pointer]
+                - generic [ref=e8653] [cursor=pointer]: 全ボタン操作
+              - generic [ref=e8654]:
+                - checkbox "バッテリー減り速度" [ref=e8655] [cursor=pointer]
+                - generic [ref=e8656] [cursor=pointer]: バッテリー減り速度
+              - generic [ref=e8657]:
+                - checkbox "SIM確認" [ref=e8658] [cursor=pointer]
+                - generic [ref=e8659] [cursor=pointer]: SIM確認
+              - generic [ref=e8660]:
+                - checkbox "水没なし" [ref=e8661] [cursor=pointer]
+                - generic [ref=e8662] [cursor=pointer]: 水没なし
+        - group [ref=e8664]:
+          - button "ランク説明" [ref=e8665] [cursor=pointer]
+        - generic [ref=e8667]:
+          - generic [ref=e8668]: 査定写真（これ使って）
+          - generic [ref=e8670]:
+            - generic [ref=e8825]:
+              - generic [ref=e8826]:
+                - generic "IMG-7053.jpg" [ref=e8827]
+                - button [ref=e8829] [cursor=pointer]
+                - generic [ref=e8830]: 748 KB
+                - img "IMG-7053.jpg" [ref=e8832] [cursor=pointer]
+              - generic [ref=e8833]:
+                - generic "IMG-7054.jpg" [ref=e8834]
+                - button [ref=e8836] [cursor=pointer]
+                - generic [ref=e8837]: 585 KB
+                - img "IMG-7054.jpg" [ref=e8839] [cursor=pointer]
+              - generic [ref=e8840]:
+                - generic "IMG-7055.jpg" [ref=e8841]
+                - button [ref=e8843] [cursor=pointer]
+                - generic [ref=e8844]: 444 KB
+                - img "IMG-7055.jpg" [ref=e8846] [cursor=pointer]
+              - generic [ref=e8847]:
+                - generic "IMG-7056.jpg" [ref=e8848]
+                - button [ref=e8850] [cursor=pointer]
+                - generic [ref=e8851]: 468 KB
+                - img "IMG-7056.jpg" [ref=e8863] [cursor=pointer]
+              - generic [ref=e8853]:
+                - generic "IMG-7057.jpg" [ref=e8854]
+                - button [ref=e8856] [cursor=pointer]
+                - generic [ref=e8857]: 455 KB
+                - img "IMG-7057.jpg" [ref=e8865] [cursor=pointer]
+              - generic [ref=e8858]:
+                - generic "IMG-7058.jpg" [ref=e8859]
+                - button [ref=e8861] [cursor=pointer]
+                - generic [ref=e8862]: 1 MB
+                - img "IMG-7058.jpg" [ref=e8867] [cursor=pointer]
+            - link "参照 Choose File" [ref=e8671] [cursor=pointer]:
+              - /url: javascript:void(0)
+              - text: 参照
+              - button "Choose File" [ref=e8673]
+            - paragraph [ref=e8674]: (最大1 GB)
+        - separator [ref=e8677]
+        - generic [ref=e8682]: 価格情報
+        - generic [ref=e8683]:
+          - generic [ref=e8684]:
+            - generic [ref=e8685]: 価格設定
+            - listbox [ref=e8688]:
+              - option "-----" [selected] [ref=e8689]
+          - generic [ref=e8691]:
+            - generic [ref=e8692]: 最高提示価格
+            - textbox [ref=e8697]: "18200"
+          - generic [ref=e8698]:
+            - generic [ref=e8699]: 最低提示価格
+            - textbox [ref=e8704]: "18200"
+          - generic [ref=e8705]:
+            - generic [ref=e8706]: 最終買取価格
+            - textbox [ref=e8711]
+          - generic [ref=e8712]:
+            - generic [ref=e8713]: 買取日
+            - textbox [ref=e8716]
+        - generic [ref=e8717]:
+          - generic [ref=e8718]:
+            - generic [ref=e8719]: 価格設定（高額）
+            - listbox [ref=e8722]:
+              - option "-----" [selected] [ref=e8723]
+          - generic [ref=e8725]:
+            - generic [ref=e8726]: 最高提示価格（高額）
+            - textbox [ref=e8731]: "21000"
+          - generic [ref=e8732]:
+            - generic [ref=e8733]: 最低提示価格（高額）
+            - textbox [ref=e8738]: "21000"
+          - generic [ref=e8739]:
+            - generic [ref=e8740]: データベース選択*
+            - generic [ref=e8742]:
+              - generic [ref=e8743]:
+                - radio "2023/06/11" [ref=e8744] [cursor=pointer]
+                - generic [ref=e8745] [cursor=pointer]: 2023/06/11
+              - generic [ref=e8746]:
+                - radio "2023/03/20" [ref=e8747] [cursor=pointer]
+                - generic [ref=e8748] [cursor=pointer]: 2023/03/20
+              - generic [ref=e8749]:
+                - radio "ヒカカク" [ref=e8750] [cursor=pointer]
+                - generic [ref=e8751] [cursor=pointer]: ヒカカク
+              - generic [ref=e8752]:
+                - radio "2023/01/12" [ref=e8753] [cursor=pointer]
+                - generic [ref=e8754] [cursor=pointer]: 2023/01/12
+              - generic [ref=e8755]:
+                - radio "2023/09/02" [ref=e8756] [cursor=pointer]
+                - generic [ref=e8757] [cursor=pointer]: 2023/09/02
+              - generic [ref=e8758]:
+                - radio "2023/09/27" [checked] [ref=e8759] [cursor=pointer]
+                - generic [ref=e8760] [cursor=pointer]: 2023/09/27
+        - separator [ref=e8763]
+        - separator [ref=e8766]
+        - group [ref=e8768]:
+          - button "販売" [expanded] [ref=e8769] [cursor=pointer]
+          - generic [ref=e8872]: 出品文章作成
+          - generic [ref=e8873]:
+            - generic [ref=e8874]:
+              - generic [ref=e8875]: ムスビーランクー販売時
+              - listbox [ref=e8878]:
+                - option "-----" [selected] [ref=e8879]
+            - generic [ref=e8881]:
+              - generic [ref=e8882]: 備考ー販売時
+              - textbox [ref=e8885]
+            - generic [ref=e8886]:
+              - generic [ref=e8887]: 状態説明１（デメリット）
+              - listbox [ref=e8890]:
+                - option "-----" [selected] [ref=e8891]
+            - generic [ref=e8893]:
+              - generic [ref=e8894]: 状態説明２（メリット）
+              - listbox [ref=e8897]:
+                - option "-----" [selected] [ref=e8898]
+          - generic [ref=e8900]:
+            - generic [ref=e8901]:
+              - generic [ref=e8902]: 状態説明
+              - textbox [ref=e8905]
+            - generic [ref=e8906]:
+              - generic [ref=e8907]: 出品タイトル
+              - textbox [ref=e8910]
+            - generic [ref=e8911]:
+              - generic [ref=e8912]: 出品文章
+              - textbox [ref=e8915]
+            - generic [ref=e8917]:
+              - generic [ref=e8918]: タイトルアピール
+              - listbox [ref=e8921]:
+                - option "動作良好！" [selected] [ref=e8922]
+          - generic [ref=e8924]:
+            - generic [ref=e8925]:
+              - generic [ref=e8926]: BMコンディション
+              - listbox [ref=e8929]:
+                - option "Cグレード" [selected] [ref=e9323]
+            - generic [ref=e8932]:
+              - generic [ref=e8933]: Amazonコンディション
+              - listbox [ref=e8936]:
+                - option "-----" [selected] [ref=e8937]
+            - generic [ref=e8939]:
+              - generic [ref=e8940]: YSランク
+              - listbox [ref=e8943]:
+                - option "-----" [selected] [ref=e8944]
+          - generic [ref=e8947]:
+            - generic [ref=e8948]: 整備時確認項目１
+            - generic [ref=e8950]:
+              - generic [ref=e8951]:
+                - checkbox "Wi-Fi接続" [ref=e8952] [cursor=pointer]
+                - generic [ref=e8953] [cursor=pointer]: Wi-Fi接続
+              - generic [ref=e8954]:
+                - checkbox "Touch/FaceID機能" [ref=e8955] [cursor=pointer]
+                - generic [ref=e8956] [cursor=pointer]: Touch/FaceID機能
+              - generic [ref=e8957]:
+                - checkbox "バッテリー最大容量" [ref=e8958] [cursor=pointer]
+                - generic [ref=e8959] [cursor=pointer]: バッテリー最大容量
+              - generic [ref=e8960]:
+                - checkbox "SIMロック有無" [ref=e8961] [cursor=pointer]
+                - generic [ref=e8962] [cursor=pointer]: SIMロック有無
+              - generic [ref=e8963]:
+                - checkbox "ＳＩＭカード有無" [ref=e8964] [cursor=pointer]
+                - generic [ref=e8965] [cursor=pointer]: ＳＩＭカード有無
+              - generic [ref=e8966]:
+                - checkbox "通話" [ref=e8967] [cursor=pointer]
+                - generic [ref=e8968] [cursor=pointer]: 通話
+              - generic [ref=e8969]:
+                - checkbox "充電時発熱有無" [ref=e8970] [cursor=pointer]
+                - generic [ref=e8971] [cursor=pointer]: 充電時発熱有無
+              - generic [ref=e8972]:
+                - checkbox "バッテリー減り速度" [ref=e8973] [cursor=pointer]
+                - generic [ref=e8974] [cursor=pointer]: バッテリー減り速度
+          - generic [ref=e8975]:
+            - generic [ref=e8976]:
+              - generic [ref=e8977]: 整備確認
+              - generic [ref=e8980]:
+                - checkbox "全完了" [ref=e8981] [cursor=pointer]
+                - generic [ref=e8982] [cursor=pointer]: 全完了
+            - generic [ref=e8983]:
+              - generic [ref=e8984]: 整備時確認項目２
+              - generic [ref=e8986]:
+                - generic [ref=e8987]:
+                  - checkbox "タッチ操作" [ref=e8988] [cursor=pointer]
+                  - generic [ref=e8989] [cursor=pointer]: タッチ操作
+                - generic [ref=e8990]:
+                  - checkbox "画面発色" [ref=e8991] [cursor=pointer]
+                  - generic [ref=e8992] [cursor=pointer]: 画面発色
+                - generic [ref=e8993]:
+                  - checkbox "画面浮き" [ref=e8994] [cursor=pointer]
+                  - generic [ref=e8995] [cursor=pointer]: 画面浮き
+                - generic [ref=e8996]:
+                  - checkbox "近接センサー" [ref=e8997] [cursor=pointer]
+                  - generic [ref=e8998] [cursor=pointer]: 近接センサー
+                - generic [ref=e8999]:
+                  - checkbox "アウトカメラ" [ref=e9000] [cursor=pointer]
+                  - generic [ref=e9001] [cursor=pointer]: アウトカメラ
+                - generic [ref=e9002]:
+                  - checkbox "インカメラ" [ref=e9003] [cursor=pointer]
+                  - generic [ref=e9004] [cursor=pointer]: インカメラ
+                - generic [ref=e9005]:
+                  - checkbox "フラッシュ" [ref=e9006] [cursor=pointer]
+                  - generic [ref=e9007] [cursor=pointer]: フラッシュ
+                - generic [ref=e9008]:
+                  - checkbox "全ボタン操作" [ref=e9009] [cursor=pointer]
+                  - generic [ref=e9010] [cursor=pointer]: 全ボタン操作
+                - generic [ref=e9011]:
+                  - checkbox "充電可否" [ref=e9012] [cursor=pointer]
+                  - generic [ref=e9013] [cursor=pointer]: 充電可否
+          - separator [ref=e9016]
+          - generic [ref=e9021]: 出品価格・進捗
+          - generic [ref=e9022]:
+            - generic [ref=e9023]:
+              - generic [ref=e9024]: 出品媒体
+              - generic [ref=e9026]:
+                - generic [ref=e9027]:
+                  - checkbox "バックマーケット" [checked] [ref=e9028] [cursor=pointer]
+                  - generic [ref=e9029] [cursor=pointer]: バックマーケット
+                - generic [ref=e9030]:
+                  - checkbox "ヤフーショッピング" [ref=e9031] [cursor=pointer]
+                  - generic [ref=e9032] [cursor=pointer]: ヤフーショッピング
+                - generic [ref=e9033]:
+                  - checkbox "ムスビー" [ref=e9034] [cursor=pointer]
+                  - generic [ref=e9035] [cursor=pointer]: ムスビー
+                - generic [ref=e9036]:
+                  - checkbox "秋葉原店" [ref=e9037] [cursor=pointer]
+                  - generic [ref=e9038] [cursor=pointer]: 秋葉原店
+                - generic [ref=e9039]:
+                  - checkbox "ヤフオク" [ref=e9040] [cursor=pointer]
+                  - generic [ref=e9041] [cursor=pointer]: ヤフオク
+                - generic [ref=e9042]:
+                  - checkbox "アマゾン" [ref=e9043] [cursor=pointer]
+                  - generic [ref=e9044] [cursor=pointer]: アマゾン
+                - generic [ref=e9045]:
+                  - checkbox "店頭" [ref=e9046] [cursor=pointer]
+                  - generic [ref=e9047] [cursor=pointer]: 店頭
+            - generic [ref=e9048]:
+              - generic [ref=e9049]: BM-MB粗利差
+              - textbox [disabled] [ref=e9054]: "0"
+          - generic [ref=e9055]:
+            - generic [ref=e9056]:
+              - generic [ref=e9057]: 販売価格MB（税込）
+              - textbox [ref=e9062]
+            - generic [ref=e9063]:
+              - generic [ref=e9064]: 卸価格
+              - textbox [disabled] [ref=e9069]: "-500"
+            - generic [ref=e9070]:
+              - generic [ref=e9071]: 粗利益
+              - textbox [disabled] [ref=e9076]: "-500"
+          - generic [ref=e9077]:
+            - generic [ref=e9078]:
+              - generic [ref=e9079]: 販売価格BM（税込）
+              - textbox [ref=e9084]
+            - generic [ref=e9085]:
+              - generic [ref=e9086]: 卸価格
+              - textbox [disabled] [ref=e9091]: "-500"
+            - generic [ref=e9092]:
+              - generic [ref=e9093]: 粗利益
+              - textbox [disabled] [ref=e9098]: "-500"
+          - generic [ref=e9099]:
+            - generic [ref=e9100]:
+              - generic [ref=e9101]: 販売価格徐さん（税込）
+              - textbox [ref=e9106]
+            - generic [ref=e9107]:
+              - generic [ref=e9108]: 卸価格
+              - textbox [disabled] [ref=e9113]: "-500"
+            - generic [ref=e9114]:
+              - generic [ref=e9115]: 粗利益
+              - textbox [disabled] [ref=e9120]: "-500"
+          - generic [ref=e9121]:
+            - generic [ref=e9122]:
+              - generic [ref=e9123]: 販売価格グウェンさん（税込）
+              - textbox [ref=e9128]
+            - generic [ref=e9129]:
+              - generic [ref=e9130]: 卸価格
+              - textbox [disabled] [ref=e9135]: "-500"
+            - generic [ref=e9136]:
+              - generic [ref=e9137]: 粗利益
+              - textbox [disabled] [ref=e9142]: "-500"
+          - generic [ref=e9143]:
+            - generic [ref=e9144]:
+              - generic [ref=e9145]: 販売価格ドラゴン（税込）
+              - textbox [ref=e9150]
+            - generic [ref=e9151]:
+              - generic [ref=e9152]: 卸価格
+              - textbox [disabled] [ref=e9157]: "-500"
+            - generic [ref=e9158]:
+              - generic [ref=e9159]: 粗利益
+              - textbox [disabled] [ref=e9164]: "-500"
+          - generic [ref=e9165]:
+            - generic [ref=e9166]:
+              - generic [ref=e9167]: 販売価格イオシス（税込）
+              - textbox [ref=e9172]
+            - generic [ref=e9173]:
+              - generic [ref=e9174]: 卸価格
+              - textbox [disabled] [ref=e9179]: "-500"
+            - generic [ref=e9180]:
+              - generic [ref=e9181]: 粗利益
+              - textbox [disabled] [ref=e9186]: "-500"
+          - generic [ref=e9187]:
+            - generic [ref=e9188]:
+              - generic [ref=e9189]: 販売価格YS（税込）
+              - textbox [ref=e9194]
+            - generic [ref=e9195]:
+              - generic [ref=e9196]: 粗利益
+              - textbox [disabled] [ref=e9201]: "-500"
+            - generic [ref=e9202]:
+              - generic [ref=e9203]: 卸価格
+              - textbox [disabled] [ref=e9208]: "-500"
+          - generic [ref=e9209]:
+            - generic [ref=e9210]:
+              - generic [ref=e9211]: 販売経路
+              - listbox [ref=e9214]:
+                - option "バックマーケット" [selected] [ref=e9349]
+            - generic [ref=e9217]:
+              - generic [ref=e9218]: 最終販売価格（税込）
+              - textbox [ref=e9223]
+            - generic [ref=e9224]:
+              - generic [ref=e9225]: 修理費
+              - textbox [ref=e9230]: "0"
+            - generic [ref=e9231]:
+              - generic [ref=e9232]: 出品日
+              - textbox [ref=e9235]
+            - generic [ref=e9239]:
+              - checkbox "パーツ取り" [ref=e9240] [cursor=pointer]
+              - generic [ref=e9241] [cursor=pointer]: パーツ取り
+          - generic [ref=e9242]:
+            - generic [ref=e9243]:
+              - generic [ref=e9244]: 販売手数料
+              - textbox [ref=e9249]
+            - generic [ref=e9250]:
+              - generic [ref=e9251]: １台あたりの広告費
+              - textbox [ref=e9256]
+            - generic [ref=e9257]:
+              - generic [ref=e9258]: 送料
+              - textbox [ref=e9263]
+            - generic [ref=e9264]:
+              - generic [ref=e9265]: 販売日
+              - textbox [ref=e9268]
+          - generic [ref=e9269]:
+            - generic [ref=e9270]:
+              - generic [ref=e9271]: 想定販売経路
+              - listbox [ref=e9274]:
+                - option "バックマーケット" [selected] [ref=e9375]
+            - generic [ref=e9277]:
+              - generic [ref=e9278]: 想定販売価格
+              - textbox [ref=e9283]: "44275"
+            - generic [ref=e9284]:
+              - generic [ref=e9285]: 想定店頭販売価格
+              - textbox [ref=e9290]
+            - generic [ref=e9291]:
+              - generic [ref=e9292]: 粗利(手数料引)
+              - textbox [disabled] [ref=e9297]: "38904.75"
+            - generic [ref=e9298]:
+              - generic [ref=e9299]: 卸売価格
+              - textbox [disabled] [ref=e9304]: "38404.75"
+            - generic [ref=e9305]:
+              - generic [ref=e9306]: 営業利益(平均経費から算出)
+              - textbox [disabled] [ref=e9311]: "26904.75"
+        - group [ref=e8771]:
+          - button "メタ" [ref=e8772] [cursor=pointer]
+      - tablist [ref=e440]:
+        - tab "変更履歴" [ref=e441]
+  - generic [ref=e8109]:
+    - button "キャンセル" [ref=e8110] [cursor=pointer]
+    - button "保存" [ref=e8111] [cursor=pointer]

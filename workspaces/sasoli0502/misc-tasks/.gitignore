@@ -1,0 +1,14 @@
+# データファイル
+data/
+outputs/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+
+# 一時ファイル
+*.tmp
+*.log
+.DS_Store

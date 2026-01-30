@@ -1,0 +1,306 @@
+# スキルマスター
+# 全スキルの定義と分類
+# 最終更新: 2025-10-21
+
+# スキル定義
+skills:
+  # ========== コア業務（タスク化対象） ==========
+  査定:
+    display_name: "査定"
+    category: core
+    description: "端末の状態確認と価格査定"
+    default_duration_minutes: 15
+    requires_certification: false
+    can_be_assigned_as_task: true
+
+  検品:
+    display_name: "検品"
+    category: core
+    description: "端末の動作確認と品質チェック"
+    default_duration_minutes: 20
+    requires_certification: false
+    can_be_assigned_as_task: true
+
+  出品:
+    display_name: "出品"
+    category: core
+    description: "端末情報の登録と出品作業"
+    default_duration_minutes: 10
+    requires_certification: false
+    can_be_assigned_as_task: true
+
+  修理:
+    display_name: "修理"
+    category: core
+    description: "端末の修理作業"
+    default_duration_minutes: 60
+    requires_certification: true
+    can_be_assigned_as_task: true
+
+  # ========== 作業系（将来タスク化可能） ==========
+  梱包キット作成:
+    display_name: "梱包キット作成"
+    category: operation
+    description: "査定キットの梱包と準備"
+    default_duration_minutes: 5
+    requires_certification: false
+    can_be_assigned_as_task: true
+
+  開封:
+    display_name: "開封"
+    category: operation
+    description: "受け取った端末の開封作業"
+    default_duration_minutes: 3
+    requires_certification: false
+    can_be_assigned_as_task: true
+
+  アクティベート:
+    display_name: "アクティベート"
+    category: operation
+    description: "端末のアクティベーション作業"
+    default_duration_minutes: 10
+    requires_certification: false
+    can_be_assigned_as_task: true
+
+  成約仕分:
+    display_name: "成約仕分"
+    category: operation
+    description: "成約済み端末の仕分け作業"
+    default_duration_minutes: 5
+    requires_certification: false
+    can_be_assigned_as_task: true
+
+  発送準備:
+    display_name: "発送準備"
+    category: operation
+    description: "端末の梱包と発送準備"
+    default_duration_minutes: 10
+    requires_certification: false
+    can_be_assigned_as_task: true
+
+  送り状作成:
+    display_name: "送り状作成"
+    category: operation
+    description: "発送用送り状の作成"
+    default_duration_minutes: 5
+    requires_certification: false
+    can_be_assigned_as_task: true
+
+  ムスビー撮影:
+    display_name: "ムスビー撮影"
+    category: operation
+    description: "ムスビー出品用端末の撮影"
+    default_duration_minutes: 15
+    requires_certification: false
+    can_be_assigned_as_task: true
+
+  ムスビー出品:
+    display_name: "ムスビー出品"
+    category: operation
+    description: "ムスビーへの出品登録作業"
+    default_duration_minutes: 10
+    requires_certification: false
+    can_be_assigned_as_task: true
+
+  # ========== コミュニケーション系 ==========
+  返信:
+    display_name: "返信"
+    category: communication
+    description: "お客様・スタッフへのメッセージ返信"
+    default_duration_minutes: 10
+    requires_certification: false
+    can_be_assigned_as_task: true
+
+  振込メッセ:
+    display_name: "振込メッセージ"
+    category: communication
+    description: "振込完了メッセージの送信"
+    default_duration_minutes: 5
+    requires_certification: false
+    can_be_assigned_as_task: true
+
+  催促:
+    display_name: "催促"
+    category: communication
+    description: "未対応案件の催促連絡"
+    default_duration_minutes: 5
+    requires_certification: false
+    can_be_assigned_as_task: true
+
+  査定結果:
+    display_name: "査定結果送信"
+    category: communication
+    description: "査定結果のお客様への送信"
+    default_duration_minutes: 10
+    requires_certification: false
+    can_be_assigned_as_task: true
+
+  返送交渉:
+    display_name: "返送交渉"
+    category: communication
+    description: "端末返送に関する交渉"
+    default_duration_minutes: 15
+    requires_certification: false
+    can_be_assigned_as_task: true
+
+  発送完了連絡:
+    display_name: "発送完了連絡"
+    category: communication
+    description: "発送完了のお知らせ送信"
+    default_duration_minutes: 5
+    requires_certification: false
+    can_be_assigned_as_task: true
+
+  電話対応:
+    display_name: "電話対応"
+    category: communication
+    description: "お客様からの電話対応"
+    default_duration_minutes: 15
+    requires_certification: false
+    can_be_assigned_as_task: false
+
+  # ========== 管理業務 ==========
+  KPI入力:
+    display_name: "KPI入力"
+    category: management
+    description: "日次KPIデータの入力"
+    default_duration_minutes: 10
+    requires_certification: false
+    can_be_assigned_as_task: false
+
+  実残高入力:
+    display_name: "実残高入力"
+    category: management
+    description: "実在庫残高の入力"
+    default_duration_minutes: 5
+    requires_certification: false
+    can_be_assigned_as_task: false
+
+  座席決定:
+    display_name: "座席決定"
+    category: management
+    description: "スタッフの座席配置決定"
+    default_duration_minutes: 5
+    requires_certification: false
+    can_be_assigned_as_task: false
+
+  タスク設定:
+    display_name: "タスク設定"
+    category: management
+    description: "スタッフへのタスク割り当て"
+    default_duration_minutes: 10
+    requires_certification: false
+    can_be_assigned_as_task: false
+
+  BM在庫確認:
+    display_name: "BM在庫確認"
+    category: management
+    description: "バックマーケット在庫の確認作業"
+    default_duration_minutes: 10
+    requires_certification: false
+    can_be_assigned_as_task: true
+
+  進捗変更:
+    display_name: "進捗変更"
+    category: management
+    description: "タスク・案件の進捗状態更新"
+    default_duration_minutes: 5
+    requires_certification: false
+    can_be_assigned_as_task: false
+
+  新品価格変更:
+    display_name: "新品価格変更"
+    category: management
+    description: "新品端末の価格調整"
+    default_duration_minutes: 5
+    requires_certification: false
+    can_be_assigned_as_task: false
+
+  品質管理:
+    display_name: "品質管理"
+    category: management
+    description: "作業品質のチェックと管理"
+    default_duration_minutes: 15
+    requires_certification: false
+    can_be_assigned_as_task: false
+
+  # ========== 専門業務 ==========
+  パーツ注文:
+    display_name: "パーツ注文"
+    category: specialized
+    description: "修理用パーツの発注"
+    default_duration_minutes: 10
+    requires_certification: false
+    can_be_assigned_as_task: true
+
+  店舗準備:
+    display_name: "店舗準備"
+    category: specialized
+    description: "店舗営業の準備作業"
+    default_duration_minutes: 30
+    requires_certification: false
+    can_be_assigned_as_task: false
+
+  店舗査定:
+    display_name: "店舗査定"
+    category: specialized
+    description: "店舗での端末査定対応"
+    default_duration_minutes: 20
+    requires_certification: false
+    can_be_assigned_as_task: false
+
+  店舗修理受付:
+    display_name: "店舗修理受付"
+    category: specialized
+    description: "店舗での修理受付対応"
+    default_duration_minutes: 15
+    requires_certification: false
+    can_be_assigned_as_task: false
+
+  店舗修理お渡し:
+    display_name: "店舗修理お渡し"
+    category: specialized
+    description: "修理完了端末のお渡し"
+    default_duration_minutes: 10
+    requires_certification: false
+    can_be_assigned_as_task: false
+
+  法人販売:
+    display_name: "法人販売"
+    category: specialized
+    description: "法人向け営業・販売対応"
+    default_duration_minutes: 60
+    requires_certification: false
+    can_be_assigned_as_task: false
+
+# カテゴリ定義
+categories:
+  core:
+    display_name: "コア業務"
+    description: "タスク管理の中心となる主要業務"
+    priority: 1
+    color: "#FF6B6B"
+
+  operation:
+    display_name: "作業系"
+    description: "定型的な作業タスク"
+    priority: 2
+    color: "#4ECDC4"
+
+  communication:
+    display_name: "コミュニケーション"
+    description: "お客様・スタッフとの連絡業務"
+    priority: 3
+    color: "#45B7D1"
+
+  management:
+    display_name: "管理業務"
+    description: "データ入力・進捗管理など"
+    priority: 4
+    color: "#FFA07A"
+
+  specialized:
+    display_name: "専門業務"
+    description: "店舗対応・法人営業など特殊業務"
+    priority: 5
+    color: "#98D8C8"

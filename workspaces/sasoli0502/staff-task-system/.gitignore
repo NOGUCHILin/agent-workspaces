@@ -1,0 +1,76 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# uv
+uv.lock
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+# タスクデータ（実データは含めない）
+tasks/active/*.yaml
+!tasks/active/.gitkeep
+
+# アーカイブデータ
+tasks/archive/*.yaml
+!tasks/archive/.gitkeep
+
+# テンプレート以外
+templates/*
+!templates/.gitkeep
+
+# テストフィクスチャ（サンプルデータのみコミット）
+tests/fixtures/*.yaml
+!tests/fixtures/sample_*.yaml
+
+# ローカル設定
+.claude/settings.local.json
+
+# 環境変数（機密情報）
+.env
+.env.local
+*.key
+*.pem
+
+# ログファイル
+*.log
+logs/
+
+# 一時ファイル
+*.tmp
+*.bak
+.cache/

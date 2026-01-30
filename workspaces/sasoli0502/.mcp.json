@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@0.0.59",
+        "--user-data-dir=C:/Users/koyom/.playwright-profiles/sasoli0502"
+      ]
+    }
+  }
+}

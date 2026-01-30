@@ -1,0 +1,44 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# Data files (sensitive financial info)
+data/*.png
+data/*.jpg
+data/*.jpeg
+data/*.webp
+data/proposals/*.md
+data/*.csv
+data/*.xlsx
+data/*.yaml
+!data/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 引き継ぎドキュメント（ローカル管理）
+次セッションへの引き継ぎ*.md
+*実績分析*.md
+*検討*.md
+*最適化案*.md
+*細分化*.md
+矛盾点と課題*.md
+
+# Claude
+.claude/
+.vercel

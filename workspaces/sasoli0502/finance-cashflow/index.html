@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💳 クレジットカード運用ダッシュボード</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .header .date {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .section {
+            padding: 30px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section h2 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* カード残高入力セクション */
+        .card-input-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+
+        .card-input-item {
+            padding: 15px;
+            border-radius: 8px;
+            border: 2px solid #e0e0e0;
+            transition: all 0.3s;
+        }
+
+        .card-input-item:hover {
+            border-color: #667eea;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+        }
+
+        .card-input-item.status-good {
+            background-color: #f0fdf4;
+            border-color: #86efac;
+        }
+
+        .card-input-item.status-warning {
+            background-color: #fefce8;
+            border-color: #fde047;
+        }
+
+        .card-input-item.status-danger {
+            background-color: #fef2f2;
+            border-color: #fca5a5;
+        }
+
+        .card-name {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card-info {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .card-input-item input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            font-family: inherit;
+        }
+
+        .card-input-item input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        /* 更新ボタン */
+        .update-button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: transform 0.2s;
+        }
+
+        .update-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        .update-button:active {
+            transform: translateY(0);
+        }
+
+        /* 今日使った場合の引き落とし日 */
+        .card-recommendation-list {
+            display: grid;
+            gap: 15px;
+        }
+
+        .card-rec-item {
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            background-color: #f8f9fa;
+            transition: all 0.3s;
+        }
+
+        .card-rec-item:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transform: translateX(5px);
+        }
+
+        .card-rec-item.rank-1 {
+            border-left-color: #fbbf24;
+            background: linear-gradient(to right, #fef3c7, #f8f9fa);
+        }
+
+        .card-rec-item.rank-2 {
+            border-left-color: #c0c0c0;
+            background: linear-gradient(to right, #f3f4f6, #f8f9fa);
+        }
+
+        .card-rec-item.rank-3 {
+            border-left-color: #cd7f32;
+            background: linear-gradient(to right, #fed7aa, #f8f9fa);
+        }
+
+        .card-rec-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .card-rec-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .card-rec-detail {
+            font-size: 14px;
+            color: #666;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .badge-good {
+            background-color: #86efac;
+            color: #166534;
+        }
+
+        .badge-warning {
+            background-color: #fde047;
+            color: #854d0e;
+        }
+
+        .badge-danger {
+            background-color: #fca5a5;
+            color: #991b1b;
+        }
+
+        .badge-unavailable {
+            background-color: #e5e7eb;
+            color: #6b7280;
+        }
+
+        /* レスポンシブ対応 */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .header {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 22px;
+            }
+
+            .header .date {
+                font-size: 16px;
+            }
+
+            .section {
+                padding: 20px;
+            }
+
+            .section h2 {
+                font-size: 18px;
+            }
+
+            .card-input-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card-rec-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        /* ローディング表示 */
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+
+        /* 締日アラート */
+        .closing-alert {
+            display: inline-block;
+            background-color: #fef3c7;
+            color: #92400e;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        /* スケジュールアイテム */
+        .schedule-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .schedule-date {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .schedule-tasks {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .schedule-task {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 12px;
+            background-color: white;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .schedule-task input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            margin-top: 2px;
+        }
+
+        .schedule-task-content {
+            flex: 1;
+        }
+
+        .schedule-task-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 4px;
+        }
+
+        .schedule-task-detail {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* 決済完了のタスク */
+        .schedule-task.status-completed {
+            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+            border: 2px solid #28a745;
+            position: relative;
+        }
+
+        .schedule-task.status-completed::before {
+            content: '✓';
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 32px;
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .schedule-task.status-completed .schedule-task-title {
+            color: #155724;
+            font-weight: bold;
+        }
+
+        .schedule-task.status-completed .schedule-task-detail {
+            color: #155724;
+        }
+
+        /* チェックボックスでの完了（手動） */
+        .schedule-task.completed {
+            opacity: 0.6;
+        }
+
+        .schedule-task.completed .schedule-task-title {
+            text-decoration: line-through;
+        }
+
+        /* 引き落としスケジュール */
+        .withdrawal-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #ef4444;
+        }
+
+        .withdrawal-date {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .withdrawal-total {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ef4444;
+            margin-bottom: 15px;
+        }
+
+        .withdrawal-details {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-left: 20px;
+        }
+
+        .withdrawal-detail-item {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* 月次ルーティンセクション */
+        .routine-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .routine-card {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .routine-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+
+        .routine-card.unassigned {
+            opacity: 0.7;
+        }
+
+        .routine-header {
+            color: white;
+            padding: 15px;
+            font-size: 16px;
+        }
+
+        .routine-body {
+            padding: 15px;
+            background: white;
+        }
+
+        .routine-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 8px;
+            background: #f9fafb;
+            border-radius: 6px;
+            border-left: 3px solid #667eea;
+        }
+
+        .routine-item.conditional {
+            border-left-color: #fbbf24;
+            background: #fffbeb;
+        }
+
+        .routine-label {
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .routine-badge {
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .routine-badge.split-ok {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .routine-badge.split-no {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        .routine-badge.conditional {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .routine-note {
+            font-size: 12px;
+            color: #6b7280;
+            margin-top: 8px;
+            padding: 8px;
+            background: #f3f4f6;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>💳 クレジットカード運用ダッシュボード</h1>
+            <div class="date" id="currentDate">2025-11-07 (金)</div>
+        </div>
+
+        <div class="section">
+            <h2>📊 カード残高入力（毎日更新）</h2>
+            <p style="color: #666; margin-bottom: 20px; font-size: 14px;">
+                ※ 各カード会社のサイトで確認した利用可能額を入力してください（自動保存されます）
+            </p>
+            <div class="card-input-grid" id="cardInputGrid">
+                <!-- カード入力欄がここに動的に生成されます -->
+            </div>
+            <button class="update-button" onclick="calculatePaymentDates()">💾 残高を反映して再計算</button>
+        </div>
+
+        <div class="section">
+            <h2>🎯 今日カードを使った場合の引き落とし日</h2>
+            <p style="color: #666; margin-bottom: 20px; font-size: 14px;">
+                猶予期間が長い順に表示しています。利用可能額も確認してください。
+            </p>
+            <div class="card-recommendation-list" id="recommendationList">
+                <div class="loading">💾 「残高を反映して再計算」ボタンを押してください</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📅 月次ルーティン（暫定配分）</h2>
+            <p style="color: #666; margin-bottom: 20px; font-size: 14px;">
+                月次ルーティンに基づく基本的なカード配分です。実際の金額は毎月変動します。
+            </p>
+            <div class="routine-grid">
+                <div class="routine-card">
+                    <div class="routine-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <strong>毎月1日申請 - Amazon（DGFT）</strong>
+                        <div style="font-size: 12px; opacity: 0.9;">振込5日 → 決済約2日 → 引落翌月26日</div>
+                    </div>
+                    <div class="routine-body">
+                        <div class="routine-item">
+                            <span class="routine-label">🏢 ユニホー</span>
+                            <span class="routine-badge conditional">期日超過</span>
+                        </div>
+                        <div class="routine-item">
+                            <span class="routine-label">🏭 ビズビ</span>
+                            <span class="routine-badge conditional">期日超過</span>
+                        </div>
+                        <div class="routine-note">前月末期日を超過して申請（DGFT経由）→ 引落を1ヶ月遅延</div>
+                    </div>
+                </div>
+
+                <div class="routine-card">
+                    <div class="routine-header" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                        <strong>毎月12日頃申請 - しんきんJCB（マネフォ）</strong>
+                        <div style="font-size: 12px; opacity: 0.9;">振込20日 → 決済約16日 → 引落翌々月10日</div>
+                    </div>
+                    <div class="routine-body">
+                        <div class="routine-item">
+                            <span class="routine-label">👤 徐さん</span>
+                            <span class="routine-badge split-ok">分割可</span>
+                        </div>
+                        <div class="routine-note">枠100万円、超過分はアメックス（byGMO）で分割</div>
+                    </div>
+                </div>
+
+                <div class="routine-card">
+                    <div class="routine-header" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <strong>毎月19日頃申請 - しんきんVisa（マネフォ）</strong>
+                        <div style="font-size: 12px; opacity: 0.9;">振込25日 → 決済約22日 → 引落翌々月10日</div>
+                    </div>
+                    <div class="routine-body">
+                        <div class="routine-item">
+                            <span class="routine-label">🚚 ヤマト運輸</span>
+                            <span class="routine-badge split-no">期日厳守</span>
+                        </div>
+                        <div class="routine-note">期日25日厳守、枠160万円</div>
+                    </div>
+                </div>
+
+                <div class="routine-card">
+                    <div class="routine-header" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <strong>毎月24日頃申請 - アメックス（byGMO）</strong>
+                        <div style="font-size: 12px; opacity: 0.9;">振込末日 → 決済約26日 → 引落翌々月10日</div>
+                    </div>
+                    <div class="routine-body">
+                        <div class="routine-item">
+                            <span class="routine-label">🏬 ドンキ</span>
+                            <span class="routine-badge split-no">期日厳守</span>
+                        </div>
+                        <div class="routine-note">期日末日厳守、byGMO経由でアメックス使用</div>
+                    </div>
+                </div>
+
+                <div class="routine-card unassigned">
+                    <div class="routine-header" style="background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);">
+                        <strong>トヨタカード - 請求書払い不使用</strong>
+                        <div style="font-size: 12px; opacity: 0.9;">DGFT非対応のため月次ルーティンから除外</div>
+                    </div>
+                    <div class="routine-body">
+                        <div class="routine-item conditional">
+                            <span class="routine-label">⚠️ 使用しない</span>
+                            <span class="routine-badge conditional">予備</span>
+                        </div>
+                        <div class="routine-note">通常のクレカ払いでのみ使用（広告費等）</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📋 請求書カード払いスケジュール</h2>
+            <p style="color: #666; margin-bottom: 20px; font-size: 14px;">
+                申請日順に並んでいます。申請済みのものはチェックしてください。
+            </p>
+            <div id="invoiceSchedule">
+                <div class="loading">💾 「残高を反映して再計算」ボタンを押してください</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>💸 引き落としスケジュール</h2>
+            <p style="color: #666; margin-bottom: 20px; font-size: 14px;">
+                銀行口座からの引き落とし予定日です。請求書払い+定期引き落とし（2, 4, 10, 26日）を表示しています。
+            </p>
+            <div id="withdrawalSchedule">
+                <div class="loading">💾 「残高を反映して再計算」ボタンを押してください</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // カードマスターデータ
+        const CARDS = [
+            {
+                id: 'toyota',
+                name: 'トヨタファイナンス',
+                closingDay: 5,
+                paymentDayOffset: 2,
+                paymentMonthOffset: 1,
+                creditLimit: 1200000,
+                invoicePayment: true
+            },
+            {
+                id: 'amazon',
+                name: 'Amazon Mastercard',
+                closingDay: 31,
+                paymentDayOffset: 26,
+                paymentMonthOffset: 1,
+                creditLimit: 2000000,
+                invoicePayment: true
+            },
+            {
+                id: 'gpc',
+                name: 'GPC（ゴールドポイントカード+）',
+                closingDay: 31,
+                paymentDayOffset: 26,
+                paymentMonthOffset: 1,
+                creditLimit: 500000,
+                invoicePayment: false
+            },
+            {
+                id: 'shinkin_visa',
+                name: 'しんきんVisa',
+                closingDay: 15,
+                paymentDayOffset: 10,
+                paymentMonthOffset: 1,
+                creditLimit: 1600000,
+                invoicePayment: true
+            },
+            {
+                id: 'shinkin_jcb',
+                name: 'しんきんJCB',
+                closingDay: 15,
+                paymentDayOffset: 10,
+                paymentMonthOffset: 1,
+                creditLimit: 1000000,
+                invoicePayment: true
+            },
+            {
+                id: 'jfr',
+                name: 'JFR（大丸）',
+                closingDay: 15,
+                paymentDayOffset: 10,
+                paymentMonthOffset: 1,
+                creditLimit: 1000000,
+                invoicePayment: true
+            },
+            {
+                id: 'saison',
+                name: 'セゾン',
+                closingDay: 10,
+                paymentDayOffset: 4,
+                paymentMonthOffset: 1,
+                creditLimit: 7000000,
+                invoicePayment: false
+            },
+            {
+                id: 'mi',
+                name: 'MIカード',
+                closingDay: 5,
+                paymentDayOffset: 26,
+                paymentMonthOffset: 0,
+                creditLimit: 1000000,
+                invoicePayment: true
+            },
+            {
+                id: 'amex',
+                name: 'アメックス',
+                closingDay: 22,
+                paymentDayOffset: 10,
+                paymentMonthOffset: 1,
+                creditLimit: 6350000,
+                invoicePayment: false
+            }
+        ];
+
+        // 初期残高（11月13日時点 - 11/10引き落とし後）- localStorageから読み込み、なければこの値を使用
+        const DEFAULT_BALANCES = {
+            'toyota': 1200000,
+            'amazon': 436000,
+            'gpc': 464000,
+            'shinkin_visa': 402000,      // 11/10引落(+1,619,160) - ヤマト決済(-1,198,000) = 402,000
+            'shinkin_jcb': 936329,       // 11/10引落(+878,329) + 元々58,000 = 936,329
+            'jfr': 0,
+            'saison': 5015000,
+            'mi': 722000,
+            'amex': 2596000
+        };
+
+        // 請求書カード払いデータ
+        // date: 申請日
+        // settlementDate: 決済日（カードが切られた日）- これを基準に引き落とし日を計算
+        // completedDate: 完了日（status='completed'にした日）- 1日後に非表示になる
+        const INVOICE_PAYMENTS = [
+            {
+                date: '2025-11-14',
+                settlementDate: '2025-11-12',  // 振込希望日11/14の2営業日前
+                name: 'ヤマト',
+                amount: 1198000,
+                card: 'shinkin_visa',
+                category: '荷造運賃',
+                status: 'completed',
+                completedDate: '2025-11-14',  // 完了日
+                note: '振込希望日11/14、決済完了'
+            },
+            {
+                date: '2025-11-14',
+                settlementDate: '2025-11-18',  // 振込希望日11/20の2営業日前
+                name: '徐さん（1/2）',
+                amount: 936000,
+                card: 'shinkin_jcb',
+                category: '仕入',
+                status: 'completed',
+                completedDate: '2025-11-26',
+                note: '振込希望日11/20、請求書分割909,709円、申請完了'
+            },
+            {
+                date: '2025-11-14',
+                settlementDate: '2025-11-18',  // 振込希望日11/20の2営業日前
+                name: '徐さん（2/2）',
+                amount: 41882,
+                card: 'shinkin_visa',
+                category: '仕入',
+                status: 'completed',
+                completedDate: '2025-11-26',
+                note: '振込希望日11/20、請求書分割40,661円、申請完了'
+            },
+            {
+                date: '2025-11-22',
+                settlementDate: '2025-11-28',  // 振込希望日11/30の2営業日前
+                name: 'ドンキ（11月分）',
+                amount: 258000,
+                card: 'toyota',
+                category: '地代家賃',
+                status: 'completed',
+                completedDate: '2025-11-26',
+                note: '振込希望日11/30、引き落とし2026-01-02、申請完了'
+            },
+            {
+                date: '2025-12-19',
+                settlementDate: '2025-12-22',  // 振込希望日12/25の2営業日前
+                name: 'ヤマト（12月分）',
+                amount: 1200000,
+                card: 'shinkin_visa',
+                category: '荷造運賃',
+                status: 'pending',
+                note: '振込希望日12/25（期日厳守）、引き落とし2026-02-10'
+            },
+            {
+                date: '2025-12-12',
+                settlementDate: '2025-12-16',  // 振込希望日12/20の2営業日前
+                name: '徐さん（12月分 1/2）',
+                amount: 1000000,
+                card: 'shinkin_jcb',
+                category: '仕入',
+                status: 'pending',
+                note: '振込希望日12/20、請求書1,454,997円×1.03=1,498,646円、引き落とし2026-01-10'
+            },
+            {
+                date: '2025-12-12',
+                settlementDate: '2025-12-16',  // 振込希望日12/20の2営業日前
+                name: '徐さん（12月分 2/2）',
+                amount: 498646,
+                card: 'amex',
+                category: '仕入',
+                status: 'pending',
+                note: '振込希望日12/20、byGMO経由、引き落とし2026-01-10'
+            },
+            {
+                date: '2026-01-01',
+                settlementDate: '2026-01-02',  // 振込希望日1/5の2営業日前
+                name: 'ユニホー（12月分）',
+                amount: 257500,
+                card: 'amazon',
+                category: '地代家賃',
+                status: 'pending',
+                note: '振込希望日1/5（期日12/31超過）、引き落とし2026-02-26'
+            },
+            {
+                date: '2026-01-01',
+                settlementDate: '2026-01-02',  // 振込希望日1/5の2営業日前
+                name: 'ビズビ（12月分）',
+                amount: 100000,
+                card: 'amazon',
+                category: '仕入',
+                status: 'pending',
+                note: '振込希望日1/5（期日12/31超過）、引き落とし2026-02-26'
+            },
+            {
+                date: '2025-12-24',
+                settlementDate: '2025-12-26',  // 振込希望日12/31の2営業日前
+                name: 'ドンキ（12月分）',
+                amount: 258000,
+                card: 'amex',
+                category: '地代家賃',
+                status: 'pending',
+                note: '振込希望日12/31（期日厳守）、引き落とし2026-02-10'
+            }
+        ];
+
+        // 祝日リスト（2025年）
+        const HOLIDAYS_2025 = [
+            '2025-01-01', '2025-01-13', '2025-02-11', '2025-02-23', '2025-02-24',
+            '2025-03-20', '2025-04-29', '2025-05-03', '2025-05-04', '2025-05-05',
+            '2025-05-06', '2025-07-21', '2025-08-11', '2025-09-15', '2025-09-23',
+            '2025-10-13', '2025-11-03', '2025-11-23', '2025-11-24'
+        ];
+
+        // localStorage関連
+        function loadBalances() {
+            const saved = localStorage.getItem('cardBalances');
+            if (saved) {
+                try {
+                    return JSON.parse(saved);
+                } catch (e) {
+                    console.error('Failed to load balances:', e);
+                }
+            }
+            return DEFAULT_BALANCES;
+        }
+
+        function saveBalances(balances) {
+            localStorage.setItem('cardBalances', JSON.stringify(balances));
+        }
+
+        // 引き落とし金額の管理
+        function loadWithdrawalAmounts() {
+            const saved = localStorage.getItem('withdrawalAmounts');
+            if (saved) {
+                try {
+                    return JSON.parse(saved);
+                } catch (e) {
+                    console.error('Failed to load withdrawal amounts:', e);
+                }
+            }
+            return {};
+        }
+
+        function saveWithdrawalAmounts(amounts) {
+            localStorage.setItem('withdrawalAmounts', JSON.stringify(amounts));
+        }
+
+        function getWithdrawalAmount(dateKey, cardId) {
+            const amounts = loadWithdrawalAmounts();
+            const key = `${dateKey}_${cardId}`;
+            return amounts[key] || null;
+        }
+
+        function setWithdrawalAmount(dateKey, cardId, amount) {
+            const amounts = loadWithdrawalAmounts();
+            const key = `${dateKey}_${cardId}`;
+            if (amount === null || amount === '' || amount === undefined) {
+                delete amounts[key];
+            } else {
+                amounts[key] = parseFloat(amount);
+            }
+            saveWithdrawalAmounts(amounts);
+        }
+
+        // 土日祝日判定
+        function isHoliday(date) {
+            const day = date.getDay();
+            // 土曜(6)または日曜(0)
+            if (day === 0 || day === 6) return true;
+
+            // 祝日判定
+            const dateStr = formatDateKey(date);
+            return HOLIDAYS_2025.includes(dateStr);
+        }
+
+        // 土日祝を後ろ倒し
+        function adjustForHolidays(date) {
+            const adjusted = new Date(date);
+            while (isHoliday(adjusted)) {
+                adjusted.setDate(adjusted.getDate() + 1);
+            }
+            return adjusted;
+        }
+
+        // 日付キー用フォーマット (YYYY-MM-DD)
+        function formatDateKey(date) {
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const day = String(date.getDate()).padStart(2, '0');
+            return `${year}-${month}-${day}`;
+        }
+
+        // 日付関連のユーティリティ
+        function formatDate(date) {
+            const days = ['日', '月', '火', '水', '木', '金', '土'];
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const day = String(date.getDate()).padStart(2, '0');
+            const dayOfWeek = days[date.getDay()];
+            return `${year}-${month}-${day} (${dayOfWeek})`;
+        }
+
+        function getLastDayOfMonth(year, month) {
+            return new Date(year, month + 1, 0).getDate();
+        }
+
+        // 引き落とし日を計算
+        function calculatePaymentDate(card, usageDate) {
+            const year = usageDate.getFullYear();
+            const month = usageDate.getMonth();
+            const day = usageDate.getDate();
+
+            let closingDay = card.closingDay;
+            if (closingDay === 31) {
+                closingDay = getLastDayOfMonth(year, month);
+            }
+
+            // 締め日より後の使用なら、次の締め日に回る
+            let billingMonth = month;
+            let billingYear = year;
+            if (day > closingDay) {
+                billingMonth++;
+                if (billingMonth > 11) {
+                    billingMonth = 0;
+                    billingYear++;
+                }
+            }
+
+            // 支払い月を計算
+            let paymentMonth = billingMonth + card.paymentMonthOffset;
+            let paymentYear = billingYear;
+            if (paymentMonth > 11) {
+                paymentMonth -= 12;
+                paymentYear++;
+            }
+
+            // 支払い日を計算
+            let paymentDay = card.paymentDayOffset;
+            const lastDay = getLastDayOfMonth(paymentYear, paymentMonth);
+            if (paymentDay > lastDay) {
+                paymentDay = lastDay;
+            }
+
+            const rawDate = new Date(paymentYear, paymentMonth, paymentDay);
+
+            // 土日祝の後ろ倒し
+            return adjustForHolidays(rawDate);
+        }
+
+        // 猶予期間を計算（日数）
+        function calculateGraceDays(usageDate, paymentDate) {
+            const diffTime = paymentDate - usageDate;
+            return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        }
+
+        // 次の締め日までの日数を計算
+        function calculateDaysUntilClosing(card, today) {
+            const year = today.getFullYear();
+            const month = today.getMonth();
+            const day = today.getDate();
+
+            let closingDay = card.closingDay;
+            if (closingDay === 31) {
+                closingDay = getLastDayOfMonth(year, month);
+            }
+
+            // 今月の締め日
+            let closingDate = new Date(year, month, closingDay);
+
+            // 今日が締め日を過ぎていたら、来月の締め日
+            if (day > closingDay) {
+                let nextMonth = month + 1;
+                let nextYear = year;
+                if (nextMonth > 11) {
+                    nextMonth = 0;
+                    nextYear++;
+                }
+                closingDay = card.closingDay;
+                if (closingDay === 31) {
+                    closingDay = getLastDayOfMonth(nextYear, nextMonth);
+                }
+                closingDate = new Date(nextYear, nextMonth, closingDay);
+            }
+
+            const diffTime = closingDate - today;
+            return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        }
+
+        // カード入力欄を生成
+        function renderCardInputs() {
+            const grid = document.getElementById('cardInputGrid');
+            const balances = loadBalances();
+
+            // 猶予期間順にソート
+            const today = new Date();
+            const sortedCards = [...CARDS].sort((a, b) => {
+                const dateA = calculatePaymentDate(a, today);
+                const dateB = calculatePaymentDate(b, today);
+                const graceA = calculateGraceDays(today, dateA);
+                const graceB = calculateGraceDays(today, dateB);
+                return graceB - graceA;
+            });
+
+            grid.innerHTML = sortedCards.map(card => {
+                const balance = balances[card.id] || 0;
+                const statusClass = getStatusClass(balance);
+                const paymentDate = calculatePaymentDate(card, today);
+                const graceDays = calculateGraceDays(today, paymentDate);
+
+                return `
+                    <div class="card-input-item ${statusClass}">
+                        <div class="card-name">
+                            ${card.name}
+                        </div>
+                        <div class="card-info">
+                            締日: ${card.closingDay === 31 ? '月末' : card.closingDay + '日'} |
+                            猶予: ${graceDays}日 |
+                            請求書払い: ${card.invoicePayment ? '○' : '×'}
+                        </div>
+                        <input
+                            type="number"
+                            id="balance_${card.id}"
+                            value="${balance}"
+                            placeholder="利用可能額を入力"
+                            min="0"
+                            step="1000"
+                            onchange="saveCurrentBalances()"
+                        />
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // 現在の残高を保存
+        function saveCurrentBalances() {
+            const balances = {};
+            CARDS.forEach(card => {
+                const input = document.getElementById(`balance_${card.id}`);
+                if (input) {
+                    balances[card.id] = parseInt(input.value) || 0;
+                }
+            });
+            saveBalances(balances);
+        }
+
+        // ステータスクラスを取得
+        function getStatusClass(balance) {
+            if (balance >= 500000) return 'status-good';
+            if (balance >= 100000) return 'status-warning';
+            return 'status-danger';
+        }
+
+        // 引き落とし日一覧を計算して表示
+        function calculatePaymentDates() {
+            const today = new Date();
+            const results = [];
+
+            CARDS.forEach(card => {
+                const balanceInput = document.getElementById(`balance_${card.id}`);
+                const balance = parseInt(balanceInput.value) || 0;
+                const paymentDate = calculatePaymentDate(card, today);
+                const graceDays = calculateGraceDays(today, paymentDate);
+
+                results.push({
+                    card: card,
+                    balance: balance,
+                    paymentDate: paymentDate,
+                    graceDays: graceDays
+                });
+            });
+
+            // 猶予期間順にソート（長い順）
+            results.sort((a, b) => b.graceDays - a.graceDays);
+
+            // 保存
+            saveCurrentBalances();
+
+            renderRecommendations(results);
+            renderInvoiceSchedule();
+            renderWithdrawalSchedule();
+        }
+
+        // 請求書カード払いスケジュールを表示
+        function renderInvoiceSchedule() {
+            const container = document.getElementById('invoiceSchedule');
+            const today = new Date();
+            today.setHours(0, 0, 0, 0); // 時刻をリセット
+
+            // 完了後1日経過したタスクをフィルタリング
+            const visiblePayments = INVOICE_PAYMENTS.filter(payment => {
+                if (payment.status === 'completed' && payment.completedDate) {
+                    const completedDate = new Date(payment.completedDate);
+                    completedDate.setHours(0, 0, 0, 0);
+                    const oneDayLater = new Date(completedDate);
+                    oneDayLater.setDate(oneDayLater.getDate() + 1);
+
+                    // 完了日の翌日以降は非表示
+                    return today < oneDayLater;
+                }
+                return true; // 未完了または完了日未設定は表示
+            });
+
+            // 日付でグループ化
+            const grouped = {};
+            visiblePayments.forEach(payment => {
+                if (!grouped[payment.date]) {
+                    grouped[payment.date] = [];
+                }
+                grouped[payment.date].push(payment);
+            });
+
+            // 日付順にソート
+            const sortedDates = Object.keys(grouped).sort();
+
+            container.innerHTML = sortedDates.map(date => {
+                const payments = grouped[date];
+                const dateObj = new Date(date);
+
+                return `
+                    <div class="schedule-item">
+                        <div class="schedule-date">
+                            📅 ${formatDate(dateObj)}
+                        </div>
+                        <div class="schedule-tasks">
+                            ${payments.map((payment, idx) => {
+                                const card = CARDS.find(c => c.id === payment.card);
+                                const cardName = card ? card.name : payment.card;
+                                const applicationDate = new Date(payment.date);
+                                const paymentDate = calculatePaymentDate(card, applicationDate);
+
+                                const statusClass = payment.status === 'completed' ? 'status-completed' : '';
+
+                                // ユニークIDを生成（支払い先名+金額+カード名で識別）
+                                const uniqueId = `${payment.name}_${payment.amount}_${payment.card}`.replace(/[^a-zA-Z0-9_]/g, '_');
+
+                                return `
+                                    <div class="schedule-task ${statusClass}" id="task_${uniqueId}">
+                                        <input
+                                            type="checkbox"
+                                            ${payment.status === 'completed' ? 'checked disabled' : ''}
+                                            onchange="toggleTaskComplete('${uniqueId}')"
+                                        />
+                                        <div class="schedule-task-content">
+                                            <div class="schedule-task-title">
+                                                ${payment.status === 'completed' ? '✅ ' : ''}${payment.name} (${(payment.amount / 10000).toFixed(1)}万円)
+                                            </div>
+                                            <div class="schedule-task-detail">
+                                                ${cardName}で申請 → 引き落とし: ${formatDate(paymentDate)}
+                                                ${payment.note ? ` | ${payment.note}` : ''}
+                                            </div>
+                                        </div>
+                                    </div>
+                                `;
+                            }).join('')}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // タスク完了トグル
+        function toggleTaskComplete(uniqueId) {
+            const checkbox = document.querySelector(`#task_${uniqueId} input[type="checkbox"]`);
+            const isChecked = checkbox.checked;
+
+            // uniqueIdから該当するpaymentを検索
+            const payment = INVOICE_PAYMENTS.find(p => {
+                const id = `${p.name}_${p.amount}_${p.card}`.replace(/[^a-zA-Z0-9_]/g, '_');
+                return id === uniqueId;
+            });
+
+            if (!payment) return;
+
+            if (isChecked) {
+                // 完了にする
+                payment.status = 'completed';
+                payment.completedDate = new Date().toISOString().split('T')[0]; // 今日の日付（YYYY-MM-DD形式）
+                saveInvoicePaymentsToStorage();
+            } else {
+                // 未完了に戻す
+                payment.status = 'pending';
+                delete payment.completedDate;
+                saveInvoicePaymentsToStorage();
+            }
+
+            // 画面を再描画
+            renderInvoiceSchedule();
+        }
+
+        // LocalStorageに請求書払いデータを保存
+        function saveInvoicePaymentsToStorage() {
+            localStorage.setItem('invoicePayments', JSON.stringify(INVOICE_PAYMENTS));
+        }
+
+        // LocalStorageから請求書払いデータを読み込み
+        function loadInvoicePaymentsFromStorage() {
+            const saved = localStorage.getItem('invoicePayments');
+            if (saved) {
+                try {
+                    const loaded = JSON.parse(saved);
+                    // INVOICE_PAYMENTSの内容を更新
+                    INVOICE_PAYMENTS.length = 0;
+                    INVOICE_PAYMENTS.push(...loaded);
+                } catch (e) {
+                    console.error('Failed to load invoice payments:', e);
+                }
+            }
+        }
+
+        // 引き落としスケジュールを表示（請求書払い+定期引き落とし）
+        function renderWithdrawalSchedule() {
+            const container = document.getElementById('withdrawalSchedule');
+            const today = new Date();
+            const withdrawals = {};
+
+            // 1. 請求書払いの引き落とし日を追加（カードごとにグループ化）
+            INVOICE_PAYMENTS.forEach(payment => {
+                const card = CARDS.find(c => c.id === payment.card);
+                if (!card) return;
+
+                // settlementDate（決済日）を使用、なければdate（申請日）を使用
+                const settlementDate = new Date(payment.settlementDate || payment.date);
+                const paymentDate = calculatePaymentDate(card, settlementDate);
+                const dateKey = formatDate(paymentDate);
+
+                if (!withdrawals[dateKey]) {
+                    withdrawals[dateKey] = {
+                        date: paymentDate,
+                        items: []
+                    };
+                }
+
+                // 既に同じカードの請求書払いグループがあるか確認
+                let existingCardGroup = withdrawals[dateKey].items.find(
+                    item => item.card === card.name && item.isInvoicePayment
+                );
+
+                if (!existingCardGroup) {
+                    // 新しいカードグループを作成
+                    existingCardGroup = {
+                        card: card.name,
+                        cardId: card.id,
+                        isInvoicePayment: true,
+                        amount: 0,
+                        details: []
+                    };
+                    withdrawals[dateKey].items.push(existingCardGroup);
+                }
+
+                // 詳細を追加
+                existingCardGroup.details.push({
+                    name: payment.name,
+                    amount: payment.amount,
+                    status: payment.status  // 決済状況を追加
+                });
+                existingCardGroup.amount += payment.amount;
+            });
+
+            // 2. 各カードの定期引き落とし日（今月・来月・再来月の3ヶ月分）
+            const currentYear = today.getFullYear();
+            const currentMonth = today.getMonth();
+
+            for (let monthOffset = 0; monthOffset < 3; monthOffset++) {
+                let targetMonth = currentMonth + monthOffset;
+                let targetYear = currentYear;
+
+                if (targetMonth > 11) {
+                    targetMonth -= 12;
+                    targetYear++;
+                }
+
+                CARDS.forEach(card => {
+                    // 各カードの支払い日を計算（その月の1日時点での計算）
+                    const firstDayOfMonth = new Date(targetYear, targetMonth, 1);
+                    const rawPaymentDate = new Date(targetYear, targetMonth, card.paymentDayOffset);
+
+                    // 月末を超える場合は調整
+                    const lastDay = getLastDayOfMonth(targetYear, targetMonth);
+                    if (card.paymentDayOffset > lastDay) {
+                        rawPaymentDate.setDate(lastDay);
+                    }
+
+                    // 土日祝の後ろ倒し
+                    const paymentDate = adjustForHolidays(rawPaymentDate);
+                    const dateKey = formatDate(paymentDate);
+
+                    if (!withdrawals[dateKey]) {
+                        withdrawals[dateKey] = {
+                            date: paymentDate,
+                            items: []
+                        };
+                    }
+
+                    // 重複チェック（既に同じカードが登録されていないか）
+                    const existingItem = withdrawals[dateKey].items.find(
+                        item => item.card === card.name
+                    );
+
+                    // まだ登録されていない場合のみ定期引き落としを追加
+                    if (!existingItem) {
+                        withdrawals[dateKey].items.push({
+                            name: '定期引き落とし',
+                            card: card.name,
+                            amount: null // 金額不明
+                        });
+                    }
+                });
+            }
+
+            // 日付順にソート
+            const sortedDates = Object.keys(withdrawals).sort((a, b) => {
+                return withdrawals[a].date - withdrawals[b].date;
+            });
+
+            // 過去の引き落とし予定日をフィルタリング（今日以降のみ表示）
+            const todayStart = new Date(today);
+            todayStart.setHours(0, 0, 0, 0);
+            const futureDates = sortedDates.filter(dateKey => {
+                const withdrawalDate = withdrawals[dateKey].date;
+                return withdrawalDate >= todayStart;
+            });
+
+            container.innerHTML = futureDates.map(dateKey => {
+                const withdrawal = withdrawals[dateKey];
+
+                // 各カードの金額を取得（localStorageから、なければデフォルト）
+                const itemsWithAmounts = withdrawal.items.map(item => {
+                    // 請求書払いグループの場合
+                    if (item.isInvoicePayment) {
+                        return { ...item, editableAmount: item.amount };
+                    }
+                    // 定期引き落としの場合はlocalStorageから取得
+                    const cardObj = CARDS.find(c => c.name === item.card);
+                    const savedAmount = cardObj ? getWithdrawalAmount(dateKey, cardObj.id) : null;
+                    return { ...item, editableAmount: savedAmount };
+                });
+
+                // 合計金額を計算
+                const total = itemsWithAmounts.reduce((sum, item) => {
+                    return sum + (item.editableAmount || 0);
+                }, 0);
+
+                return `
+                    <div class="withdrawal-item">
+                        <div class="withdrawal-date">
+                            📅 ${dateKey}
+                        </div>
+                        <div class="withdrawal-total">
+                            💰 合計: ${total > 0 ? total.toLocaleString() + '円' : '未入力'}
+                        </div>
+                        <div class="withdrawal-details">
+                            ${itemsWithAmounts.map((item, idx) => {
+                                const cardObj = CARDS.find(c => c.name === item.card);
+                                const inputId = `withdrawal_${dateKey}_${cardObj ? cardObj.id : idx}`;
+
+                                // 請求書払いグループの場合
+                                if (item.isInvoicePayment) {
+                                    // 通常クレカ払い分を取得（localStorageから）
+                                    const normalAmount = getWithdrawalAmount(dateKey, item.cardId) || 0;
+                                    const totalAmount = item.amount + normalAmount;
+
+                                    return `<div class="withdrawal-detail-item">
+                                        <div style="margin-bottom: 8px;">
+                                            <strong>・ ${item.card}: ${totalAmount.toLocaleString()}円</strong>
+                                            ${normalAmount > 0 ? `<span style="color: #666; font-size: 0.9em; margin-left: 8px;">（請求書${item.amount.toLocaleString()}円 + 通常${normalAmount.toLocaleString()}円）</span>` : ''}
+                                        </div>
+                                        ${item.details.map(detail => {
+                                            const isPending = detail.status !== 'completed';
+                                            const statusLabel = isPending ? '<span style="color: #dc3545; font-weight: bold;">（暫定）</span>' : '';
+                                            return `
+                                            <div style="margin-left: 20px; color: #666; font-size: 0.9em;">
+                                                - ${detail.name}（請求書払い）${statusLabel}: ${detail.amount.toLocaleString()}円
+                                            </div>
+                                        `;
+                                        }).join('')}
+                                        <div style="margin-left: 20px; margin-top: 8px;">
+                                            <label style="display: flex; align-items: center; gap: 8px;">
+                                                <span style="color: #666; font-size: 0.9em;">+ 通常クレカ払い:</span>
+                                                <input
+                                                    type="number"
+                                                    id="withdrawal_${dateKey}_${item.cardId}"
+                                                    value="${normalAmount || ''}"
+                                                    placeholder="金額を入力"
+                                                    style="width: 150px; padding: 4px 8px; font-size: 0.9em;"
+                                                    onchange="handleWithdrawalAmountChange('${dateKey}', '${item.cardId}', this.value)"
+                                                />
+                                                <span style="font-size: 0.9em;">円</span>
+                                            </label>
+                                        </div>
+                                    </div>`;
+                                }
+
+                                // 定期引き落としの場合
+                                const isReadonly = false;
+                                return `<div class="withdrawal-detail-item">
+                                    <label style="display: flex; align-items: center; gap: 8px;">
+                                        <span style="min-width: 200px;">・ ${item.card}:</span>
+                                        <input
+                                            type="number"
+                                            id="${inputId}"
+                                            value="${item.editableAmount || ''}"
+                                            placeholder="金額を入力"
+                                            style="width: 150px; padding: 4px 8px;"
+                                            onchange="handleWithdrawalAmountChange('${dateKey}', '${cardObj ? cardObj.id : ''}', this.value)"
+                                        />
+                                        <span>円</span>
+                                    </label>
+                                </div>`;
+                            }).join('')}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // 引き落とし金額変更時のハンドラー
+        function handleWithdrawalAmountChange(dateKey, cardId, value) {
+            setWithdrawalAmount(dateKey, cardId, value);
+            renderWithdrawalSchedule(); // 再描画して合計を更新
+        }
+
+        // おすすめ表示
+        function renderRecommendations(results) {
+            const list = document.getElementById('recommendationList');
+            const today = new Date();
+
+            list.innerHTML = results.map((result, index) => {
+                const rankClass = index === 0 ? 'rank-1' : index === 1 ? 'rank-2' : index === 2 ? 'rank-3' : '';
+                const medal = index === 0 ? '🥇' : index === 1 ? '🥈' : index === 2 ? '🥉' : '';
+                const statusBadge = getStatusBadge(result.balance);
+
+                // 締日アラート
+                const daysUntilClosing = calculateDaysUntilClosing(result.card, today);
+                const closingAlert = daysUntilClosing <= 7
+                    ? `<span class="closing-alert">⏰ 締日まで${daysUntilClosing}日</span>`
+                    : '';
+
+                return `
+                    <div class="card-rec-item ${rankClass}">
+                        <div class="card-rec-header">
+                            <div class="card-rec-name">
+                                ${medal} ${result.card.name}
+                                ${closingAlert}
+                            </div>
+                            ${statusBadge}
+                        </div>
+                        <div class="card-rec-detail">
+                            <div>📅 引き落とし: <strong>${formatDate(result.paymentDate)}</strong></div>
+                            <div>⏱️ 猶予: <strong>${result.graceDays}日後</strong></div>
+                            <div>💰 利用可能: <strong>${result.balance.toLocaleString()}円</strong></div>
+                            <div>🎫 請求書払い: ${result.card.invoicePayment ? '○' : '×'}</div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // ステータスバッジ
+        function getStatusBadge(balance) {
+            if (balance === 0) {
+                return '<span class="badge badge-unavailable">❌ 利用不可</span>';
+            } else if (balance < 100000) {
+                return '<span class="badge badge-danger">⚠️ 残り少</span>';
+            } else if (balance < 500000) {
+                return '<span class="badge badge-warning">💡 要注意</span>';
+            } else {
+                return '<span class="badge badge-good">✅ 余裕あり</span>';
+            }
+        }
+
+        // 初期化
+        function init() {
+            // 今日の日付を表示
+            const today = new Date();
+            document.getElementById('currentDate').textContent = formatDate(today);
+
+            // LocalStorageから請求書払いデータを読み込み
+            loadInvoicePaymentsFromStorage();
+
+            // カード入力欄を生成
+            renderCardInputs();
+        }
+
+        // ページ読み込み時に初期化
+        window.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>

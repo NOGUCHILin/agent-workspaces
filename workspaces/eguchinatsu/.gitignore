@@ -1,0 +1,4 @@
+# 認証情報（絶対にコミットしない）
+.claude/credentials.local.json
+*.local.json
+nul

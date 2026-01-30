@@ -1,0 +1,9 @@
+intent,keywords,triggers,content_type,cta_type,ai_priority,google_intent,description
+know,"とは,方法,やり方,仕組み,理由,なぜ,どうして,意味,違い","what,how,why,meaning,difference",explainer,soft-cta,high,Know,"情報収集。学習・理解が目的。AI引用されやすい。"
+know-simple,"いつ,どこ,誰,何,定義","when,where,who,what,define",quick-answer,none,high,Know Simple,"単純な事実確認。即答が求められる。"
+do,"買取,売る,申込,依頼,注文,購入,予約,登録,ダウンロード","buy,sell,order,apply,book,register,download",action-page,strong-cta,low,Do,"アクション実行。コンバージョン直結。"
+do-device,"設定,インストール,操作,使い方,接続","setup,install,configure,connect",tutorial,soft-cta,medium,Do (Device Action),"デバイス操作。手順ガイドが必要。"
+website,"ブランド名,サービス名,会社名,公式,ログイン","brand,official,login,site",brand-page,navigation,medium,Website,"特定サイトへのナビゲーション。"
+visit,"店舗,アクセス,営業時間,近く,地図,駐車場","store,access,hours,near,map,parking",local-page,map-contact,low,Visit-in-person,"実店舗訪問意図。ローカルSEO重要。"
+commercial,"比較,おすすめ,ランキング,レビュー,口コミ,評判","compare,best,ranking,review,reputation",comparison,medium-cta,medium,Commercial Investigation,"購入前の比較検討。複数選択肢を提示。"
+mixed,"買取 相場,iPhone 売る 方法,中古 価格","price,market,value,worth",hybrid,adaptive,medium,Mixed,"情報+アクション両方の意図。ハイブリッド設計。"

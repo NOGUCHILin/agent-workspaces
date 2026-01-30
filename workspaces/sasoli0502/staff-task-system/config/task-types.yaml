@@ -1,0 +1,498 @@
+# タスク種別マスタ（拡張版）
+# 30種類以上の業務タイプを3カテゴリで管理
+
+task_types:
+  # ========== 数量管理タスク（quantity_based） ==========
+  # 台数・件数ベースで管理するタスク
+
+  査定:
+    display_name: "査定"
+    category: quantity_based
+    description: "端末の状態確認と価格査定"
+    required_skills: [査定]
+    default_duration_minutes: 15
+    priority_base: 2
+    can_parallel: false
+    required_tools: [検査ツール, 価格表]
+    quantity_management:
+      source: morning_input
+      available_at: "10:00"
+      base_quantity_field: satei_waiting
+
+  修理:
+    display_name: "修理"
+    category: quantity_based
+    description: "端末の修理作業"
+    required_skills: [修理]
+    default_duration_minutes: 60
+    priority_base: 3
+    can_parallel: false
+    required_tools: [修理キット, 交換部品]
+    quantity_management:
+      source: calculated
+      available_at: "10:00"
+      formula: "satei_waiting * 0.5"
+      base_quantity_field: satei_waiting
+
+  検品:
+    display_name: "検品"
+    category: quantity_based
+    description: "端末の動作確認と品質チェック"
+    required_skills: [検品]
+    default_duration_minutes: 20
+    priority_base: 2
+    can_parallel: true
+    required_tools: [検査ツール]
+    quantity_management:
+      source: calculated
+      available_at: "10:00"
+      formula: "satei_waiting * 0.5"
+      base_quantity_field: satei_waiting
+
+  出品:
+    display_name: "出品"
+    category: quantity_based
+    description: "端末情報の登録と出品作業"
+    required_skills: [出品]
+    default_duration_minutes: 10
+    priority_base: 1
+    can_parallel: true
+    required_tools: [PC, カメラ]
+    quantity_management:
+      source: calculated
+      available_at: "10:00"
+      formula: "satei_waiting * 0.8"
+      base_quantity_field: satei_waiting
+
+  開封:
+    display_name: "開封"
+    category: quantity_based
+    description: "到着した端末の開封作業"
+    required_skills: [開封]
+    default_duration_minutes: 3
+    priority_base: 2
+    can_parallel: true
+    required_tools: []
+    quantity_management:
+      source: morning_input
+      available_at: "10:00"
+      base_quantity_field: kaifuu_count
+
+  アクティベート:
+    display_name: "アクティベート"
+    category: quantity_based
+    description: "端末の初期設定・アクティベーション"
+    required_skills: [アクティベート]
+    default_duration_minutes: 5
+    priority_base: 2
+    can_parallel: true
+    required_tools: [PC, SIMカード]
+    quantity_management:
+      source: calculated
+      available_at: "10:00"
+      formula: "kaifuu_count"
+      base_quantity_field: kaifuu_count
+
+  梱包キット作成:
+    display_name: "梱包キット作成"
+    category: quantity_based
+    description: "発送用の梱包キット準備"
+    required_skills: [梱包キット作成]
+    default_duration_minutes: 5
+    priority_base: 2
+    can_parallel: true
+    required_tools: [梱包材, プリンター]
+    quantity_management:
+      source: afternoon_input
+      available_at: "14:00"
+      detection_time: "14:00"
+      addition_time: "16:00"
+      base_quantity_field: konpou_kit_count
+
+  発送準備:
+    display_name: "発送準備"
+    category: quantity_based
+    description: "発送手続きと梱包"
+    required_skills: [発送準備]
+    default_duration_minutes: 10
+    priority_base: 2
+    can_parallel: true
+    required_tools: [梱包材, プリンター]
+    quantity_management:
+      source: afternoon_input
+      available_at: "13:00"
+      detection_time: "13:00"
+      base_quantity_field: hassou_junbi_count
+
+  送り状作成:
+    display_name: "送り状作成"
+    category: quantity_based
+    description: "発送伝票の作成"
+    required_skills: [送り状作成]
+    default_duration_minutes: 3
+    priority_base: 2
+    can_parallel: true
+    required_tools: [PC, プリンター]
+    quantity_management:
+      source: calculated
+      available_at: "13:00"
+      formula: "hassou_junbi_count"
+      base_quantity_field: hassou_junbi_count
+
+  成約仕分:
+    display_name: "成約仕分"
+    category: quantity_based
+    description: "成約した端末の仕分け作業"
+    required_skills: [成約仕分]
+    default_duration_minutes: 5
+    priority_base: 2
+    can_parallel: true
+    required_tools: []
+    quantity_management:
+      source: manual
+      available_at: "10:00"
+      base_quantity_field: null
+
+  # ========== 担当制タスク（assignment_based） ==========
+  # スキル保持者が担当するタスク（数量より担当者が重要）
+
+  返信:
+    display_name: "返信"
+    category: assignment_based
+    description: "Slackメッセージ返信・アクティベーションロック解除報告"
+    required_skills: [返信]
+    default_duration_minutes: 10
+    priority_base: 2
+    can_parallel: true
+    required_tools: [PC, Slack]
+    assignment_policy:
+      type: skill_based
+      skill_required: 返信
+      auto_assign: false
+
+  振込メッセ:
+    display_name: "振込メッセージ"
+    category: assignment_based
+    description: "振込完了通知の送信"
+    required_skills: [振込メッセ]
+    default_duration_minutes: 5
+    priority_base: 2
+    can_parallel: true
+    required_tools: [PC]
+    assignment_policy:
+      type: skill_based
+      skill_required: 振込メッセ
+      auto_assign: false
+
+  催促:
+    display_name: "催促"
+    category: assignment_based
+    description: "未返信ユーザーへの催促連絡"
+    required_skills: [催促]
+    default_duration_minutes: 10
+    priority_base: 2
+    can_parallel: true
+    required_tools: [PC]
+    assignment_policy:
+      type: skill_based
+      skill_required: 催促
+      auto_assign: false
+
+  査定結果送信:
+    display_name: "査定結果送信"
+    category: assignment_based
+    description: "査定結果の通知送信"
+    required_skills: [査定結果]
+    default_duration_minutes: 10
+    priority_base: 2
+    can_parallel: true
+    required_tools: [PC]
+    assignment_policy:
+      type: skill_based
+      skill_required: 査定結果
+      auto_assign: false
+
+  返送交渉:
+    display_name: "返送交渉"
+    category: assignment_based
+    description: "返送に関する交渉対応"
+    required_skills: [返送交渉]
+    default_duration_minutes: 15
+    priority_base: 2
+    can_parallel: true
+    required_tools: [PC]
+    assignment_policy:
+      type: skill_based
+      skill_required: 返送交渉
+      auto_assign: false
+
+  進捗変更:
+    display_name: "進捗変更"
+    category: assignment_based
+    description: "売れた端末の進捗状態更新"
+    required_skills: [進捗変更]
+    default_duration_minutes: 5
+    priority_base: 2
+    can_parallel: true
+    required_tools: [PC]
+    assignment_policy:
+      type: skill_based
+      skill_required: 返信
+      auto_assign: false
+
+  発送完了連絡:
+    display_name: "発送完了連絡"
+    category: assignment_based
+    description: "発送完了の通知送信"
+    required_skills: [発送完了連絡]
+    default_duration_minutes: 5
+    priority_base: 2
+    can_parallel: true
+    required_tools: [PC]
+    assignment_policy:
+      type: skill_based
+      skill_required: 発送完了連絡
+      auto_assign: false
+
+  電話対応:
+    display_name: "電話対応"
+    category: assignment_based
+    description: "電話での顧客対応"
+    required_skills: [電話対応]
+    default_duration_minutes: 15
+    priority_base: 3
+    can_parallel: false
+    required_tools: [電話]
+    assignment_policy:
+      type: skill_based
+      skill_required: 電話対応
+      auto_assign: false
+
+  KPI入力:
+    display_name: "KPI入力"
+    category: assignment_based
+    description: "KPIデータの入力作業"
+    required_skills: [KPI入力]
+    default_duration_minutes: 20
+    priority_base: 2
+    can_parallel: false
+    required_tools: [PC]
+    assignment_policy:
+      type: skill_based
+      skill_required: KPI入力
+      auto_assign: false
+
+  実残高入力:
+    display_name: "実残高入力"
+    category: assignment_based
+    description: "実在庫の残高入力"
+    required_skills: [実残高入力]
+    default_duration_minutes: 15
+    priority_base: 2
+    can_parallel: false
+    required_tools: [PC]
+    assignment_policy:
+      type: skill_based
+      skill_required: 実残高入力
+      auto_assign: false
+
+  座席決定:
+    display_name: "座席決定"
+    category: assignment_based
+    description: "スタッフの座席配置決定"
+    required_skills: [座席決定]
+    default_duration_minutes: 10
+    priority_base: 1
+    can_parallel: false
+    required_tools: []
+    assignment_policy:
+      type: skill_based
+      skill_required: 座席決定
+      auto_assign: false
+
+  タスク設定:
+    display_name: "タスク設定"
+    category: assignment_based
+    description: "タスク管理システムの設定"
+    required_skills: [タスク設定]
+    default_duration_minutes: 15
+    priority_base: 2
+    can_parallel: false
+    required_tools: [PC]
+    assignment_policy:
+      type: skill_based
+      skill_required: タスク設定
+      auto_assign: false
+
+  BM在庫確認:
+    display_name: "BM在庫確認"
+    category: assignment_based
+    description: "BM（バイヤーマーケット）の在庫確認"
+    required_skills: [BM在庫確認]
+    default_duration_minutes: 10
+    priority_base: 2
+    can_parallel: true
+    required_tools: [PC]
+    assignment_policy:
+      type: skill_based
+      skill_required: BM在庫確認
+      auto_assign: false
+
+  新品価格変更:
+    display_name: "新品価格変更"
+    category: assignment_based
+    description: "新品端末の価格調整"
+    required_skills: [新品価格変更]
+    default_duration_minutes: 20
+    priority_base: 2
+    can_parallel: false
+    required_tools: [PC]
+    assignment_policy:
+      type: skill_based
+      skill_required: 新品価格変更
+      auto_assign: false
+
+  品質管理チェック:
+    display_name: "品質管理チェック"
+    category: assignment_based
+    description: "品質管理の確認作業"
+    required_skills: [品質管理]
+    default_duration_minutes: 30
+    priority_base: 3
+    can_parallel: false
+    required_tools: [PC, 検査ツール]
+    assignment_policy:
+      type: skill_based
+      skill_required: 品質管理
+      auto_assign: false
+
+  パーツ注文:
+    display_name: "パーツ注文"
+    category: assignment_based
+    description: "修理用パーツの発注"
+    required_skills: [パーツ注文]
+    default_duration_minutes: 15
+    priority_base: 2
+    can_parallel: false
+    required_tools: [PC]
+    assignment_policy:
+      type: skill_based
+      skill_required: パーツ注文
+      auto_assign: false
+
+  法人販売:
+    display_name: "法人販売"
+    category: assignment_based
+    description: "法人向け販売対応"
+    required_skills: [法人販売]
+    default_duration_minutes: 30
+    priority_base: 3
+    can_parallel: false
+    required_tools: [PC, 電話]
+    assignment_policy:
+      type: skill_based
+      skill_required: 法人販売
+      auto_assign: false
+
+  # 店舗勤務者専用タスク
+  店舗準備:
+    display_name: "店舗準備"
+    category: assignment_based
+    description: "店舗の開店準備"
+    required_skills: [店舗準備]
+    default_duration_minutes: 30
+    priority_base: 3
+    can_parallel: false
+    required_tools: []
+    assignment_policy:
+      type: skill_based
+      skill_required: 店舗準備
+      auto_assign: false
+
+  店舗査定:
+    display_name: "店舗査定"
+    category: assignment_based
+    description: "店舗での端末査定"
+    required_skills: [店舗査定]
+    default_duration_minutes: 20
+    priority_base: 2
+    can_parallel: true
+    required_tools: [検査ツール, 価格表]
+    assignment_policy:
+      type: skill_based
+      skill_required: 店舗査定
+      auto_assign: false
+
+  店舗修理受付:
+    display_name: "店舗修理受付"
+    category: assignment_based
+    description: "店舗での修理受付"
+    required_skills: [店舗修理受付]
+    default_duration_minutes: 15
+    priority_base: 2
+    can_parallel: true
+    required_tools: [PC]
+    assignment_policy:
+      type: skill_based
+      skill_required: 店舗修理受付
+      auto_assign: false
+
+  店舗修理お渡し:
+    display_name: "店舗修理お渡し"
+    category: assignment_based
+    description: "修理完了端末のお渡し"
+    required_skills: [店舗修理お渡し]
+    default_duration_minutes: 10
+    priority_base: 2
+    can_parallel: true
+    required_tools: []
+    assignment_policy:
+      type: skill_based
+      skill_required: 店舗修理お渡し
+      auto_assign: false
+
+  # ========== オプショナルタスク（optional） ==========
+  # 余裕があれば実施するタスク
+
+  ムスビー撮影:
+    display_name: "ムスビー撮影"
+    category: optional
+    description: "ムスビー出品用の端末撮影"
+    required_skills: [ムスビー撮影]
+    default_duration_minutes: 15
+    priority_base: 1
+    can_parallel: false
+    required_tools: [カメラ, 撮影台]
+    assignment_policy:
+      type: skill_based
+      skill_required: ムスビー撮影
+      auto_assign: false
+
+  ムスビー出品:
+    display_name: "ムスビー出品"
+    category: optional
+    description: "ムスビーへの端末出品登録"
+    required_skills: [ムスビー出品]
+    default_duration_minutes: 10
+    priority_base: 1
+    can_parallel: true
+    required_tools: [PC]
+    assignment_policy:
+      type: skill_based
+      skill_required: ムスビー出品
+      auto_assign: false
+
+# 業務間の依存関係
+dependencies:
+  - from: 査定
+    to: 検品
+    description: "査定完了後に検品が必要"
+  - from: 検品
+    to: 出品
+    description: "検品完了後に出品可能"
+  - from: 開封
+    to: アクティベート
+    description: "開封後にアクティベート可能"
+  - from: 発送準備
+    to: 送り状作成
+    description: "発送準備完了後に送り状作成"

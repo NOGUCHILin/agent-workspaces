@@ -21,6 +21,7 @@
 | open-backmarket | バックマーケット販売者管理ページを開く |
 | open-shipping-schedule | Notion発送予定を今日の日付で開く |
 | notion-tag-copy | Notionテーブルでタグを下のセルにコピペ |
+| packing-kit-reminder | 梱包キット催促（5日前発送で未返送の顧客確認） |
 
 ## プロジェクト管理
 

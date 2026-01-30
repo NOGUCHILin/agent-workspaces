@@ -1,0 +1,6 @@
+2026/01/26-11:40:24.321 c1ec Reusing MANIFEST c:\Users\koyom\claude-code-worktrees\workspaces\sasoli0502\{{HOME}}\.playwright-profiles\claude-workspace\Profile 1\Local Storage\leveldb/MANIFEST-000001
+2026/01/26-11:40:24.325 c1ec Recovering log #113
+2026/01/26-11:40:24.327 c1ec Reusing old log c:\Users\koyom\claude-code-worktrees\workspaces\sasoli0502\{{HOME}}\.playwright-profiles\claude-workspace\Profile 1\Local Storage\leveldb/000113.log 
+2026/01/26-11:41:24.375 c1a8 Level-0 table #117: started
+2026/01/26-11:41:24.476 c1a8 Level-0 table #117: 101326 bytes OK
+2026/01/26-11:41:24.480 c1a8 Delete type=0 #113

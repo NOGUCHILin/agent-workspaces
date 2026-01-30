@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>タスク進捗ボード</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        body.manager-mode {
+            padding: 0.8rem;
+        }
+
+        .mode-toggle {
+            position: absolute;
+            top: 1.5rem;
+            right: 2rem;
+            display: flex;
+            gap: 0.5rem;
+            z-index: 1000;
+        }
+
+        .mode-button {
+            padding: 0.75rem 1.5rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .mode-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .mode-button.active {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: #fff;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        body.manager-mode .header {
+            margin-bottom: 0.5rem;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        body.manager-mode .header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .header .datetime {
+            font-size: 2rem;
+            opacity: 0.9;
+        }
+
+        body.manager-mode .header .datetime {
+            font-size: 1rem;
+        }
+
+        /* マネージャーモード専用：チェックポイント情報 */
+        .checkpoint-info {
+            display: none;
+            text-align: center;
+            font-size: 1.4rem;
+            margin-top: 0.5rem;
+            opacity: 0.95;
+        }
+
+        body.manager-mode .checkpoint-info {
+            font-size: 0.9rem;
+            margin-top: 0.2rem;
+        }
+
+        body.manager-mode .checkpoint-info {
+            display: block;
+        }
+
+        /* マネージャーモード：弁当箱スタイル（3x2グリッドレイアウト） */
+        body.manager-mode #content {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 0.8rem;
+            height: calc(100vh - 120px);
+            grid-template-areas:
+                "summary morning staff"
+                "bottleneck finish alerts";
+        }
+
+        body.manager-mode .summary-section {
+            grid-area: summary;
+        }
+
+        body.manager-mode .morning-section {
+            grid-area: morning;
+        }
+
+        body.manager-mode .staff-section {
+            grid-area: staff;
+        }
+
+        body.manager-mode .bottleneck-section {
+            grid-area: bottleneck;
+        }
+
+        body.manager-mode .finish-section {
+            grid-area: finish;
+        }
+
+        body.manager-mode .alerts-section {
+            grid-area: alerts;
+        }
+
+        .main-stats {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+
+        body.manager-mode .main-stats {
+            padding: 1rem;
+            margin-bottom: 0;
+        }
+
+        .progress-bar-container {
+            margin: 1.5rem 0;
+        }
+
+        body.manager-mode .progress-bar-container {
+            margin: 0.8rem 0;
+        }
+
+        .progress-label {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        body.manager-mode .progress-label {
+            font-size: 1.3rem;
+        }
+
+        .progress-bar {
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        body.manager-mode .progress-bar {
+            height: 35px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4ade80, #22c55e);
+            border-radius: 25px;
+            transition: width 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 1rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        body.manager-mode .progress-fill {
+            font-size: 1.1rem;
+        }
+
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        body.manager-mode .status-grid {
+            gap: 0.7rem;
+            margin: 0.8rem 0;
+        }
+
+        .status-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        body.manager-mode .status-card {
+            padding: 1rem;
+        }
+
+        .status-card .label {
+            font-size: 1.4rem;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+        }
+
+        body.manager-mode .status-card .label {
+            font-size: 1rem;
+        }
+
+        .status-card .value {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        body.manager-mode .status-card .value {
+            font-size: 2rem;
+        }
+
+        .status-card .emoji {
+            font-size: 2.5rem;
+            margin-right: 0.5rem;
+        }
+
+        body.manager-mode .status-card .emoji {
+            font-size: 1.8rem;
+        }
+
+        /* マネージャーモード専用：朝の予測 vs 実績 */
+        .morning-vs-actual {
+            display: none;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+
+        body.manager-mode .morning-vs-actual {
+            padding: 0.8rem;
+            margin-bottom: 0;
+            border-radius: 10px;
+        }
+
+        body.manager-mode .morning-vs-actual {
+            display: block;
+        }
+
+        .morning-vs-actual h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+
+        body.manager-mode .morning-vs-actual h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .prediction-item {
+            display: grid;
+            grid-template-columns: 120px 1fr 100px 80px;
+            gap: 1rem;
+            align-items: center;
+            padding: 0.8rem;
+            margin-bottom: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        body.manager-mode .prediction-item {
+            grid-template-columns: 80px 1fr 70px 50px;
+            gap: 0.5rem;
+            padding: 0.4rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .prediction-item.delayed {
+            background: rgba(239, 68, 68, 0.2);
+            border-left: 4px solid #ef4444;
+        }
+
+        .prediction-item.ahead {
+            background: rgba(34, 197, 94, 0.2);
+            border-left: 4px solid #22c55e;
+        }
+
+        .prediction-item .task-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        body.manager-mode .prediction-item .task-name {
+            font-size: 0.85rem;
+        }
+
+        .prediction-item .progress-text {
+            font-size: 1.1rem;
+        }
+
+        body.manager-mode .prediction-item .progress-text {
+            font-size: 0.8rem;
+        }
+
+        .prediction-item .rate {
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-align: right;
+        }
+
+        body.manager-mode .prediction-item .rate {
+            font-size: 0.9rem;
+        }
+
+        .prediction-item .status-icon {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        body.manager-mode .prediction-item .status-icon {
+            font-size: 1rem;
+        }
+
+        /* マネージャーモード専用：ボトルネック */
+        .bottlenecks {
+            display: none;
+            background: rgba(239, 68, 68, 0.2);
+            border: 2px solid rgba(239, 68, 68, 0.5);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        body.manager-mode .bottlenecks {
+            padding: 0.8rem;
+            margin-bottom: 0;
+            border-radius: 10px;
+        }
+
+        body.manager-mode .bottlenecks {
+            display: block;
+        }
+
+        .bottlenecks h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        body.manager-mode .bottlenecks h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .bottlenecks h3::before {
+            content: "🔥";
+            margin-right: 0.5rem;
+            font-size: 1.8rem;
+        }
+
+        .bottleneck-item {
+            font-size: 1.2rem;
+            padding: 0.5rem 0;
+            opacity: 0.95;
+        }
+
+        body.manager-mode .bottleneck-item {
+            font-size: 0.85rem;
+            padding: 0.2rem 0;
+        }
+
+        /* マネージャーモード専用：予想終了時刻 */
+        .finish-estimate {
+            display: none;
+            background: rgba(59, 130, 246, 0.2);
+            border: 2px solid rgba(59, 130, 246, 0.5);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        body.manager-mode .finish-estimate {
+            padding: 0.8rem;
+            margin-bottom: 0;
+            border-radius: 10px;
+        }
+
+        body.manager-mode .finish-estimate {
+            display: block;
+        }
+
+        .finish-estimate .label {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+        }
+
+        body.manager-mode .finish-estimate .label {
+            font-size: 0.9rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .finish-estimate .time {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        body.manager-mode .finish-estimate .time {
+            font-size: 1.5rem;
+        }
+
+        .staff-list {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+
+        body.manager-mode .staff-list {
+            padding: 0.8rem;
+            max-height: 100%;
+            overflow-y: auto;
+        }
+
+        body.manager-mode .staff-list h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .staff-item {
+            display: flex;
+            align-items: center;
+            padding: 1.2rem;
+            margin-bottom: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            transition: transform 0.2s;
+        }
+
+        body.manager-mode .staff-item {
+            padding: 0.4rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .staff-item:hover {
+            transform: translateX(5px);
+        }
+
+        .staff-icon {
+            font-size: 2rem;
+            margin-right: 1rem;
+        }
+
+        body.manager-mode .staff-icon {
+            font-size: 1rem;
+            margin-right: 0.4rem;
+        }
+
+        .staff-name {
+            font-size: 2rem;
+            font-weight: bold;
+            min-width: 150px;
+        }
+
+        body.manager-mode .staff-name {
+            font-size: 0.9rem;
+            min-width: 70px;
+        }
+
+        .staff-progress {
+            font-size: 1.6rem;
+            margin-left: 1rem;
+            min-width: 150px;
+        }
+
+        body.manager-mode .staff-progress {
+            font-size: 0.8rem;
+            min-width: 70px;
+        }
+
+        .staff-bar {
+            flex: 1;
+            height: 30px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            margin: 0 1rem;
+            overflow: hidden;
+        }
+
+        body.manager-mode .staff-bar {
+            height: 14px;
+        }
+
+        .staff-bar-fill {
+            height: 100%;
+            border-radius: 15px;
+            transition: width 0.5s ease;
+        }
+
+        .staff-bar-fill.high {
+            background: linear-gradient(90deg, #4ade80, #22c55e);
+        }
+
+        .staff-bar-fill.medium {
+            background: linear-gradient(90deg, #fbbf24, #f59e0b);
+        }
+
+        .staff-bar-fill.low {
+            background: linear-gradient(90deg, #f87171, #ef4444);
+        }
+
+        .staff-rate {
+            font-size: 1.8rem;
+            font-weight: bold;
+            min-width: 100px;
+            text-align: right;
+        }
+
+        body.manager-mode .staff-rate {
+            font-size: 0.85rem;
+            min-width: 60px;
+        }
+
+        .staff-status {
+            font-size: 2.5rem;
+            margin-left: 1rem;
+        }
+
+        body.manager-mode .staff-status {
+            font-size: 1.1rem;
+            margin-left: 0.4rem;
+        }
+
+        .alerts {
+            background: rgba(239, 68, 68, 0.2);
+            border: 2px solid rgba(239, 68, 68, 0.5);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        body.manager-mode .alerts {
+            padding: 0.8rem;
+            margin-top: 0;
+            border-radius: 10px;
+        }
+
+        .alerts h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        body.manager-mode .alerts h3 {
+            font-size: 1.4rem;
+        }
+
+        .alerts h3::before {
+            content: "⚠️";
+            margin-right: 0.5rem;
+            font-size: 2rem;
+        }
+
+        .alert-item {
+            font-size: 1.4rem;
+            padding: 0.5rem 0;
+            opacity: 0.95;
+        }
+
+        body.manager-mode .alert-item {
+            font-size: 1.1rem;
+        }
+
+        .loading {
+            text-align: center;
+            font-size: 2rem;
+            padding: 4rem;
+        }
+
+        .error {
+            text-align: center;
+            font-size: 1.8rem;
+            padding: 2rem;
+            background: rgba(239, 68, 68, 0.2);
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- モード切り替えボタン -->
+    <div class="mode-toggle">
+        <button class="mode-button active" id="tv-mode-btn">TV</button>
+        <button class="mode-button" id="manager-mode-btn">Manager</button>
+    </div>
+
+    <div class="header">
+        <h1>📊 タスク進捗ボード</h1>
+        <div class="datetime" id="datetime"></div>
+        <div class="checkpoint-info" id="checkpoint-info"></div>
+    </div>
+
+    <div id="loading" class="loading">読み込み中...</div>
+
+    <div id="content" style="display: none;">
+        <!-- 全体サマリーセクション -->
+        <div class="summary-section">
+            <div class="main-stats">
+                <div class="progress-bar-container">
+                    <div class="progress-label">
+                        <span>完了率</span>
+                        <span id="completion-rate">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="status-grid">
+                    <div class="status-card">
+                        <div class="label">完了</div>
+                        <div class="value">
+                            <span class="emoji">🟢</span>
+                            <span id="completed-count">0</span>件
+                        </div>
+                    </div>
+                    <div class="status-card">
+                        <div class="label">進行中</div>
+                        <div class="value">
+                            <span class="emoji">🟡</span>
+                            <span id="in-progress-count">0</span>件
+                        </div>
+                    </div>
+                    <div class="status-card">
+                        <div class="label">未着手</div>
+                        <div class="value">
+                            <span class="emoji">⚪</span>
+                            <span id="pending-count">0</span>件
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 朝の予測 vs 実績セクション -->
+        <div class="morning-section">
+            <div class="morning-vs-actual" id="morning-vs-actual">
+                <h3>📊 朝の予測 vs 実績</h3>
+                <div id="predictions-list"></div>
+            </div>
+        </div>
+
+        <!-- スタッフ進捗セクション -->
+        <div class="staff-section">
+            <div class="staff-list" id="staff-list">
+                <!-- スタッフ進捗が動的に挿入される -->
+            </div>
+        </div>
+
+        <!-- ボトルネックセクション -->
+        <div class="bottleneck-section">
+            <div class="bottlenecks" id="bottlenecks-container" style="display: none;">
+                <h3>要注意（ボトルネック）</h3>
+                <div id="bottlenecks-list"></div>
+            </div>
+        </div>
+
+        <!-- 予想終了時刻セクション -->
+        <div class="finish-section">
+            <div class="finish-estimate" id="finish-estimate" style="display: none;">
+                <div class="label">⏰ 本日の作業終了予想</div>
+                <div class="time" id="finish-time"></div>
+            </div>
+        </div>
+
+        <!-- 警告セクション -->
+        <div class="alerts-section">
+            <div id="alerts-container">
+                <!-- 警告が動的に挿入される -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentMode = 'tv'; // 'tv' or 'manager'
+
+        // モード切り替え
+        document.getElementById('tv-mode-btn').addEventListener('click', () => {
+            setMode('tv');
+        });
+
+        document.getElementById('manager-mode-btn').addEventListener('click', () => {
+            setMode('manager');
+        });
+
+        function setMode(mode) {
+            currentMode = mode;
+            document.body.className = mode === 'manager' ? 'manager-mode' : '';
+
+            // ボタンのアクティブ状態更新
+            document.getElementById('tv-mode-btn').classList.toggle('active', mode === 'tv');
+            document.getElementById('manager-mode-btn').classList.toggle('active', mode === 'manager');
+        }
+
+        // 現在日時を更新
+        function updateDateTime() {
+            const now = new Date();
+            const dateStr = now.toLocaleDateString('ja-JP', {
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                weekday: 'short'
+            });
+            const timeStr = now.toLocaleTimeString('ja-JP', {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+            document.getElementById('datetime').textContent = `${dateStr} ${timeStr}`;
+        }
+
+        // チェックポイント情報を更新
+        function updateCheckpointInfo(managerData) {
+            const checkpointEl = document.getElementById('checkpoint-info');
+            if (managerData.next_checkpoint) {
+                const cp = managerData.next_checkpoint;
+                const hours = Math.floor(cp.remaining_minutes / 60);
+                const mins = cp.remaining_minutes % 60;
+                let timeText = '';
+                if (hours > 0) {
+                    timeText = `${hours}時間${mins}分`;
+                } else {
+                    timeText = `${mins}分`;
+                }
+                checkpointEl.textContent = `次のチェックポイント: ${cp.time} (あと${timeText})`;
+            } else {
+                checkpointEl.textContent = '本日のチェックポイントはすべて終了しました';
+            }
+        }
+
+        // 朝の予測 vs 実績を更新
+        function updateMorningVsActual(predictions) {
+            const listEl = document.getElementById('predictions-list');
+            if (!predictions || predictions.length === 0) {
+                listEl.innerHTML = '<div style="text-align: center; opacity: 0.7;">朝の集計データがありません</div>';
+                return;
+            }
+
+            listEl.innerHTML = predictions.map(pred => {
+                let statusIcon = '🟢';
+                if (pred.status === 'delayed') statusIcon = '🔴';
+                else if (pred.status === 'ahead') statusIcon = '✨';
+
+                return `
+                    <div class="prediction-item ${pred.status}">
+                        <div class="task-name">${pred.task_type}</div>
+                        <div class="progress-text">${pred.completed}/${pred.predicted}台</div>
+                        <div class="rate">${pred.completion_rate}%</div>
+                        <div class="status-icon">${statusIcon}</div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // ボトルネックを更新
+        function updateBottlenecks(bottlenecks) {
+            const containerEl = document.getElementById('bottlenecks-container');
+            const listEl = document.getElementById('bottlenecks-list');
+
+            if (!bottlenecks || bottlenecks.length === 0) {
+                containerEl.style.display = 'none';
+                return;
+            }
+
+            containerEl.style.display = 'block';
+            listEl.innerHTML = bottlenecks.map(bn => `
+                <div class="bottleneck-item">• ${bn.message}</div>
+            `).join('');
+        }
+
+        // 予想終了時刻を更新
+        function updateFinishEstimate(finishTime) {
+            const containerEl = document.getElementById('finish-estimate');
+            const timeEl = document.getElementById('finish-time');
+
+            if (!finishTime) {
+                containerEl.style.display = 'none';
+                return;
+            }
+
+            containerEl.style.display = 'block';
+            timeEl.textContent = finishTime;
+        }
+
+        // ダッシュボードデータを取得
+        async function fetchDashboardData() {
+            try {
+                const response = await fetch('/api/dashboard');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error('データ取得エラー:', error);
+                return null;
+            }
+        }
+
+        // ダッシュボードを更新
+        function updateDashboard(data) {
+            if (!data || data.summary.error) {
+                document.getElementById('loading').innerHTML = '<div class="error">データが見つかりません</div>';
+                return;
+            }
+
+            // ローディング非表示、コンテンツ表示
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+
+            const summary = data.summary;
+            const staffProgress = data.staff_progress;
+            const alerts = data.alerts;
+            const managerData = data.manager_data;
+
+            // 全体サマリー更新
+            document.getElementById('completion-rate').textContent = `${summary.completion_rate}%`;
+            document.getElementById('progress-fill').style.width = `${summary.completion_rate}%`;
+            document.getElementById('completed-count').textContent = summary.completed;
+            document.getElementById('in-progress-count').textContent = summary.in_progress;
+            document.getElementById('pending-count').textContent = summary.pending;
+
+            // マネージャーモード専用データ
+            if (managerData) {
+                updateCheckpointInfo(managerData);
+                updateMorningVsActual(managerData.morning_vs_actual);
+                updateBottlenecks(managerData.bottlenecks);
+                updateFinishEstimate(managerData.estimated_finish_time);
+            }
+
+            // スタッフ別進捗更新
+            const staffListEl = document.getElementById('staff-list');
+            const staffHeader = currentMode === 'manager' ? '<h3>👥 スタッフ別進捗</h3>' : '';
+            staffListEl.innerHTML = staffHeader + staffProgress.map(staff => {
+                let barClass = 'low';
+                if (staff.completion_rate >= 60) barClass = 'high';
+                else if (staff.completion_rate >= 40) barClass = 'medium';
+
+                return `
+                    <div class="staff-item">
+                        <div class="staff-icon">👤</div>
+                        <div class="staff-name">${staff.staff}</div>
+                        <div class="staff-progress">${staff.completed}/${staff.total_tasks}</div>
+                        <div class="staff-bar">
+                            <div class="staff-bar-fill ${barClass}" style="width: ${staff.completion_rate}%"></div>
+                        </div>
+                        <div class="staff-rate">${staff.completion_rate}%</div>
+                        <div class="staff-status">${staff.status_icon}</div>
+                    </div>
+                `;
+            }).join('');
+
+            // 警告更新
+            const alertsContainerEl = document.getElementById('alerts-container');
+            if (alerts.length > 0) {
+                alertsContainerEl.innerHTML = `
+                    <div class="alerts">
+                        <h3>要注意</h3>
+                        ${alerts.map(alert => `<div class="alert-item">• ${alert.message}</div>`).join('')}
+                    </div>
+                `;
+            } else {
+                alertsContainerEl.innerHTML = '';
+            }
+        }
+
+        // 初期化
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+
+        // データ取得と更新
+        async function refreshData() {
+            const data = await fetchDashboardData();
+            if (data) {
+                updateDashboard(data);
+            }
+        }
+
+        // 初回読み込み
+        refreshData();
+
+        // 5秒ごとに自動更新
+        setInterval(refreshData, 5000);
+    </script>
+</body>
+</html>

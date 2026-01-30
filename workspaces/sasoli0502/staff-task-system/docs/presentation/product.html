@@ -1,0 +1,636 @@
+
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スタッフタスク管理システム - プロダクト紹介</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans JP", sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 60px;
+            animation: fadeInDown 1s ease;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            opacity: 0.95;
+            margin-bottom: 30px;
+        }
+
+        .hero-tags {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .content {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            overflow: hidden;
+            animation: fadeInUp 1s ease;
+        }
+
+        .section {
+            padding: 60px 50px;
+        }
+
+        .section:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            color: #667eea;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: #495057;
+            margin: 30px 0 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
+            border-color: #667eea;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .feature-desc {
+            color: #6c757d;
+            font-size: 0.95rem;
+        }
+
+        .phase-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .phase-list li {
+            padding: 15px;
+            margin: 10px 0;
+            background: white;
+            border-left: 4px solid #667eea;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .phase-list strong {
+            color: #667eea;
+            font-size: 1.1rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .tech-badge {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            transition: transform 0.2s ease;
+        }
+
+        .tech-badge:hover {
+            transform: scale(1.05);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .demo-command {
+            background: #2d3748;
+            color: #68d391;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            margin: 20px 0;
+            overflow-x: auto;
+            box-shadow: inset 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .demo-command::before {
+            content: '$ ';
+            color: #a0aec0;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 80px 50px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 50px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-top: 30px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        code {
+            background: #f1f3f5;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9em;
+            color: #e83e8c;
+        }
+
+        .architecture-diagram {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid #e9ecef;
+        }
+
+        .flow-step {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .flow-step-number {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .security-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #d4edda;
+            color: #155724;
+            padding: 8px 16px;
+            border-radius: 20px;
+            border: 1px solid #c3e6cb;
+            font-weight: 600;
+            margin: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: white;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .section {
+                padding: 40px 30px;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📋 スタッフタスク管理システム</h1>
+            <p class="subtitle">自然言語で操作できる、次世代の業務管理プラットフォーム</p>
+            <div class="hero-tags">
+                <span class="tag">🤖 AI駆動</span>
+                <span class="tag">🗣️ 自然言語対話</span>
+                <span class="tag">⚡ リアルタイム進捗</span>
+                <span class="tag">🔒 データ整合性保証</span>
+            </div>
+        </header>
+
+        <div class="content">
+            <!-- 概要セクション -->
+            <section class="section">
+                <h2>🎯 プロダクト概要</h2>
+                <p style="font-size: 1.1rem; margin-top: 20px; color: #495057;">
+                    <strong>スタッフタスク管理システム</strong>は、査定・検品・出品・修理といった日次業務を、
+                    <strong>自然言語での対話</strong>だけで完結できる革新的な管理システムです。
+                    Claude Codeエージェントを基盤とし、複雑なコマンド操作を一切必要としません。
+                </p>
+
+                <div class="stats">
+                    <div class="stat-card">
+                        <div class="stat-number">13</div>
+                        <div class="stat-label">自動化スクリプト</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">実装フェーズ完了</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">8</div>
+                        <div class="stat-label">タスク種別対応</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">データ整合性</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 主要機能 -->
+            <section class="section">
+                <h2>✨ 主要機能</h2>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🗣️</div>
+                        <div class="feature-title">自然言語インターフェース</div>
+                        <div class="feature-desc">
+                            「今日のタスクを教えて」「細谷さんのスキルは？」など、
+                            日常会話でシステムを操作できます。
+                        </div>
+                        <div class="demo-command" style="margin-top: 15px; font-size: 0.85rem;">
+                            "今日のタスクを教えて"
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🤖</div>
+                        <div class="feature-title">AI最適化アルゴリズム</div>
+                        <div class="feature-desc">
+                            スタッフのスキルレベル（1-3）、スピードファクター（0.9-1.3x）、
+                            資格を考慮した最適なタスク配分を自動提案。
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">⏱️</div>
+                        <div class="feature-title">リアルタイム進捗管理</div>
+                        <div class="feature-desc">
+                            14:00/17:00のチェックポイントで自動分析。
+                            遅延を検知し、即座にフィードバックを提案します。
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🔄</div>
+                        <div class="feature-title">突発対応の自動化</div>
+                        <div class="feature-desc">
+                            スタッフの欠勤時、保留中のタスクを自動抽出。
+                            スキルマッチする最適な再割り当て候補を提案。
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <div class="feature-title">包括的な分析レポート</div>
+                        <div class="feature-desc">
+                            日報・週次・月次レポートを自動生成。
+                            スタッフ別パフォーマンス、タスク種別トレンドを可視化。
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🔗</div>
+                        <div class="feature-title">外部システム連携</div>
+                        <div class="feature-desc">
+                            Kintoneからのデータ自動取得、
+                            Slackへのリアルタイム通知に対応。
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- アーキテクチャ -->
+            <section class="section">
+                <h2>🏗️ システムアーキテクチャ</h2>
+
+                <div class="architecture-diagram">
+                    <h3>🔄 データフロー</h3>
+
+                    <div class="flow-step">
+                        <div class="flow-step-number">1</div>
+                        <div>
+                            <strong>自然言語入力</strong><br>
+                            <small>ユーザーが日本語で質問・指示</small>
+                        </div>
+                    </div>
+
+                    <div class="flow-step">
+                        <div class="flow-step-number">2</div>
+                        <div>
+                            <strong>Claude Codeエージェント</strong><br>
+                            <small>CLAUDE.mdのルールに基づいて適切なスクリプトを自動実行</small>
+                        </div>
+                    </div>
+
+                    <div class="flow-step">
+                        <div class="flow-step-number">3</div>
+                        <div>
+                            <strong>Pydanticバリデーション</strong><br>
+                            <small>データ整合性を厳密にチェック（タスクID形式、Enum値、必須項目）</small>
+                        </div>
+                    </div>
+
+                    <div class="flow-step">
+                        <div class="flow-step-number">4</div>
+                        <div>
+                            <strong>YAML永続化</strong><br>
+                            <small>バリデーション済みデータをYAMLファイルに保存</small>
+                        </div>
+                    </div>
+
+                    <div class="flow-step">
+                        <div class="flow-step-number">5</div>
+                        <div>
+                            <strong>結果を自然言語で返答</strong><br>
+                            <small>実行結果をわかりやすい日本語で提示</small>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 40px;">🔒 データ整合性の保証</h3>
+                <div style="margin-top: 20px;">
+                    <span class="security-badge">✅ Pydantic v2による厳密なバリデーション</span>
+                    <span class="security-badge">✅ YAML直接編集を技術的にブロック</span>
+                    <span class="security-badge">✅ スクリプト経由のみデータ変更可能</span>
+                    <span class="security-badge">✅ タスクID形式の自動検証</span>
+                    <span class="security-badge">✅ Enum値の厳密チェック</span>
+                </div>
+            </section>
+
+            <!-- 実装フェーズ -->
+            <section class="section">
+                <h2>🚀 実装フェーズ</h2>
+
+                <ul class="phase-list">
+                    <li>
+                        <strong>Phase 1: 基盤構築</strong> ✅<br>
+                        Pydanticモデル、YAML管理、バリデーション、基本CRUD操作
+                    </li>
+                    <li>
+                        <strong>Phase 2: 朝の集計・進捗管理</strong> ✅<br>
+                        朝の集計入力、チェックポイント、役割分担AI提案、フィードバック記録
+                    </li>
+                    <li>
+                        <strong>Phase 3-A: 突発対応</strong> ✅<br>
+                        欠勤対応・タスク再割り当て、スキルマトリックス表示
+                    </li>
+                    <li>
+                        <strong>Phase 3-B: 分析機能</strong> ✅<br>
+                        日報自動生成、週次・月次の作業履歴分析
+                    </li>
+                    <li>
+                        <strong>Phase 4: 外部連携</strong> ✅<br>
+                        Kintone連携、Slack通知連携
+                    </li>
+                </ul>
+
+                <div style="text-align: center; margin-top: 40px;">
+                    <div style="display: inline-block; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 20px 40px; border-radius: 15px; font-size: 1.3rem; font-weight: 700; box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);">
+                        🎉 全フェーズ実装完了！
+                    </div>
+                </div>
+            </section>
+
+            <!-- 技術スタック -->
+            <section class="section">
+                <h2>🛠️ 技術スタック</h2>
+
+                <div class="tech-stack">
+                    <span class="tech-badge">Python 3.10+</span>
+                    <span class="tech-badge">Pydantic v2</span>
+                    <span class="tech-badge">PyYAML</span>
+                    <span class="tech-badge">Requests</span>
+                    <span class="tech-badge">uv (パッケージ管理)</span>
+                    <span class="tech-badge">Claude Code Agent</span>
+                    <span class="tech-badge">Kintone API</span>
+                    <span class="tech-badge">Slack Webhook</span>
+                </div>
+
+                <h3 style="margin-top: 40px;">📂 プロジェクト構成</h3>
+                <div style="background: #2d3748; color: #68d391; padding: 25px; border-radius: 10px; margin-top: 20px; font-family: 'Monaco', 'Menlo', monospace; font-size: 0.9rem; overflow-x: auto;">
+<pre style="margin: 0;">work/staff-task-system/
+├── .claude/
+│   └── settings.local.json    # ツール制約設定
+├── config/                     # マスタデータ
+│   ├── staff.yaml             # スタッフ情報
+│   ├── task-types.yaml        # タスク種別定義
+│   └── schedule.yaml          # スケジュール
+├── scripts/                    # 13個の自動化スクリプト
+│   ├── models.py              # Pydanticモデル
+│   ├── validate.py            # バリデーション
+│   ├── add_task.py            # タスク追加
+│   ├── checkpoint.py          # 進捗確認
+│   ├── handle_absence.py      # 欠勤対応
+│   ├── generate_daily_report.py  # 日報生成
+│   └── ...
+└── tasks/
+    └── active/                # 日次タスクデータ
+        └── YYYY-MM-DD.yaml</pre>
+                </div>
+            </section>
+
+            <!-- 使用例 -->
+            <section class="section">
+                <h2>💬 使用例</h2>
+
+                <h3>基本操作</h3>
+                <div class="demo-command">今日のタスクを教えて</div>
+                <div class="demo-command">細谷さんのスキル情報を見せて</div>
+                <div class="demo-command">査定できる人を探して</div>
+
+                <h3 style="margin-top: 30px;">進捗管理</h3>
+                <div class="demo-command">朝の集計を入力</div>
+                <div class="demo-command">14時のチェックポイント</div>
+                <div class="demo-command">今日の日報を見せて</div>
+
+                <h3 style="margin-top: 30px;">突発対応</h3>
+                <div class="demo-command">江口さんが欠勤なのでタスクを再割り当てして</div>
+                <div class="demo-command">スキルマトリックスを表示</div>
+
+                <h3 style="margin-top: 30px;">分析</h3>
+                <div class="demo-command">週次レポートを見せて</div>
+                <div class="demo-command">月次のパフォーマンス分析</div>
+            </section>
+
+            <!-- CTA -->
+            <section class="cta-section">
+                <h2 style="color: white; margin-bottom: 20px;">🎯 今すぐ始めましょう</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 10px;">
+                    複雑なコマンドは不要。自然な会話でタスク管理を始められます。
+                </p>
+                <a href="https://github.com/anthropics/claude-code" class="cta-button" target="_blank">
+                    Claude Codeをダウンロード
+                </a>
+            </section>
+        </div>
+
+        <footer>
+            <p>🤖 Powered by Claude Code | Built with ❤️ for efficient task management</p>
+            <p style="margin-top: 10px;">© 2025 Staff Task Management System</p>
+        </footer>
+    </div>
+</body>
+</html>

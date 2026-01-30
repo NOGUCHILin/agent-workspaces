@@ -1,0 +1,7 @@
+2026/01/22-18:59:27.854 24688 Reusing MANIFEST c:\Users\koyom\claude-code-worktrees\workspaces\sasoli0502\{{HOME}}\.playwright-profiles\claude-workspace\Profile 1\IndexedDB\https_www.notion.so_0.indexeddb.leveldb/MANIFEST-000001
+2026/01/22-18:59:27.854 24688 Recovering log #27
+2026/01/22-18:59:27.864 24688 Reusing old log c:\Users\koyom\claude-code-worktrees\workspaces\sasoli0502\{{HOME}}\.playwright-profiles\claude-workspace\Profile 1\IndexedDB\https_www.notion.so_0.indexeddb.leveldb/000027.log 
+2026/01/22-18:59:29.843 b96c Level-0 table #32: started
+2026/01/22-18:59:29.848 b96c Level-0 table #32: 341213 bytes OK
+2026/01/22-18:59:29.849 b96c Delete type=0 #27
+2026/01/22-18:59:29.850 24688 Manual compaction at level-0 from '\x00\x0d\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x0e\x00\x00\x00' @ 0 : 0; will stop at (end)

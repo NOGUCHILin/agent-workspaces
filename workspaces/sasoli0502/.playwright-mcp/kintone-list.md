@@ -1,0 +1,4794 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e5]:
+        - heading "kintone" [level=1] [ref=e6]
+        - link "ロゴ" [ref=e8] [cursor=pointer]:
+          - /url: /k/
+          - img [ref=e9]
+      - generic [ref=e12]:
+        - link "野口器" [ref=e13] [cursor=pointer]:
+          - /url: /k/#/people/user/noguchisara%40japanconsulting.co.jp
+          - img [ref=e14]
+          - generic "野口器" [ref=e15]
+        - button "アカウントメニュー" [ref=e19] [cursor=pointer]:
+          - img "アカウントメニュー" [ref=e20]:
+            - img [ref=e21]
+    - navigation [ref=e24]:
+      - list [ref=e26]:
+        - listitem [ref=e27]:
+          - button "サイドメニュー" [ref=e31] [cursor=pointer]:
+            - img "サイドメニュー" [ref=e32]:
+              - img [ref=e34]
+        - listitem [ref=e36]:
+          - link "ポータル" [ref=e39] [cursor=pointer]:
+            - /url: /k/#/portal
+            - img "ポータル" [ref=e40]:
+              - img [ref=e42]
+        - listitem [ref=e44]:
+          - link "通知一覧(100件以上の未読)" [ref=e248] [cursor=pointer]:
+            - /url: /k/#/ntf/mention
+            - img "通知一覧" [ref=e49]:
+              - generic [ref=e50]:
+                - img [ref=e51]
+                - generic [ref=e249]: 99+
+        - listitem [ref=e53]:
+          - button "ブックマーク" [ref=e57] [cursor=pointer]:
+            - img "ブックマーク" [ref=e58]:
+              - img [ref=e60]
+      - generic [ref=e62]:
+        - list [ref=e63]:
+          - listitem
+          - listitem
+          - listitem
+          - listitem
+          - listitem [ref=e64]:
+            - button "設定" [ref=e69] [cursor=pointer]:
+              - img "設定" [ref=e70]:
+                - img [ref=e71]
+          - listitem [ref=e73]:
+            - button "ヘルプ" [ref=e78] [cursor=pointer]:
+              - img "ヘルプ" [ref=e79]:
+                - img [ref=e80]
+        - generic [ref=e83]:
+          - combobox "アプリ内検索" [ref=e84]
+          - button "検索" [ref=e87] [cursor=pointer]:
+            - img "検索" [ref=e88]:
+              - img [ref=e90]
+  - generic [ref=e93]:
+    - generic [ref=e96]:
+      - generic [ref=e97]:
+        - text: "このアプリ（id: 11）で、 2025-08-07 16:57 にパフォーマンスに影響を与える処理が検知されました。レコード一括取得APIで offset に上限（10,000）を超える値が指定されて実行されました。詳細は、"
+        - link "offset の制限値を考慮したレコード一括取得の案内" [ref=e98] [cursor=pointer]:
+          - /url: /k/redirect/ja-get-records-considering-offset-limit
+        - text: を参照してください。
+      - generic "閉じる" [ref=e99] [cursor=pointer]
+    - generic [ref=e100]:
+      - generic [ref=e101]:
+        - img [ref=e102]
+        - heading "買取販売リスト(iPhone,iPad)" [level=2]:
+          - link "買取販売リスト(iPhone,iPad)" [ref=e103] [cursor=pointer]:
+            - /url: /k/11/
+      - generic [ref=e104]:
+        - generic [ref=e107]:
+          - generic "現在位置" [ref=e109]:
+            - list [ref=e110]:
+              - listitem [ref=e111]:
+                - link "ポータル" [ref=e112] [cursor=pointer]:
+                  - /url: /k/#/portal
+              - listitem [ref=e113]
+              - listitem [ref=e114]:
+                - generic [ref=e115]: "アプリ:"
+                - generic "買取販売リスト(iPhone,iPad)" [ref=e116]
+          - button "お気に入り" [ref=e119] [cursor=pointer]
+        - generic [ref=e121]:
+          - generic [ref=e122]:
+            - listbox "標準一覧" [ref=e124]:
+              - option "標準一覧" [selected] [ref=e125]
+            - listbox [ref=e128]:
+              - option "--" [selected] [ref=e129]
+          - button "絞り込む" [ref=e131] [cursor=pointer]
+          - button "集計する" [ref=e132] [cursor=pointer]
+          - generic [ref=e133]:
+            - menuitem "レコードを追加する" [ref=e134] [cursor=pointer]:
+              - generic [ref=e135]: レコードを追加する
+            - generic [ref=e136]:
+              - link "アプリを設定" [ref=e137] [cursor=pointer]:
+                - /url: /k/admin/app/flow?app=11#section=form
+                - generic [ref=e138]: アプリを設定
+              - button "アプリ設定メニュー" [ref=e139]
+            - button "オプション" [ref=e140] [cursor=pointer]
+      - generic [ref=e142]:
+        - generic [ref=e250]: 1 - 100 （337229件中）
+        - button "次へ" [ref=e145] [cursor=pointer]
+    - table [ref=e150]:
+      - rowgroup [ref=e151]:
+        - columnheader [ref=e152]
+        - columnheader "レコード番号" [ref=e153]:
+          - generic "降順に並び替える" [ref=e155]: レコード番号
+        - columnheader "買取媒体" [ref=e157]:
+          - generic "降順に並び替える" [ref=e159]: 買取媒体
+        - columnheader "メッセージ媒体" [ref=e161]:
+          - generic "降順に並び替える" [ref=e163]: メッセージ媒体
+        - columnheader "作成者" [ref=e165]:
+          - generic "降順に並び替える" [ref=e167]: 作成者
+        - columnheader "作成日時" [ref=e169]:
+          - generic "降順に並び替える" [ref=e171]: 作成日時
+        - columnheader "更新者" [ref=e173]:
+          - generic "降順に並び替える" [ref=e175]: 更新者
+        - columnheader "更新日時" [ref=e177]:
+          - generic "降順に並び替える" [ref=e179]: 更新日時
+        - columnheader "ユーザーネーム" [ref=e181]:
+          - generic "降順に並び替える" [ref=e183]: ユーザーネーム
+        - columnheader "ユーザー氏名" [ref=e185]:
+          - generic "降順に並び替える" [ref=e187]: ユーザー氏名
+        - columnheader "機種" [ref=e189]:
+          - generic "降順に並び替える" [ref=e191]: 機種
+        - columnheader "容量" [ref=e193]:
+          - generic "降順に並び替える" [ref=e195]: 容量
+        - columnheader "ランク" [ref=e197]:
+          - generic "降順に並び替える" [ref=e199]: ランク
+        - columnheader "最終買取価格" [ref=e201]:
+          - generic "降順に並び替える" [ref=e203]: 最終買取価格
+        - columnheader "最終販売価格（税込）" [ref=e205]:
+          - generic "降順に並び替える" [ref=e207]: 最終販売価格（税込）
+        - columnheader "進捗" [ref=e209]:
+          - generic "降順に並び替える" [ref=e211]: 進捗
+        - columnheader "新品・未開封" [ref=e213]:
+          - generic [ref=e215]: 新品・未開封
+        - columnheader "特記事項" [ref=e217]:
+          - generic [ref=e219]: 特記事項
+        - columnheader "想定販売経路" [ref=e221]:
+          - generic "降順に並び替える" [ref=e223]: 想定販売経路
+        - columnheader "最高提示価格（高額）" [ref=e225]:
+          - generic "降順に並び替える" [ref=e227]: 最高提示価格（高額）
+        - columnheader "最高提示価格" [ref=e229]:
+          - generic "降順に並び替える" [ref=e231]: 最高提示価格
+        - columnheader "集荷受付日時" [ref=e233]:
+          - generic "降順に並び替える" [ref=e235]: 集荷受付日時
+        - columnheader [ref=e237]
+      - rowgroup [ref=e251]:
+        - row "339707 自社サイト LINE Administrator 2026-01-28 15:13 Administrator 2026-01-28 15:13 maaya maaya iPhone 14 Pro Max 512GB 美品 本査定前交渉中 88000 79000 編集する" [ref=e252]:
+          - cell [ref=e253]:
+            - link "レコードの詳細を表示する" [ref=e254] [cursor=pointer]:
+              - /url: /k/11/show#record=339707&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339706&l.prev=0
+          - cell "339707" [ref=e256]:
+            - generic [ref=e258]: "339707"
+          - cell "自社サイト" [ref=e259]:
+            - generic [ref=e261]: 自社サイト
+          - cell "LINE" [ref=e262]:
+            - generic [ref=e264]: LINE
+          - cell "Administrator" [ref=e265]:
+            - button "Administrator" [ref=e267] [cursor=pointer]:
+              - img [ref=e268]
+              - text: Administrator
+          - cell "2026-01-28 15:13" [ref=e269]:
+            - generic [ref=e271]: 2026-01-28 15:13
+          - cell "Administrator" [ref=e272]:
+            - button "Administrator" [ref=e274] [cursor=pointer]:
+              - img [ref=e275]
+              - text: Administrator
+          - cell "2026-01-28 15:13" [ref=e276]:
+            - generic [ref=e278]: 2026-01-28 15:13
+          - cell "maaya" [ref=e279]:
+            - generic [ref=e281]: maaya
+          - cell "maaya" [ref=e282]:
+            - generic [ref=e284]: maaya
+          - cell "iPhone 14 Pro Max" [ref=e285]:
+            - generic [ref=e287]: iPhone 14 Pro Max
+          - cell "512GB" [ref=e288]:
+            - generic [ref=e290]: 512GB
+          - cell "美品" [ref=e291]:
+            - generic [ref=e293]: 美品
+          - cell [ref=e294]
+          - cell [ref=e296]
+          - cell "本査定前交渉中" [ref=e298]:
+            - generic [ref=e300]: 本査定前交渉中
+          - cell [ref=e301]
+          - cell [ref=e303]
+          - cell [ref=e305]
+          - cell "88000" [ref=e307]:
+            - generic [ref=e309]: "88000"
+          - cell "79000" [ref=e310]:
+            - generic [ref=e312]: "79000"
+          - cell [ref=e313]
+          - cell "編集する" [ref=e315]:
+            - button "編集する" [ref=e317] [cursor=pointer]
+        - row "339706 自社サイト LINE Administrator 2026-01-28 15:12 Administrator 2026-01-28 15:14 リっちょん 村越莉紗 iPhone 13 256GB 美品 集荷依頼受付済み 40000 36000 2026-01-28 15:14 編集する" [ref=e318]:
+          - cell [ref=e319]:
+            - link "レコードの詳細を表示する" [ref=e320] [cursor=pointer]:
+              - /url: /k/11/show#record=339706&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339705&l.prev=339707
+          - cell "339706" [ref=e322]:
+            - generic [ref=e324]: "339706"
+          - cell "自社サイト" [ref=e325]:
+            - generic [ref=e327]: 自社サイト
+          - cell "LINE" [ref=e328]:
+            - generic [ref=e330]: LINE
+          - cell "Administrator" [ref=e331]:
+            - button "Administrator" [ref=e333] [cursor=pointer]:
+              - img [ref=e334]
+              - text: Administrator
+          - cell "2026-01-28 15:12" [ref=e335]:
+            - generic [ref=e337]: 2026-01-28 15:12
+          - cell "Administrator" [ref=e338]:
+            - button "Administrator" [ref=e340] [cursor=pointer]:
+              - img [ref=e341]
+              - text: Administrator
+          - cell "2026-01-28 15:14" [ref=e342]:
+            - generic [ref=e344]: 2026-01-28 15:14
+          - cell "リっちょん" [ref=e345]:
+            - generic [ref=e347]: リっちょん
+          - cell "村越莉紗" [ref=e348]:
+            - generic [ref=e350]: 村越莉紗
+          - cell "iPhone 13" [ref=e351]:
+            - generic [ref=e353]: iPhone 13
+          - cell "256GB" [ref=e354]:
+            - generic [ref=e356]: 256GB
+          - cell "美品" [ref=e357]:
+            - generic [ref=e359]: 美品
+          - cell [ref=e360]
+          - cell [ref=e362]
+          - cell "集荷依頼受付済み" [ref=e364]:
+            - generic [ref=e366]: 集荷依頼受付済み
+          - cell [ref=e367]
+          - cell [ref=e369]
+          - cell [ref=e371]
+          - cell "40000" [ref=e373]:
+            - generic [ref=e375]: "40000"
+          - cell "36000" [ref=e376]:
+            - generic [ref=e378]: "36000"
+          - cell "2026-01-28 15:14" [ref=e379]:
+            - generic [ref=e381]: 2026-01-28 15:14
+          - cell "編集する" [ref=e382]:
+            - button "編集する" [ref=e384] [cursor=pointer]
+        - row "339705 自社サイト LINE Administrator 2026-01-28 15:12 Administrator 2026-01-28 15:12 🐈‍⬛🌙 🐈‍⬛🌙 iPhone 14 128GB 目立つ傷あり 本査定前交渉中 38000 33000 編集する" [ref=e385]:
+          - cell [ref=e386]:
+            - link "レコードの詳細を表示する" [ref=e387] [cursor=pointer]:
+              - /url: /k/11/show#record=339705&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339704&l.prev=339706
+          - cell "339705" [ref=e389]:
+            - generic [ref=e391]: "339705"
+          - cell "自社サイト" [ref=e392]:
+            - generic [ref=e394]: 自社サイト
+          - cell "LINE" [ref=e395]:
+            - generic [ref=e397]: LINE
+          - cell "Administrator" [ref=e398]:
+            - button "Administrator" [ref=e400] [cursor=pointer]:
+              - img [ref=e401]
+              - text: Administrator
+          - cell "2026-01-28 15:12" [ref=e402]:
+            - generic [ref=e404]: 2026-01-28 15:12
+          - cell "Administrator" [ref=e405]:
+            - button "Administrator" [ref=e407] [cursor=pointer]:
+              - img [ref=e408]
+              - text: Administrator
+          - cell "2026-01-28 15:12" [ref=e409]:
+            - generic [ref=e411]: 2026-01-28 15:12
+          - cell "🐈‍⬛🌙" [ref=e412]:
+            - generic [ref=e414]: 🐈‍⬛🌙
+          - cell "🐈‍⬛🌙" [ref=e415]:
+            - generic [ref=e417]: 🐈‍⬛🌙
+          - cell "iPhone 14" [ref=e418]:
+            - generic [ref=e420]: iPhone 14
+          - cell "128GB" [ref=e421]:
+            - generic [ref=e423]: 128GB
+          - cell "目立つ傷あり" [ref=e424]:
+            - generic [ref=e426]: 目立つ傷あり
+          - cell [ref=e427]
+          - cell [ref=e429]
+          - cell "本査定前交渉中" [ref=e431]:
+            - generic [ref=e433]: 本査定前交渉中
+          - cell [ref=e434]
+          - cell [ref=e436]
+          - cell [ref=e438]
+          - cell "38000" [ref=e440]:
+            - generic [ref=e442]: "38000"
+          - cell "33000" [ref=e443]:
+            - generic [ref=e445]: "33000"
+          - cell [ref=e446]
+          - cell "編集する" [ref=e448]:
+            - button "編集する" [ref=e450] [cursor=pointer]
+        - row "339704 自社サイト LINE Administrator 2026-01-28 14:56 Administrator 2026-01-28 14:56 辻 歩伽 辻 歩伽 iPhone 13 mini 128GB 外装ジャンク 本査定前交渉中 17000 15000 編集する" [ref=e451]:
+          - cell [ref=e452]:
+            - link "レコードの詳細を表示する" [ref=e453] [cursor=pointer]:
+              - /url: /k/11/show#record=339704&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339703&l.prev=339705
+          - cell "339704" [ref=e455]:
+            - generic [ref=e457]: "339704"
+          - cell "自社サイト" [ref=e458]:
+            - generic [ref=e460]: 自社サイト
+          - cell "LINE" [ref=e461]:
+            - generic [ref=e463]: LINE
+          - cell "Administrator" [ref=e464]:
+            - button "Administrator" [ref=e466] [cursor=pointer]:
+              - img [ref=e467]
+              - text: Administrator
+          - cell "2026-01-28 14:56" [ref=e468]:
+            - generic [ref=e470]: 2026-01-28 14:56
+          - cell "Administrator" [ref=e471]:
+            - button "Administrator" [ref=e473] [cursor=pointer]:
+              - img [ref=e474]
+              - text: Administrator
+          - cell "2026-01-28 14:56" [ref=e475]:
+            - generic [ref=e477]: 2026-01-28 14:56
+          - cell "辻 歩伽" [ref=e478]:
+            - generic [ref=e480]: 辻 歩伽
+          - cell "辻 歩伽" [ref=e481]:
+            - generic [ref=e483]: 辻 歩伽
+          - cell "iPhone 13 mini" [ref=e484]:
+            - generic [ref=e486]: iPhone 13 mini
+          - cell "128GB" [ref=e487]:
+            - generic [ref=e489]: 128GB
+          - cell "外装ジャンク" [ref=e490]:
+            - generic [ref=e492]: 外装ジャンク
+          - cell [ref=e493]
+          - cell [ref=e495]
+          - cell "本査定前交渉中" [ref=e497]:
+            - generic [ref=e499]: 本査定前交渉中
+          - cell [ref=e500]
+          - cell [ref=e502]
+          - cell [ref=e504]
+          - cell "17000" [ref=e506]:
+            - generic [ref=e508]: "17000"
+          - cell "15000" [ref=e509]:
+            - generic [ref=e511]: "15000"
+          - cell [ref=e512]
+          - cell "編集する" [ref=e514]:
+            - button "編集する" [ref=e516] [cursor=pointer]
+        - row "339703 自社サイト LINE Administrator 2026-01-28 14:47 Administrator 2026-01-28 14:47 宮田洋一 宮田洋一 iPhone XR 64GB 新品同様 本査定前交渉中 6500 4500 編集する" [ref=e517]:
+          - cell [ref=e518]:
+            - link "レコードの詳細を表示する" [ref=e519] [cursor=pointer]:
+              - /url: /k/11/show#record=339703&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339702&l.prev=339704
+          - cell "339703" [ref=e521]:
+            - generic [ref=e523]: "339703"
+          - cell "自社サイト" [ref=e524]:
+            - generic [ref=e526]: 自社サイト
+          - cell "LINE" [ref=e527]:
+            - generic [ref=e529]: LINE
+          - cell "Administrator" [ref=e530]:
+            - button "Administrator" [ref=e532] [cursor=pointer]:
+              - img [ref=e533]
+              - text: Administrator
+          - cell "2026-01-28 14:47" [ref=e534]:
+            - generic [ref=e536]: 2026-01-28 14:47
+          - cell "Administrator" [ref=e537]:
+            - button "Administrator" [ref=e539] [cursor=pointer]:
+              - img [ref=e540]
+              - text: Administrator
+          - cell "2026-01-28 14:47" [ref=e541]:
+            - generic [ref=e543]: 2026-01-28 14:47
+          - cell "宮田洋一" [ref=e544]:
+            - generic [ref=e546]: 宮田洋一
+          - cell "宮田洋一" [ref=e547]:
+            - generic [ref=e549]: 宮田洋一
+          - cell "iPhone XR" [ref=e550]:
+            - generic [ref=e552]: iPhone XR
+          - cell "64GB" [ref=e553]:
+            - generic [ref=e555]: 64GB
+          - cell "新品同様" [ref=e556]:
+            - generic [ref=e558]: 新品同様
+          - cell [ref=e559]
+          - cell [ref=e561]
+          - cell "本査定前交渉中" [ref=e563]:
+            - generic [ref=e565]: 本査定前交渉中
+          - cell [ref=e566]
+          - cell [ref=e568]
+          - cell [ref=e570]
+          - cell "6500" [ref=e572]:
+            - generic [ref=e574]: "6500"
+          - cell "4500" [ref=e575]:
+            - generic [ref=e577]: "4500"
+          - cell [ref=e578]
+          - cell "編集する" [ref=e580]:
+            - button "編集する" [ref=e582] [cursor=pointer]
+        - row "339702 自社サイト LINE Administrator 2026-01-28 14:35 Administrator 2026-01-28 14:35 nishida chikara nishida chikara iPhone 13 Pro 128GB 新品同様 本査定前交渉中 48000 44000 編集する" [ref=e583]:
+          - cell [ref=e584]:
+            - link "レコードの詳細を表示する" [ref=e585] [cursor=pointer]:
+              - /url: /k/11/show#record=339702&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339701&l.prev=339703
+          - cell "339702" [ref=e587]:
+            - generic [ref=e589]: "339702"
+          - cell "自社サイト" [ref=e590]:
+            - generic [ref=e592]: 自社サイト
+          - cell "LINE" [ref=e593]:
+            - generic [ref=e595]: LINE
+          - cell "Administrator" [ref=e596]:
+            - button "Administrator" [ref=e598] [cursor=pointer]:
+              - img [ref=e599]
+              - text: Administrator
+          - cell "2026-01-28 14:35" [ref=e600]:
+            - generic [ref=e602]: 2026-01-28 14:35
+          - cell "Administrator" [ref=e603]:
+            - button "Administrator" [ref=e605] [cursor=pointer]:
+              - img [ref=e606]
+              - text: Administrator
+          - cell "2026-01-28 14:35" [ref=e607]:
+            - generic [ref=e609]: 2026-01-28 14:35
+          - cell "nishida chikara" [ref=e610]:
+            - generic [ref=e612]: nishida chikara
+          - cell "nishida chikara" [ref=e613]:
+            - generic [ref=e615]: nishida chikara
+          - cell "iPhone 13 Pro" [ref=e616]:
+            - generic [ref=e618]: iPhone 13 Pro
+          - cell "128GB" [ref=e619]:
+            - generic [ref=e621]: 128GB
+          - cell "新品同様" [ref=e622]:
+            - generic [ref=e624]: 新品同様
+          - cell [ref=e625]
+          - cell [ref=e627]
+          - cell "本査定前交渉中" [ref=e629]:
+            - generic [ref=e631]: 本査定前交渉中
+          - cell [ref=e632]
+          - cell [ref=e634]
+          - cell [ref=e636]
+          - cell "48000" [ref=e638]:
+            - generic [ref=e640]: "48000"
+          - cell "44000" [ref=e641]:
+            - generic [ref=e643]: "44000"
+          - cell [ref=e644]
+          - cell "編集する" [ref=e646]:
+            - button "編集する" [ref=e648] [cursor=pointer]
+        - row "339701 自社サイト LINE Administrator 2026-01-28 14:35 Administrator 2026-01-28 14:35 nishida chikara nishida chikara iPhone 13 Pro 128GB 使用感あり 本査定前交渉中 44000 40000 編集する" [ref=e649]:
+          - cell [ref=e650]:
+            - link "レコードの詳細を表示する" [ref=e651] [cursor=pointer]:
+              - /url: /k/11/show#record=339701&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339700&l.prev=339702
+          - cell "339701" [ref=e653]:
+            - generic [ref=e655]: "339701"
+          - cell "自社サイト" [ref=e656]:
+            - generic [ref=e658]: 自社サイト
+          - cell "LINE" [ref=e659]:
+            - generic [ref=e661]: LINE
+          - cell "Administrator" [ref=e662]:
+            - button "Administrator" [ref=e664] [cursor=pointer]:
+              - img [ref=e665]
+              - text: Administrator
+          - cell "2026-01-28 14:35" [ref=e666]:
+            - generic [ref=e668]: 2026-01-28 14:35
+          - cell "Administrator" [ref=e669]:
+            - button "Administrator" [ref=e671] [cursor=pointer]:
+              - img [ref=e672]
+              - text: Administrator
+          - cell "2026-01-28 14:35" [ref=e673]:
+            - generic [ref=e675]: 2026-01-28 14:35
+          - cell "nishida chikara" [ref=e676]:
+            - generic [ref=e678]: nishida chikara
+          - cell "nishida chikara" [ref=e679]:
+            - generic [ref=e681]: nishida chikara
+          - cell "iPhone 13 Pro" [ref=e682]:
+            - generic [ref=e684]: iPhone 13 Pro
+          - cell "128GB" [ref=e685]:
+            - generic [ref=e687]: 128GB
+          - cell "使用感あり" [ref=e688]:
+            - generic [ref=e690]: 使用感あり
+          - cell [ref=e691]
+          - cell [ref=e693]
+          - cell "本査定前交渉中" [ref=e695]:
+            - generic [ref=e697]: 本査定前交渉中
+          - cell [ref=e698]
+          - cell [ref=e700]
+          - cell [ref=e702]
+          - cell "44000" [ref=e704]:
+            - generic [ref=e706]: "44000"
+          - cell "40000" [ref=e707]:
+            - generic [ref=e709]: "40000"
+          - cell [ref=e710]
+          - cell "編集する" [ref=e712]:
+            - button "編集する" [ref=e714] [cursor=pointer]
+        - row "339700 自社サイト LINE Administrator 2026-01-28 14:22 Administrator 2026-01-28 14:22 saaa.☺︎ saaa.☺︎ iPhone 13 mini 128GB 新品同様 本査定前交渉中 32750 28500 編集する" [ref=e715]:
+          - cell [ref=e716]:
+            - link "レコードの詳細を表示する" [ref=e717] [cursor=pointer]:
+              - /url: /k/11/show#record=339700&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339699&l.prev=339701
+          - cell "339700" [ref=e719]:
+            - generic [ref=e721]: "339700"
+          - cell "自社サイト" [ref=e722]:
+            - generic [ref=e724]: 自社サイト
+          - cell "LINE" [ref=e725]:
+            - generic [ref=e727]: LINE
+          - cell "Administrator" [ref=e728]:
+            - button "Administrator" [ref=e730] [cursor=pointer]:
+              - img [ref=e731]
+              - text: Administrator
+          - cell "2026-01-28 14:22" [ref=e732]:
+            - generic [ref=e734]: 2026-01-28 14:22
+          - cell "Administrator" [ref=e735]:
+            - button "Administrator" [ref=e737] [cursor=pointer]:
+              - img [ref=e738]
+              - text: Administrator
+          - cell "2026-01-28 14:22" [ref=e739]:
+            - generic [ref=e741]: 2026-01-28 14:22
+          - cell "saaa.☺︎" [ref=e742]:
+            - generic [ref=e744]: saaa.☺︎
+          - cell "saaa.☺︎" [ref=e745]:
+            - generic [ref=e747]: saaa.☺︎
+          - cell "iPhone 13 mini" [ref=e748]:
+            - generic [ref=e750]: iPhone 13 mini
+          - cell "128GB" [ref=e751]:
+            - generic [ref=e753]: 128GB
+          - cell "新品同様" [ref=e754]:
+            - generic [ref=e756]: 新品同様
+          - cell [ref=e757]
+          - cell [ref=e759]
+          - cell "本査定前交渉中" [ref=e761]:
+            - generic [ref=e763]: 本査定前交渉中
+          - cell [ref=e764]
+          - cell [ref=e766]
+          - cell [ref=e768]
+          - cell "32750" [ref=e770]:
+            - generic [ref=e772]: "32750"
+          - cell "28500" [ref=e773]:
+            - generic [ref=e775]: "28500"
+          - cell [ref=e776]
+          - cell "編集する" [ref=e778]:
+            - button "編集する" [ref=e780] [cursor=pointer]
+        - row "339699 自社サイト LINE Administrator 2026-01-28 14:21 Administrator 2026-01-28 14:21 saaa.☺︎ saaa.☺︎ iPhone 13 mini 128GB 新品同様 本査定前交渉中 32750 28500 編集する" [ref=e781]:
+          - cell [ref=e782]:
+            - link "レコードの詳細を表示する" [ref=e783] [cursor=pointer]:
+              - /url: /k/11/show#record=339699&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339698&l.prev=339700
+          - cell "339699" [ref=e785]:
+            - generic [ref=e787]: "339699"
+          - cell "自社サイト" [ref=e788]:
+            - generic [ref=e790]: 自社サイト
+          - cell "LINE" [ref=e791]:
+            - generic [ref=e793]: LINE
+          - cell "Administrator" [ref=e794]:
+            - button "Administrator" [ref=e796] [cursor=pointer]:
+              - img [ref=e797]
+              - text: Administrator
+          - cell "2026-01-28 14:21" [ref=e798]:
+            - generic [ref=e800]: 2026-01-28 14:21
+          - cell "Administrator" [ref=e801]:
+            - button "Administrator" [ref=e803] [cursor=pointer]:
+              - img [ref=e804]
+              - text: Administrator
+          - cell "2026-01-28 14:21" [ref=e805]:
+            - generic [ref=e807]: 2026-01-28 14:21
+          - cell "saaa.☺︎" [ref=e808]:
+            - generic [ref=e810]: saaa.☺︎
+          - cell "saaa.☺︎" [ref=e811]:
+            - generic [ref=e813]: saaa.☺︎
+          - cell "iPhone 13 mini" [ref=e814]:
+            - generic [ref=e816]: iPhone 13 mini
+          - cell "128GB" [ref=e817]:
+            - generic [ref=e819]: 128GB
+          - cell "新品同様" [ref=e820]:
+            - generic [ref=e822]: 新品同様
+          - cell [ref=e823]
+          - cell [ref=e825]
+          - cell "本査定前交渉中" [ref=e827]:
+            - generic [ref=e829]: 本査定前交渉中
+          - cell [ref=e830]
+          - cell [ref=e832]
+          - cell [ref=e834]
+          - cell "32750" [ref=e836]:
+            - generic [ref=e838]: "32750"
+          - cell "28500" [ref=e839]:
+            - generic [ref=e841]: "28500"
+          - cell [ref=e842]
+          - cell "編集する" [ref=e844]:
+            - button "編集する" [ref=e846] [cursor=pointer]
+        - row "339698 自社サイト LINE Administrator 2026-01-28 14:18 Administrator 2026-01-28 14:18 ヨッシャ ☺V ヨッシャ ☺V iPhone 16 Pro 512GB 使用感あり 本査定前交渉中 122000 112000 編集する" [ref=e847]:
+          - cell [ref=e848]:
+            - link "レコードの詳細を表示する" [ref=e849] [cursor=pointer]:
+              - /url: /k/11/show#record=339698&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339697&l.prev=339699
+          - cell "339698" [ref=e851]:
+            - generic [ref=e853]: "339698"
+          - cell "自社サイト" [ref=e854]:
+            - generic [ref=e856]: 自社サイト
+          - cell "LINE" [ref=e857]:
+            - generic [ref=e859]: LINE
+          - cell "Administrator" [ref=e860]:
+            - button "Administrator" [ref=e862] [cursor=pointer]:
+              - img [ref=e863]
+              - text: Administrator
+          - cell "2026-01-28 14:18" [ref=e864]:
+            - generic [ref=e866]: 2026-01-28 14:18
+          - cell "Administrator" [ref=e867]:
+            - button "Administrator" [ref=e869] [cursor=pointer]:
+              - img [ref=e870]
+              - text: Administrator
+          - cell "2026-01-28 14:18" [ref=e871]:
+            - generic [ref=e873]: 2026-01-28 14:18
+          - cell "ヨッシャ ☺V" [ref=e874]:
+            - generic [ref=e876]: ヨッシャ ☺V
+          - cell "ヨッシャ ☺V" [ref=e877]:
+            - generic [ref=e879]: ヨッシャ ☺V
+          - cell "iPhone 16 Pro" [ref=e880]:
+            - generic [ref=e882]: iPhone 16 Pro
+          - cell "512GB" [ref=e883]:
+            - generic [ref=e885]: 512GB
+          - cell "使用感あり" [ref=e886]:
+            - generic [ref=e888]: 使用感あり
+          - cell [ref=e889]
+          - cell [ref=e891]
+          - cell "本査定前交渉中" [ref=e893]:
+            - generic [ref=e895]: 本査定前交渉中
+          - cell [ref=e896]
+          - cell [ref=e898]
+          - cell [ref=e900]
+          - cell "122000" [ref=e902]:
+            - generic [ref=e904]: "122000"
+          - cell "112000" [ref=e905]:
+            - generic [ref=e907]: "112000"
+          - cell [ref=e908]
+          - cell "編集する" [ref=e910]:
+            - button "編集する" [ref=e912] [cursor=pointer]
+        - row "339697 自社サイト LINE Administrator 2026-01-28 14:18 Administrator 2026-01-28 14:18 優樹 優樹 iPhone 16 Plus 256GB 新品・未開封 本査定前交渉中 はい 120000 108000 編集する" [ref=e913]:
+          - cell [ref=e914]:
+            - link "レコードの詳細を表示する" [ref=e915] [cursor=pointer]:
+              - /url: /k/11/show#record=339697&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339696&l.prev=339698
+          - cell "339697" [ref=e917]:
+            - generic [ref=e919]: "339697"
+          - cell "自社サイト" [ref=e920]:
+            - generic [ref=e922]: 自社サイト
+          - cell "LINE" [ref=e923]:
+            - generic [ref=e925]: LINE
+          - cell "Administrator" [ref=e926]:
+            - button "Administrator" [ref=e928] [cursor=pointer]:
+              - img [ref=e929]
+              - text: Administrator
+          - cell "2026-01-28 14:18" [ref=e930]:
+            - generic [ref=e932]: 2026-01-28 14:18
+          - cell "Administrator" [ref=e933]:
+            - button "Administrator" [ref=e935] [cursor=pointer]:
+              - img [ref=e936]
+              - text: Administrator
+          - cell "2026-01-28 14:18" [ref=e937]:
+            - generic [ref=e939]: 2026-01-28 14:18
+          - cell "優樹" [ref=e940]:
+            - generic [ref=e942]: 優樹
+          - cell "優樹" [ref=e943]:
+            - generic [ref=e945]: 優樹
+          - cell "iPhone 16 Plus" [ref=e946]:
+            - generic [ref=e948]: iPhone 16 Plus
+          - cell "256GB" [ref=e949]:
+            - generic [ref=e951]: 256GB
+          - cell "新品・未開封" [ref=e952]:
+            - generic [ref=e954]: 新品・未開封
+          - cell [ref=e955]
+          - cell [ref=e957]
+          - cell "本査定前交渉中" [ref=e959]:
+            - generic [ref=e961]: 本査定前交渉中
+          - cell "はい" [ref=e962]:
+            - generic [ref=e964]: はい
+          - cell [ref=e965]
+          - cell [ref=e967]
+          - cell "120000" [ref=e969]:
+            - generic [ref=e971]: "120000"
+          - cell "108000" [ref=e972]:
+            - generic [ref=e974]: "108000"
+          - cell [ref=e975]
+          - cell "編集する" [ref=e977]:
+            - button "編集する" [ref=e979] [cursor=pointer]
+        - row "339696 自社サイト LINE Administrator 2026-01-28 14:17 Administrator 2026-01-28 14:17 優樹 優樹 iPhone 16 Plus 128GB 新品・未開封 本査定前交渉中 はい 107000 95000 編集する" [ref=e980]:
+          - cell [ref=e981]:
+            - link "レコードの詳細を表示する" [ref=e982] [cursor=pointer]:
+              - /url: /k/11/show#record=339696&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339695&l.prev=339697
+          - cell "339696" [ref=e984]:
+            - generic [ref=e986]: "339696"
+          - cell "自社サイト" [ref=e987]:
+            - generic [ref=e989]: 自社サイト
+          - cell "LINE" [ref=e990]:
+            - generic [ref=e992]: LINE
+          - cell "Administrator" [ref=e993]:
+            - button "Administrator" [ref=e995] [cursor=pointer]:
+              - img [ref=e996]
+              - text: Administrator
+          - cell "2026-01-28 14:17" [ref=e997]:
+            - generic [ref=e999]: 2026-01-28 14:17
+          - cell "Administrator" [ref=e1000]:
+            - button "Administrator" [ref=e1002] [cursor=pointer]:
+              - img [ref=e1003]
+              - text: Administrator
+          - cell "2026-01-28 14:17" [ref=e1004]:
+            - generic [ref=e1006]: 2026-01-28 14:17
+          - cell "優樹" [ref=e1007]:
+            - generic [ref=e1009]: 優樹
+          - cell "優樹" [ref=e1010]:
+            - generic [ref=e1012]: 優樹
+          - cell "iPhone 16 Plus" [ref=e1013]:
+            - generic [ref=e1015]: iPhone 16 Plus
+          - cell "128GB" [ref=e1016]:
+            - generic [ref=e1018]: 128GB
+          - cell "新品・未開封" [ref=e1019]:
+            - generic [ref=e1021]: 新品・未開封
+          - cell [ref=e1022]
+          - cell [ref=e1024]
+          - cell "本査定前交渉中" [ref=e1026]:
+            - generic [ref=e1028]: 本査定前交渉中
+          - cell "はい" [ref=e1029]:
+            - generic [ref=e1031]: はい
+          - cell [ref=e1032]
+          - cell [ref=e1034]
+          - cell "107000" [ref=e1036]:
+            - generic [ref=e1038]: "107000"
+          - cell "95000" [ref=e1039]:
+            - generic [ref=e1041]: "95000"
+          - cell [ref=e1042]
+          - cell "編集する" [ref=e1044]:
+            - button "編集する" [ref=e1046] [cursor=pointer]
+        - row "339695 自社サイト LINE Administrator 2026-01-28 14:17 Administrator 2026-01-28 14:17 izumi yamamoto izumi yamamoto iPhone 12 mini 64GB 新品同様 本査定前交渉中 12000 10000 編集する" [ref=e1047]:
+          - cell [ref=e1048]:
+            - link "レコードの詳細を表示する" [ref=e1049] [cursor=pointer]:
+              - /url: /k/11/show#record=339695&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339694&l.prev=339696
+          - cell "339695" [ref=e1051]:
+            - generic [ref=e1053]: "339695"
+          - cell "自社サイト" [ref=e1054]:
+            - generic [ref=e1056]: 自社サイト
+          - cell "LINE" [ref=e1057]:
+            - generic [ref=e1059]: LINE
+          - cell "Administrator" [ref=e1060]:
+            - button "Administrator" [ref=e1062] [cursor=pointer]:
+              - img [ref=e1063]
+              - text: Administrator
+          - cell "2026-01-28 14:17" [ref=e1064]:
+            - generic [ref=e1066]: 2026-01-28 14:17
+          - cell "Administrator" [ref=e1067]:
+            - button "Administrator" [ref=e1069] [cursor=pointer]:
+              - img [ref=e1070]
+              - text: Administrator
+          - cell "2026-01-28 14:17" [ref=e1071]:
+            - generic [ref=e1073]: 2026-01-28 14:17
+          - cell "izumi yamamoto" [ref=e1074]:
+            - generic [ref=e1076]: izumi yamamoto
+          - cell "izumi yamamoto" [ref=e1077]:
+            - generic [ref=e1079]: izumi yamamoto
+          - cell "iPhone 12 mini" [ref=e1080]:
+            - generic [ref=e1082]: iPhone 12 mini
+          - cell "64GB" [ref=e1083]:
+            - generic [ref=e1085]: 64GB
+          - cell "新品同様" [ref=e1086]:
+            - generic [ref=e1088]: 新品同様
+          - cell [ref=e1089]
+          - cell [ref=e1091]
+          - cell "本査定前交渉中" [ref=e1093]:
+            - generic [ref=e1095]: 本査定前交渉中
+          - cell [ref=e1096]
+          - cell [ref=e1098]
+          - cell [ref=e1100]
+          - cell "12000" [ref=e1102]:
+            - generic [ref=e1104]: "12000"
+          - cell "10000" [ref=e1105]:
+            - generic [ref=e1107]: "10000"
+          - cell [ref=e1108]
+          - cell "編集する" [ref=e1110]:
+            - button "編集する" [ref=e1112] [cursor=pointer]
+        - row "339694 自社サイト LINE Administrator 2026-01-28 14:16 Administrator 2026-01-28 14:16 優樹 優樹 iPhone 16e 512GB 新品・未開封 本査定前交渉中 はい 98000 84000 編集する" [ref=e1113]:
+          - cell [ref=e1114]:
+            - link "レコードの詳細を表示する" [ref=e1115] [cursor=pointer]:
+              - /url: /k/11/show#record=339694&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339693&l.prev=339695
+          - cell "339694" [ref=e1117]:
+            - generic [ref=e1119]: "339694"
+          - cell "自社サイト" [ref=e1120]:
+            - generic [ref=e1122]: 自社サイト
+          - cell "LINE" [ref=e1123]:
+            - generic [ref=e1125]: LINE
+          - cell "Administrator" [ref=e1126]:
+            - button "Administrator" [ref=e1128] [cursor=pointer]:
+              - img [ref=e1129]
+              - text: Administrator
+          - cell "2026-01-28 14:16" [ref=e1130]:
+            - generic [ref=e1132]: 2026-01-28 14:16
+          - cell "Administrator" [ref=e1133]:
+            - button "Administrator" [ref=e1135] [cursor=pointer]:
+              - img [ref=e1136]
+              - text: Administrator
+          - cell "2026-01-28 14:16" [ref=e1137]:
+            - generic [ref=e1139]: 2026-01-28 14:16
+          - cell "優樹" [ref=e1140]:
+            - generic [ref=e1142]: 優樹
+          - cell "優樹" [ref=e1143]:
+            - generic [ref=e1145]: 優樹
+          - cell "iPhone 16e" [ref=e1146]:
+            - generic [ref=e1148]: iPhone 16e
+          - cell "512GB" [ref=e1149]:
+            - generic [ref=e1151]: 512GB
+          - cell "新品・未開封" [ref=e1152]:
+            - generic [ref=e1154]: 新品・未開封
+          - cell [ref=e1155]
+          - cell [ref=e1157]
+          - cell "本査定前交渉中" [ref=e1159]:
+            - generic [ref=e1161]: 本査定前交渉中
+          - cell "はい" [ref=e1162]:
+            - generic [ref=e1164]: はい
+          - cell [ref=e1165]
+          - cell [ref=e1167]
+          - cell "98000" [ref=e1169]:
+            - generic [ref=e1171]: "98000"
+          - cell "84000" [ref=e1172]:
+            - generic [ref=e1174]: "84000"
+          - cell [ref=e1175]
+          - cell "編集する" [ref=e1177]:
+            - button "編集する" [ref=e1179] [cursor=pointer]
+        - row "339693 自社サイト LINE Administrator 2026-01-28 14:16 Administrator 2026-01-28 14:16 izumi yamamoto izumi yamamoto iPhone 12 mini 128GB 美品 本査定前交渉中 16000 14000 編集する" [ref=e1180]:
+          - cell [ref=e1181]:
+            - link "レコードの詳細を表示する" [ref=e1182] [cursor=pointer]:
+              - /url: /k/11/show#record=339693&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339692&l.prev=339694
+          - cell "339693" [ref=e1184]:
+            - generic [ref=e1186]: "339693"
+          - cell "自社サイト" [ref=e1187]:
+            - generic [ref=e1189]: 自社サイト
+          - cell "LINE" [ref=e1190]:
+            - generic [ref=e1192]: LINE
+          - cell "Administrator" [ref=e1193]:
+            - button "Administrator" [ref=e1195] [cursor=pointer]:
+              - img [ref=e1196]
+              - text: Administrator
+          - cell "2026-01-28 14:16" [ref=e1197]:
+            - generic [ref=e1199]: 2026-01-28 14:16
+          - cell "Administrator" [ref=e1200]:
+            - button "Administrator" [ref=e1202] [cursor=pointer]:
+              - img [ref=e1203]
+              - text: Administrator
+          - cell "2026-01-28 14:16" [ref=e1204]:
+            - generic [ref=e1206]: 2026-01-28 14:16
+          - cell "izumi yamamoto" [ref=e1207]:
+            - generic [ref=e1209]: izumi yamamoto
+          - cell "izumi yamamoto" [ref=e1210]:
+            - generic [ref=e1212]: izumi yamamoto
+          - cell "iPhone 12 mini" [ref=e1213]:
+            - generic [ref=e1215]: iPhone 12 mini
+          - cell "128GB" [ref=e1216]:
+            - generic [ref=e1218]: 128GB
+          - cell "美品" [ref=e1219]:
+            - generic [ref=e1221]: 美品
+          - cell [ref=e1222]
+          - cell [ref=e1224]
+          - cell "本査定前交渉中" [ref=e1226]:
+            - generic [ref=e1228]: 本査定前交渉中
+          - cell [ref=e1229]
+          - cell [ref=e1231]
+          - cell [ref=e1233]
+          - cell "16000" [ref=e1235]:
+            - generic [ref=e1237]: "16000"
+          - cell "14000" [ref=e1238]:
+            - generic [ref=e1240]: "14000"
+          - cell [ref=e1241]
+          - cell "編集する" [ref=e1243]:
+            - button "編集する" [ref=e1245] [cursor=pointer]
+        - row "339692 自社サイト LINE Administrator 2026-01-28 14:15 Administrator 2026-01-28 14:15 優樹 優樹 iPhone 17 512GB 新品・未開封 本査定前交渉中 はい 159000 145000 編集する" [ref=e1246]:
+          - cell [ref=e1247]:
+            - link "レコードの詳細を表示する" [ref=e1248] [cursor=pointer]:
+              - /url: /k/11/show#record=339692&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339691&l.prev=339693
+          - cell "339692" [ref=e1250]:
+            - generic [ref=e1252]: "339692"
+          - cell "自社サイト" [ref=e1253]:
+            - generic [ref=e1255]: 自社サイト
+          - cell "LINE" [ref=e1256]:
+            - generic [ref=e1258]: LINE
+          - cell "Administrator" [ref=e1259]:
+            - button "Administrator" [ref=e1261] [cursor=pointer]:
+              - img [ref=e1262]
+              - text: Administrator
+          - cell "2026-01-28 14:15" [ref=e1263]:
+            - generic [ref=e1265]: 2026-01-28 14:15
+          - cell "Administrator" [ref=e1266]:
+            - button "Administrator" [ref=e1268] [cursor=pointer]:
+              - img [ref=e1269]
+              - text: Administrator
+          - cell "2026-01-28 14:15" [ref=e1270]:
+            - generic [ref=e1272]: 2026-01-28 14:15
+          - cell "優樹" [ref=e1273]:
+            - generic [ref=e1275]: 優樹
+          - cell "優樹" [ref=e1276]:
+            - generic [ref=e1278]: 優樹
+          - cell "iPhone 17" [ref=e1279]:
+            - generic [ref=e1281]: iPhone 17
+          - cell "512GB" [ref=e1282]:
+            - generic [ref=e1284]: 512GB
+          - cell "新品・未開封" [ref=e1285]:
+            - generic [ref=e1287]: 新品・未開封
+          - cell [ref=e1288]
+          - cell [ref=e1290]
+          - cell "本査定前交渉中" [ref=e1292]:
+            - generic [ref=e1294]: 本査定前交渉中
+          - cell "はい" [ref=e1295]:
+            - generic [ref=e1297]: はい
+          - cell [ref=e1298]
+          - cell [ref=e1300]
+          - cell "159000" [ref=e1302]:
+            - generic [ref=e1304]: "159000"
+          - cell "145000" [ref=e1305]:
+            - generic [ref=e1307]: "145000"
+          - cell [ref=e1308]
+          - cell "編集する" [ref=e1310]:
+            - button "編集する" [ref=e1312] [cursor=pointer]
+        - row "339691 自社サイト LINE Administrator 2026-01-28 14:15 Administrator 2026-01-28 14:15 優樹 優樹 iPhone 17 Pro Max 2TB 新品・未開封 本査定前交渉中 はい 305000 291000 編集する" [ref=e1313]:
+          - cell [ref=e1314]:
+            - link "レコードの詳細を表示する" [ref=e1315] [cursor=pointer]:
+              - /url: /k/11/show#record=339691&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339690&l.prev=339692
+          - cell "339691" [ref=e1317]:
+            - generic [ref=e1319]: "339691"
+          - cell "自社サイト" [ref=e1320]:
+            - generic [ref=e1322]: 自社サイト
+          - cell "LINE" [ref=e1323]:
+            - generic [ref=e1325]: LINE
+          - cell "Administrator" [ref=e1326]:
+            - button "Administrator" [ref=e1328] [cursor=pointer]:
+              - img [ref=e1329]
+              - text: Administrator
+          - cell "2026-01-28 14:15" [ref=e1330]:
+            - generic [ref=e1332]: 2026-01-28 14:15
+          - cell "Administrator" [ref=e1333]:
+            - button "Administrator" [ref=e1335] [cursor=pointer]:
+              - img [ref=e1336]
+              - text: Administrator
+          - cell "2026-01-28 14:15" [ref=e1337]:
+            - generic [ref=e1339]: 2026-01-28 14:15
+          - cell "優樹" [ref=e1340]:
+            - generic [ref=e1342]: 優樹
+          - cell "優樹" [ref=e1343]:
+            - generic [ref=e1345]: 優樹
+          - cell "iPhone 17 Pro Max" [ref=e1346]:
+            - generic [ref=e1348]: iPhone 17 Pro Max
+          - cell "2TB" [ref=e1349]:
+            - generic [ref=e1351]: 2TB
+          - cell "新品・未開封" [ref=e1352]:
+            - generic [ref=e1354]: 新品・未開封
+          - cell [ref=e1355]
+          - cell [ref=e1357]
+          - cell "本査定前交渉中" [ref=e1359]:
+            - generic [ref=e1361]: 本査定前交渉中
+          - cell "はい" [ref=e1362]:
+            - generic [ref=e1364]: はい
+          - cell [ref=e1365]
+          - cell [ref=e1367]
+          - cell "305000" [ref=e1369]:
+            - generic [ref=e1371]: "305000"
+          - cell "291000" [ref=e1372]:
+            - generic [ref=e1374]: "291000"
+          - cell [ref=e1375]
+          - cell "編集する" [ref=e1377]:
+            - button "編集する" [ref=e1379] [cursor=pointer]
+        - row "339690 自社サイト LINE Administrator 2026-01-28 14:14 Administrator 2026-01-28 14:14 優樹 優樹 iPhone 17 Pro Max 1TB 新品・未開封 本査定前交渉中 はい 258000 244000 編集する" [ref=e1380]:
+          - cell [ref=e1381]:
+            - link "レコードの詳細を表示する" [ref=e1382] [cursor=pointer]:
+              - /url: /k/11/show#record=339690&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339689&l.prev=339691
+          - cell "339690" [ref=e1384]:
+            - generic [ref=e1386]: "339690"
+          - cell "自社サイト" [ref=e1387]:
+            - generic [ref=e1389]: 自社サイト
+          - cell "LINE" [ref=e1390]:
+            - generic [ref=e1392]: LINE
+          - cell "Administrator" [ref=e1393]:
+            - button "Administrator" [ref=e1395] [cursor=pointer]:
+              - img [ref=e1396]
+              - text: Administrator
+          - cell "2026-01-28 14:14" [ref=e1397]:
+            - generic [ref=e1399]: 2026-01-28 14:14
+          - cell "Administrator" [ref=e1400]:
+            - button "Administrator" [ref=e1402] [cursor=pointer]:
+              - img [ref=e1403]
+              - text: Administrator
+          - cell "2026-01-28 14:14" [ref=e1404]:
+            - generic [ref=e1406]: 2026-01-28 14:14
+          - cell "優樹" [ref=e1407]:
+            - generic [ref=e1409]: 優樹
+          - cell "優樹" [ref=e1410]:
+            - generic [ref=e1412]: 優樹
+          - cell "iPhone 17 Pro Max" [ref=e1413]:
+            - generic [ref=e1415]: iPhone 17 Pro Max
+          - cell "1TB" [ref=e1416]:
+            - generic [ref=e1418]: 1TB
+          - cell "新品・未開封" [ref=e1419]:
+            - generic [ref=e1421]: 新品・未開封
+          - cell [ref=e1422]
+          - cell [ref=e1424]
+          - cell "本査定前交渉中" [ref=e1426]:
+            - generic [ref=e1428]: 本査定前交渉中
+          - cell "はい" [ref=e1429]:
+            - generic [ref=e1431]: はい
+          - cell [ref=e1432]
+          - cell [ref=e1434]
+          - cell "258000" [ref=e1436]:
+            - generic [ref=e1438]: "258000"
+          - cell "244000" [ref=e1439]:
+            - generic [ref=e1441]: "244000"
+          - cell [ref=e1442]
+          - cell "編集する" [ref=e1444]:
+            - button "編集する" [ref=e1446] [cursor=pointer]
+        - row "339689 自社サイト LINE Administrator 2026-01-28 14:14 Administrator 2026-01-28 14:14 優樹 優樹 iPhone Air 512GB 新品・未開封 本査定前交渉中 はい 151000 137000 編集する" [ref=e1447]:
+          - cell [ref=e1448]:
+            - link "レコードの詳細を表示する" [ref=e1449] [cursor=pointer]:
+              - /url: /k/11/show#record=339689&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339688&l.prev=339690
+          - cell "339689" [ref=e1451]:
+            - generic [ref=e1453]: "339689"
+          - cell "自社サイト" [ref=e1454]:
+            - generic [ref=e1456]: 自社サイト
+          - cell "LINE" [ref=e1457]:
+            - generic [ref=e1459]: LINE
+          - cell "Administrator" [ref=e1460]:
+            - button "Administrator" [ref=e1462] [cursor=pointer]:
+              - img [ref=e1463]
+              - text: Administrator
+          - cell "2026-01-28 14:14" [ref=e1464]:
+            - generic [ref=e1466]: 2026-01-28 14:14
+          - cell "Administrator" [ref=e1467]:
+            - button "Administrator" [ref=e1469] [cursor=pointer]:
+              - img [ref=e1470]
+              - text: Administrator
+          - cell "2026-01-28 14:14" [ref=e1471]:
+            - generic [ref=e1473]: 2026-01-28 14:14
+          - cell "優樹" [ref=e1474]:
+            - generic [ref=e1476]: 優樹
+          - cell "優樹" [ref=e1477]:
+            - generic [ref=e1479]: 優樹
+          - cell "iPhone Air" [ref=e1480]:
+            - generic [ref=e1482]: iPhone Air
+          - cell "512GB" [ref=e1483]:
+            - generic [ref=e1485]: 512GB
+          - cell "新品・未開封" [ref=e1486]:
+            - generic [ref=e1488]: 新品・未開封
+          - cell [ref=e1489]
+          - cell [ref=e1491]
+          - cell "本査定前交渉中" [ref=e1493]:
+            - generic [ref=e1495]: 本査定前交渉中
+          - cell "はい" [ref=e1496]:
+            - generic [ref=e1498]: はい
+          - cell [ref=e1499]
+          - cell [ref=e1501]
+          - cell "151000" [ref=e1503]:
+            - generic [ref=e1505]: "151000"
+          - cell "137000" [ref=e1506]:
+            - generic [ref=e1508]: "137000"
+          - cell [ref=e1509]
+          - cell "編集する" [ref=e1511]:
+            - button "編集する" [ref=e1513] [cursor=pointer]
+        - row "339688 自社サイト LINE Administrator 2026-01-28 14:13 Administrator 2026-01-28 14:13 優樹 優樹 iPhone 17 Pro 512GB 新品・未開封 本査定前交渉中 はい 208000 194000 編集する" [ref=e1514]:
+          - cell [ref=e1515]:
+            - link "レコードの詳細を表示する" [ref=e1516] [cursor=pointer]:
+              - /url: /k/11/show#record=339688&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339687&l.prev=339689
+          - cell "339688" [ref=e1518]:
+            - generic [ref=e1520]: "339688"
+          - cell "自社サイト" [ref=e1521]:
+            - generic [ref=e1523]: 自社サイト
+          - cell "LINE" [ref=e1524]:
+            - generic [ref=e1526]: LINE
+          - cell "Administrator" [ref=e1527]:
+            - button "Administrator" [ref=e1529] [cursor=pointer]:
+              - img [ref=e1530]
+              - text: Administrator
+          - cell "2026-01-28 14:13" [ref=e1531]:
+            - generic [ref=e1533]: 2026-01-28 14:13
+          - cell "Administrator" [ref=e1534]:
+            - button "Administrator" [ref=e1536] [cursor=pointer]:
+              - img [ref=e1537]
+              - text: Administrator
+          - cell "2026-01-28 14:13" [ref=e1538]:
+            - generic [ref=e1540]: 2026-01-28 14:13
+          - cell "優樹" [ref=e1541]:
+            - generic [ref=e1543]: 優樹
+          - cell "優樹" [ref=e1544]:
+            - generic [ref=e1546]: 優樹
+          - cell "iPhone 17 Pro" [ref=e1547]:
+            - generic [ref=e1549]: iPhone 17 Pro
+          - cell "512GB" [ref=e1550]:
+            - generic [ref=e1552]: 512GB
+          - cell "新品・未開封" [ref=e1553]:
+            - generic [ref=e1555]: 新品・未開封
+          - cell [ref=e1556]
+          - cell [ref=e1558]
+          - cell "本査定前交渉中" [ref=e1560]:
+            - generic [ref=e1562]: 本査定前交渉中
+          - cell "はい" [ref=e1563]:
+            - generic [ref=e1565]: はい
+          - cell [ref=e1566]
+          - cell [ref=e1568]
+          - cell "208000" [ref=e1570]:
+            - generic [ref=e1572]: "208000"
+          - cell "194000" [ref=e1573]:
+            - generic [ref=e1575]: "194000"
+          - cell [ref=e1576]
+          - cell "編集する" [ref=e1578]:
+            - button "編集する" [ref=e1580] [cursor=pointer]
+        - row "339687 自社サイト LINE Administrator 2026-01-28 14:13 Administrator 2026-01-28 14:13 優樹 優樹 iPhone 17 Pro Max 512GB 新品・未開封 本査定前交渉中 はい 223000 209000 編集する" [ref=e1581]:
+          - cell [ref=e1582]:
+            - link "レコードの詳細を表示する" [ref=e1583] [cursor=pointer]:
+              - /url: /k/11/show#record=339687&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339686&l.prev=339688
+          - cell "339687" [ref=e1585]:
+            - generic [ref=e1587]: "339687"
+          - cell "自社サイト" [ref=e1588]:
+            - generic [ref=e1590]: 自社サイト
+          - cell "LINE" [ref=e1591]:
+            - generic [ref=e1593]: LINE
+          - cell "Administrator" [ref=e1594]:
+            - button "Administrator" [ref=e1596] [cursor=pointer]:
+              - img [ref=e1597]
+              - text: Administrator
+          - cell "2026-01-28 14:13" [ref=e1598]:
+            - generic [ref=e1600]: 2026-01-28 14:13
+          - cell "Administrator" [ref=e1601]:
+            - button "Administrator" [ref=e1603] [cursor=pointer]:
+              - img [ref=e1604]
+              - text: Administrator
+          - cell "2026-01-28 14:13" [ref=e1605]:
+            - generic [ref=e1607]: 2026-01-28 14:13
+          - cell "優樹" [ref=e1608]:
+            - generic [ref=e1610]: 優樹
+          - cell "優樹" [ref=e1611]:
+            - generic [ref=e1613]: 優樹
+          - cell "iPhone 17 Pro Max" [ref=e1614]:
+            - generic [ref=e1616]: iPhone 17 Pro Max
+          - cell "512GB" [ref=e1617]:
+            - generic [ref=e1619]: 512GB
+          - cell "新品・未開封" [ref=e1620]:
+            - generic [ref=e1622]: 新品・未開封
+          - cell [ref=e1623]
+          - cell [ref=e1625]
+          - cell "本査定前交渉中" [ref=e1627]:
+            - generic [ref=e1629]: 本査定前交渉中
+          - cell "はい" [ref=e1630]:
+            - generic [ref=e1632]: はい
+          - cell [ref=e1633]
+          - cell [ref=e1635]
+          - cell "223000" [ref=e1637]:
+            - generic [ref=e1639]: "223000"
+          - cell "209000" [ref=e1640]:
+            - generic [ref=e1642]: "209000"
+          - cell [ref=e1643]
+          - cell "編集する" [ref=e1645]:
+            - button "編集する" [ref=e1647] [cursor=pointer]
+        - row "339686 自社サイト LINE Administrator 2026-01-28 14:12 Administrator 2026-01-28 14:12 優樹 優樹 iPhone 17 256GB 新品・未開封 本査定前交渉中 はい 131000 117000 編集する" [ref=e1648]:
+          - cell [ref=e1649]:
+            - link "レコードの詳細を表示する" [ref=e1650] [cursor=pointer]:
+              - /url: /k/11/show#record=339686&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339685&l.prev=339687
+          - cell "339686" [ref=e1652]:
+            - generic [ref=e1654]: "339686"
+          - cell "自社サイト" [ref=e1655]:
+            - generic [ref=e1657]: 自社サイト
+          - cell "LINE" [ref=e1658]:
+            - generic [ref=e1660]: LINE
+          - cell "Administrator" [ref=e1661]:
+            - button "Administrator" [ref=e1663] [cursor=pointer]:
+              - img [ref=e1664]
+              - text: Administrator
+          - cell "2026-01-28 14:12" [ref=e1665]:
+            - generic [ref=e1667]: 2026-01-28 14:12
+          - cell "Administrator" [ref=e1668]:
+            - button "Administrator" [ref=e1670] [cursor=pointer]:
+              - img [ref=e1671]
+              - text: Administrator
+          - cell "2026-01-28 14:12" [ref=e1672]:
+            - generic [ref=e1674]: 2026-01-28 14:12
+          - cell "優樹" [ref=e1675]:
+            - generic [ref=e1677]: 優樹
+          - cell "優樹" [ref=e1678]:
+            - generic [ref=e1680]: 優樹
+          - cell "iPhone 17" [ref=e1681]:
+            - generic [ref=e1683]: iPhone 17
+          - cell "256GB" [ref=e1684]:
+            - generic [ref=e1686]: 256GB
+          - cell "新品・未開封" [ref=e1687]:
+            - generic [ref=e1689]: 新品・未開封
+          - cell [ref=e1690]
+          - cell [ref=e1692]
+          - cell "本査定前交渉中" [ref=e1694]:
+            - generic [ref=e1696]: 本査定前交渉中
+          - cell "はい" [ref=e1697]:
+            - generic [ref=e1699]: はい
+          - cell [ref=e1700]
+          - cell [ref=e1702]
+          - cell "131000" [ref=e1704]:
+            - generic [ref=e1706]: "131000"
+          - cell "117000" [ref=e1707]:
+            - generic [ref=e1709]: "117000"
+          - cell [ref=e1710]
+          - cell "編集する" [ref=e1712]:
+            - button "編集する" [ref=e1714] [cursor=pointer]
+        - row "339685 自社サイト LINE Administrator 2026-01-28 14:11 Administrator 2026-01-28 14:11 優樹 優樹 iPhone Air 256GB 新品・未開封 本査定前交渉中 はい 146000 132000 編集する" [ref=e1715]:
+          - cell [ref=e1716]:
+            - link "レコードの詳細を表示する" [ref=e1717] [cursor=pointer]:
+              - /url: /k/11/show#record=339685&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339684&l.prev=339686
+          - cell "339685" [ref=e1719]:
+            - generic [ref=e1721]: "339685"
+          - cell "自社サイト" [ref=e1722]:
+            - generic [ref=e1724]: 自社サイト
+          - cell "LINE" [ref=e1725]:
+            - generic [ref=e1727]: LINE
+          - cell "Administrator" [ref=e1728]:
+            - button "Administrator" [ref=e1730] [cursor=pointer]:
+              - img [ref=e1731]
+              - text: Administrator
+          - cell "2026-01-28 14:11" [ref=e1732]:
+            - generic [ref=e1734]: 2026-01-28 14:11
+          - cell "Administrator" [ref=e1735]:
+            - button "Administrator" [ref=e1737] [cursor=pointer]:
+              - img [ref=e1738]
+              - text: Administrator
+          - cell "2026-01-28 14:11" [ref=e1739]:
+            - generic [ref=e1741]: 2026-01-28 14:11
+          - cell "優樹" [ref=e1742]:
+            - generic [ref=e1744]: 優樹
+          - cell "優樹" [ref=e1745]:
+            - generic [ref=e1747]: 優樹
+          - cell "iPhone Air" [ref=e1748]:
+            - generic [ref=e1750]: iPhone Air
+          - cell "256GB" [ref=e1751]:
+            - generic [ref=e1753]: 256GB
+          - cell "新品・未開封" [ref=e1754]:
+            - generic [ref=e1756]: 新品・未開封
+          - cell [ref=e1757]
+          - cell [ref=e1759]
+          - cell "本査定前交渉中" [ref=e1761]:
+            - generic [ref=e1763]: 本査定前交渉中
+          - cell "はい" [ref=e1764]:
+            - generic [ref=e1766]: はい
+          - cell [ref=e1767]
+          - cell [ref=e1769]
+          - cell "146000" [ref=e1771]:
+            - generic [ref=e1773]: "146000"
+          - cell "132000" [ref=e1774]:
+            - generic [ref=e1776]: "132000"
+          - cell [ref=e1777]
+          - cell "編集する" [ref=e1779]:
+            - button "編集する" [ref=e1781] [cursor=pointer]
+        - row "339684 自社サイト LINE Administrator 2026-01-28 14:11 Administrator 2026-01-28 14:11 優樹 優樹 iPhone 17 Pro 256GB 新品・未開封 本査定前交渉中 はい 182500 168500 編集する" [ref=e1782]:
+          - cell [ref=e1783]:
+            - link "レコードの詳細を表示する" [ref=e1784] [cursor=pointer]:
+              - /url: /k/11/show#record=339684&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339683&l.prev=339685
+          - cell "339684" [ref=e1786]:
+            - generic [ref=e1788]: "339684"
+          - cell "自社サイト" [ref=e1789]:
+            - generic [ref=e1791]: 自社サイト
+          - cell "LINE" [ref=e1792]:
+            - generic [ref=e1794]: LINE
+          - cell "Administrator" [ref=e1795]:
+            - button "Administrator" [ref=e1797] [cursor=pointer]:
+              - img [ref=e1798]
+              - text: Administrator
+          - cell "2026-01-28 14:11" [ref=e1799]:
+            - generic [ref=e1801]: 2026-01-28 14:11
+          - cell "Administrator" [ref=e1802]:
+            - button "Administrator" [ref=e1804] [cursor=pointer]:
+              - img [ref=e1805]
+              - text: Administrator
+          - cell "2026-01-28 14:11" [ref=e1806]:
+            - generic [ref=e1808]: 2026-01-28 14:11
+          - cell "優樹" [ref=e1809]:
+            - generic [ref=e1811]: 優樹
+          - cell "優樹" [ref=e1812]:
+            - generic [ref=e1814]: 優樹
+          - cell "iPhone 17 Pro" [ref=e1815]:
+            - generic [ref=e1817]: iPhone 17 Pro
+          - cell "256GB" [ref=e1818]:
+            - generic [ref=e1820]: 256GB
+          - cell "新品・未開封" [ref=e1821]:
+            - generic [ref=e1823]: 新品・未開封
+          - cell [ref=e1824]
+          - cell [ref=e1826]
+          - cell "本査定前交渉中" [ref=e1828]:
+            - generic [ref=e1830]: 本査定前交渉中
+          - cell "はい" [ref=e1831]:
+            - generic [ref=e1833]: はい
+          - cell [ref=e1834]
+          - cell [ref=e1836]
+          - cell "182500" [ref=e1838]:
+            - generic [ref=e1840]: "182500"
+          - cell "168500" [ref=e1841]:
+            - generic [ref=e1843]: "168500"
+          - cell [ref=e1844]
+          - cell "編集する" [ref=e1846]:
+            - button "編集する" [ref=e1848] [cursor=pointer]
+        - row "339683 自社サイト LINE Administrator 2026-01-28 14:11 Administrator 2026-01-28 14:11 優樹 優樹 iPhone 17 Pro Max 256GB 新品・未開封 本査定前交渉中 はい 202000 188000 編集する" [ref=e1849]:
+          - cell [ref=e1850]:
+            - link "レコードの詳細を表示する" [ref=e1851] [cursor=pointer]:
+              - /url: /k/11/show#record=339683&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339682&l.prev=339684
+          - cell "339683" [ref=e1853]:
+            - generic [ref=e1855]: "339683"
+          - cell "自社サイト" [ref=e1856]:
+            - generic [ref=e1858]: 自社サイト
+          - cell "LINE" [ref=e1859]:
+            - generic [ref=e1861]: LINE
+          - cell "Administrator" [ref=e1862]:
+            - button "Administrator" [ref=e1864] [cursor=pointer]:
+              - img [ref=e1865]
+              - text: Administrator
+          - cell "2026-01-28 14:11" [ref=e1866]:
+            - generic [ref=e1868]: 2026-01-28 14:11
+          - cell "Administrator" [ref=e1869]:
+            - button "Administrator" [ref=e1871] [cursor=pointer]:
+              - img [ref=e1872]
+              - text: Administrator
+          - cell "2026-01-28 14:11" [ref=e1873]:
+            - generic [ref=e1875]: 2026-01-28 14:11
+          - cell "優樹" [ref=e1876]:
+            - generic [ref=e1878]: 優樹
+          - cell "優樹" [ref=e1879]:
+            - generic [ref=e1881]: 優樹
+          - cell "iPhone 17 Pro Max" [ref=e1882]:
+            - generic [ref=e1884]: iPhone 17 Pro Max
+          - cell "256GB" [ref=e1885]:
+            - generic [ref=e1887]: 256GB
+          - cell "新品・未開封" [ref=e1888]:
+            - generic [ref=e1890]: 新品・未開封
+          - cell [ref=e1891]
+          - cell [ref=e1893]
+          - cell "本査定前交渉中" [ref=e1895]:
+            - generic [ref=e1897]: 本査定前交渉中
+          - cell "はい" [ref=e1898]:
+            - generic [ref=e1900]: はい
+          - cell [ref=e1901]
+          - cell [ref=e1903]
+          - cell "202000" [ref=e1905]:
+            - generic [ref=e1907]: "202000"
+          - cell "188000" [ref=e1908]:
+            - generic [ref=e1910]: "188000"
+          - cell [ref=e1911]
+          - cell "編集する" [ref=e1913]:
+            - button "編集する" [ref=e1915] [cursor=pointer]
+        - row "339682 自社サイト LINE Administrator 2026-01-28 14:09 Administrator 2026-01-28 14:09 Reiko Goto Fukuoka Reiko Goto Fukuoka iPhone 11 Pro 64GB 外装ジャンク 本査定前交渉中 14000 12000 編集する" [ref=e1916]:
+          - cell [ref=e1917]:
+            - link "レコードの詳細を表示する" [ref=e1918] [cursor=pointer]:
+              - /url: /k/11/show#record=339682&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339681&l.prev=339683
+          - cell "339682" [ref=e1920]:
+            - generic [ref=e1922]: "339682"
+          - cell "自社サイト" [ref=e1923]:
+            - generic [ref=e1925]: 自社サイト
+          - cell "LINE" [ref=e1926]:
+            - generic [ref=e1928]: LINE
+          - cell "Administrator" [ref=e1929]:
+            - button "Administrator" [ref=e1931] [cursor=pointer]:
+              - img [ref=e1932]
+              - text: Administrator
+          - cell "2026-01-28 14:09" [ref=e1933]:
+            - generic [ref=e1935]: 2026-01-28 14:09
+          - cell "Administrator" [ref=e1936]:
+            - button "Administrator" [ref=e1938] [cursor=pointer]:
+              - img [ref=e1939]
+              - text: Administrator
+          - cell "2026-01-28 14:09" [ref=e1940]:
+            - generic [ref=e1942]: 2026-01-28 14:09
+          - cell "Reiko Goto Fukuoka" [ref=e1943]:
+            - generic [ref=e1945]: Reiko Goto Fukuoka
+          - cell "Reiko Goto Fukuoka" [ref=e1946]:
+            - generic [ref=e1948]: Reiko Goto Fukuoka
+          - cell "iPhone 11 Pro" [ref=e1949]:
+            - generic [ref=e1951]: iPhone 11 Pro
+          - cell "64GB" [ref=e1952]:
+            - generic [ref=e1954]: 64GB
+          - cell "外装ジャンク" [ref=e1955]:
+            - generic [ref=e1957]: 外装ジャンク
+          - cell [ref=e1958]
+          - cell [ref=e1960]
+          - cell "本査定前交渉中" [ref=e1962]:
+            - generic [ref=e1964]: 本査定前交渉中
+          - cell [ref=e1965]
+          - cell [ref=e1967]
+          - cell [ref=e1969]
+          - cell "14000" [ref=e1971]:
+            - generic [ref=e1973]: "14000"
+          - cell "12000" [ref=e1974]:
+            - generic [ref=e1976]: "12000"
+          - cell [ref=e1977]
+          - cell "編集する" [ref=e1979]:
+            - button "編集する" [ref=e1981] [cursor=pointer]
+        - row "339681 自社サイト LINE Administrator 2026-01-28 14:07 Administrator 2026-01-28 14:07 沙織 沙織 iPhone SE（第3世代） 64GB 使用感あり 本査定前交渉中 7000 5000 編集する" [ref=e1982]:
+          - cell [ref=e1983]:
+            - link "レコードの詳細を表示する" [ref=e1984] [cursor=pointer]:
+              - /url: /k/11/show#record=339681&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339680&l.prev=339682
+          - cell "339681" [ref=e1986]:
+            - generic [ref=e1988]: "339681"
+          - cell "自社サイト" [ref=e1989]:
+            - generic [ref=e1991]: 自社サイト
+          - cell "LINE" [ref=e1992]:
+            - generic [ref=e1994]: LINE
+          - cell "Administrator" [ref=e1995]:
+            - button "Administrator" [ref=e1997] [cursor=pointer]:
+              - img [ref=e1998]
+              - text: Administrator
+          - cell "2026-01-28 14:07" [ref=e1999]:
+            - generic [ref=e2001]: 2026-01-28 14:07
+          - cell "Administrator" [ref=e2002]:
+            - button "Administrator" [ref=e2004] [cursor=pointer]:
+              - img [ref=e2005]
+              - text: Administrator
+          - cell "2026-01-28 14:07" [ref=e2006]:
+            - generic [ref=e2008]: 2026-01-28 14:07
+          - cell "沙織" [ref=e2009]:
+            - generic [ref=e2011]: 沙織
+          - cell "沙織" [ref=e2012]:
+            - generic [ref=e2014]: 沙織
+          - cell "iPhone SE（第3世代）" [ref=e2015]:
+            - generic [ref=e2017]: iPhone SE（第3世代）
+          - cell "64GB" [ref=e2018]:
+            - generic [ref=e2020]: 64GB
+          - cell "使用感あり" [ref=e2021]:
+            - generic [ref=e2023]: 使用感あり
+          - cell [ref=e2024]
+          - cell [ref=e2026]
+          - cell "本査定前交渉中" [ref=e2028]:
+            - generic [ref=e2030]: 本査定前交渉中
+          - cell [ref=e2031]
+          - cell [ref=e2033]
+          - cell [ref=e2035]
+          - cell "7000" [ref=e2037]:
+            - generic [ref=e2039]: "7000"
+          - cell "5000" [ref=e2040]:
+            - generic [ref=e2042]: "5000"
+          - cell [ref=e2043]
+          - cell "編集する" [ref=e2045]:
+            - button "編集する" [ref=e2047] [cursor=pointer]
+        - row "339680 自社サイト LINE Administrator 2026-01-28 14:03 Administrator 2026-01-28 14:03 Reiko Goto Fukuoka Reiko Goto Fukuoka iPhone 11 Pro 256GB 目立つ傷あり 本査定前交渉中 21500 19500 編集する" [ref=e2048]:
+          - cell [ref=e2049]:
+            - link "レコードの詳細を表示する" [ref=e2050] [cursor=pointer]:
+              - /url: /k/11/show#record=339680&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339679&l.prev=339681
+          - cell "339680" [ref=e2052]:
+            - generic [ref=e2054]: "339680"
+          - cell "自社サイト" [ref=e2055]:
+            - generic [ref=e2057]: 自社サイト
+          - cell "LINE" [ref=e2058]:
+            - generic [ref=e2060]: LINE
+          - cell "Administrator" [ref=e2061]:
+            - button "Administrator" [ref=e2063] [cursor=pointer]:
+              - img [ref=e2064]
+              - text: Administrator
+          - cell "2026-01-28 14:03" [ref=e2065]:
+            - generic [ref=e2067]: 2026-01-28 14:03
+          - cell "Administrator" [ref=e2068]:
+            - button "Administrator" [ref=e2070] [cursor=pointer]:
+              - img [ref=e2071]
+              - text: Administrator
+          - cell "2026-01-28 14:03" [ref=e2072]:
+            - generic [ref=e2074]: 2026-01-28 14:03
+          - cell "Reiko Goto Fukuoka" [ref=e2075]:
+            - generic [ref=e2077]: Reiko Goto Fukuoka
+          - cell "Reiko Goto Fukuoka" [ref=e2078]:
+            - generic [ref=e2080]: Reiko Goto Fukuoka
+          - cell "iPhone 11 Pro" [ref=e2081]:
+            - generic [ref=e2083]: iPhone 11 Pro
+          - cell "256GB" [ref=e2084]:
+            - generic [ref=e2086]: 256GB
+          - cell "目立つ傷あり" [ref=e2087]:
+            - generic [ref=e2089]: 目立つ傷あり
+          - cell [ref=e2090]
+          - cell [ref=e2092]
+          - cell "本査定前交渉中" [ref=e2094]:
+            - generic [ref=e2096]: 本査定前交渉中
+          - cell [ref=e2097]
+          - cell [ref=e2099]
+          - cell [ref=e2101]
+          - cell "21500" [ref=e2103]:
+            - generic [ref=e2105]: "21500"
+          - cell "19500" [ref=e2106]:
+            - generic [ref=e2108]: "19500"
+          - cell [ref=e2109]
+          - cell "編集する" [ref=e2111]:
+            - button "編集する" [ref=e2113] [cursor=pointer]
+        - row "339679 自社サイト LINE Administrator 2026-01-28 14:02 Administrator 2026-01-28 14:02 松下 松下 iPhone XS 64GB 外装ジャンク 本査定前交渉中 5000 3000 編集する" [ref=e2114]:
+          - cell [ref=e2115]:
+            - link "レコードの詳細を表示する" [ref=e2116] [cursor=pointer]:
+              - /url: /k/11/show#record=339679&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339678&l.prev=339680
+          - cell "339679" [ref=e2118]:
+            - generic [ref=e2120]: "339679"
+          - cell "自社サイト" [ref=e2121]:
+            - generic [ref=e2123]: 自社サイト
+          - cell "LINE" [ref=e2124]:
+            - generic [ref=e2126]: LINE
+          - cell "Administrator" [ref=e2127]:
+            - button "Administrator" [ref=e2129] [cursor=pointer]:
+              - img [ref=e2130]
+              - text: Administrator
+          - cell "2026-01-28 14:02" [ref=e2131]:
+            - generic [ref=e2133]: 2026-01-28 14:02
+          - cell "Administrator" [ref=e2134]:
+            - button "Administrator" [ref=e2136] [cursor=pointer]:
+              - img [ref=e2137]
+              - text: Administrator
+          - cell "2026-01-28 14:02" [ref=e2138]:
+            - generic [ref=e2140]: 2026-01-28 14:02
+          - cell "松下" [ref=e2141]:
+            - generic [ref=e2143]: 松下
+          - cell "松下" [ref=e2144]:
+            - generic [ref=e2146]: 松下
+          - cell "iPhone XS" [ref=e2147]:
+            - generic [ref=e2149]: iPhone XS
+          - cell "64GB" [ref=e2150]:
+            - generic [ref=e2152]: 64GB
+          - cell "外装ジャンク" [ref=e2153]:
+            - generic [ref=e2155]: 外装ジャンク
+          - cell [ref=e2156]
+          - cell [ref=e2158]
+          - cell "本査定前交渉中" [ref=e2160]:
+            - generic [ref=e2162]: 本査定前交渉中
+          - cell [ref=e2163]
+          - cell [ref=e2165]
+          - cell [ref=e2167]
+          - cell "5000" [ref=e2169]:
+            - generic [ref=e2171]: "5000"
+          - cell "3000" [ref=e2172]:
+            - generic [ref=e2174]: "3000"
+          - cell [ref=e2175]
+          - cell "編集する" [ref=e2177]:
+            - button "編集する" [ref=e2179] [cursor=pointer]
+        - row "339678 自社サイト LINE Administrator 2026-01-28 14:00 Administrator 2026-01-28 14:00 とりっぴー とりっぴー iPhone 14 Pro 256GB 使用感あり 本査定前交渉中 61000 53000 編集する" [ref=e2180]:
+          - cell [ref=e2181]:
+            - link "レコードの詳細を表示する" [ref=e2182] [cursor=pointer]:
+              - /url: /k/11/show#record=339678&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339677&l.prev=339679
+          - cell "339678" [ref=e2184]:
+            - generic [ref=e2186]: "339678"
+          - cell "自社サイト" [ref=e2187]:
+            - generic [ref=e2189]: 自社サイト
+          - cell "LINE" [ref=e2190]:
+            - generic [ref=e2192]: LINE
+          - cell "Administrator" [ref=e2193]:
+            - button "Administrator" [ref=e2195] [cursor=pointer]:
+              - img [ref=e2196]
+              - text: Administrator
+          - cell "2026-01-28 14:00" [ref=e2197]:
+            - generic [ref=e2199]: 2026-01-28 14:00
+          - cell "Administrator" [ref=e2200]:
+            - button "Administrator" [ref=e2202] [cursor=pointer]:
+              - img [ref=e2203]
+              - text: Administrator
+          - cell "2026-01-28 14:00" [ref=e2204]:
+            - generic [ref=e2206]: 2026-01-28 14:00
+          - cell "とりっぴー" [ref=e2207]:
+            - generic [ref=e2209]: とりっぴー
+          - cell "とりっぴー" [ref=e2210]:
+            - generic [ref=e2212]: とりっぴー
+          - cell "iPhone 14 Pro" [ref=e2213]:
+            - generic [ref=e2215]: iPhone 14 Pro
+          - cell "256GB" [ref=e2216]:
+            - generic [ref=e2218]: 256GB
+          - cell "使用感あり" [ref=e2219]:
+            - generic [ref=e2221]: 使用感あり
+          - cell [ref=e2222]
+          - cell [ref=e2224]
+          - cell "本査定前交渉中" [ref=e2226]:
+            - generic [ref=e2228]: 本査定前交渉中
+          - cell [ref=e2229]
+          - cell [ref=e2231]
+          - cell [ref=e2233]
+          - cell "61000" [ref=e2235]:
+            - generic [ref=e2237]: "61000"
+          - cell "53000" [ref=e2238]:
+            - generic [ref=e2240]: "53000"
+          - cell [ref=e2241]
+          - cell "編集する" [ref=e2243]:
+            - button "編集する" [ref=e2245] [cursor=pointer]
+        - row "339677 自社サイト LINE Administrator 2026-01-28 13:59 Administrator 2026-01-28 13:59 とりっぴー とりっぴー iPhone 8 128GB 使用感あり 本査定前交渉中 2000 1000 編集する" [ref=e2246]:
+          - cell [ref=e2247]:
+            - link "レコードの詳細を表示する" [ref=e2248] [cursor=pointer]:
+              - /url: /k/11/show#record=339677&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339676&l.prev=339678
+          - cell "339677" [ref=e2250]:
+            - generic [ref=e2252]: "339677"
+          - cell "自社サイト" [ref=e2253]:
+            - generic [ref=e2255]: 自社サイト
+          - cell "LINE" [ref=e2256]:
+            - generic [ref=e2258]: LINE
+          - cell "Administrator" [ref=e2259]:
+            - button "Administrator" [ref=e2261] [cursor=pointer]:
+              - img [ref=e2262]
+              - text: Administrator
+          - cell "2026-01-28 13:59" [ref=e2263]:
+            - generic [ref=e2265]: 2026-01-28 13:59
+          - cell "Administrator" [ref=e2266]:
+            - button "Administrator" [ref=e2268] [cursor=pointer]:
+              - img [ref=e2269]
+              - text: Administrator
+          - cell "2026-01-28 13:59" [ref=e2270]:
+            - generic [ref=e2272]: 2026-01-28 13:59
+          - cell "とりっぴー" [ref=e2273]:
+            - generic [ref=e2275]: とりっぴー
+          - cell "とりっぴー" [ref=e2276]:
+            - generic [ref=e2278]: とりっぴー
+          - cell "iPhone 8" [ref=e2279]:
+            - generic [ref=e2281]: iPhone 8
+          - cell "128GB" [ref=e2282]:
+            - generic [ref=e2284]: 128GB
+          - cell "使用感あり" [ref=e2285]:
+            - generic [ref=e2287]: 使用感あり
+          - cell [ref=e2288]
+          - cell [ref=e2290]
+          - cell "本査定前交渉中" [ref=e2292]:
+            - generic [ref=e2294]: 本査定前交渉中
+          - cell [ref=e2295]
+          - cell [ref=e2297]
+          - cell [ref=e2299]
+          - cell "2000" [ref=e2301]:
+            - generic [ref=e2303]: "2000"
+          - cell "1000" [ref=e2304]:
+            - generic [ref=e2306]: "1000"
+          - cell [ref=e2307]
+          - cell "編集する" [ref=e2309]:
+            - button "編集する" [ref=e2311] [cursor=pointer]
+        - row "339676 自社サイト LINE Administrator 2026-01-28 13:58 Administrator 2026-01-28 13:58 とりっぴー とりっぴー iPhone 6s 64GB 使用感あり 本査定前交渉中 500 200 編集する" [ref=e2312]:
+          - cell [ref=e2313]:
+            - link "レコードの詳細を表示する" [ref=e2314] [cursor=pointer]:
+              - /url: /k/11/show#record=339676&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339675&l.prev=339677
+          - cell "339676" [ref=e2316]:
+            - generic [ref=e2318]: "339676"
+          - cell "自社サイト" [ref=e2319]:
+            - generic [ref=e2321]: 自社サイト
+          - cell "LINE" [ref=e2322]:
+            - generic [ref=e2324]: LINE
+          - cell "Administrator" [ref=e2325]:
+            - button "Administrator" [ref=e2327] [cursor=pointer]:
+              - img [ref=e2328]
+              - text: Administrator
+          - cell "2026-01-28 13:58" [ref=e2329]:
+            - generic [ref=e2331]: 2026-01-28 13:58
+          - cell "Administrator" [ref=e2332]:
+            - button "Administrator" [ref=e2334] [cursor=pointer]:
+              - img [ref=e2335]
+              - text: Administrator
+          - cell "2026-01-28 13:58" [ref=e2336]:
+            - generic [ref=e2338]: 2026-01-28 13:58
+          - cell "とりっぴー" [ref=e2339]:
+            - generic [ref=e2341]: とりっぴー
+          - cell "とりっぴー" [ref=e2342]:
+            - generic [ref=e2344]: とりっぴー
+          - cell "iPhone 6s" [ref=e2345]:
+            - generic [ref=e2347]: iPhone 6s
+          - cell "64GB" [ref=e2348]:
+            - generic [ref=e2350]: 64GB
+          - cell "使用感あり" [ref=e2351]:
+            - generic [ref=e2353]: 使用感あり
+          - cell [ref=e2354]
+          - cell [ref=e2356]
+          - cell "本査定前交渉中" [ref=e2358]:
+            - generic [ref=e2360]: 本査定前交渉中
+          - cell [ref=e2361]
+          - cell [ref=e2363]
+          - cell [ref=e2365]
+          - cell "500" [ref=e2367]:
+            - generic [ref=e2369]: "500"
+          - cell "200" [ref=e2370]:
+            - generic [ref=e2372]: "200"
+          - cell [ref=e2373]
+          - cell "編集する" [ref=e2375]:
+            - button "編集する" [ref=e2377] [cursor=pointer]
+        - row "339675 自社サイト LINE Administrator 2026-01-28 13:54 Administrator 2026-01-28 13:54 優樹 優樹 iPhone 16 128GB 新品・未開封 本査定前交渉中 はい 102000 88000 編集する" [ref=e2378]:
+          - cell [ref=e2379]:
+            - link "レコードの詳細を表示する" [ref=e2380] [cursor=pointer]:
+              - /url: /k/11/show#record=339675&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339674&l.prev=339676
+          - cell "339675" [ref=e2382]:
+            - generic [ref=e2384]: "339675"
+          - cell "自社サイト" [ref=e2385]:
+            - generic [ref=e2387]: 自社サイト
+          - cell "LINE" [ref=e2388]:
+            - generic [ref=e2390]: LINE
+          - cell "Administrator" [ref=e2391]:
+            - button "Administrator" [ref=e2393] [cursor=pointer]:
+              - img [ref=e2394]
+              - text: Administrator
+          - cell "2026-01-28 13:54" [ref=e2395]:
+            - generic [ref=e2397]: 2026-01-28 13:54
+          - cell "Administrator" [ref=e2398]:
+            - button "Administrator" [ref=e2400] [cursor=pointer]:
+              - img [ref=e2401]
+              - text: Administrator
+          - cell "2026-01-28 13:54" [ref=e2402]:
+            - generic [ref=e2404]: 2026-01-28 13:54
+          - cell "優樹" [ref=e2405]:
+            - generic [ref=e2407]: 優樹
+          - cell "優樹" [ref=e2408]:
+            - generic [ref=e2410]: 優樹
+          - cell "iPhone 16" [ref=e2411]:
+            - generic [ref=e2413]: iPhone 16
+          - cell "128GB" [ref=e2414]:
+            - generic [ref=e2416]: 128GB
+          - cell "新品・未開封" [ref=e2417]:
+            - generic [ref=e2419]: 新品・未開封
+          - cell [ref=e2420]
+          - cell [ref=e2422]
+          - cell "本査定前交渉中" [ref=e2424]:
+            - generic [ref=e2426]: 本査定前交渉中
+          - cell "はい" [ref=e2427]:
+            - generic [ref=e2429]: はい
+          - cell [ref=e2430]
+          - cell [ref=e2432]
+          - cell "102000" [ref=e2434]:
+            - generic [ref=e2436]: "102000"
+          - cell "88000" [ref=e2437]:
+            - generic [ref=e2439]: "88000"
+          - cell [ref=e2440]
+          - cell "編集する" [ref=e2442]:
+            - button "編集する" [ref=e2444] [cursor=pointer]
+        - row "339674 自社サイト LINE Administrator 2026-01-28 13:53 Administrator 2026-01-28 13:53 優樹 優樹 iPhone 16e 256GB 新品・未開封 本査定前交渉中 はい 91000 77000 編集する" [ref=e2445]:
+          - cell [ref=e2446]:
+            - link "レコードの詳細を表示する" [ref=e2447] [cursor=pointer]:
+              - /url: /k/11/show#record=339674&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339673&l.prev=339675
+          - cell "339674" [ref=e2449]:
+            - generic [ref=e2451]: "339674"
+          - cell "自社サイト" [ref=e2452]:
+            - generic [ref=e2454]: 自社サイト
+          - cell "LINE" [ref=e2455]:
+            - generic [ref=e2457]: LINE
+          - cell "Administrator" [ref=e2458]:
+            - button "Administrator" [ref=e2460] [cursor=pointer]:
+              - img [ref=e2461]
+              - text: Administrator
+          - cell "2026-01-28 13:53" [ref=e2462]:
+            - generic [ref=e2464]: 2026-01-28 13:53
+          - cell "Administrator" [ref=e2465]:
+            - button "Administrator" [ref=e2467] [cursor=pointer]:
+              - img [ref=e2468]
+              - text: Administrator
+          - cell "2026-01-28 13:53" [ref=e2469]:
+            - generic [ref=e2471]: 2026-01-28 13:53
+          - cell "優樹" [ref=e2472]:
+            - generic [ref=e2474]: 優樹
+          - cell "優樹" [ref=e2475]:
+            - generic [ref=e2477]: 優樹
+          - cell "iPhone 16e" [ref=e2478]:
+            - generic [ref=e2480]: iPhone 16e
+          - cell "256GB" [ref=e2481]:
+            - generic [ref=e2483]: 256GB
+          - cell "新品・未開封" [ref=e2484]:
+            - generic [ref=e2486]: 新品・未開封
+          - cell [ref=e2487]
+          - cell [ref=e2489]
+          - cell "本査定前交渉中" [ref=e2491]:
+            - generic [ref=e2493]: 本査定前交渉中
+          - cell "はい" [ref=e2494]:
+            - generic [ref=e2496]: はい
+          - cell [ref=e2497]
+          - cell [ref=e2499]
+          - cell "91000" [ref=e2501]:
+            - generic [ref=e2503]: "91000"
+          - cell "77000" [ref=e2504]:
+            - generic [ref=e2506]: "77000"
+          - cell [ref=e2507]
+          - cell "編集する" [ref=e2509]:
+            - button "編集する" [ref=e2511] [cursor=pointer]
+        - row "339673 自社サイト LINE Administrator 2026-01-28 13:52 Administrator 2026-01-28 13:52 優樹 優樹 iPhone 16e 128GB 新品・未開封 本査定前交渉中 はい 78000 64000 編集する" [ref=e2512]:
+          - cell [ref=e2513]:
+            - link "レコードの詳細を表示する" [ref=e2514] [cursor=pointer]:
+              - /url: /k/11/show#record=339673&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339672&l.prev=339674
+          - cell "339673" [ref=e2516]:
+            - generic [ref=e2518]: "339673"
+          - cell "自社サイト" [ref=e2519]:
+            - generic [ref=e2521]: 自社サイト
+          - cell "LINE" [ref=e2522]:
+            - generic [ref=e2524]: LINE
+          - cell "Administrator" [ref=e2525]:
+            - button "Administrator" [ref=e2527] [cursor=pointer]:
+              - img [ref=e2528]
+              - text: Administrator
+          - cell "2026-01-28 13:52" [ref=e2529]:
+            - generic [ref=e2531]: 2026-01-28 13:52
+          - cell "Administrator" [ref=e2532]:
+            - button "Administrator" [ref=e2534] [cursor=pointer]:
+              - img [ref=e2535]
+              - text: Administrator
+          - cell "2026-01-28 13:52" [ref=e2536]:
+            - generic [ref=e2538]: 2026-01-28 13:52
+          - cell "優樹" [ref=e2539]:
+            - generic [ref=e2541]: 優樹
+          - cell "優樹" [ref=e2542]:
+            - generic [ref=e2544]: 優樹
+          - cell "iPhone 16e" [ref=e2545]:
+            - generic [ref=e2547]: iPhone 16e
+          - cell "128GB" [ref=e2548]:
+            - generic [ref=e2550]: 128GB
+          - cell "新品・未開封" [ref=e2551]:
+            - generic [ref=e2553]: 新品・未開封
+          - cell [ref=e2554]
+          - cell [ref=e2556]
+          - cell "本査定前交渉中" [ref=e2558]:
+            - generic [ref=e2560]: 本査定前交渉中
+          - cell "はい" [ref=e2561]:
+            - generic [ref=e2563]: はい
+          - cell [ref=e2564]
+          - cell [ref=e2566]
+          - cell "78000" [ref=e2568]:
+            - generic [ref=e2570]: "78000"
+          - cell "64000" [ref=e2571]:
+            - generic [ref=e2573]: "64000"
+          - cell [ref=e2574]
+          - cell "編集する" [ref=e2576]:
+            - button "編集する" [ref=e2578] [cursor=pointer]
+        - row "339672 自社サイト LINE Administrator 2026-01-28 13:52 Administrator 2026-01-28 13:52 m.s🖤 m.s🖤 iPhone 11 Pro 64GB 使用感あり 本査定前交渉中 18000 16000 編集する" [ref=e2579]:
+          - cell [ref=e2580]:
+            - link "レコードの詳細を表示する" [ref=e2581] [cursor=pointer]:
+              - /url: /k/11/show#record=339672&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339671&l.prev=339673
+          - cell "339672" [ref=e2583]:
+            - generic [ref=e2585]: "339672"
+          - cell "自社サイト" [ref=e2586]:
+            - generic [ref=e2588]: 自社サイト
+          - cell "LINE" [ref=e2589]:
+            - generic [ref=e2591]: LINE
+          - cell "Administrator" [ref=e2592]:
+            - button "Administrator" [ref=e2594] [cursor=pointer]:
+              - img [ref=e2595]
+              - text: Administrator
+          - cell "2026-01-28 13:52" [ref=e2596]:
+            - generic [ref=e2598]: 2026-01-28 13:52
+          - cell "Administrator" [ref=e2599]:
+            - button "Administrator" [ref=e2601] [cursor=pointer]:
+              - img [ref=e2602]
+              - text: Administrator
+          - cell "2026-01-28 13:52" [ref=e2603]:
+            - generic [ref=e2605]: 2026-01-28 13:52
+          - cell "m.s🖤" [ref=e2606]:
+            - generic [ref=e2608]: m.s🖤
+          - cell "m.s🖤" [ref=e2609]:
+            - generic [ref=e2611]: m.s🖤
+          - cell "iPhone 11 Pro" [ref=e2612]:
+            - generic [ref=e2614]: iPhone 11 Pro
+          - cell "64GB" [ref=e2615]:
+            - generic [ref=e2617]: 64GB
+          - cell "使用感あり" [ref=e2618]:
+            - generic [ref=e2620]: 使用感あり
+          - cell [ref=e2621]
+          - cell [ref=e2623]
+          - cell "本査定前交渉中" [ref=e2625]:
+            - generic [ref=e2627]: 本査定前交渉中
+          - cell [ref=e2628]
+          - cell [ref=e2630]
+          - cell [ref=e2632]
+          - cell "18000" [ref=e2634]:
+            - generic [ref=e2636]: "18000"
+          - cell "16000" [ref=e2637]:
+            - generic [ref=e2639]: "16000"
+          - cell [ref=e2640]
+          - cell "編集する" [ref=e2642]:
+            - button "編集する" [ref=e2644] [cursor=pointer]
+        - row "339671 自社サイト LINE Administrator 2026-01-28 13:48 Administrator 2026-01-28 13:48 きよみ IKEDA きよみ IKEDA iPhone X 64GB 美品 本査定前交渉中 5500 3500 編集する" [ref=e2645]:
+          - cell [ref=e2646]:
+            - link "レコードの詳細を表示する" [ref=e2647] [cursor=pointer]:
+              - /url: /k/11/show#record=339671&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339670&l.prev=339672
+          - cell "339671" [ref=e2649]:
+            - generic [ref=e2651]: "339671"
+          - cell "自社サイト" [ref=e2652]:
+            - generic [ref=e2654]: 自社サイト
+          - cell "LINE" [ref=e2655]:
+            - generic [ref=e2657]: LINE
+          - cell "Administrator" [ref=e2658]:
+            - button "Administrator" [ref=e2660] [cursor=pointer]:
+              - img [ref=e2661]
+              - text: Administrator
+          - cell "2026-01-28 13:48" [ref=e2662]:
+            - generic [ref=e2664]: 2026-01-28 13:48
+          - cell "Administrator" [ref=e2665]:
+            - button "Administrator" [ref=e2667] [cursor=pointer]:
+              - img [ref=e2668]
+              - text: Administrator
+          - cell "2026-01-28 13:48" [ref=e2669]:
+            - generic [ref=e2671]: 2026-01-28 13:48
+          - cell "きよみ IKEDA" [ref=e2672]:
+            - generic [ref=e2674]: きよみ IKEDA
+          - cell "きよみ IKEDA" [ref=e2675]:
+            - generic [ref=e2677]: きよみ IKEDA
+          - cell "iPhone X" [ref=e2678]:
+            - generic [ref=e2680]: iPhone X
+          - cell "64GB" [ref=e2681]:
+            - generic [ref=e2683]: 64GB
+          - cell "美品" [ref=e2684]:
+            - generic [ref=e2686]: 美品
+          - cell [ref=e2687]
+          - cell [ref=e2689]
+          - cell "本査定前交渉中" [ref=e2691]:
+            - generic [ref=e2693]: 本査定前交渉中
+          - cell [ref=e2694]
+          - cell [ref=e2696]
+          - cell [ref=e2698]
+          - cell "5500" [ref=e2700]:
+            - generic [ref=e2702]: "5500"
+          - cell "3500" [ref=e2703]:
+            - generic [ref=e2705]: "3500"
+          - cell [ref=e2706]
+          - cell "編集する" [ref=e2708]:
+            - button "編集する" [ref=e2710] [cursor=pointer]
+        - row "339670 自社サイト LINE Administrator 2026-01-28 13:42 Administrator 2026-01-28 14:30 入口虎太郎 入口虎太郎 iPhone 12 Pro 外装ジャンク 集荷予定日確定 9300 8200 2026-01-28 13:44 編集する" [ref=e2711]:
+          - cell [ref=e2712]:
+            - link "レコードの詳細を表示する" [ref=e2713] [cursor=pointer]:
+              - /url: /k/11/show#record=339670&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339669&l.prev=339671
+          - cell "339670" [ref=e2715]:
+            - generic [ref=e2717]: "339670"
+          - cell "自社サイト" [ref=e2718]:
+            - generic [ref=e2720]: 自社サイト
+          - cell "LINE" [ref=e2721]:
+            - generic [ref=e2723]: LINE
+          - cell "Administrator" [ref=e2724]:
+            - button "Administrator" [ref=e2726] [cursor=pointer]:
+              - img [ref=e2727]
+              - text: Administrator
+          - cell "2026-01-28 13:42" [ref=e2728]:
+            - generic [ref=e2730]: 2026-01-28 13:42
+          - cell "Administrator" [ref=e2731]:
+            - button "Administrator" [ref=e2733] [cursor=pointer]:
+              - img [ref=e2734]
+              - text: Administrator
+          - cell "2026-01-28 14:30" [ref=e2735]:
+            - generic [ref=e2737]: 2026-01-28 14:30
+          - cell "入口虎太郎" [ref=e2738]:
+            - generic [ref=e2740]: 入口虎太郎
+          - cell "入口虎太郎" [ref=e2741]:
+            - generic [ref=e2743]: 入口虎太郎
+          - cell "iPhone 12 Pro" [ref=e2744]:
+            - generic [ref=e2746]: iPhone 12 Pro
+          - cell [ref=e2747]
+          - cell "外装ジャンク" [ref=e2749]:
+            - generic [ref=e2751]: 外装ジャンク
+          - cell [ref=e2752]
+          - cell [ref=e2754]
+          - cell "集荷予定日確定" [ref=e2756]:
+            - generic [ref=e2758]: 集荷予定日確定
+          - cell [ref=e2759]
+          - cell [ref=e2761]
+          - cell [ref=e2763]
+          - cell "9300" [ref=e2765]:
+            - generic [ref=e2767]: "9300"
+          - cell "8200" [ref=e2768]:
+            - generic [ref=e2770]: "8200"
+          - cell "2026-01-28 13:44" [ref=e2771]:
+            - generic [ref=e2773]: 2026-01-28 13:44
+          - cell "編集する" [ref=e2774]:
+            - button "編集する" [ref=e2776] [cursor=pointer]
+        - row "339669 自社サイト LINE Administrator 2026-01-28 13:34 Administrator 2026-01-28 13:34 サトウマユ サトウマユ iPhone 16e 128GB 新品・未開封 本査定前交渉中 はい 78000 64000 編集する" [ref=e2777]:
+          - cell [ref=e2778]:
+            - link "レコードの詳細を表示する" [ref=e2779] [cursor=pointer]:
+              - /url: /k/11/show#record=339669&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339668&l.prev=339670
+          - cell "339669" [ref=e2781]:
+            - generic [ref=e2783]: "339669"
+          - cell "自社サイト" [ref=e2784]:
+            - generic [ref=e2786]: 自社サイト
+          - cell "LINE" [ref=e2787]:
+            - generic [ref=e2789]: LINE
+          - cell "Administrator" [ref=e2790]:
+            - button "Administrator" [ref=e2792] [cursor=pointer]:
+              - img [ref=e2793]
+              - text: Administrator
+          - cell "2026-01-28 13:34" [ref=e2794]:
+            - generic [ref=e2796]: 2026-01-28 13:34
+          - cell "Administrator" [ref=e2797]:
+            - button "Administrator" [ref=e2799] [cursor=pointer]:
+              - img [ref=e2800]
+              - text: Administrator
+          - cell "2026-01-28 13:34" [ref=e2801]:
+            - generic [ref=e2803]: 2026-01-28 13:34
+          - cell "サトウマユ" [ref=e2804]:
+            - generic [ref=e2806]: サトウマユ
+          - cell "サトウマユ" [ref=e2807]:
+            - generic [ref=e2809]: サトウマユ
+          - cell "iPhone 16e" [ref=e2810]:
+            - generic [ref=e2812]: iPhone 16e
+          - cell "128GB" [ref=e2813]:
+            - generic [ref=e2815]: 128GB
+          - cell "新品・未開封" [ref=e2816]:
+            - generic [ref=e2818]: 新品・未開封
+          - cell [ref=e2819]
+          - cell [ref=e2821]
+          - cell "本査定前交渉中" [ref=e2823]:
+            - generic [ref=e2825]: 本査定前交渉中
+          - cell "はい" [ref=e2826]:
+            - generic [ref=e2828]: はい
+          - cell [ref=e2829]
+          - cell [ref=e2831]
+          - cell "78000" [ref=e2833]:
+            - generic [ref=e2835]: "78000"
+          - cell "64000" [ref=e2836]:
+            - generic [ref=e2838]: "64000"
+          - cell [ref=e2839]
+          - cell "編集する" [ref=e2841]:
+            - button "編集する" [ref=e2843] [cursor=pointer]
+        - row "339668 自社サイト LINE Administrator 2026-01-28 13:30 平山優大 2026-01-28 13:37 𝔗𝔞𝔨𝔞𝔞𝔨𝔦 福安孝明 iPhone 15 Pro 256GB 新品同様 本査定前不成約 84000 75000 2026-01-28 13:32 編集する" [ref=e2844]:
+          - cell [ref=e2845]:
+            - link "レコードの詳細を表示する" [ref=e2846] [cursor=pointer]:
+              - /url: /k/11/show#record=339668&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339667&l.prev=339669
+          - cell "339668" [ref=e2848]:
+            - generic [ref=e2850]: "339668"
+          - cell "自社サイト" [ref=e2851]:
+            - generic [ref=e2853]: 自社サイト
+          - cell "LINE" [ref=e2854]:
+            - generic [ref=e2856]: LINE
+          - cell "Administrator" [ref=e2857]:
+            - button "Administrator" [ref=e2859] [cursor=pointer]:
+              - img [ref=e2860]
+              - text: Administrator
+          - cell "2026-01-28 13:30" [ref=e2861]:
+            - generic [ref=e2863]: 2026-01-28 13:30
+          - cell "平山優大" [ref=e2864]:
+            - button "平山優大" [ref=e2866] [cursor=pointer]:
+              - img [ref=e2867]
+              - text: 平山優大
+          - cell "2026-01-28 13:37" [ref=e2868]:
+            - generic [ref=e2870]: 2026-01-28 13:37
+          - cell "𝔗𝔞𝔨𝔞𝔞𝔨𝔦" [ref=e2871]:
+            - generic [ref=e2873]: 𝔗𝔞𝔨𝔞𝔞𝔨𝔦
+          - cell "福安孝明" [ref=e2874]:
+            - generic [ref=e2876]: 福安孝明
+          - cell "iPhone 15 Pro" [ref=e2877]:
+            - generic [ref=e2879]: iPhone 15 Pro
+          - cell "256GB" [ref=e2880]:
+            - generic [ref=e2882]: 256GB
+          - cell "新品同様" [ref=e2883]:
+            - generic [ref=e2885]: 新品同様
+          - cell [ref=e2886]
+          - cell [ref=e2888]
+          - cell "本査定前不成約" [ref=e2890]:
+            - generic [ref=e2892]: 本査定前不成約
+          - cell [ref=e2893]
+          - cell [ref=e2895]
+          - cell [ref=e2897]
+          - cell "84000" [ref=e2899]:
+            - generic [ref=e2901]: "84000"
+          - cell "75000" [ref=e2902]:
+            - generic [ref=e2904]: "75000"
+          - cell "2026-01-28 13:32" [ref=e2905]:
+            - generic [ref=e2907]: 2026-01-28 13:32
+          - cell "編集する" [ref=e2908]:
+            - button "編集する" [ref=e2910] [cursor=pointer]
+        - row "339667 自社サイト LINE Administrator 2026-01-28 13:26 Administrator 2026-01-28 13:28 なかの 中野公喜 iPhone XR 128GB 新品・未開封 梱包キット発送要望あり はい 9500 7500 編集する" [ref=e2911]:
+          - cell [ref=e2912]:
+            - link "レコードの詳細を表示する" [ref=e2913] [cursor=pointer]:
+              - /url: /k/11/show#record=339667&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339666&l.prev=339668
+          - cell "339667" [ref=e2915]:
+            - generic [ref=e2917]: "339667"
+          - cell "自社サイト" [ref=e2918]:
+            - generic [ref=e2920]: 自社サイト
+          - cell "LINE" [ref=e2921]:
+            - generic [ref=e2923]: LINE
+          - cell "Administrator" [ref=e2924]:
+            - button "Administrator" [ref=e2926] [cursor=pointer]:
+              - img [ref=e2927]
+              - text: Administrator
+          - cell "2026-01-28 13:26" [ref=e2928]:
+            - generic [ref=e2930]: 2026-01-28 13:26
+          - cell "Administrator" [ref=e2931]:
+            - button "Administrator" [ref=e2933] [cursor=pointer]:
+              - img [ref=e2934]
+              - text: Administrator
+          - cell "2026-01-28 13:28" [ref=e2935]:
+            - generic [ref=e2937]: 2026-01-28 13:28
+          - cell "なかの" [ref=e2938]:
+            - generic [ref=e2940]: なかの
+          - cell "中野公喜" [ref=e2941]:
+            - generic [ref=e2943]: 中野公喜
+          - cell "iPhone XR" [ref=e2944]:
+            - generic [ref=e2946]: iPhone XR
+          - cell "128GB" [ref=e2947]:
+            - generic [ref=e2949]: 128GB
+          - cell "新品・未開封" [ref=e2950]:
+            - generic [ref=e2952]: 新品・未開封
+          - cell [ref=e2953]
+          - cell [ref=e2955]
+          - cell "梱包キット発送要望あり" [ref=e2957]:
+            - generic [ref=e2959]: 梱包キット発送要望あり
+          - cell "はい" [ref=e2960]:
+            - generic [ref=e2962]: はい
+          - cell [ref=e2963]
+          - cell [ref=e2965]
+          - cell "9500" [ref=e2967]:
+            - generic [ref=e2969]: "9500"
+          - cell "7500" [ref=e2970]:
+            - generic [ref=e2972]: "7500"
+          - cell [ref=e2973]
+          - cell "編集する" [ref=e2975]:
+            - button "編集する" [ref=e2977] [cursor=pointer]
+        - row "339666 自社サイト LINE Administrator 2026-01-28 13:26 Administrator 2026-01-28 13:26 なかの なかの iPhone XR 128GB 目立つ傷あり 本査定前交渉中 5500 3500 編集する" [ref=e2978]:
+          - cell [ref=e2979]:
+            - link "レコードの詳細を表示する" [ref=e2980] [cursor=pointer]:
+              - /url: /k/11/show#record=339666&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339665&l.prev=339667
+          - cell "339666" [ref=e2982]:
+            - generic [ref=e2984]: "339666"
+          - cell "自社サイト" [ref=e2985]:
+            - generic [ref=e2987]: 自社サイト
+          - cell "LINE" [ref=e2988]:
+            - generic [ref=e2990]: LINE
+          - cell "Administrator" [ref=e2991]:
+            - button "Administrator" [ref=e2993] [cursor=pointer]:
+              - img [ref=e2994]
+              - text: Administrator
+          - cell "2026-01-28 13:26" [ref=e2995]:
+            - generic [ref=e2997]: 2026-01-28 13:26
+          - cell "Administrator" [ref=e2998]:
+            - button "Administrator" [ref=e3000] [cursor=pointer]:
+              - img [ref=e3001]
+              - text: Administrator
+          - cell "2026-01-28 13:26" [ref=e3002]:
+            - generic [ref=e3004]: 2026-01-28 13:26
+          - cell "なかの" [ref=e3005]:
+            - generic [ref=e3007]: なかの
+          - cell "なかの" [ref=e3008]:
+            - generic [ref=e3010]: なかの
+          - cell "iPhone XR" [ref=e3011]:
+            - generic [ref=e3013]: iPhone XR
+          - cell "128GB" [ref=e3014]:
+            - generic [ref=e3016]: 128GB
+          - cell "目立つ傷あり" [ref=e3017]:
+            - generic [ref=e3019]: 目立つ傷あり
+          - cell [ref=e3020]
+          - cell [ref=e3022]
+          - cell "本査定前交渉中" [ref=e3024]:
+            - generic [ref=e3026]: 本査定前交渉中
+          - cell [ref=e3027]
+          - cell [ref=e3029]
+          - cell [ref=e3031]
+          - cell "5500" [ref=e3033]:
+            - generic [ref=e3035]: "5500"
+          - cell "3500" [ref=e3036]:
+            - generic [ref=e3038]: "3500"
+          - cell [ref=e3039]
+          - cell "編集する" [ref=e3041]:
+            - button "編集する" [ref=e3043] [cursor=pointer]
+        - row "339665 自社サイト LINE Administrator 2026-01-28 13:22 Administrator 2026-01-28 13:22 あいか あいか iPhone 14 128GB 新品同様 本査定前交渉中 43000 37000 編集する" [ref=e3044]:
+          - cell [ref=e3045]:
+            - link "レコードの詳細を表示する" [ref=e3046] [cursor=pointer]:
+              - /url: /k/11/show#record=339665&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339664&l.prev=339666
+          - cell "339665" [ref=e3048]:
+            - generic [ref=e3050]: "339665"
+          - cell "自社サイト" [ref=e3051]:
+            - generic [ref=e3053]: 自社サイト
+          - cell "LINE" [ref=e3054]:
+            - generic [ref=e3056]: LINE
+          - cell "Administrator" [ref=e3057]:
+            - button "Administrator" [ref=e3059] [cursor=pointer]:
+              - img [ref=e3060]
+              - text: Administrator
+          - cell "2026-01-28 13:22" [ref=e3061]:
+            - generic [ref=e3063]: 2026-01-28 13:22
+          - cell "Administrator" [ref=e3064]:
+            - button "Administrator" [ref=e3066] [cursor=pointer]:
+              - img [ref=e3067]
+              - text: Administrator
+          - cell "2026-01-28 13:22" [ref=e3068]:
+            - generic [ref=e3070]: 2026-01-28 13:22
+          - cell "あいか" [ref=e3071]:
+            - generic [ref=e3073]: あいか
+          - cell "あいか" [ref=e3074]:
+            - generic [ref=e3076]: あいか
+          - cell "iPhone 14" [ref=e3077]:
+            - generic [ref=e3079]: iPhone 14
+          - cell "128GB" [ref=e3080]:
+            - generic [ref=e3082]: 128GB
+          - cell "新品同様" [ref=e3083]:
+            - generic [ref=e3085]: 新品同様
+          - cell [ref=e3086]
+          - cell [ref=e3088]
+          - cell "本査定前交渉中" [ref=e3090]:
+            - generic [ref=e3092]: 本査定前交渉中
+          - cell [ref=e3093]
+          - cell [ref=e3095]
+          - cell [ref=e3097]
+          - cell "43000" [ref=e3099]:
+            - generic [ref=e3101]: "43000"
+          - cell "37000" [ref=e3102]:
+            - generic [ref=e3104]: "37000"
+          - cell [ref=e3105]
+          - cell "編集する" [ref=e3107]:
+            - button "編集する" [ref=e3109] [cursor=pointer]
+        - row "339664 自社サイト LINE Administrator 2026-01-28 13:22 Administrator 2026-01-28 13:22 あいか あいか iPhone 14 128GB 美品 本査定前交渉中 42000 36000 編集する" [ref=e3110]:
+          - cell [ref=e3111]:
+            - link "レコードの詳細を表示する" [ref=e3112] [cursor=pointer]:
+              - /url: /k/11/show#record=339664&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339663&l.prev=339665
+          - cell "339664" [ref=e3114]:
+            - generic [ref=e3116]: "339664"
+          - cell "自社サイト" [ref=e3117]:
+            - generic [ref=e3119]: 自社サイト
+          - cell "LINE" [ref=e3120]:
+            - generic [ref=e3122]: LINE
+          - cell "Administrator" [ref=e3123]:
+            - button "Administrator" [ref=e3125] [cursor=pointer]:
+              - img [ref=e3126]
+              - text: Administrator
+          - cell "2026-01-28 13:22" [ref=e3127]:
+            - generic [ref=e3129]: 2026-01-28 13:22
+          - cell "Administrator" [ref=e3130]:
+            - button "Administrator" [ref=e3132] [cursor=pointer]:
+              - img [ref=e3133]
+              - text: Administrator
+          - cell "2026-01-28 13:22" [ref=e3134]:
+            - generic [ref=e3136]: 2026-01-28 13:22
+          - cell "あいか" [ref=e3137]:
+            - generic [ref=e3139]: あいか
+          - cell "あいか" [ref=e3140]:
+            - generic [ref=e3142]: あいか
+          - cell "iPhone 14" [ref=e3143]:
+            - generic [ref=e3145]: iPhone 14
+          - cell "128GB" [ref=e3146]:
+            - generic [ref=e3148]: 128GB
+          - cell "美品" [ref=e3149]:
+            - generic [ref=e3151]: 美品
+          - cell [ref=e3152]
+          - cell [ref=e3154]
+          - cell "本査定前交渉中" [ref=e3156]:
+            - generic [ref=e3158]: 本査定前交渉中
+          - cell [ref=e3159]
+          - cell [ref=e3161]
+          - cell [ref=e3163]
+          - cell "42000" [ref=e3165]:
+            - generic [ref=e3167]: "42000"
+          - cell "36000" [ref=e3168]:
+            - generic [ref=e3170]: "36000"
+          - cell [ref=e3171]
+          - cell "編集する" [ref=e3173]:
+            - button "編集する" [ref=e3175] [cursor=pointer]
+        - row "339663 自社サイト LINE Administrator 2026-01-28 13:19 Administrator 2026-01-28 13:19 𝐲𝐮𝐚 𝐲𝐮𝐚 iPhone 13 256GB 新品同様 本査定前交渉中 42000 38000 編集する" [ref=e3176]:
+          - cell [ref=e3177]:
+            - link "レコードの詳細を表示する" [ref=e3178] [cursor=pointer]:
+              - /url: /k/11/show#record=339663&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339662&l.prev=339664
+          - cell "339663" [ref=e3180]:
+            - generic [ref=e3182]: "339663"
+          - cell "自社サイト" [ref=e3183]:
+            - generic [ref=e3185]: 自社サイト
+          - cell "LINE" [ref=e3186]:
+            - generic [ref=e3188]: LINE
+          - cell "Administrator" [ref=e3189]:
+            - button "Administrator" [ref=e3191] [cursor=pointer]:
+              - img [ref=e3192]
+              - text: Administrator
+          - cell "2026-01-28 13:19" [ref=e3193]:
+            - generic [ref=e3195]: 2026-01-28 13:19
+          - cell "Administrator" [ref=e3196]:
+            - button "Administrator" [ref=e3198] [cursor=pointer]:
+              - img [ref=e3199]
+              - text: Administrator
+          - cell "2026-01-28 13:19" [ref=e3200]:
+            - generic [ref=e3202]: 2026-01-28 13:19
+          - cell "𝐲𝐮𝐚" [ref=e3203]:
+            - generic [ref=e3205]: 𝐲𝐮𝐚
+          - cell "𝐲𝐮𝐚" [ref=e3206]:
+            - generic [ref=e3208]: 𝐲𝐮𝐚
+          - cell "iPhone 13" [ref=e3209]:
+            - generic [ref=e3211]: iPhone 13
+          - cell "256GB" [ref=e3212]:
+            - generic [ref=e3214]: 256GB
+          - cell "新品同様" [ref=e3215]:
+            - generic [ref=e3217]: 新品同様
+          - cell [ref=e3218]
+          - cell [ref=e3220]
+          - cell "本査定前交渉中" [ref=e3222]:
+            - generic [ref=e3224]: 本査定前交渉中
+          - cell [ref=e3225]
+          - cell [ref=e3227]
+          - cell [ref=e3229]
+          - cell "42000" [ref=e3231]:
+            - generic [ref=e3233]: "42000"
+          - cell "38000" [ref=e3234]:
+            - generic [ref=e3236]: "38000"
+          - cell [ref=e3237]
+          - cell "編集する" [ref=e3239]:
+            - button "編集する" [ref=e3241] [cursor=pointer]
+        - row "339662 自社サイト LINE Administrator 2026-01-28 13:17 Administrator 2026-01-28 13:17 𝔗𝔞𝔨𝔞𝔞𝔨𝔦 𝔗𝔞𝔨𝔞𝔞𝔨𝔦 iPhone 15 Pro 256GB 美品 本査定前交渉中 82000 73000 編集する" [ref=e3242]:
+          - cell [ref=e3243]:
+            - link "レコードの詳細を表示する" [ref=e3244] [cursor=pointer]:
+              - /url: /k/11/show#record=339662&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339661&l.prev=339663
+          - cell "339662" [ref=e3246]:
+            - generic [ref=e3248]: "339662"
+          - cell "自社サイト" [ref=e3249]:
+            - generic [ref=e3251]: 自社サイト
+          - cell "LINE" [ref=e3252]:
+            - generic [ref=e3254]: LINE
+          - cell "Administrator" [ref=e3255]:
+            - button "Administrator" [ref=e3257] [cursor=pointer]:
+              - img [ref=e3258]
+              - text: Administrator
+          - cell "2026-01-28 13:17" [ref=e3259]:
+            - generic [ref=e3261]: 2026-01-28 13:17
+          - cell "Administrator" [ref=e3262]:
+            - button "Administrator" [ref=e3264] [cursor=pointer]:
+              - img [ref=e3265]
+              - text: Administrator
+          - cell "2026-01-28 13:17" [ref=e3266]:
+            - generic [ref=e3268]: 2026-01-28 13:17
+          - cell "𝔗𝔞𝔨𝔞𝔞𝔨𝔦" [ref=e3269]:
+            - generic [ref=e3271]: 𝔗𝔞𝔨𝔞𝔞𝔨𝔦
+          - cell "𝔗𝔞𝔨𝔞𝔞𝔨𝔦" [ref=e3272]:
+            - generic [ref=e3274]: 𝔗𝔞𝔨𝔞𝔞𝔨𝔦
+          - cell "iPhone 15 Pro" [ref=e3275]:
+            - generic [ref=e3277]: iPhone 15 Pro
+          - cell "256GB" [ref=e3278]:
+            - generic [ref=e3280]: 256GB
+          - cell "美品" [ref=e3281]:
+            - generic [ref=e3283]: 美品
+          - cell [ref=e3284]
+          - cell [ref=e3286]
+          - cell "本査定前交渉中" [ref=e3288]:
+            - generic [ref=e3290]: 本査定前交渉中
+          - cell [ref=e3291]
+          - cell [ref=e3293]
+          - cell [ref=e3295]
+          - cell "82000" [ref=e3297]:
+            - generic [ref=e3299]: "82000"
+          - cell "73000" [ref=e3300]:
+            - generic [ref=e3302]: "73000"
+          - cell [ref=e3303]
+          - cell "編集する" [ref=e3305]:
+            - button "編集する" [ref=e3307] [cursor=pointer]
+        - row "339661 自社サイト LINE Administrator 2026-01-28 13:15 Administrator 2026-01-28 13:15 kagemusya kagemusya iPhone 12 64GB 新品同様 本査定前交渉中 21000 19000 編集する" [ref=e3308]:
+          - cell [ref=e3309]:
+            - link "レコードの詳細を表示する" [ref=e3310] [cursor=pointer]:
+              - /url: /k/11/show#record=339661&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339660&l.prev=339662
+          - cell "339661" [ref=e3312]:
+            - generic [ref=e3314]: "339661"
+          - cell "自社サイト" [ref=e3315]:
+            - generic [ref=e3317]: 自社サイト
+          - cell "LINE" [ref=e3318]:
+            - generic [ref=e3320]: LINE
+          - cell "Administrator" [ref=e3321]:
+            - button "Administrator" [ref=e3323] [cursor=pointer]:
+              - img [ref=e3324]
+              - text: Administrator
+          - cell "2026-01-28 13:15" [ref=e3325]:
+            - generic [ref=e3327]: 2026-01-28 13:15
+          - cell "Administrator" [ref=e3328]:
+            - button "Administrator" [ref=e3330] [cursor=pointer]:
+              - img [ref=e3331]
+              - text: Administrator
+          - cell "2026-01-28 13:15" [ref=e3332]:
+            - generic [ref=e3334]: 2026-01-28 13:15
+          - cell "kagemusya" [ref=e3335]:
+            - generic [ref=e3337]: kagemusya
+          - cell "kagemusya" [ref=e3338]:
+            - generic [ref=e3340]: kagemusya
+          - cell "iPhone 12" [ref=e3341]:
+            - generic [ref=e3343]: iPhone 12
+          - cell "64GB" [ref=e3344]:
+            - generic [ref=e3346]: 64GB
+          - cell "新品同様" [ref=e3347]:
+            - generic [ref=e3349]: 新品同様
+          - cell [ref=e3350]
+          - cell [ref=e3352]
+          - cell "本査定前交渉中" [ref=e3354]:
+            - generic [ref=e3356]: 本査定前交渉中
+          - cell [ref=e3357]
+          - cell [ref=e3359]
+          - cell [ref=e3361]
+          - cell "21000" [ref=e3363]:
+            - generic [ref=e3365]: "21000"
+          - cell "19000" [ref=e3366]:
+            - generic [ref=e3368]: "19000"
+          - cell [ref=e3369]
+          - cell "編集する" [ref=e3371]:
+            - button "編集する" [ref=e3373] [cursor=pointer]
+        - row "339660 自社サイト LINE Administrator 2026-01-28 13:15 Administrator 2026-01-28 13:15 Haruka Haruka iPhone 14 Pro Max 128GB 外装ジャンク 本査定前交渉中 43000 40000 編集する" [ref=e3374]:
+          - cell [ref=e3375]:
+            - link "レコードの詳細を表示する" [ref=e3376] [cursor=pointer]:
+              - /url: /k/11/show#record=339660&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339659&l.prev=339661
+          - cell "339660" [ref=e3378]:
+            - generic [ref=e3380]: "339660"
+          - cell "自社サイト" [ref=e3381]:
+            - generic [ref=e3383]: 自社サイト
+          - cell "LINE" [ref=e3384]:
+            - generic [ref=e3386]: LINE
+          - cell "Administrator" [ref=e3387]:
+            - button "Administrator" [ref=e3389] [cursor=pointer]:
+              - img [ref=e3390]
+              - text: Administrator
+          - cell "2026-01-28 13:15" [ref=e3391]:
+            - generic [ref=e3393]: 2026-01-28 13:15
+          - cell "Administrator" [ref=e3394]:
+            - button "Administrator" [ref=e3396] [cursor=pointer]:
+              - img [ref=e3397]
+              - text: Administrator
+          - cell "2026-01-28 13:15" [ref=e3398]:
+            - generic [ref=e3400]: 2026-01-28 13:15
+          - cell "Haruka" [ref=e3401]:
+            - generic [ref=e3403]: Haruka
+          - cell "Haruka" [ref=e3404]:
+            - generic [ref=e3406]: Haruka
+          - cell "iPhone 14 Pro Max" [ref=e3407]:
+            - generic [ref=e3409]: iPhone 14 Pro Max
+          - cell "128GB" [ref=e3410]:
+            - generic [ref=e3412]: 128GB
+          - cell "外装ジャンク" [ref=e3413]:
+            - generic [ref=e3415]: 外装ジャンク
+          - cell [ref=e3416]
+          - cell [ref=e3418]
+          - cell "本査定前交渉中" [ref=e3420]:
+            - generic [ref=e3422]: 本査定前交渉中
+          - cell [ref=e3423]
+          - cell [ref=e3425]
+          - cell [ref=e3427]
+          - cell "43000" [ref=e3429]:
+            - generic [ref=e3431]: "43000"
+          - cell "40000" [ref=e3432]:
+            - generic [ref=e3434]: "40000"
+          - cell [ref=e3435]
+          - cell "編集する" [ref=e3437]:
+            - button "編集する" [ref=e3439] [cursor=pointer]
+        - row "339659 自社サイト LINE Administrator 2026-01-28 13:12 Administrator 2026-01-28 13:12 ごう ごう iPhone 17 Pro Max 256GB 新品・未開封 本査定前交渉中 はい 202000 188000 編集する" [ref=e3440]:
+          - cell [ref=e3441]:
+            - link "レコードの詳細を表示する" [ref=e3442] [cursor=pointer]:
+              - /url: /k/11/show#record=339659&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339658&l.prev=339660
+          - cell "339659" [ref=e3444]:
+            - generic [ref=e3446]: "339659"
+          - cell "自社サイト" [ref=e3447]:
+            - generic [ref=e3449]: 自社サイト
+          - cell "LINE" [ref=e3450]:
+            - generic [ref=e3452]: LINE
+          - cell "Administrator" [ref=e3453]:
+            - button "Administrator" [ref=e3455] [cursor=pointer]:
+              - img [ref=e3456]
+              - text: Administrator
+          - cell "2026-01-28 13:12" [ref=e3457]:
+            - generic [ref=e3459]: 2026-01-28 13:12
+          - cell "Administrator" [ref=e3460]:
+            - button "Administrator" [ref=e3462] [cursor=pointer]:
+              - img [ref=e3463]
+              - text: Administrator
+          - cell "2026-01-28 13:12" [ref=e3464]:
+            - generic [ref=e3466]: 2026-01-28 13:12
+          - cell "ごう" [ref=e3467]:
+            - generic [ref=e3469]: ごう
+          - cell "ごう" [ref=e3470]:
+            - generic [ref=e3472]: ごう
+          - cell "iPhone 17 Pro Max" [ref=e3473]:
+            - generic [ref=e3475]: iPhone 17 Pro Max
+          - cell "256GB" [ref=e3476]:
+            - generic [ref=e3478]: 256GB
+          - cell "新品・未開封" [ref=e3479]:
+            - generic [ref=e3481]: 新品・未開封
+          - cell [ref=e3482]
+          - cell [ref=e3484]
+          - cell "本査定前交渉中" [ref=e3486]:
+            - generic [ref=e3488]: 本査定前交渉中
+          - cell "はい" [ref=e3489]:
+            - generic [ref=e3491]: はい
+          - cell [ref=e3492]
+          - cell [ref=e3494]
+          - cell "202000" [ref=e3496]:
+            - generic [ref=e3498]: "202000"
+          - cell "188000" [ref=e3499]:
+            - generic [ref=e3501]: "188000"
+          - cell [ref=e3502]
+          - cell "編集する" [ref=e3504]:
+            - button "編集する" [ref=e3506] [cursor=pointer]
+        - row "339658 自社サイト LINE Administrator 2026-01-28 13:02 Administrator 2026-01-28 13:02 ︎︎ ︎︎ iPhone 13 128GB 新品同様 本査定前交渉中 35000 31000 編集する" [ref=e3507]:
+          - cell [ref=e3508]:
+            - link "レコードの詳細を表示する" [ref=e3509] [cursor=pointer]:
+              - /url: /k/11/show#record=339658&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339657&l.prev=339659
+          - cell "339658" [ref=e3511]:
+            - generic [ref=e3513]: "339658"
+          - cell "自社サイト" [ref=e3514]:
+            - generic [ref=e3516]: 自社サイト
+          - cell "LINE" [ref=e3517]:
+            - generic [ref=e3519]: LINE
+          - cell "Administrator" [ref=e3520]:
+            - button "Administrator" [ref=e3522] [cursor=pointer]:
+              - img [ref=e3523]
+              - text: Administrator
+          - cell "2026-01-28 13:02" [ref=e3524]:
+            - generic [ref=e3526]: 2026-01-28 13:02
+          - cell "Administrator" [ref=e3527]:
+            - button "Administrator" [ref=e3529] [cursor=pointer]:
+              - img [ref=e3530]
+              - text: Administrator
+          - cell "2026-01-28 13:02" [ref=e3531]:
+            - generic [ref=e3533]: 2026-01-28 13:02
+          - cell "︎︎" [ref=e3534]:
+            - generic [ref=e3536]: ︎︎
+          - cell "︎︎" [ref=e3537]:
+            - generic [ref=e3539]: ︎︎
+          - cell "iPhone 13" [ref=e3540]:
+            - generic [ref=e3542]: iPhone 13
+          - cell "128GB" [ref=e3543]:
+            - generic [ref=e3545]: 128GB
+          - cell "新品同様" [ref=e3546]:
+            - generic [ref=e3548]: 新品同様
+          - cell [ref=e3549]
+          - cell [ref=e3551]
+          - cell "本査定前交渉中" [ref=e3553]:
+            - generic [ref=e3555]: 本査定前交渉中
+          - cell [ref=e3556]
+          - cell [ref=e3558]
+          - cell [ref=e3560]
+          - cell "35000" [ref=e3562]:
+            - generic [ref=e3564]: "35000"
+          - cell "31000" [ref=e3565]:
+            - generic [ref=e3567]: "31000"
+          - cell [ref=e3568]
+          - cell "編集する" [ref=e3570]:
+            - button "編集する" [ref=e3572] [cursor=pointer]
+        - row "339657 自社サイト LINE Administrator 2026-01-28 13:00 Administrator 2026-01-28 13:07 京谷忍 京谷忍 iPhone 15 Pro 256GB 使用感あり 梱包キット発送完了 76000 67000 編集する" [ref=e3573]:
+          - cell [ref=e3574]:
+            - link "レコードの詳細を表示する" [ref=e3575] [cursor=pointer]:
+              - /url: /k/11/show#record=339657&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339656&l.prev=339658
+          - cell "339657" [ref=e3577]:
+            - generic [ref=e3579]: "339657"
+          - cell "自社サイト" [ref=e3580]:
+            - generic [ref=e3582]: 自社サイト
+          - cell "LINE" [ref=e3583]:
+            - generic [ref=e3585]: LINE
+          - cell "Administrator" [ref=e3586]:
+            - button "Administrator" [ref=e3588] [cursor=pointer]:
+              - img [ref=e3589]
+              - text: Administrator
+          - cell "2026-01-28 13:00" [ref=e3590]:
+            - generic [ref=e3592]: 2026-01-28 13:00
+          - cell "Administrator" [ref=e3593]:
+            - button "Administrator" [ref=e3595] [cursor=pointer]:
+              - img [ref=e3596]
+              - text: Administrator
+          - cell "2026-01-28 13:07" [ref=e3597]:
+            - generic [ref=e3599]: 2026-01-28 13:07
+          - cell "京谷忍" [ref=e3600]:
+            - generic [ref=e3602]: 京谷忍
+          - cell "京谷忍" [ref=e3603]:
+            - generic [ref=e3605]: 京谷忍
+          - cell "iPhone 15 Pro" [ref=e3606]:
+            - generic [ref=e3608]: iPhone 15 Pro
+          - cell "256GB" [ref=e3609]:
+            - generic [ref=e3611]: 256GB
+          - cell "使用感あり" [ref=e3612]:
+            - generic [ref=e3614]: 使用感あり
+          - cell [ref=e3615]
+          - cell [ref=e3617]
+          - cell "梱包キット発送完了" [ref=e3619]:
+            - generic [ref=e3621]: 梱包キット発送完了
+          - cell [ref=e3622]
+          - cell [ref=e3624]
+          - cell [ref=e3626]
+          - cell "76000" [ref=e3628]:
+            - generic [ref=e3630]: "76000"
+          - cell "67000" [ref=e3631]:
+            - generic [ref=e3633]: "67000"
+          - cell [ref=e3634]
+          - cell "編集する" [ref=e3636]:
+            - button "編集する" [ref=e3638] [cursor=pointer]
+        - row "339656 自社サイト LINE Administrator 2026-01-28 12:57 Administrator 2026-01-28 12:57 優香 優香 iPhone 14 Pro Max 256GB 使用感あり 本査定前交渉中 36300 31900 編集する" [ref=e3639]:
+          - cell [ref=e3640]:
+            - link "レコードの詳細を表示する" [ref=e3641] [cursor=pointer]:
+              - /url: /k/11/show#record=339656&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339655&l.prev=339657
+          - cell "339656" [ref=e3643]:
+            - generic [ref=e3645]: "339656"
+          - cell "自社サイト" [ref=e3646]:
+            - generic [ref=e3648]: 自社サイト
+          - cell "LINE" [ref=e3649]:
+            - generic [ref=e3651]: LINE
+          - cell "Administrator" [ref=e3652]:
+            - button "Administrator" [ref=e3654] [cursor=pointer]:
+              - img [ref=e3655]
+              - text: Administrator
+          - cell "2026-01-28 12:57" [ref=e3656]:
+            - generic [ref=e3658]: 2026-01-28 12:57
+          - cell "Administrator" [ref=e3659]:
+            - button "Administrator" [ref=e3661] [cursor=pointer]:
+              - img [ref=e3662]
+              - text: Administrator
+          - cell "2026-01-28 12:57" [ref=e3663]:
+            - generic [ref=e3665]: 2026-01-28 12:57
+          - cell "優香" [ref=e3666]:
+            - generic [ref=e3668]: 優香
+          - cell "優香" [ref=e3669]:
+            - generic [ref=e3671]: 優香
+          - cell "iPhone 14 Pro Max" [ref=e3672]:
+            - generic [ref=e3674]: iPhone 14 Pro Max
+          - cell "256GB" [ref=e3675]:
+            - generic [ref=e3677]: 256GB
+          - cell "使用感あり" [ref=e3678]:
+            - generic [ref=e3680]: 使用感あり
+          - cell [ref=e3681]
+          - cell [ref=e3683]
+          - cell "本査定前交渉中" [ref=e3685]:
+            - generic [ref=e3687]: 本査定前交渉中
+          - cell [ref=e3688]
+          - cell [ref=e3690]
+          - cell [ref=e3692]
+          - cell "36300" [ref=e3694]:
+            - generic [ref=e3696]: "36300"
+          - cell "31900" [ref=e3697]:
+            - generic [ref=e3699]: "31900"
+          - cell [ref=e3700]
+          - cell "編集する" [ref=e3702]:
+            - button "編集する" [ref=e3704] [cursor=pointer]
+        - row "339655 自社サイト LINE Administrator 2026-01-28 12:56 Administrator 2026-01-28 12:56 koji takano koji takano iPhone 13 256GB 新品同様 本査定前交渉中 42000 38000 編集する" [ref=e3705]:
+          - cell [ref=e3706]:
+            - link "レコードの詳細を表示する" [ref=e3707] [cursor=pointer]:
+              - /url: /k/11/show#record=339655&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339654&l.prev=339656
+          - cell "339655" [ref=e3709]:
+            - generic [ref=e3711]: "339655"
+          - cell "自社サイト" [ref=e3712]:
+            - generic [ref=e3714]: 自社サイト
+          - cell "LINE" [ref=e3715]:
+            - generic [ref=e3717]: LINE
+          - cell "Administrator" [ref=e3718]:
+            - button "Administrator" [ref=e3720] [cursor=pointer]:
+              - img [ref=e3721]
+              - text: Administrator
+          - cell "2026-01-28 12:56" [ref=e3722]:
+            - generic [ref=e3724]: 2026-01-28 12:56
+          - cell "Administrator" [ref=e3725]:
+            - button "Administrator" [ref=e3727] [cursor=pointer]:
+              - img [ref=e3728]
+              - text: Administrator
+          - cell "2026-01-28 12:56" [ref=e3729]:
+            - generic [ref=e3731]: 2026-01-28 12:56
+          - cell "koji takano" [ref=e3732]:
+            - generic [ref=e3734]: koji takano
+          - cell "koji takano" [ref=e3735]:
+            - generic [ref=e3737]: koji takano
+          - cell "iPhone 13" [ref=e3738]:
+            - generic [ref=e3740]: iPhone 13
+          - cell "256GB" [ref=e3741]:
+            - generic [ref=e3743]: 256GB
+          - cell "新品同様" [ref=e3744]:
+            - generic [ref=e3746]: 新品同様
+          - cell [ref=e3747]
+          - cell [ref=e3749]
+          - cell "本査定前交渉中" [ref=e3751]:
+            - generic [ref=e3753]: 本査定前交渉中
+          - cell [ref=e3754]
+          - cell [ref=e3756]
+          - cell [ref=e3758]
+          - cell "42000" [ref=e3760]:
+            - generic [ref=e3762]: "42000"
+          - cell "38000" [ref=e3763]:
+            - generic [ref=e3765]: "38000"
+          - cell [ref=e3766]
+          - cell "編集する" [ref=e3768]:
+            - button "編集する" [ref=e3770] [cursor=pointer]
+        - row "339654 自社サイト LINE Administrator 2026-01-28 12:29 Administrator 2026-01-28 12:29 Tomoaki Tomoaki iPhone 17 Pro 256GB 新品・未開封 本査定前交渉中 はい 182500 168500 編集する" [ref=e3771]:
+          - cell [ref=e3772]:
+            - link "レコードの詳細を表示する" [ref=e3773] [cursor=pointer]:
+              - /url: /k/11/show#record=339654&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339653&l.prev=339655
+          - cell "339654" [ref=e3775]:
+            - generic [ref=e3777]: "339654"
+          - cell "自社サイト" [ref=e3778]:
+            - generic [ref=e3780]: 自社サイト
+          - cell "LINE" [ref=e3781]:
+            - generic [ref=e3783]: LINE
+          - cell "Administrator" [ref=e3784]:
+            - button "Administrator" [ref=e3786] [cursor=pointer]:
+              - img [ref=e3787]
+              - text: Administrator
+          - cell "2026-01-28 12:29" [ref=e3788]:
+            - generic [ref=e3790]: 2026-01-28 12:29
+          - cell "Administrator" [ref=e3791]:
+            - button "Administrator" [ref=e3793] [cursor=pointer]:
+              - img [ref=e3794]
+              - text: Administrator
+          - cell "2026-01-28 12:29" [ref=e3795]:
+            - generic [ref=e3797]: 2026-01-28 12:29
+          - cell "Tomoaki" [ref=e3798]:
+            - generic [ref=e3800]: Tomoaki
+          - cell "Tomoaki" [ref=e3801]:
+            - generic [ref=e3803]: Tomoaki
+          - cell "iPhone 17 Pro" [ref=e3804]:
+            - generic [ref=e3806]: iPhone 17 Pro
+          - cell "256GB" [ref=e3807]:
+            - generic [ref=e3809]: 256GB
+          - cell "新品・未開封" [ref=e3810]:
+            - generic [ref=e3812]: 新品・未開封
+          - cell [ref=e3813]
+          - cell [ref=e3815]
+          - cell "本査定前交渉中" [ref=e3817]:
+            - generic [ref=e3819]: 本査定前交渉中
+          - cell "はい" [ref=e3820]:
+            - generic [ref=e3822]: はい
+          - cell [ref=e3823]
+          - cell [ref=e3825]
+          - cell "182500" [ref=e3827]:
+            - generic [ref=e3829]: "182500"
+          - cell "168500" [ref=e3830]:
+            - generic [ref=e3832]: "168500"
+          - cell [ref=e3833]
+          - cell "編集する" [ref=e3835]:
+            - button "編集する" [ref=e3837] [cursor=pointer]
+        - row "339653 自社サイト LINE Administrator 2026-01-28 12:29 Administrator 2026-01-28 12:29 ｍａｉｋａ ｍａｉｋａ iPhone 12 Pro 128GB 美品 本査定前交渉中 27000 24000 編集する" [ref=e3838]:
+          - cell [ref=e3839]:
+            - link "レコードの詳細を表示する" [ref=e3840] [cursor=pointer]:
+              - /url: /k/11/show#record=339653&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339652&l.prev=339654
+          - cell "339653" [ref=e3842]:
+            - generic [ref=e3844]: "339653"
+          - cell "自社サイト" [ref=e3845]:
+            - generic [ref=e3847]: 自社サイト
+          - cell "LINE" [ref=e3848]:
+            - generic [ref=e3850]: LINE
+          - cell "Administrator" [ref=e3851]:
+            - button "Administrator" [ref=e3853] [cursor=pointer]:
+              - img [ref=e3854]
+              - text: Administrator
+          - cell "2026-01-28 12:29" [ref=e3855]:
+            - generic [ref=e3857]: 2026-01-28 12:29
+          - cell "Administrator" [ref=e3858]:
+            - button "Administrator" [ref=e3860] [cursor=pointer]:
+              - img [ref=e3861]
+              - text: Administrator
+          - cell "2026-01-28 12:29" [ref=e3862]:
+            - generic [ref=e3864]: 2026-01-28 12:29
+          - cell "ｍａｉｋａ" [ref=e3865]:
+            - generic [ref=e3867]: ｍａｉｋａ
+          - cell "ｍａｉｋａ" [ref=e3868]:
+            - generic [ref=e3870]: ｍａｉｋａ
+          - cell "iPhone 12 Pro" [ref=e3871]:
+            - generic [ref=e3873]: iPhone 12 Pro
+          - cell "128GB" [ref=e3874]:
+            - generic [ref=e3876]: 128GB
+          - cell "美品" [ref=e3877]:
+            - generic [ref=e3879]: 美品
+          - cell [ref=e3880]
+          - cell [ref=e3882]
+          - cell "本査定前交渉中" [ref=e3884]:
+            - generic [ref=e3886]: 本査定前交渉中
+          - cell [ref=e3887]
+          - cell [ref=e3889]
+          - cell [ref=e3891]
+          - cell "27000" [ref=e3893]:
+            - generic [ref=e3895]: "27000"
+          - cell "24000" [ref=e3896]:
+            - generic [ref=e3898]: "24000"
+          - cell [ref=e3899]
+          - cell "編集する" [ref=e3901]:
+            - button "編集する" [ref=e3903] [cursor=pointer]
+        - row "339652 自社サイト LINE Administrator 2026-01-28 12:25 Administrator 2026-01-28 12:25 Nguyen Duc Nguyen Duc iPhone 17 Pro Max 256GB 新品・未開封 本査定前交渉中 はい 202000 188000 編集する" [ref=e3904]:
+          - cell [ref=e3905]:
+            - link "レコードの詳細を表示する" [ref=e3906] [cursor=pointer]:
+              - /url: /k/11/show#record=339652&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339651&l.prev=339653
+          - cell "339652" [ref=e3908]:
+            - generic [ref=e3910]: "339652"
+          - cell "自社サイト" [ref=e3911]:
+            - generic [ref=e3913]: 自社サイト
+          - cell "LINE" [ref=e3914]:
+            - generic [ref=e3916]: LINE
+          - cell "Administrator" [ref=e3917]:
+            - button "Administrator" [ref=e3919] [cursor=pointer]:
+              - img [ref=e3920]
+              - text: Administrator
+          - cell "2026-01-28 12:25" [ref=e3921]:
+            - generic [ref=e3923]: 2026-01-28 12:25
+          - cell "Administrator" [ref=e3924]:
+            - button "Administrator" [ref=e3926] [cursor=pointer]:
+              - img [ref=e3927]
+              - text: Administrator
+          - cell "2026-01-28 12:25" [ref=e3928]:
+            - generic [ref=e3930]: 2026-01-28 12:25
+          - cell "Nguyen Duc" [ref=e3931]:
+            - generic [ref=e3933]: Nguyen Duc
+          - cell "Nguyen Duc" [ref=e3934]:
+            - generic [ref=e3936]: Nguyen Duc
+          - cell "iPhone 17 Pro Max" [ref=e3937]:
+            - generic [ref=e3939]: iPhone 17 Pro Max
+          - cell "256GB" [ref=e3940]:
+            - generic [ref=e3942]: 256GB
+          - cell "新品・未開封" [ref=e3943]:
+            - generic [ref=e3945]: 新品・未開封
+          - cell [ref=e3946]
+          - cell [ref=e3948]
+          - cell "本査定前交渉中" [ref=e3950]:
+            - generic [ref=e3952]: 本査定前交渉中
+          - cell "はい" [ref=e3953]:
+            - generic [ref=e3955]: はい
+          - cell [ref=e3956]
+          - cell [ref=e3958]
+          - cell "202000" [ref=e3960]:
+            - generic [ref=e3962]: "202000"
+          - cell "188000" [ref=e3963]:
+            - generic [ref=e3965]: "188000"
+          - cell [ref=e3966]
+          - cell "編集する" [ref=e3968]:
+            - button "編集する" [ref=e3970] [cursor=pointer]
+        - row "339651 自社サイト LINE Administrator 2026-01-28 12:20 Administrator 2026-01-28 13:08 石田 翔一郎 石田翔一郎 iPhone 17 Pro Max 512GB 新品・未開封 梱包キット発送完了 はい 223000 209000 編集する" [ref=e3971]:
+          - cell [ref=e3972]:
+            - link "レコードの詳細を表示する" [ref=e3973] [cursor=pointer]:
+              - /url: /k/11/show#record=339651&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339650&l.prev=339652
+          - cell "339651" [ref=e3975]:
+            - generic [ref=e3977]: "339651"
+          - cell "自社サイト" [ref=e3978]:
+            - generic [ref=e3980]: 自社サイト
+          - cell "LINE" [ref=e3981]:
+            - generic [ref=e3983]: LINE
+          - cell "Administrator" [ref=e3984]:
+            - button "Administrator" [ref=e3986] [cursor=pointer]:
+              - img [ref=e3987]
+              - text: Administrator
+          - cell "2026-01-28 12:20" [ref=e3988]:
+            - generic [ref=e3990]: 2026-01-28 12:20
+          - cell "Administrator" [ref=e3991]:
+            - button "Administrator" [ref=e3993] [cursor=pointer]:
+              - img [ref=e3994]
+              - text: Administrator
+          - cell "2026-01-28 13:08" [ref=e3995]:
+            - generic [ref=e3997]: 2026-01-28 13:08
+          - cell "石田 翔一郎" [ref=e3998]:
+            - generic [ref=e4000]: 石田 翔一郎
+          - cell "石田翔一郎" [ref=e4001]:
+            - generic [ref=e4003]: 石田翔一郎
+          - cell "iPhone 17 Pro Max" [ref=e4004]:
+            - generic [ref=e4006]: iPhone 17 Pro Max
+          - cell "512GB" [ref=e4007]:
+            - generic [ref=e4009]: 512GB
+          - cell "新品・未開封" [ref=e4010]:
+            - generic [ref=e4012]: 新品・未開封
+          - cell [ref=e4013]
+          - cell [ref=e4015]
+          - cell "梱包キット発送完了" [ref=e4017]:
+            - generic [ref=e4019]: 梱包キット発送完了
+          - cell "はい" [ref=e4020]:
+            - generic [ref=e4022]: はい
+          - cell [ref=e4023]
+          - cell [ref=e4025]
+          - cell "223000" [ref=e4027]:
+            - generic [ref=e4029]: "223000"
+          - cell "209000" [ref=e4030]:
+            - generic [ref=e4032]: "209000"
+          - cell [ref=e4033]
+          - cell "編集する" [ref=e4035]:
+            - button "編集する" [ref=e4037] [cursor=pointer]
+        - row "339650 自社サイト LINE 江口那都 2026-01-28 12:06 江口那都 2026-01-28 12:06 naoko 岡崎直子 iPhone SE（第1世代） 新品同様 本査定開始 2000 1500 2026-01-25 23:57 編集する" [ref=e4038]:
+          - cell [ref=e4039]:
+            - link "レコードの詳細を表示する" [ref=e4040] [cursor=pointer]:
+              - /url: /k/11/show#record=339650&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339649&l.prev=339651
+          - cell "339650" [ref=e4042]:
+            - generic [ref=e4044]: "339650"
+          - cell "自社サイト" [ref=e4045]:
+            - generic [ref=e4047]: 自社サイト
+          - cell "LINE" [ref=e4048]:
+            - generic [ref=e4050]: LINE
+          - cell "江口那都" [ref=e4051]:
+            - button "江口那都" [ref=e4053] [cursor=pointer]:
+              - img [ref=e4054]
+              - text: 江口那都
+          - cell "2026-01-28 12:06" [ref=e4055]:
+            - generic [ref=e4057]: 2026-01-28 12:06
+          - cell "江口那都" [ref=e4058]:
+            - button "江口那都" [ref=e4060] [cursor=pointer]:
+              - img [ref=e4061]
+              - text: 江口那都
+          - cell "2026-01-28 12:06" [ref=e4062]:
+            - generic [ref=e4064]: 2026-01-28 12:06
+          - cell "naoko" [ref=e4065]:
+            - generic [ref=e4067]: naoko
+          - cell "岡崎直子" [ref=e4068]:
+            - generic [ref=e4070]: 岡崎直子
+          - cell "iPhone SE（第1世代）" [ref=e4071]:
+            - generic [ref=e4073]: iPhone SE（第1世代）
+          - cell [ref=e4074]
+          - cell "新品同様" [ref=e4076]:
+            - generic [ref=e4078]: 新品同様
+          - cell [ref=e4079]
+          - cell [ref=e4081]
+          - cell "本査定開始" [ref=e4083]:
+            - generic [ref=e4085]: 本査定開始
+          - cell [ref=e4086]
+          - cell [ref=e4088]
+          - cell [ref=e4090]
+          - cell "2000" [ref=e4092]:
+            - generic [ref=e4094]: "2000"
+          - cell "1500" [ref=e4095]:
+            - generic [ref=e4097]: "1500"
+          - cell "2026-01-25 23:57" [ref=e4098]:
+            - generic [ref=e4100]: 2026-01-25 23:57
+          - cell "編集する" [ref=e4101]:
+            - button "編集する" [ref=e4103] [cursor=pointer]
+        - row "339649 自社サイト LINE Administrator 2026-01-28 12:01 Administrator 2026-01-28 14:30 式 堤彩香 iPhone 17 Pro Max 256GB 新品・未開封 集荷予定日確定 はい 208500 194500 2026-01-28 12:09 編集する" [ref=e4104]:
+          - cell [ref=e4105]:
+            - link "レコードの詳細を表示する" [ref=e4106] [cursor=pointer]:
+              - /url: /k/11/show#record=339649&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339648&l.prev=339650
+          - cell "339649" [ref=e4108]:
+            - generic [ref=e4110]: "339649"
+          - cell "自社サイト" [ref=e4111]:
+            - generic [ref=e4113]: 自社サイト
+          - cell "LINE" [ref=e4114]:
+            - generic [ref=e4116]: LINE
+          - cell "Administrator" [ref=e4117]:
+            - button "Administrator" [ref=e4119] [cursor=pointer]:
+              - img [ref=e4120]
+              - text: Administrator
+          - cell "2026-01-28 12:01" [ref=e4121]:
+            - generic [ref=e4123]: 2026-01-28 12:01
+          - cell "Administrator" [ref=e4124]:
+            - button "Administrator" [ref=e4126] [cursor=pointer]:
+              - img [ref=e4127]
+              - text: Administrator
+          - cell "2026-01-28 14:30" [ref=e4128]:
+            - generic [ref=e4130]: 2026-01-28 14:30
+          - cell "式" [ref=e4131]:
+            - generic [ref=e4133]: 式
+          - cell "堤彩香" [ref=e4134]:
+            - generic [ref=e4136]: 堤彩香
+          - cell "iPhone 17 Pro Max" [ref=e4137]:
+            - generic [ref=e4139]: iPhone 17 Pro Max
+          - cell "256GB" [ref=e4140]:
+            - generic [ref=e4142]: 256GB
+          - cell "新品・未開封" [ref=e4143]:
+            - generic [ref=e4145]: 新品・未開封
+          - cell [ref=e4146]
+          - cell [ref=e4148]
+          - cell "集荷予定日確定" [ref=e4150]:
+            - generic [ref=e4152]: 集荷予定日確定
+          - cell "はい" [ref=e4153]:
+            - generic [ref=e4155]: はい
+          - cell [ref=e4156]
+          - cell [ref=e4158]
+          - cell "208500" [ref=e4160]:
+            - generic [ref=e4162]: "208500"
+          - cell "194500" [ref=e4163]:
+            - generic [ref=e4165]: "194500"
+          - cell "2026-01-28 12:09" [ref=e4166]:
+            - generic [ref=e4168]: 2026-01-28 12:09
+          - cell "編集する" [ref=e4169]:
+            - button "編集する" [ref=e4171] [cursor=pointer]
+        - row "339648 自社サイト LINE Administrator 2026-01-28 12:00 Administrator 2026-01-28 12:00 河村日夏里 河村日夏里 iPhone 17 Pro Max 256GB 新品・未開封 本査定前交渉中 はい 208500 194500 編集する" [ref=e4172]:
+          - cell [ref=e4173]:
+            - link "レコードの詳細を表示する" [ref=e4174] [cursor=pointer]:
+              - /url: /k/11/show#record=339648&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339647&l.prev=339649
+          - cell "339648" [ref=e4176]:
+            - generic [ref=e4178]: "339648"
+          - cell "自社サイト" [ref=e4179]:
+            - generic [ref=e4181]: 自社サイト
+          - cell "LINE" [ref=e4182]:
+            - generic [ref=e4184]: LINE
+          - cell "Administrator" [ref=e4185]:
+            - button "Administrator" [ref=e4187] [cursor=pointer]:
+              - img [ref=e4188]
+              - text: Administrator
+          - cell "2026-01-28 12:00" [ref=e4189]:
+            - generic [ref=e4191]: 2026-01-28 12:00
+          - cell "Administrator" [ref=e4192]:
+            - button "Administrator" [ref=e4194] [cursor=pointer]:
+              - img [ref=e4195]
+              - text: Administrator
+          - cell "2026-01-28 12:00" [ref=e4196]:
+            - generic [ref=e4198]: 2026-01-28 12:00
+          - cell "河村日夏里" [ref=e4199]:
+            - generic [ref=e4201]: 河村日夏里
+          - cell "河村日夏里" [ref=e4202]:
+            - generic [ref=e4204]: 河村日夏里
+          - cell "iPhone 17 Pro Max" [ref=e4205]:
+            - generic [ref=e4207]: iPhone 17 Pro Max
+          - cell "256GB" [ref=e4208]:
+            - generic [ref=e4210]: 256GB
+          - cell "新品・未開封" [ref=e4211]:
+            - generic [ref=e4213]: 新品・未開封
+          - cell [ref=e4214]
+          - cell [ref=e4216]
+          - cell "本査定前交渉中" [ref=e4218]:
+            - generic [ref=e4220]: 本査定前交渉中
+          - cell "はい" [ref=e4221]:
+            - generic [ref=e4223]: はい
+          - cell [ref=e4224]
+          - cell [ref=e4226]
+          - cell "208500" [ref=e4228]:
+            - generic [ref=e4230]: "208500"
+          - cell "194500" [ref=e4231]:
+            - generic [ref=e4233]: "194500"
+          - cell [ref=e4234]
+          - cell "編集する" [ref=e4236]:
+            - button "編集する" [ref=e4238] [cursor=pointer]
+        - row "339647 自社サイト LINE Administrator 2026-01-28 11:59 Administrator 2026-01-28 11:59 Shun.A Shun.A iPhone 13 mini 256GB 使用感あり 本査定前交渉中 1600 1500 編集する" [ref=e4239]:
+          - cell [ref=e4240]:
+            - link "レコードの詳細を表示する" [ref=e4241] [cursor=pointer]:
+              - /url: /k/11/show#record=339647&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339646&l.prev=339648
+          - cell "339647" [ref=e4243]:
+            - generic [ref=e4245]: "339647"
+          - cell "自社サイト" [ref=e4246]:
+            - generic [ref=e4248]: 自社サイト
+          - cell "LINE" [ref=e4249]:
+            - generic [ref=e4251]: LINE
+          - cell "Administrator" [ref=e4252]:
+            - button "Administrator" [ref=e4254] [cursor=pointer]:
+              - img [ref=e4255]
+              - text: Administrator
+          - cell "2026-01-28 11:59" [ref=e4256]:
+            - generic [ref=e4258]: 2026-01-28 11:59
+          - cell "Administrator" [ref=e4259]:
+            - button "Administrator" [ref=e4261] [cursor=pointer]:
+              - img [ref=e4262]
+              - text: Administrator
+          - cell "2026-01-28 11:59" [ref=e4263]:
+            - generic [ref=e4265]: 2026-01-28 11:59
+          - cell "Shun.A" [ref=e4266]:
+            - generic [ref=e4268]: Shun.A
+          - cell "Shun.A" [ref=e4269]:
+            - generic [ref=e4271]: Shun.A
+          - cell "iPhone 13 mini" [ref=e4272]:
+            - generic [ref=e4274]: iPhone 13 mini
+          - cell "256GB" [ref=e4275]:
+            - generic [ref=e4277]: 256GB
+          - cell "使用感あり" [ref=e4278]:
+            - generic [ref=e4280]: 使用感あり
+          - cell [ref=e4281]
+          - cell [ref=e4283]
+          - cell "本査定前交渉中" [ref=e4285]:
+            - generic [ref=e4287]: 本査定前交渉中
+          - cell [ref=e4288]
+          - cell [ref=e4290]
+          - cell [ref=e4292]
+          - cell "1600" [ref=e4294]:
+            - generic [ref=e4296]: "1600"
+          - cell "1500" [ref=e4297]:
+            - generic [ref=e4299]: "1500"
+          - cell [ref=e4300]
+          - cell "編集する" [ref=e4302]:
+            - button "編集する" [ref=e4304] [cursor=pointer]
+        - row "339646 自社サイト LINE Administrator 2026-01-28 11:56 Administrator 2026-01-28 13:08 あいば 相場哲学 iPhone XS 64GB 外装ジャンク 梱包キット発送完了 0 0 編集する" [ref=e4305]:
+          - cell [ref=e4306]:
+            - link "レコードの詳細を表示する" [ref=e4307] [cursor=pointer]:
+              - /url: /k/11/show#record=339646&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339645&l.prev=339647
+          - cell "339646" [ref=e4309]:
+            - generic [ref=e4311]: "339646"
+          - cell "自社サイト" [ref=e4312]:
+            - generic [ref=e4314]: 自社サイト
+          - cell "LINE" [ref=e4315]:
+            - generic [ref=e4317]: LINE
+          - cell "Administrator" [ref=e4318]:
+            - button "Administrator" [ref=e4320] [cursor=pointer]:
+              - img [ref=e4321]
+              - text: Administrator
+          - cell "2026-01-28 11:56" [ref=e4322]:
+            - generic [ref=e4324]: 2026-01-28 11:56
+          - cell "Administrator" [ref=e4325]:
+            - button "Administrator" [ref=e4327] [cursor=pointer]:
+              - img [ref=e4328]
+              - text: Administrator
+          - cell "2026-01-28 13:08" [ref=e4329]:
+            - generic [ref=e4331]: 2026-01-28 13:08
+          - cell "あいば" [ref=e4332]:
+            - generic [ref=e4334]: あいば
+          - cell "相場哲学" [ref=e4335]:
+            - generic [ref=e4337]: 相場哲学
+          - cell "iPhone XS" [ref=e4338]:
+            - generic [ref=e4340]: iPhone XS
+          - cell "64GB" [ref=e4341]:
+            - generic [ref=e4343]: 64GB
+          - cell "外装ジャンク" [ref=e4344]:
+            - generic [ref=e4346]: 外装ジャンク
+          - cell [ref=e4347]
+          - cell [ref=e4349]
+          - cell "梱包キット発送完了" [ref=e4351]:
+            - generic [ref=e4353]: 梱包キット発送完了
+          - cell [ref=e4354]
+          - cell [ref=e4356]
+          - cell [ref=e4358]
+          - cell "0" [ref=e4360]:
+            - generic [ref=e4362]: "0"
+          - cell "0" [ref=e4363]:
+            - generic [ref=e4365]: "0"
+          - cell [ref=e4366]
+          - cell "編集する" [ref=e4368]:
+            - button "編集する" [ref=e4370] [cursor=pointer]
+        - row "339645 自社サイト LINE Administrator 2026-01-28 11:54 Administrator 2026-01-28 11:54 あいば あいば iPhone SE（第1世代） 16GB 外装ジャンク 本査定前交渉中 0 0 編集する" [ref=e4371]:
+          - cell [ref=e4372]:
+            - link "レコードの詳細を表示する" [ref=e4373] [cursor=pointer]:
+              - /url: /k/11/show#record=339645&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339644&l.prev=339646
+          - cell "339645" [ref=e4375]:
+            - generic [ref=e4377]: "339645"
+          - cell "自社サイト" [ref=e4378]:
+            - generic [ref=e4380]: 自社サイト
+          - cell "LINE" [ref=e4381]:
+            - generic [ref=e4383]: LINE
+          - cell "Administrator" [ref=e4384]:
+            - button "Administrator" [ref=e4386] [cursor=pointer]:
+              - img [ref=e4387]
+              - text: Administrator
+          - cell "2026-01-28 11:54" [ref=e4388]:
+            - generic [ref=e4390]: 2026-01-28 11:54
+          - cell "Administrator" [ref=e4391]:
+            - button "Administrator" [ref=e4393] [cursor=pointer]:
+              - img [ref=e4394]
+              - text: Administrator
+          - cell "2026-01-28 11:54" [ref=e4395]:
+            - generic [ref=e4397]: 2026-01-28 11:54
+          - cell "あいば" [ref=e4398]:
+            - generic [ref=e4400]: あいば
+          - cell "あいば" [ref=e4401]:
+            - generic [ref=e4403]: あいば
+          - cell "iPhone SE（第1世代）" [ref=e4404]:
+            - generic [ref=e4406]: iPhone SE（第1世代）
+          - cell "16GB" [ref=e4407]:
+            - generic [ref=e4409]: 16GB
+          - cell "外装ジャンク" [ref=e4410]:
+            - generic [ref=e4412]: 外装ジャンク
+          - cell [ref=e4413]
+          - cell [ref=e4415]
+          - cell "本査定前交渉中" [ref=e4417]:
+            - generic [ref=e4419]: 本査定前交渉中
+          - cell [ref=e4420]
+          - cell [ref=e4422]
+          - cell [ref=e4424]
+          - cell "0" [ref=e4426]:
+            - generic [ref=e4428]: "0"
+          - cell "0" [ref=e4429]:
+            - generic [ref=e4431]: "0"
+          - cell [ref=e4432]
+          - cell "編集する" [ref=e4434]:
+            - button "編集する" [ref=e4436] [cursor=pointer]
+        - row "339644 自社サイト LINE Administrator 2026-01-28 11:53 Administrator 2026-01-28 11:53 肉の極 肉の極 iPhone 7 新品同様 本査定前交渉中 1600 1400 編集する" [ref=e4437]:
+          - cell [ref=e4438]:
+            - link "レコードの詳細を表示する" [ref=e4439] [cursor=pointer]:
+              - /url: /k/11/show#record=339644&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339643&l.prev=339645
+          - cell "339644" [ref=e4441]:
+            - generic [ref=e4443]: "339644"
+          - cell "自社サイト" [ref=e4444]:
+            - generic [ref=e4446]: 自社サイト
+          - cell "LINE" [ref=e4447]:
+            - generic [ref=e4449]: LINE
+          - cell "Administrator" [ref=e4450]:
+            - button "Administrator" [ref=e4452] [cursor=pointer]:
+              - img [ref=e4453]
+              - text: Administrator
+          - cell "2026-01-28 11:53" [ref=e4454]:
+            - generic [ref=e4456]: 2026-01-28 11:53
+          - cell "Administrator" [ref=e4457]:
+            - button "Administrator" [ref=e4459] [cursor=pointer]:
+              - img [ref=e4460]
+              - text: Administrator
+          - cell "2026-01-28 11:53" [ref=e4461]:
+            - generic [ref=e4463]: 2026-01-28 11:53
+          - cell "肉の極" [ref=e4464]:
+            - generic [ref=e4466]: 肉の極
+          - cell "肉の極" [ref=e4467]:
+            - generic [ref=e4469]: 肉の極
+          - cell "iPhone 7" [ref=e4470]:
+            - generic [ref=e4472]: iPhone 7
+          - cell [ref=e4473]
+          - cell "新品同様" [ref=e4475]:
+            - generic [ref=e4477]: 新品同様
+          - cell [ref=e4478]
+          - cell [ref=e4480]
+          - cell "本査定前交渉中" [ref=e4482]:
+            - generic [ref=e4484]: 本査定前交渉中
+          - cell [ref=e4485]
+          - cell [ref=e4487]
+          - cell [ref=e4489]
+          - cell "1600" [ref=e4491]:
+            - generic [ref=e4493]: "1600"
+          - cell "1400" [ref=e4494]:
+            - generic [ref=e4496]: "1400"
+          - cell [ref=e4497]
+          - cell "編集する" [ref=e4499]:
+            - button "編集する" [ref=e4501] [cursor=pointer]
+        - row "339643 自社サイト LINE Administrator 2026-01-28 11:48 Administrator 2026-01-28 11:48 はなみこうじ(main) はなみこうじ(main) iPhone 11 128GB 新品同様 本査定前交渉中 15000 13000 編集する" [ref=e4502]:
+          - cell [ref=e4503]:
+            - link "レコードの詳細を表示する" [ref=e4504] [cursor=pointer]:
+              - /url: /k/11/show#record=339643&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339642&l.prev=339644
+          - cell "339643" [ref=e4506]:
+            - generic [ref=e4508]: "339643"
+          - cell "自社サイト" [ref=e4509]:
+            - generic [ref=e4511]: 自社サイト
+          - cell "LINE" [ref=e4512]:
+            - generic [ref=e4514]: LINE
+          - cell "Administrator" [ref=e4515]:
+            - button "Administrator" [ref=e4517] [cursor=pointer]:
+              - img [ref=e4518]
+              - text: Administrator
+          - cell "2026-01-28 11:48" [ref=e4519]:
+            - generic [ref=e4521]: 2026-01-28 11:48
+          - cell "Administrator" [ref=e4522]:
+            - button "Administrator" [ref=e4524] [cursor=pointer]:
+              - img [ref=e4525]
+              - text: Administrator
+          - cell "2026-01-28 11:48" [ref=e4526]:
+            - generic [ref=e4528]: 2026-01-28 11:48
+          - cell "はなみこうじ(main)" [ref=e4529]:
+            - generic [ref=e4531]: はなみこうじ(main)
+          - cell "はなみこうじ(main)" [ref=e4532]:
+            - generic [ref=e4534]: はなみこうじ(main)
+          - cell "iPhone 11" [ref=e4535]:
+            - generic [ref=e4537]: iPhone 11
+          - cell "128GB" [ref=e4538]:
+            - generic [ref=e4540]: 128GB
+          - cell "新品同様" [ref=e4541]:
+            - generic [ref=e4543]: 新品同様
+          - cell [ref=e4544]
+          - cell [ref=e4546]
+          - cell "本査定前交渉中" [ref=e4548]:
+            - generic [ref=e4550]: 本査定前交渉中
+          - cell [ref=e4551]
+          - cell [ref=e4553]
+          - cell [ref=e4555]
+          - cell "15000" [ref=e4557]:
+            - generic [ref=e4559]: "15000"
+          - cell "13000" [ref=e4560]:
+            - generic [ref=e4562]: "13000"
+          - cell [ref=e4563]
+          - cell "編集する" [ref=e4565]:
+            - button "編集する" [ref=e4567] [cursor=pointer]
+        - row "339642 自社サイト LINE Administrator 2026-01-28 11:36 Administrator 2026-01-28 11:36 わかな わかな iPhone XR 64GB 使用感あり 本査定前交渉中 3100 2400 編集する" [ref=e4568]:
+          - cell [ref=e4569]:
+            - link "レコードの詳細を表示する" [ref=e4570] [cursor=pointer]:
+              - /url: /k/11/show#record=339642&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339641&l.prev=339643
+          - cell "339642" [ref=e4572]:
+            - generic [ref=e4574]: "339642"
+          - cell "自社サイト" [ref=e4575]:
+            - generic [ref=e4577]: 自社サイト
+          - cell "LINE" [ref=e4578]:
+            - generic [ref=e4580]: LINE
+          - cell "Administrator" [ref=e4581]:
+            - button "Administrator" [ref=e4583] [cursor=pointer]:
+              - img [ref=e4584]
+              - text: Administrator
+          - cell "2026-01-28 11:36" [ref=e4585]:
+            - generic [ref=e4587]: 2026-01-28 11:36
+          - cell "Administrator" [ref=e4588]:
+            - button "Administrator" [ref=e4590] [cursor=pointer]:
+              - img [ref=e4591]
+              - text: Administrator
+          - cell "2026-01-28 11:36" [ref=e4592]:
+            - generic [ref=e4594]: 2026-01-28 11:36
+          - cell "わかな" [ref=e4595]:
+            - generic [ref=e4597]: わかな
+          - cell "わかな" [ref=e4598]:
+            - generic [ref=e4600]: わかな
+          - cell "iPhone XR" [ref=e4601]:
+            - generic [ref=e4603]: iPhone XR
+          - cell "64GB" [ref=e4604]:
+            - generic [ref=e4606]: 64GB
+          - cell "使用感あり" [ref=e4607]:
+            - generic [ref=e4609]: 使用感あり
+          - cell [ref=e4610]
+          - cell [ref=e4612]
+          - cell "本査定前交渉中" [ref=e4614]:
+            - generic [ref=e4616]: 本査定前交渉中
+          - cell [ref=e4617]
+          - cell [ref=e4619]
+          - cell [ref=e4621]
+          - cell "3100" [ref=e4623]:
+            - generic [ref=e4625]: "3100"
+          - cell "2400" [ref=e4626]:
+            - generic [ref=e4628]: "2400"
+          - cell [ref=e4629]
+          - cell "編集する" [ref=e4631]:
+            - button "編集する" [ref=e4633] [cursor=pointer]
+        - row "339641 自社サイト LINE Administrator 2026-01-28 11:27 Administrator 2026-01-28 11:27 仲間慶 仲間慶 iPhone 7 128GB 使用感あり 本査定前交渉中 0 0 編集する" [ref=e4634]:
+          - cell [ref=e4635]:
+            - link "レコードの詳細を表示する" [ref=e4636] [cursor=pointer]:
+              - /url: /k/11/show#record=339641&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339640&l.prev=339642
+          - cell "339641" [ref=e4638]:
+            - generic [ref=e4640]: "339641"
+          - cell "自社サイト" [ref=e4641]:
+            - generic [ref=e4643]: 自社サイト
+          - cell "LINE" [ref=e4644]:
+            - generic [ref=e4646]: LINE
+          - cell "Administrator" [ref=e4647]:
+            - button "Administrator" [ref=e4649] [cursor=pointer]:
+              - img [ref=e4650]
+              - text: Administrator
+          - cell "2026-01-28 11:27" [ref=e4651]:
+            - generic [ref=e4653]: 2026-01-28 11:27
+          - cell "Administrator" [ref=e4654]:
+            - button "Administrator" [ref=e4656] [cursor=pointer]:
+              - img [ref=e4657]
+              - text: Administrator
+          - cell "2026-01-28 11:27" [ref=e4658]:
+            - generic [ref=e4660]: 2026-01-28 11:27
+          - cell "仲間慶" [ref=e4661]:
+            - generic [ref=e4663]: 仲間慶
+          - cell "仲間慶" [ref=e4664]:
+            - generic [ref=e4666]: 仲間慶
+          - cell "iPhone 7" [ref=e4667]:
+            - generic [ref=e4669]: iPhone 7
+          - cell "128GB" [ref=e4670]:
+            - generic [ref=e4672]: 128GB
+          - cell "使用感あり" [ref=e4673]:
+            - generic [ref=e4675]: 使用感あり
+          - cell [ref=e4676]
+          - cell [ref=e4678]
+          - cell "本査定前交渉中" [ref=e4680]:
+            - generic [ref=e4682]: 本査定前交渉中
+          - cell [ref=e4683]
+          - cell [ref=e4685]
+          - cell [ref=e4687]
+          - cell "0" [ref=e4689]:
+            - generic [ref=e4691]: "0"
+          - cell "0" [ref=e4692]:
+            - generic [ref=e4694]: "0"
+          - cell [ref=e4695]
+          - cell "編集する" [ref=e4697]:
+            - button "編集する" [ref=e4699] [cursor=pointer]
+        - row "339640 自社サイト LINE Administrator 2026-01-28 11:26 Administrator 2026-01-28 11:26 ♪masami♪ ♪masami♪ iPhone 17 Pro 512GB 新品・未開封 本査定前交渉中 はい 211000 197000 編集する" [ref=e4700]:
+          - cell [ref=e4701]:
+            - link "レコードの詳細を表示する" [ref=e4702] [cursor=pointer]:
+              - /url: /k/11/show#record=339640&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339639&l.prev=339641
+          - cell "339640" [ref=e4704]:
+            - generic [ref=e4706]: "339640"
+          - cell "自社サイト" [ref=e4707]:
+            - generic [ref=e4709]: 自社サイト
+          - cell "LINE" [ref=e4710]:
+            - generic [ref=e4712]: LINE
+          - cell "Administrator" [ref=e4713]:
+            - button "Administrator" [ref=e4715] [cursor=pointer]:
+              - img [ref=e4716]
+              - text: Administrator
+          - cell "2026-01-28 11:26" [ref=e4717]:
+            - generic [ref=e4719]: 2026-01-28 11:26
+          - cell "Administrator" [ref=e4720]:
+            - button "Administrator" [ref=e4722] [cursor=pointer]:
+              - img [ref=e4723]
+              - text: Administrator
+          - cell "2026-01-28 11:26" [ref=e4724]:
+            - generic [ref=e4726]: 2026-01-28 11:26
+          - cell "♪masami♪" [ref=e4727]:
+            - generic [ref=e4729]: ♪masami♪
+          - cell "♪masami♪" [ref=e4730]:
+            - generic [ref=e4732]: ♪masami♪
+          - cell "iPhone 17 Pro" [ref=e4733]:
+            - generic [ref=e4735]: iPhone 17 Pro
+          - cell "512GB" [ref=e4736]:
+            - generic [ref=e4738]: 512GB
+          - cell "新品・未開封" [ref=e4739]:
+            - generic [ref=e4741]: 新品・未開封
+          - cell [ref=e4742]
+          - cell [ref=e4744]
+          - cell "本査定前交渉中" [ref=e4746]:
+            - generic [ref=e4748]: 本査定前交渉中
+          - cell "はい" [ref=e4749]:
+            - generic [ref=e4751]: はい
+          - cell [ref=e4752]
+          - cell [ref=e4754]
+          - cell "211000" [ref=e4756]:
+            - generic [ref=e4758]: "211000"
+          - cell "197000" [ref=e4759]:
+            - generic [ref=e4761]: "197000"
+          - cell [ref=e4762]
+          - cell "編集する" [ref=e4764]:
+            - button "編集する" [ref=e4766] [cursor=pointer]
+        - row "339639 自社サイト LINE Administrator 2026-01-28 11:23 Administrator 2026-01-28 11:23 わかな わかな iPhone 13 128GB 使用感あり 本査定前交渉中 31000 27000 編集する" [ref=e4767]:
+          - cell [ref=e4768]:
+            - link "レコードの詳細を表示する" [ref=e4769] [cursor=pointer]:
+              - /url: /k/11/show#record=339639&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339638&l.prev=339640
+          - cell "339639" [ref=e4771]:
+            - generic [ref=e4773]: "339639"
+          - cell "自社サイト" [ref=e4774]:
+            - generic [ref=e4776]: 自社サイト
+          - cell "LINE" [ref=e4777]:
+            - generic [ref=e4779]: LINE
+          - cell "Administrator" [ref=e4780]:
+            - button "Administrator" [ref=e4782] [cursor=pointer]:
+              - img [ref=e4783]
+              - text: Administrator
+          - cell "2026-01-28 11:23" [ref=e4784]:
+            - generic [ref=e4786]: 2026-01-28 11:23
+          - cell "Administrator" [ref=e4787]:
+            - button "Administrator" [ref=e4789] [cursor=pointer]:
+              - img [ref=e4790]
+              - text: Administrator
+          - cell "2026-01-28 11:23" [ref=e4791]:
+            - generic [ref=e4793]: 2026-01-28 11:23
+          - cell "わかな" [ref=e4794]:
+            - generic [ref=e4796]: わかな
+          - cell "わかな" [ref=e4797]:
+            - generic [ref=e4799]: わかな
+          - cell "iPhone 13" [ref=e4800]:
+            - generic [ref=e4802]: iPhone 13
+          - cell "128GB" [ref=e4803]:
+            - generic [ref=e4805]: 128GB
+          - cell "使用感あり" [ref=e4806]:
+            - generic [ref=e4808]: 使用感あり
+          - cell [ref=e4809]
+          - cell [ref=e4811]
+          - cell "本査定前交渉中" [ref=e4813]:
+            - generic [ref=e4815]: 本査定前交渉中
+          - cell [ref=e4816]
+          - cell [ref=e4818]
+          - cell [ref=e4820]
+          - cell "31000" [ref=e4822]:
+            - generic [ref=e4824]: "31000"
+          - cell "27000" [ref=e4825]:
+            - generic [ref=e4827]: "27000"
+          - cell [ref=e4828]
+          - cell "編集する" [ref=e4830]:
+            - button "編集する" [ref=e4832] [cursor=pointer]
+        - row "339638 自社サイト LINE Administrator 2026-01-28 11:16 Administrator 2026-01-28 11:16 TK TK iPhone 15 Pro Max 256GB 新品同様 本査定前交渉中 93000 83000 編集する" [ref=e4833]:
+          - cell [ref=e4834]:
+            - link "レコードの詳細を表示する" [ref=e4835] [cursor=pointer]:
+              - /url: /k/11/show#record=339638&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339637&l.prev=339639
+          - cell "339638" [ref=e4837]:
+            - generic [ref=e4839]: "339638"
+          - cell "自社サイト" [ref=e4840]:
+            - generic [ref=e4842]: 自社サイト
+          - cell "LINE" [ref=e4843]:
+            - generic [ref=e4845]: LINE
+          - cell "Administrator" [ref=e4846]:
+            - button "Administrator" [ref=e4848] [cursor=pointer]:
+              - img [ref=e4849]
+              - text: Administrator
+          - cell "2026-01-28 11:16" [ref=e4850]:
+            - generic [ref=e4852]: 2026-01-28 11:16
+          - cell "Administrator" [ref=e4853]:
+            - button "Administrator" [ref=e4855] [cursor=pointer]:
+              - img [ref=e4856]
+              - text: Administrator
+          - cell "2026-01-28 11:16" [ref=e4857]:
+            - generic [ref=e4859]: 2026-01-28 11:16
+          - cell "TK" [ref=e4860]:
+            - generic [ref=e4862]: TK
+          - cell "TK" [ref=e4863]:
+            - generic [ref=e4865]: TK
+          - cell "iPhone 15 Pro Max" [ref=e4866]:
+            - generic [ref=e4868]: iPhone 15 Pro Max
+          - cell "256GB" [ref=e4869]:
+            - generic [ref=e4871]: 256GB
+          - cell "新品同様" [ref=e4872]:
+            - generic [ref=e4874]: 新品同様
+          - cell [ref=e4875]
+          - cell [ref=e4877]
+          - cell "本査定前交渉中" [ref=e4879]:
+            - generic [ref=e4881]: 本査定前交渉中
+          - cell [ref=e4882]
+          - cell [ref=e4884]
+          - cell [ref=e4886]
+          - cell "93000" [ref=e4888]:
+            - generic [ref=e4890]: "93000"
+          - cell "83000" [ref=e4891]:
+            - generic [ref=e4893]: "83000"
+          - cell [ref=e4894]
+          - cell "編集する" [ref=e4896]:
+            - button "編集する" [ref=e4898] [cursor=pointer]
+        - row "339637 自社サイト LINE 江口那都 2026-01-28 11:14 江口那都 2026-01-28 11:16 いくらや静岡SBS 通り店 いくらや静岡SBS 通り店 iPhone XS 256GB 使用感あり 本査定前交渉中 9900 8400 編集する" [ref=e4899]:
+          - cell [ref=e4900]:
+            - link "レコードの詳細を表示する" [ref=e4901] [cursor=pointer]:
+              - /url: /k/11/show#record=339637&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339636&l.prev=339638
+          - cell "339637" [ref=e4903]:
+            - generic [ref=e4905]: "339637"
+          - cell "自社サイト" [ref=e4906]:
+            - generic [ref=e4908]: 自社サイト
+          - cell "LINE" [ref=e4909]:
+            - generic [ref=e4911]: LINE
+          - cell "江口那都" [ref=e4912]:
+            - button "江口那都" [ref=e4914] [cursor=pointer]:
+              - img [ref=e4915]
+              - text: 江口那都
+          - cell "2026-01-28 11:14" [ref=e4916]:
+            - generic [ref=e4918]: 2026-01-28 11:14
+          - cell "江口那都" [ref=e4919]:
+            - button "江口那都" [ref=e4921] [cursor=pointer]:
+              - img [ref=e4922]
+              - text: 江口那都
+          - cell "2026-01-28 11:16" [ref=e4923]:
+            - generic [ref=e4925]: 2026-01-28 11:16
+          - cell "いくらや静岡SBS 通り店" [ref=e4926]:
+            - generic [ref=e4928]: いくらや静岡SBS 通り店
+          - cell "いくらや静岡SBS 通り店" [ref=e4929]:
+            - generic [ref=e4931]: いくらや静岡SBS 通り店
+          - cell "iPhone XS" [ref=e4932]:
+            - generic [ref=e4934]: iPhone XS
+          - cell "256GB" [ref=e4935]:
+            - generic [ref=e4937]: 256GB
+          - cell "使用感あり" [ref=e4938]:
+            - generic [ref=e4940]: 使用感あり
+          - cell [ref=e4941]
+          - cell [ref=e4943]
+          - cell "本査定前交渉中" [ref=e4945]:
+            - generic [ref=e4947]: 本査定前交渉中
+          - cell [ref=e4948]
+          - cell [ref=e4950]
+          - cell [ref=e4952]
+          - cell "9900" [ref=e4954]:
+            - generic [ref=e4956]: "9900"
+          - cell "8400" [ref=e4957]:
+            - generic [ref=e4959]: "8400"
+          - cell [ref=e4960]
+          - cell "編集する" [ref=e4962]:
+            - button "編集する" [ref=e4964] [cursor=pointer]
+        - row "339636 自社サイト LINE Administrator 2026-01-28 11:06 Administrator 2026-01-28 14:30 式 堤 彩香 iPhone 17 Pro Max 256GB 新品・未開封 集荷予定日確定 はい 208500 194500 2026-01-28 11:11 編集する" [ref=e4965]:
+          - cell [ref=e4966]:
+            - link "レコードの詳細を表示する" [ref=e4967] [cursor=pointer]:
+              - /url: /k/11/show#record=339636&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339635&l.prev=339637
+          - cell "339636" [ref=e4969]:
+            - generic [ref=e4971]: "339636"
+          - cell "自社サイト" [ref=e4972]:
+            - generic [ref=e4974]: 自社サイト
+          - cell "LINE" [ref=e4975]:
+            - generic [ref=e4977]: LINE
+          - cell "Administrator" [ref=e4978]:
+            - button "Administrator" [ref=e4980] [cursor=pointer]:
+              - img [ref=e4981]
+              - text: Administrator
+          - cell "2026-01-28 11:06" [ref=e4982]:
+            - generic [ref=e4984]: 2026-01-28 11:06
+          - cell "Administrator" [ref=e4985]:
+            - button "Administrator" [ref=e4987] [cursor=pointer]:
+              - img [ref=e4988]
+              - text: Administrator
+          - cell "2026-01-28 14:30" [ref=e4989]:
+            - generic [ref=e4991]: 2026-01-28 14:30
+          - cell "式" [ref=e4992]:
+            - generic [ref=e4994]: 式
+          - cell "堤 彩香" [ref=e4995]:
+            - generic [ref=e4997]: 堤 彩香
+          - cell "iPhone 17 Pro Max" [ref=e4998]:
+            - generic [ref=e5000]: iPhone 17 Pro Max
+          - cell "256GB" [ref=e5001]:
+            - generic [ref=e5003]: 256GB
+          - cell "新品・未開封" [ref=e5004]:
+            - generic [ref=e5006]: 新品・未開封
+          - cell [ref=e5007]
+          - cell [ref=e5009]
+          - cell "集荷予定日確定" [ref=e5011]:
+            - generic [ref=e5013]: 集荷予定日確定
+          - cell "はい" [ref=e5014]:
+            - generic [ref=e5016]: はい
+          - cell [ref=e5017]
+          - cell [ref=e5019]
+          - cell "208500" [ref=e5021]:
+            - generic [ref=e5023]: "208500"
+          - cell "194500" [ref=e5024]:
+            - generic [ref=e5026]: "194500"
+          - cell "2026-01-28 11:11" [ref=e5027]:
+            - generic [ref=e5029]: 2026-01-28 11:11
+          - cell "編集する" [ref=e5030]:
+            - button "編集する" [ref=e5032] [cursor=pointer]
+        - row "339635 自社サイト LINE Administrator 2026-01-28 10:48 Administrator 2026-01-28 10:48 田中瑛史 田中瑛史 iPhone 12 Pro 256GB 目立つ傷あり 本査定前交渉中 1400 1200 編集する" [ref=e5033]:
+          - cell [ref=e5034]:
+            - link "レコードの詳細を表示する" [ref=e5035] [cursor=pointer]:
+              - /url: /k/11/show#record=339635&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339634&l.prev=339636
+          - cell "339635" [ref=e5037]:
+            - generic [ref=e5039]: "339635"
+          - cell "自社サイト" [ref=e5040]:
+            - generic [ref=e5042]: 自社サイト
+          - cell "LINE" [ref=e5043]:
+            - generic [ref=e5045]: LINE
+          - cell "Administrator" [ref=e5046]:
+            - button "Administrator" [ref=e5048] [cursor=pointer]:
+              - img [ref=e5049]
+              - text: Administrator
+          - cell "2026-01-28 10:48" [ref=e5050]:
+            - generic [ref=e5052]: 2026-01-28 10:48
+          - cell "Administrator" [ref=e5053]:
+            - button "Administrator" [ref=e5055] [cursor=pointer]:
+              - img [ref=e5056]
+              - text: Administrator
+          - cell "2026-01-28 10:48" [ref=e5057]:
+            - generic [ref=e5059]: 2026-01-28 10:48
+          - cell "田中瑛史" [ref=e5060]:
+            - generic [ref=e5062]: 田中瑛史
+          - cell "田中瑛史" [ref=e5063]:
+            - generic [ref=e5065]: 田中瑛史
+          - cell "iPhone 12 Pro" [ref=e5066]:
+            - generic [ref=e5068]: iPhone 12 Pro
+          - cell "256GB" [ref=e5069]:
+            - generic [ref=e5071]: 256GB
+          - cell "目立つ傷あり" [ref=e5072]:
+            - generic [ref=e5074]: 目立つ傷あり
+          - cell [ref=e5075]
+          - cell [ref=e5077]
+          - cell "本査定前交渉中" [ref=e5079]:
+            - generic [ref=e5081]: 本査定前交渉中
+          - cell [ref=e5082]
+          - cell [ref=e5084]
+          - cell [ref=e5086]
+          - cell "1400" [ref=e5088]:
+            - generic [ref=e5090]: "1400"
+          - cell "1200" [ref=e5091]:
+            - generic [ref=e5093]: "1200"
+          - cell [ref=e5094]
+          - cell "編集する" [ref=e5096]:
+            - button "編集する" [ref=e5098] [cursor=pointer]
+        - row "339634 自社サイト LINE Administrator 2026-01-28 10:42 Administrator 2026-01-28 14:30 kissy♚ 岸岡里美 iPhone 12 128GB 美品 集荷予定日確定 24000 22000 2026-01-28 13:41 編集する" [ref=e5099]:
+          - cell [ref=e5100]:
+            - link "レコードの詳細を表示する" [ref=e5101] [cursor=pointer]:
+              - /url: /k/11/show#record=339634&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339633&l.prev=339635
+          - cell "339634" [ref=e5103]:
+            - generic [ref=e5105]: "339634"
+          - cell "自社サイト" [ref=e5106]:
+            - generic [ref=e5108]: 自社サイト
+          - cell "LINE" [ref=e5109]:
+            - generic [ref=e5111]: LINE
+          - cell "Administrator" [ref=e5112]:
+            - button "Administrator" [ref=e5114] [cursor=pointer]:
+              - img [ref=e5115]
+              - text: Administrator
+          - cell "2026-01-28 10:42" [ref=e5116]:
+            - generic [ref=e5118]: 2026-01-28 10:42
+          - cell "Administrator" [ref=e5119]:
+            - button "Administrator" [ref=e5121] [cursor=pointer]:
+              - img [ref=e5122]
+              - text: Administrator
+          - cell "2026-01-28 14:30" [ref=e5123]:
+            - generic [ref=e5125]: 2026-01-28 14:30
+          - cell "kissy♚" [ref=e5126]:
+            - generic [ref=e5128]: kissy♚
+          - cell "岸岡里美" [ref=e5129]:
+            - generic [ref=e5131]: 岸岡里美
+          - cell "iPhone 12" [ref=e5132]:
+            - generic [ref=e5134]: iPhone 12
+          - cell "128GB" [ref=e5135]:
+            - generic [ref=e5137]: 128GB
+          - cell "美品" [ref=e5138]:
+            - generic [ref=e5140]: 美品
+          - cell [ref=e5141]
+          - cell [ref=e5143]
+          - cell "集荷予定日確定" [ref=e5145]:
+            - generic [ref=e5147]: 集荷予定日確定
+          - cell [ref=e5148]
+          - cell [ref=e5150]
+          - cell [ref=e5152]
+          - cell "24000" [ref=e5154]:
+            - generic [ref=e5156]: "24000"
+          - cell "22000" [ref=e5157]:
+            - generic [ref=e5159]: "22000"
+          - cell "2026-01-28 13:41" [ref=e5160]:
+            - generic [ref=e5162]: 2026-01-28 13:41
+          - cell "編集する" [ref=e5163]:
+            - button "編集する" [ref=e5165] [cursor=pointer]
+        - row "339633 自社サイト LINE Administrator 2026-01-28 10:38 Administrator 2026-01-28 10:38 納屋 尭侑 納屋 尭侑 iPhone SE（第2世代） 64GB 美品 本査定前交渉中 1800 800 編集する" [ref=e5166]:
+          - cell [ref=e5167]:
+            - link "レコードの詳細を表示する" [ref=e5168] [cursor=pointer]:
+              - /url: /k/11/show#record=339633&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339632&l.prev=339634
+          - cell "339633" [ref=e5170]:
+            - generic [ref=e5172]: "339633"
+          - cell "自社サイト" [ref=e5173]:
+            - generic [ref=e5175]: 自社サイト
+          - cell "LINE" [ref=e5176]:
+            - generic [ref=e5178]: LINE
+          - cell "Administrator" [ref=e5179]:
+            - button "Administrator" [ref=e5181] [cursor=pointer]:
+              - img [ref=e5182]
+              - text: Administrator
+          - cell "2026-01-28 10:38" [ref=e5183]:
+            - generic [ref=e5185]: 2026-01-28 10:38
+          - cell "Administrator" [ref=e5186]:
+            - button "Administrator" [ref=e5188] [cursor=pointer]:
+              - img [ref=e5189]
+              - text: Administrator
+          - cell "2026-01-28 10:38" [ref=e5190]:
+            - generic [ref=e5192]: 2026-01-28 10:38
+          - cell "納屋 尭侑" [ref=e5193]:
+            - generic [ref=e5195]: 納屋 尭侑
+          - cell "納屋 尭侑" [ref=e5196]:
+            - generic [ref=e5198]: 納屋 尭侑
+          - cell "iPhone SE（第2世代）" [ref=e5199]:
+            - generic [ref=e5201]: iPhone SE（第2世代）
+          - cell "64GB" [ref=e5202]:
+            - generic [ref=e5204]: 64GB
+          - cell "美品" [ref=e5205]:
+            - generic [ref=e5207]: 美品
+          - cell [ref=e5208]
+          - cell [ref=e5210]
+          - cell "本査定前交渉中" [ref=e5212]:
+            - generic [ref=e5214]: 本査定前交渉中
+          - cell [ref=e5215]
+          - cell [ref=e5217]
+          - cell [ref=e5219]
+          - cell "1800" [ref=e5221]:
+            - generic [ref=e5223]: "1800"
+          - cell "800" [ref=e5224]:
+            - generic [ref=e5226]: "800"
+          - cell [ref=e5227]
+          - cell "編集する" [ref=e5229]:
+            - button "編集する" [ref=e5231] [cursor=pointer]
+        - row "339632 自社サイト LINE Administrator 2026-01-28 10:16 Administrator 2026-01-28 10:16 石田 翔一郎 石田 翔一郎 iPhone 17 Pro Max 512GB 新品・未開封 本査定前交渉中 はい 229000 215000 編集する" [ref=e5232]:
+          - cell [ref=e5233]:
+            - link "レコードの詳細を表示する" [ref=e5234] [cursor=pointer]:
+              - /url: /k/11/show#record=339632&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339631&l.prev=339633
+          - cell "339632" [ref=e5236]:
+            - generic [ref=e5238]: "339632"
+          - cell "自社サイト" [ref=e5239]:
+            - generic [ref=e5241]: 自社サイト
+          - cell "LINE" [ref=e5242]:
+            - generic [ref=e5244]: LINE
+          - cell "Administrator" [ref=e5245]:
+            - button "Administrator" [ref=e5247] [cursor=pointer]:
+              - img [ref=e5248]
+              - text: Administrator
+          - cell "2026-01-28 10:16" [ref=e5249]:
+            - generic [ref=e5251]: 2026-01-28 10:16
+          - cell "Administrator" [ref=e5252]:
+            - button "Administrator" [ref=e5254] [cursor=pointer]:
+              - img [ref=e5255]
+              - text: Administrator
+          - cell "2026-01-28 10:16" [ref=e5256]:
+            - generic [ref=e5258]: 2026-01-28 10:16
+          - cell "石田 翔一郎" [ref=e5259]:
+            - generic [ref=e5261]: 石田 翔一郎
+          - cell "石田 翔一郎" [ref=e5262]:
+            - generic [ref=e5264]: 石田 翔一郎
+          - cell "iPhone 17 Pro Max" [ref=e5265]:
+            - generic [ref=e5267]: iPhone 17 Pro Max
+          - cell "512GB" [ref=e5268]:
+            - generic [ref=e5270]: 512GB
+          - cell "新品・未開封" [ref=e5271]:
+            - generic [ref=e5273]: 新品・未開封
+          - cell [ref=e5274]
+          - cell [ref=e5276]
+          - cell "本査定前交渉中" [ref=e5278]:
+            - generic [ref=e5280]: 本査定前交渉中
+          - cell "はい" [ref=e5281]:
+            - generic [ref=e5283]: はい
+          - cell [ref=e5284]
+          - cell [ref=e5286]
+          - cell "229000" [ref=e5288]:
+            - generic [ref=e5290]: "229000"
+          - cell "215000" [ref=e5291]:
+            - generic [ref=e5293]: "215000"
+          - cell [ref=e5294]
+          - cell "編集する" [ref=e5296]:
+            - button "編集する" [ref=e5298] [cursor=pointer]
+        - row "339631 自社サイト LINE Administrator 2026-01-28 10:15 Administrator 2026-01-28 10:15 石田 翔一郎 石田 翔一郎 iPhone 17 Pro 512GB 新品・未開封 本査定前交渉中 はい 211000 197000 編集する" [ref=e5299]:
+          - cell [ref=e5300]:
+            - link "レコードの詳細を表示する" [ref=e5301] [cursor=pointer]:
+              - /url: /k/11/show#record=339631&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339630&l.prev=339632
+          - cell "339631" [ref=e5303]:
+            - generic [ref=e5305]: "339631"
+          - cell "自社サイト" [ref=e5306]:
+            - generic [ref=e5308]: 自社サイト
+          - cell "LINE" [ref=e5309]:
+            - generic [ref=e5311]: LINE
+          - cell "Administrator" [ref=e5312]:
+            - button "Administrator" [ref=e5314] [cursor=pointer]:
+              - img [ref=e5315]
+              - text: Administrator
+          - cell "2026-01-28 10:15" [ref=e5316]:
+            - generic [ref=e5318]: 2026-01-28 10:15
+          - cell "Administrator" [ref=e5319]:
+            - button "Administrator" [ref=e5321] [cursor=pointer]:
+              - img [ref=e5322]
+              - text: Administrator
+          - cell "2026-01-28 10:15" [ref=e5323]:
+            - generic [ref=e5325]: 2026-01-28 10:15
+          - cell "石田 翔一郎" [ref=e5326]:
+            - generic [ref=e5328]: 石田 翔一郎
+          - cell "石田 翔一郎" [ref=e5329]:
+            - generic [ref=e5331]: 石田 翔一郎
+          - cell "iPhone 17 Pro" [ref=e5332]:
+            - generic [ref=e5334]: iPhone 17 Pro
+          - cell "512GB" [ref=e5335]:
+            - generic [ref=e5337]: 512GB
+          - cell "新品・未開封" [ref=e5338]:
+            - generic [ref=e5340]: 新品・未開封
+          - cell [ref=e5341]
+          - cell [ref=e5343]
+          - cell "本査定前交渉中" [ref=e5345]:
+            - generic [ref=e5347]: 本査定前交渉中
+          - cell "はい" [ref=e5348]:
+            - generic [ref=e5350]: はい
+          - cell [ref=e5351]
+          - cell [ref=e5353]
+          - cell "211000" [ref=e5355]:
+            - generic [ref=e5357]: "211000"
+          - cell "197000" [ref=e5358]:
+            - generic [ref=e5360]: "197000"
+          - cell [ref=e5361]
+          - cell "編集する" [ref=e5363]:
+            - button "編集する" [ref=e5365] [cursor=pointer]
+        - row "339630 自社サイト LINE Administrator 2026-01-28 10:13 Administrator 2026-01-28 10:13 naoki naoki iPhone 17 Pro 256GB 新品・未開封 本査定前交渉中 はい 185000 171000 編集する" [ref=e5366]:
+          - cell [ref=e5367]:
+            - link "レコードの詳細を表示する" [ref=e5368] [cursor=pointer]:
+              - /url: /k/11/show#record=339630&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339629&l.prev=339631
+          - cell "339630" [ref=e5370]:
+            - generic [ref=e5372]: "339630"
+          - cell "自社サイト" [ref=e5373]:
+            - generic [ref=e5375]: 自社サイト
+          - cell "LINE" [ref=e5376]:
+            - generic [ref=e5378]: LINE
+          - cell "Administrator" [ref=e5379]:
+            - button "Administrator" [ref=e5381] [cursor=pointer]:
+              - img [ref=e5382]
+              - text: Administrator
+          - cell "2026-01-28 10:13" [ref=e5383]:
+            - generic [ref=e5385]: 2026-01-28 10:13
+          - cell "Administrator" [ref=e5386]:
+            - button "Administrator" [ref=e5388] [cursor=pointer]:
+              - img [ref=e5389]
+              - text: Administrator
+          - cell "2026-01-28 10:13" [ref=e5390]:
+            - generic [ref=e5392]: 2026-01-28 10:13
+          - cell "naoki" [ref=e5393]:
+            - generic [ref=e5395]: naoki
+          - cell "naoki" [ref=e5396]:
+            - generic [ref=e5398]: naoki
+          - cell "iPhone 17 Pro" [ref=e5399]:
+            - generic [ref=e5401]: iPhone 17 Pro
+          - cell "256GB" [ref=e5402]:
+            - generic [ref=e5404]: 256GB
+          - cell "新品・未開封" [ref=e5405]:
+            - generic [ref=e5407]: 新品・未開封
+          - cell [ref=e5408]
+          - cell [ref=e5410]
+          - cell "本査定前交渉中" [ref=e5412]:
+            - generic [ref=e5414]: 本査定前交渉中
+          - cell "はい" [ref=e5415]:
+            - generic [ref=e5417]: はい
+          - cell [ref=e5418]
+          - cell [ref=e5420]
+          - cell "185000" [ref=e5422]:
+            - generic [ref=e5424]: "185000"
+          - cell "171000" [ref=e5425]:
+            - generic [ref=e5427]: "171000"
+          - cell [ref=e5428]
+          - cell "編集する" [ref=e5430]:
+            - button "編集する" [ref=e5432] [cursor=pointer]
+        - row "339629 自社サイト LINE Administrator 2026-01-28 10:12 Administrator 2026-01-28 10:12 Sachiko Sachiko iPhone 17 512GB 新品・未開封 本査定前交渉中 はい 161000 147000 編集する" [ref=e5433]:
+          - cell [ref=e5434]:
+            - link "レコードの詳細を表示する" [ref=e5435] [cursor=pointer]:
+              - /url: /k/11/show#record=339629&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339628&l.prev=339630
+          - cell "339629" [ref=e5437]:
+            - generic [ref=e5439]: "339629"
+          - cell "自社サイト" [ref=e5440]:
+            - generic [ref=e5442]: 自社サイト
+          - cell "LINE" [ref=e5443]:
+            - generic [ref=e5445]: LINE
+          - cell "Administrator" [ref=e5446]:
+            - button "Administrator" [ref=e5448] [cursor=pointer]:
+              - img [ref=e5449]
+              - text: Administrator
+          - cell "2026-01-28 10:12" [ref=e5450]:
+            - generic [ref=e5452]: 2026-01-28 10:12
+          - cell "Administrator" [ref=e5453]:
+            - button "Administrator" [ref=e5455] [cursor=pointer]:
+              - img [ref=e5456]
+              - text: Administrator
+          - cell "2026-01-28 10:12" [ref=e5457]:
+            - generic [ref=e5459]: 2026-01-28 10:12
+          - cell "Sachiko" [ref=e5460]:
+            - generic [ref=e5462]: Sachiko
+          - cell "Sachiko" [ref=e5463]:
+            - generic [ref=e5465]: Sachiko
+          - cell "iPhone 17" [ref=e5466]:
+            - generic [ref=e5468]: iPhone 17
+          - cell "512GB" [ref=e5469]:
+            - generic [ref=e5471]: 512GB
+          - cell "新品・未開封" [ref=e5472]:
+            - generic [ref=e5474]: 新品・未開封
+          - cell [ref=e5475]
+          - cell [ref=e5477]
+          - cell "本査定前交渉中" [ref=e5479]:
+            - generic [ref=e5481]: 本査定前交渉中
+          - cell "はい" [ref=e5482]:
+            - generic [ref=e5484]: はい
+          - cell [ref=e5485]
+          - cell [ref=e5487]
+          - cell "161000" [ref=e5489]:
+            - generic [ref=e5491]: "161000"
+          - cell "147000" [ref=e5492]:
+            - generic [ref=e5494]: "147000"
+          - cell [ref=e5495]
+          - cell "編集する" [ref=e5497]:
+            - button "編集する" [ref=e5499] [cursor=pointer]
+        - row "339628 自社サイト LINE Administrator 2026-01-28 10:11 Administrator 2026-01-28 10:11 naoki naoki iPhone 17 Pro Max 256GB 新品・未開封 本査定前交渉中 はい 208500 194500 編集する" [ref=e5500]:
+          - cell [ref=e5501]:
+            - link "レコードの詳細を表示する" [ref=e5502] [cursor=pointer]:
+              - /url: /k/11/show#record=339628&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339627&l.prev=339629
+          - cell "339628" [ref=e5504]:
+            - generic [ref=e5506]: "339628"
+          - cell "自社サイト" [ref=e5507]:
+            - generic [ref=e5509]: 自社サイト
+          - cell "LINE" [ref=e5510]:
+            - generic [ref=e5512]: LINE
+          - cell "Administrator" [ref=e5513]:
+            - button "Administrator" [ref=e5515] [cursor=pointer]:
+              - img [ref=e5516]
+              - text: Administrator
+          - cell "2026-01-28 10:11" [ref=e5517]:
+            - generic [ref=e5519]: 2026-01-28 10:11
+          - cell "Administrator" [ref=e5520]:
+            - button "Administrator" [ref=e5522] [cursor=pointer]:
+              - img [ref=e5523]
+              - text: Administrator
+          - cell "2026-01-28 10:11" [ref=e5524]:
+            - generic [ref=e5526]: 2026-01-28 10:11
+          - cell "naoki" [ref=e5527]:
+            - generic [ref=e5529]: naoki
+          - cell "naoki" [ref=e5530]:
+            - generic [ref=e5532]: naoki
+          - cell "iPhone 17 Pro Max" [ref=e5533]:
+            - generic [ref=e5535]: iPhone 17 Pro Max
+          - cell "256GB" [ref=e5536]:
+            - generic [ref=e5538]: 256GB
+          - cell "新品・未開封" [ref=e5539]:
+            - generic [ref=e5541]: 新品・未開封
+          - cell [ref=e5542]
+          - cell [ref=e5544]
+          - cell "本査定前交渉中" [ref=e5546]:
+            - generic [ref=e5548]: 本査定前交渉中
+          - cell "はい" [ref=e5549]:
+            - generic [ref=e5551]: はい
+          - cell [ref=e5552]
+          - cell [ref=e5554]
+          - cell "208500" [ref=e5556]:
+            - generic [ref=e5558]: "208500"
+          - cell "194500" [ref=e5559]:
+            - generic [ref=e5561]: "194500"
+          - cell [ref=e5562]
+          - cell "編集する" [ref=e5564]:
+            - button "編集する" [ref=e5566] [cursor=pointer]
+        - row "339627 自社サイト LINE Administrator 2026-01-28 10:11 Administrator 2026-01-28 10:11 滝本りおな 滝本りおな iPhone 13 128GB 使用感あり 本査定前交渉中 31000 27000 編集する" [ref=e5567]:
+          - cell [ref=e5568]:
+            - link "レコードの詳細を表示する" [ref=e5569] [cursor=pointer]:
+              - /url: /k/11/show#record=339627&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339626&l.prev=339628
+          - cell "339627" [ref=e5571]:
+            - generic [ref=e5573]: "339627"
+          - cell "自社サイト" [ref=e5574]:
+            - generic [ref=e5576]: 自社サイト
+          - cell "LINE" [ref=e5577]:
+            - generic [ref=e5579]: LINE
+          - cell "Administrator" [ref=e5580]:
+            - button "Administrator" [ref=e5582] [cursor=pointer]:
+              - img [ref=e5583]
+              - text: Administrator
+          - cell "2026-01-28 10:11" [ref=e5584]:
+            - generic [ref=e5586]: 2026-01-28 10:11
+          - cell "Administrator" [ref=e5587]:
+            - button "Administrator" [ref=e5589] [cursor=pointer]:
+              - img [ref=e5590]
+              - text: Administrator
+          - cell "2026-01-28 10:11" [ref=e5591]:
+            - generic [ref=e5593]: 2026-01-28 10:11
+          - cell "滝本りおな" [ref=e5594]:
+            - generic [ref=e5596]: 滝本りおな
+          - cell "滝本りおな" [ref=e5597]:
+            - generic [ref=e5599]: 滝本りおな
+          - cell "iPhone 13" [ref=e5600]:
+            - generic [ref=e5602]: iPhone 13
+          - cell "128GB" [ref=e5603]:
+            - generic [ref=e5605]: 128GB
+          - cell "使用感あり" [ref=e5606]:
+            - generic [ref=e5608]: 使用感あり
+          - cell [ref=e5609]
+          - cell [ref=e5611]
+          - cell "本査定前交渉中" [ref=e5613]:
+            - generic [ref=e5615]: 本査定前交渉中
+          - cell [ref=e5616]
+          - cell [ref=e5618]
+          - cell [ref=e5620]
+          - cell "31000" [ref=e5622]:
+            - generic [ref=e5624]: "31000"
+          - cell "27000" [ref=e5625]:
+            - generic [ref=e5627]: "27000"
+          - cell [ref=e5628]
+          - cell "編集する" [ref=e5630]:
+            - button "編集する" [ref=e5632] [cursor=pointer]
+        - row "339626 自社サイト LINE Administrator 2026-01-28 10:09 Administrator 2026-01-28 10:09 naoki naoki iPhone 17 Pro Max 256GB 新品・未開封 本査定前交渉中 はい 208500 194500 編集する" [ref=e5633]:
+          - cell [ref=e5634]:
+            - link "レコードの詳細を表示する" [ref=e5635] [cursor=pointer]:
+              - /url: /k/11/show#record=339626&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339625&l.prev=339627
+          - cell "339626" [ref=e5637]:
+            - generic [ref=e5639]: "339626"
+          - cell "自社サイト" [ref=e5640]:
+            - generic [ref=e5642]: 自社サイト
+          - cell "LINE" [ref=e5643]:
+            - generic [ref=e5645]: LINE
+          - cell "Administrator" [ref=e5646]:
+            - button "Administrator" [ref=e5648] [cursor=pointer]:
+              - img [ref=e5649]
+              - text: Administrator
+          - cell "2026-01-28 10:09" [ref=e5650]:
+            - generic [ref=e5652]: 2026-01-28 10:09
+          - cell "Administrator" [ref=e5653]:
+            - button "Administrator" [ref=e5655] [cursor=pointer]:
+              - img [ref=e5656]
+              - text: Administrator
+          - cell "2026-01-28 10:09" [ref=e5657]:
+            - generic [ref=e5659]: 2026-01-28 10:09
+          - cell "naoki" [ref=e5660]:
+            - generic [ref=e5662]: naoki
+          - cell "naoki" [ref=e5663]:
+            - generic [ref=e5665]: naoki
+          - cell "iPhone 17 Pro Max" [ref=e5666]:
+            - generic [ref=e5668]: iPhone 17 Pro Max
+          - cell "256GB" [ref=e5669]:
+            - generic [ref=e5671]: 256GB
+          - cell "新品・未開封" [ref=e5672]:
+            - generic [ref=e5674]: 新品・未開封
+          - cell [ref=e5675]
+          - cell [ref=e5677]
+          - cell "本査定前交渉中" [ref=e5679]:
+            - generic [ref=e5681]: 本査定前交渉中
+          - cell "はい" [ref=e5682]:
+            - generic [ref=e5684]: はい
+          - cell [ref=e5685]
+          - cell [ref=e5687]
+          - cell "208500" [ref=e5689]:
+            - generic [ref=e5691]: "208500"
+          - cell "194500" [ref=e5692]:
+            - generic [ref=e5694]: "194500"
+          - cell [ref=e5695]
+          - cell "編集する" [ref=e5697]:
+            - button "編集する" [ref=e5699] [cursor=pointer]
+        - row "339625 自社サイト LINE Administrator 2026-01-28 10:08 Administrator 2026-01-28 13:08 tomotsugu 川上智頌 iPhone 13 256GB 使用感あり 梱包キット発送完了 35000 31000 編集する" [ref=e5700]:
+          - cell [ref=e5701]:
+            - link "レコードの詳細を表示する" [ref=e5702] [cursor=pointer]:
+              - /url: /k/11/show#record=339625&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339624&l.prev=339626
+          - cell "339625" [ref=e5704]:
+            - generic [ref=e5706]: "339625"
+          - cell "自社サイト" [ref=e5707]:
+            - generic [ref=e5709]: 自社サイト
+          - cell "LINE" [ref=e5710]:
+            - generic [ref=e5712]: LINE
+          - cell "Administrator" [ref=e5713]:
+            - button "Administrator" [ref=e5715] [cursor=pointer]:
+              - img [ref=e5716]
+              - text: Administrator
+          - cell "2026-01-28 10:08" [ref=e5717]:
+            - generic [ref=e5719]: 2026-01-28 10:08
+          - cell "Administrator" [ref=e5720]:
+            - button "Administrator" [ref=e5722] [cursor=pointer]:
+              - img [ref=e5723]
+              - text: Administrator
+          - cell "2026-01-28 13:08" [ref=e5724]:
+            - generic [ref=e5726]: 2026-01-28 13:08
+          - cell "tomotsugu" [ref=e5727]:
+            - generic [ref=e5729]: tomotsugu
+          - cell "川上智頌" [ref=e5730]:
+            - generic [ref=e5732]: 川上智頌
+          - cell "iPhone 13" [ref=e5733]:
+            - generic [ref=e5735]: iPhone 13
+          - cell "256GB" [ref=e5736]:
+            - generic [ref=e5738]: 256GB
+          - cell "使用感あり" [ref=e5739]:
+            - generic [ref=e5741]: 使用感あり
+          - cell [ref=e5742]
+          - cell [ref=e5744]
+          - cell "梱包キット発送完了" [ref=e5746]:
+            - generic [ref=e5748]: 梱包キット発送完了
+          - cell [ref=e5749]
+          - cell [ref=e5751]
+          - cell [ref=e5753]
+          - cell "35000" [ref=e5755]:
+            - generic [ref=e5757]: "35000"
+          - cell "31000" [ref=e5758]:
+            - generic [ref=e5760]: "31000"
+          - cell [ref=e5761]
+          - cell "編集する" [ref=e5763]:
+            - button "編集する" [ref=e5765] [cursor=pointer]
+        - row "339624 自社サイト LINE Administrator 2026-01-28 9:51 Administrator 2026-01-28 14:30 M͙O͙E͙ 上岡 萌 iPhone X 256GB 外装ジャンク 集荷予定日確定 100 100 2026-01-28 9:52 編集する" [ref=e5766]:
+          - cell [ref=e5767]:
+            - link "レコードの詳細を表示する" [ref=e5768] [cursor=pointer]:
+              - /url: /k/11/show#record=339624&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339623&l.prev=339625
+          - cell "339624" [ref=e5770]:
+            - generic [ref=e5772]: "339624"
+          - cell "自社サイト" [ref=e5773]:
+            - generic [ref=e5775]: 自社サイト
+          - cell "LINE" [ref=e5776]:
+            - generic [ref=e5778]: LINE
+          - cell "Administrator" [ref=e5779]:
+            - button "Administrator" [ref=e5781] [cursor=pointer]:
+              - img [ref=e5782]
+              - text: Administrator
+          - cell "2026-01-28 9:51" [ref=e5783]:
+            - generic [ref=e5785]: 2026-01-28 9:51
+          - cell "Administrator" [ref=e5786]:
+            - button "Administrator" [ref=e5788] [cursor=pointer]:
+              - img [ref=e5789]
+              - text: Administrator
+          - cell "2026-01-28 14:30" [ref=e5790]:
+            - generic [ref=e5792]: 2026-01-28 14:30
+          - cell "M͙O͙E͙" [ref=e5793]:
+            - generic [ref=e5795]: M͙O͙E͙
+          - cell "上岡 萌" [ref=e5796]:
+            - generic [ref=e5798]: 上岡 萌
+          - cell "iPhone X" [ref=e5799]:
+            - generic [ref=e5801]: iPhone X
+          - cell "256GB" [ref=e5802]:
+            - generic [ref=e5804]: 256GB
+          - cell "外装ジャンク" [ref=e5805]:
+            - generic [ref=e5807]: 外装ジャンク
+          - cell [ref=e5808]
+          - cell [ref=e5810]
+          - cell "集荷予定日確定" [ref=e5812]:
+            - generic [ref=e5814]: 集荷予定日確定
+          - cell [ref=e5815]
+          - cell [ref=e5817]
+          - cell [ref=e5819]
+          - cell "100" [ref=e5821]:
+            - generic [ref=e5823]: "100"
+          - cell "100" [ref=e5824]:
+            - generic [ref=e5826]: "100"
+          - cell "2026-01-28 9:52" [ref=e5827]:
+            - generic [ref=e5829]: 2026-01-28 9:52
+          - cell "編集する" [ref=e5830]:
+            - button "編集する" [ref=e5832] [cursor=pointer]
+        - row "339623 自社サイト LINE Administrator 2026-01-28 9:50 Administrator 2026-01-28 9:50 Nakamura Yuuki Nakamura Yuuki iPhone 16 Pro Max 256GB 新品同様 本査定前交渉中 124000 112000 編集する" [ref=e5833]:
+          - cell [ref=e5834]:
+            - link "レコードの詳細を表示する" [ref=e5835] [cursor=pointer]:
+              - /url: /k/11/show#record=339623&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339622&l.prev=339624
+          - cell "339623" [ref=e5837]:
+            - generic [ref=e5839]: "339623"
+          - cell "自社サイト" [ref=e5840]:
+            - generic [ref=e5842]: 自社サイト
+          - cell "LINE" [ref=e5843]:
+            - generic [ref=e5845]: LINE
+          - cell "Administrator" [ref=e5846]:
+            - button "Administrator" [ref=e5848] [cursor=pointer]:
+              - img [ref=e5849]
+              - text: Administrator
+          - cell "2026-01-28 9:50" [ref=e5850]:
+            - generic [ref=e5852]: 2026-01-28 9:50
+          - cell "Administrator" [ref=e5853]:
+            - button "Administrator" [ref=e5855] [cursor=pointer]:
+              - img [ref=e5856]
+              - text: Administrator
+          - cell "2026-01-28 9:50" [ref=e5857]:
+            - generic [ref=e5859]: 2026-01-28 9:50
+          - cell "Nakamura Yuuki" [ref=e5860]:
+            - generic [ref=e5862]: Nakamura Yuuki
+          - cell "Nakamura Yuuki" [ref=e5863]:
+            - generic [ref=e5865]: Nakamura Yuuki
+          - cell "iPhone 16 Pro Max" [ref=e5866]:
+            - generic [ref=e5868]: iPhone 16 Pro Max
+          - cell "256GB" [ref=e5869]:
+            - generic [ref=e5871]: 256GB
+          - cell "新品同様" [ref=e5872]:
+            - generic [ref=e5874]: 新品同様
+          - cell [ref=e5875]
+          - cell [ref=e5877]
+          - cell "本査定前交渉中" [ref=e5879]:
+            - generic [ref=e5881]: 本査定前交渉中
+          - cell [ref=e5882]
+          - cell [ref=e5884]
+          - cell [ref=e5886]
+          - cell "124000" [ref=e5888]:
+            - generic [ref=e5890]: "124000"
+          - cell "112000" [ref=e5891]:
+            - generic [ref=e5893]: "112000"
+          - cell [ref=e5894]
+          - cell "編集する" [ref=e5896]:
+            - button "編集する" [ref=e5898] [cursor=pointer]
+        - row "339622 自社サイト LINE Administrator 2026-01-28 9:50 Administrator 2026-01-28 9:50 M͙O͙E͙ M͙O͙E͙ iPhone X 256GB 外装ジャンク 本査定前交渉中 1700 1400 編集する" [ref=e5899]:
+          - cell [ref=e5900]:
+            - link "レコードの詳細を表示する" [ref=e5901] [cursor=pointer]:
+              - /url: /k/11/show#record=339622&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339621&l.prev=339623
+          - cell "339622" [ref=e5903]:
+            - generic [ref=e5905]: "339622"
+          - cell "自社サイト" [ref=e5906]:
+            - generic [ref=e5908]: 自社サイト
+          - cell "LINE" [ref=e5909]:
+            - generic [ref=e5911]: LINE
+          - cell "Administrator" [ref=e5912]:
+            - button "Administrator" [ref=e5914] [cursor=pointer]:
+              - img [ref=e5915]
+              - text: Administrator
+          - cell "2026-01-28 9:50" [ref=e5916]:
+            - generic [ref=e5918]: 2026-01-28 9:50
+          - cell "Administrator" [ref=e5919]:
+            - button "Administrator" [ref=e5921] [cursor=pointer]:
+              - img [ref=e5922]
+              - text: Administrator
+          - cell "2026-01-28 9:50" [ref=e5923]:
+            - generic [ref=e5925]: 2026-01-28 9:50
+          - cell "M͙O͙E͙" [ref=e5926]:
+            - generic [ref=e5928]: M͙O͙E͙
+          - cell "M͙O͙E͙" [ref=e5929]:
+            - generic [ref=e5931]: M͙O͙E͙
+          - cell "iPhone X" [ref=e5932]:
+            - generic [ref=e5934]: iPhone X
+          - cell "256GB" [ref=e5935]:
+            - generic [ref=e5937]: 256GB
+          - cell "外装ジャンク" [ref=e5938]:
+            - generic [ref=e5940]: 外装ジャンク
+          - cell [ref=e5941]
+          - cell [ref=e5943]
+          - cell "本査定前交渉中" [ref=e5945]:
+            - generic [ref=e5947]: 本査定前交渉中
+          - cell [ref=e5948]
+          - cell [ref=e5950]
+          - cell [ref=e5952]
+          - cell "1700" [ref=e5954]:
+            - generic [ref=e5956]: "1700"
+          - cell "1400" [ref=e5957]:
+            - generic [ref=e5959]: "1400"
+          - cell [ref=e5960]
+          - cell "編集する" [ref=e5962]:
+            - button "編集する" [ref=e5964] [cursor=pointer]
+        - row "339621 自社サイト LINE Administrator 2026-01-28 9:03 Administrator 2026-01-28 9:03 鈴蘭f*f☄️🦅 鈴蘭f*f☄️🦅 iPhone 17 256GB 新品・未開封 本査定前交渉中 はい 131000 117000 編集する" [ref=e5965]:
+          - cell [ref=e5966]:
+            - link "レコードの詳細を表示する" [ref=e5967] [cursor=pointer]:
+              - /url: /k/11/show#record=339621&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339620&l.prev=339622
+          - cell "339621" [ref=e5969]:
+            - generic [ref=e5971]: "339621"
+          - cell "自社サイト" [ref=e5972]:
+            - generic [ref=e5974]: 自社サイト
+          - cell "LINE" [ref=e5975]:
+            - generic [ref=e5977]: LINE
+          - cell "Administrator" [ref=e5978]:
+            - button "Administrator" [ref=e5980] [cursor=pointer]:
+              - img [ref=e5981]
+              - text: Administrator
+          - cell "2026-01-28 9:03" [ref=e5982]:
+            - generic [ref=e5984]: 2026-01-28 9:03
+          - cell "Administrator" [ref=e5985]:
+            - button "Administrator" [ref=e5987] [cursor=pointer]:
+              - img [ref=e5988]
+              - text: Administrator
+          - cell "2026-01-28 9:03" [ref=e5989]:
+            - generic [ref=e5991]: 2026-01-28 9:03
+          - cell "鈴蘭f*f☄️🦅" [ref=e5992]:
+            - generic [ref=e5994]: 鈴蘭f*f☄️🦅
+          - cell "鈴蘭f*f☄️🦅" [ref=e5995]:
+            - generic [ref=e5997]: 鈴蘭f*f☄️🦅
+          - cell "iPhone 17" [ref=e5998]:
+            - generic [ref=e6000]: iPhone 17
+          - cell "256GB" [ref=e6001]:
+            - generic [ref=e6003]: 256GB
+          - cell "新品・未開封" [ref=e6004]:
+            - generic [ref=e6006]: 新品・未開封
+          - cell [ref=e6007]
+          - cell [ref=e6009]
+          - cell "本査定前交渉中" [ref=e6011]:
+            - generic [ref=e6013]: 本査定前交渉中
+          - cell "はい" [ref=e6014]:
+            - generic [ref=e6016]: はい
+          - cell [ref=e6017]
+          - cell [ref=e6019]
+          - cell "131000" [ref=e6021]:
+            - generic [ref=e6023]: "131000"
+          - cell "117000" [ref=e6024]:
+            - generic [ref=e6026]: "117000"
+          - cell [ref=e6027]
+          - cell "編集する" [ref=e6029]:
+            - button "編集する" [ref=e6031] [cursor=pointer]
+        - row "339620 自社サイト LINE Administrator 2026-01-28 9:02 Administrator 2026-01-28 9:02 鈴蘭f*f☄️🦅 鈴蘭f*f☄️🦅 iPhone 16 128GB 新品・未開封 本査定前交渉中 はい 102000 88000 編集する" [ref=e6032]:
+          - cell [ref=e6033]:
+            - link "レコードの詳細を表示する" [ref=e6034] [cursor=pointer]:
+              - /url: /k/11/show#record=339620&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339619&l.prev=339621
+          - cell "339620" [ref=e6036]:
+            - generic [ref=e6038]: "339620"
+          - cell "自社サイト" [ref=e6039]:
+            - generic [ref=e6041]: 自社サイト
+          - cell "LINE" [ref=e6042]:
+            - generic [ref=e6044]: LINE
+          - cell "Administrator" [ref=e6045]:
+            - button "Administrator" [ref=e6047] [cursor=pointer]:
+              - img [ref=e6048]
+              - text: Administrator
+          - cell "2026-01-28 9:02" [ref=e6049]:
+            - generic [ref=e6051]: 2026-01-28 9:02
+          - cell "Administrator" [ref=e6052]:
+            - button "Administrator" [ref=e6054] [cursor=pointer]:
+              - img [ref=e6055]
+              - text: Administrator
+          - cell "2026-01-28 9:02" [ref=e6056]:
+            - generic [ref=e6058]: 2026-01-28 9:02
+          - cell "鈴蘭f*f☄️🦅" [ref=e6059]:
+            - generic [ref=e6061]: 鈴蘭f*f☄️🦅
+          - cell "鈴蘭f*f☄️🦅" [ref=e6062]:
+            - generic [ref=e6064]: 鈴蘭f*f☄️🦅
+          - cell "iPhone 16" [ref=e6065]:
+            - generic [ref=e6067]: iPhone 16
+          - cell "128GB" [ref=e6068]:
+            - generic [ref=e6070]: 128GB
+          - cell "新品・未開封" [ref=e6071]:
+            - generic [ref=e6073]: 新品・未開封
+          - cell [ref=e6074]
+          - cell [ref=e6076]
+          - cell "本査定前交渉中" [ref=e6078]:
+            - generic [ref=e6080]: 本査定前交渉中
+          - cell "はい" [ref=e6081]:
+            - generic [ref=e6083]: はい
+          - cell [ref=e6084]
+          - cell [ref=e6086]
+          - cell "102000" [ref=e6088]:
+            - generic [ref=e6090]: "102000"
+          - cell "88000" [ref=e6091]:
+            - generic [ref=e6093]: "88000"
+          - cell [ref=e6094]
+          - cell "編集する" [ref=e6096]:
+            - button "編集する" [ref=e6098] [cursor=pointer]
+        - row "339619 自社サイト LINE Administrator 2026-01-28 9:00 Administrator 2026-01-28 9:00 鈴蘭f*f☄️🦅 鈴蘭f*f☄️🦅 iPhone 16 256GB 新品・未開封 本査定前交渉中 はい 110000 98000 編集する" [ref=e6099]:
+          - cell [ref=e6100]:
+            - link "レコードの詳細を表示する" [ref=e6101] [cursor=pointer]:
+              - /url: /k/11/show#record=339619&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339618&l.prev=339620
+          - cell "339619" [ref=e6103]:
+            - generic [ref=e6105]: "339619"
+          - cell "自社サイト" [ref=e6106]:
+            - generic [ref=e6108]: 自社サイト
+          - cell "LINE" [ref=e6109]:
+            - generic [ref=e6111]: LINE
+          - cell "Administrator" [ref=e6112]:
+            - button "Administrator" [ref=e6114] [cursor=pointer]:
+              - img [ref=e6115]
+              - text: Administrator
+          - cell "2026-01-28 9:00" [ref=e6116]:
+            - generic [ref=e6118]: 2026-01-28 9:00
+          - cell "Administrator" [ref=e6119]:
+            - button "Administrator" [ref=e6121] [cursor=pointer]:
+              - img [ref=e6122]
+              - text: Administrator
+          - cell "2026-01-28 9:00" [ref=e6123]:
+            - generic [ref=e6125]: 2026-01-28 9:00
+          - cell "鈴蘭f*f☄️🦅" [ref=e6126]:
+            - generic [ref=e6128]: 鈴蘭f*f☄️🦅
+          - cell "鈴蘭f*f☄️🦅" [ref=e6129]:
+            - generic [ref=e6131]: 鈴蘭f*f☄️🦅
+          - cell "iPhone 16" [ref=e6132]:
+            - generic [ref=e6134]: iPhone 16
+          - cell "256GB" [ref=e6135]:
+            - generic [ref=e6137]: 256GB
+          - cell "新品・未開封" [ref=e6138]:
+            - generic [ref=e6140]: 新品・未開封
+          - cell [ref=e6141]
+          - cell [ref=e6143]
+          - cell "本査定前交渉中" [ref=e6145]:
+            - generic [ref=e6147]: 本査定前交渉中
+          - cell "はい" [ref=e6148]:
+            - generic [ref=e6150]: はい
+          - cell [ref=e6151]
+          - cell [ref=e6153]
+          - cell "110000" [ref=e6155]:
+            - generic [ref=e6157]: "110000"
+          - cell "98000" [ref=e6158]:
+            - generic [ref=e6160]: "98000"
+          - cell [ref=e6161]
+          - cell "編集する" [ref=e6163]:
+            - button "編集する" [ref=e6165] [cursor=pointer]
+        - row "339618 自社サイト LINE Administrator 2026-01-28 8:50 Administrator 2026-01-28 8:50 ひな ひな iPhone XR 64GB 美品 本査定前交渉中 5500 3500 編集する" [ref=e6166]:
+          - cell [ref=e6167]:
+            - link "レコードの詳細を表示する" [ref=e6168] [cursor=pointer]:
+              - /url: /k/11/show#record=339618&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339617&l.prev=339619
+          - cell "339618" [ref=e6170]:
+            - generic [ref=e6172]: "339618"
+          - cell "自社サイト" [ref=e6173]:
+            - generic [ref=e6175]: 自社サイト
+          - cell "LINE" [ref=e6176]:
+            - generic [ref=e6178]: LINE
+          - cell "Administrator" [ref=e6179]:
+            - button "Administrator" [ref=e6181] [cursor=pointer]:
+              - img [ref=e6182]
+              - text: Administrator
+          - cell "2026-01-28 8:50" [ref=e6183]:
+            - generic [ref=e6185]: 2026-01-28 8:50
+          - cell "Administrator" [ref=e6186]:
+            - button "Administrator" [ref=e6188] [cursor=pointer]:
+              - img [ref=e6189]
+              - text: Administrator
+          - cell "2026-01-28 8:50" [ref=e6190]:
+            - generic [ref=e6192]: 2026-01-28 8:50
+          - cell "ひな" [ref=e6193]:
+            - generic [ref=e6195]: ひな
+          - cell "ひな" [ref=e6196]:
+            - generic [ref=e6198]: ひな
+          - cell "iPhone XR" [ref=e6199]:
+            - generic [ref=e6201]: iPhone XR
+          - cell "64GB" [ref=e6202]:
+            - generic [ref=e6204]: 64GB
+          - cell "美品" [ref=e6205]:
+            - generic [ref=e6207]: 美品
+          - cell [ref=e6208]
+          - cell [ref=e6210]
+          - cell "本査定前交渉中" [ref=e6212]:
+            - generic [ref=e6214]: 本査定前交渉中
+          - cell [ref=e6215]
+          - cell [ref=e6217]
+          - cell [ref=e6219]
+          - cell "5500" [ref=e6221]:
+            - generic [ref=e6223]: "5500"
+          - cell "3500" [ref=e6224]:
+            - generic [ref=e6226]: "3500"
+          - cell [ref=e6227]
+          - cell "編集する" [ref=e6229]:
+            - button "編集する" [ref=e6231] [cursor=pointer]
+        - row "339617 自社サイト LINE Administrator 2026-01-28 8:50 Administrator 2026-01-28 8:50 かわちゃん かわちゃん iPhone 14 Pro Max 256GB 使用感あり 本査定前交渉中 66000 58000 編集する" [ref=e6232]:
+          - cell [ref=e6233]:
+            - link "レコードの詳細を表示する" [ref=e6234] [cursor=pointer]:
+              - /url: /k/11/show#record=339617&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339616&l.prev=339618
+          - cell "339617" [ref=e6236]:
+            - generic [ref=e6238]: "339617"
+          - cell "自社サイト" [ref=e6239]:
+            - generic [ref=e6241]: 自社サイト
+          - cell "LINE" [ref=e6242]:
+            - generic [ref=e6244]: LINE
+          - cell "Administrator" [ref=e6245]:
+            - button "Administrator" [ref=e6247] [cursor=pointer]:
+              - img [ref=e6248]
+              - text: Administrator
+          - cell "2026-01-28 8:50" [ref=e6249]:
+            - generic [ref=e6251]: 2026-01-28 8:50
+          - cell "Administrator" [ref=e6252]:
+            - button "Administrator" [ref=e6254] [cursor=pointer]:
+              - img [ref=e6255]
+              - text: Administrator
+          - cell "2026-01-28 8:50" [ref=e6256]:
+            - generic [ref=e6258]: 2026-01-28 8:50
+          - cell "かわちゃん" [ref=e6259]:
+            - generic [ref=e6261]: かわちゃん
+          - cell "かわちゃん" [ref=e6262]:
+            - generic [ref=e6264]: かわちゃん
+          - cell "iPhone 14 Pro Max" [ref=e6265]:
+            - generic [ref=e6267]: iPhone 14 Pro Max
+          - cell "256GB" [ref=e6268]:
+            - generic [ref=e6270]: 256GB
+          - cell "使用感あり" [ref=e6271]:
+            - generic [ref=e6273]: 使用感あり
+          - cell [ref=e6274]
+          - cell [ref=e6276]
+          - cell "本査定前交渉中" [ref=e6278]:
+            - generic [ref=e6280]: 本査定前交渉中
+          - cell [ref=e6281]
+          - cell [ref=e6283]
+          - cell [ref=e6285]
+          - cell "66000" [ref=e6287]:
+            - generic [ref=e6289]: "66000"
+          - cell "58000" [ref=e6290]:
+            - generic [ref=e6292]: "58000"
+          - cell [ref=e6293]
+          - cell "編集する" [ref=e6295]:
+            - button "編集する" [ref=e6297] [cursor=pointer]
+        - row "339616 自社サイト LINE Administrator 2026-01-28 8:49 Administrator 2026-01-28 8:49 沙織 沙織 iPhone 12 Pro 128GB 使用感あり 本査定前交渉中 26000 23000 編集する" [ref=e6298]:
+          - cell [ref=e6299]:
+            - link "レコードの詳細を表示する" [ref=e6300] [cursor=pointer]:
+              - /url: /k/11/show#record=339616&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339615&l.prev=339617
+          - cell "339616" [ref=e6302]:
+            - generic [ref=e6304]: "339616"
+          - cell "自社サイト" [ref=e6305]:
+            - generic [ref=e6307]: 自社サイト
+          - cell "LINE" [ref=e6308]:
+            - generic [ref=e6310]: LINE
+          - cell "Administrator" [ref=e6311]:
+            - button "Administrator" [ref=e6313] [cursor=pointer]:
+              - img [ref=e6314]
+              - text: Administrator
+          - cell "2026-01-28 8:49" [ref=e6315]:
+            - generic [ref=e6317]: 2026-01-28 8:49
+          - cell "Administrator" [ref=e6318]:
+            - button "Administrator" [ref=e6320] [cursor=pointer]:
+              - img [ref=e6321]
+              - text: Administrator
+          - cell "2026-01-28 8:49" [ref=e6322]:
+            - generic [ref=e6324]: 2026-01-28 8:49
+          - cell "沙織" [ref=e6325]:
+            - generic [ref=e6327]: 沙織
+          - cell "沙織" [ref=e6328]:
+            - generic [ref=e6330]: 沙織
+          - cell "iPhone 12 Pro" [ref=e6331]:
+            - generic [ref=e6333]: iPhone 12 Pro
+          - cell "128GB" [ref=e6334]:
+            - generic [ref=e6336]: 128GB
+          - cell "使用感あり" [ref=e6337]:
+            - generic [ref=e6339]: 使用感あり
+          - cell [ref=e6340]
+          - cell [ref=e6342]
+          - cell "本査定前交渉中" [ref=e6344]:
+            - generic [ref=e6346]: 本査定前交渉中
+          - cell [ref=e6347]
+          - cell [ref=e6349]
+          - cell [ref=e6351]
+          - cell "26000" [ref=e6353]:
+            - generic [ref=e6355]: "26000"
+          - cell "23000" [ref=e6356]:
+            - generic [ref=e6358]: "23000"
+          - cell [ref=e6359]
+          - cell "編集する" [ref=e6361]:
+            - button "編集する" [ref=e6363] [cursor=pointer]
+        - row "339615 自社サイト LINE Administrator 2026-01-28 8:49 Administrator 2026-01-28 8:49 ERIKA ERIKA iPhone 15 Pro 256GB 新品同様 本査定前交渉中 84000 75000 編集する" [ref=e6364]:
+          - cell [ref=e6365]:
+            - link "レコードの詳細を表示する" [ref=e6366] [cursor=pointer]:
+              - /url: /k/11/show#record=339615&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339614&l.prev=339616
+          - cell "339615" [ref=e6368]:
+            - generic [ref=e6370]: "339615"
+          - cell "自社サイト" [ref=e6371]:
+            - generic [ref=e6373]: 自社サイト
+          - cell "LINE" [ref=e6374]:
+            - generic [ref=e6376]: LINE
+          - cell "Administrator" [ref=e6377]:
+            - button "Administrator" [ref=e6379] [cursor=pointer]:
+              - img [ref=e6380]
+              - text: Administrator
+          - cell "2026-01-28 8:49" [ref=e6381]:
+            - generic [ref=e6383]: 2026-01-28 8:49
+          - cell "Administrator" [ref=e6384]:
+            - button "Administrator" [ref=e6386] [cursor=pointer]:
+              - img [ref=e6387]
+              - text: Administrator
+          - cell "2026-01-28 8:49" [ref=e6388]:
+            - generic [ref=e6390]: 2026-01-28 8:49
+          - cell "ERIKA" [ref=e6391]:
+            - generic [ref=e6393]: ERIKA
+          - cell "ERIKA" [ref=e6394]:
+            - generic [ref=e6396]: ERIKA
+          - cell "iPhone 15 Pro" [ref=e6397]:
+            - generic [ref=e6399]: iPhone 15 Pro
+          - cell "256GB" [ref=e6400]:
+            - generic [ref=e6402]: 256GB
+          - cell "新品同様" [ref=e6403]:
+            - generic [ref=e6405]: 新品同様
+          - cell [ref=e6406]
+          - cell [ref=e6408]
+          - cell "本査定前交渉中" [ref=e6410]:
+            - generic [ref=e6412]: 本査定前交渉中
+          - cell [ref=e6413]
+          - cell [ref=e6415]
+          - cell [ref=e6417]
+          - cell "84000" [ref=e6419]:
+            - generic [ref=e6421]: "84000"
+          - cell "75000" [ref=e6422]:
+            - generic [ref=e6424]: "75000"
+          - cell [ref=e6425]
+          - cell "編集する" [ref=e6427]:
+            - button "編集する" [ref=e6429] [cursor=pointer]
+        - row "339614 自社サイト LINE Administrator 2026-01-28 8:48 Administrator 2026-01-28 8:48 かわちゃん かわちゃん iPhone 8 128GB 使用感あり 本査定前交渉中 2000 1000 編集する" [ref=e6430]:
+          - cell [ref=e6431]:
+            - link "レコードの詳細を表示する" [ref=e6432] [cursor=pointer]:
+              - /url: /k/11/show#record=339614&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339613&l.prev=339615
+          - cell "339614" [ref=e6434]:
+            - generic [ref=e6436]: "339614"
+          - cell "自社サイト" [ref=e6437]:
+            - generic [ref=e6439]: 自社サイト
+          - cell "LINE" [ref=e6440]:
+            - generic [ref=e6442]: LINE
+          - cell "Administrator" [ref=e6443]:
+            - button "Administrator" [ref=e6445] [cursor=pointer]:
+              - img [ref=e6446]
+              - text: Administrator
+          - cell "2026-01-28 8:48" [ref=e6447]:
+            - generic [ref=e6449]: 2026-01-28 8:48
+          - cell "Administrator" [ref=e6450]:
+            - button "Administrator" [ref=e6452] [cursor=pointer]:
+              - img [ref=e6453]
+              - text: Administrator
+          - cell "2026-01-28 8:48" [ref=e6454]:
+            - generic [ref=e6456]: 2026-01-28 8:48
+          - cell "かわちゃん" [ref=e6457]:
+            - generic [ref=e6459]: かわちゃん
+          - cell "かわちゃん" [ref=e6460]:
+            - generic [ref=e6462]: かわちゃん
+          - cell "iPhone 8" [ref=e6463]:
+            - generic [ref=e6465]: iPhone 8
+          - cell "128GB" [ref=e6466]:
+            - generic [ref=e6468]: 128GB
+          - cell "使用感あり" [ref=e6469]:
+            - generic [ref=e6471]: 使用感あり
+          - cell [ref=e6472]
+          - cell [ref=e6474]
+          - cell "本査定前交渉中" [ref=e6476]:
+            - generic [ref=e6478]: 本査定前交渉中
+          - cell [ref=e6479]
+          - cell [ref=e6481]
+          - cell [ref=e6483]
+          - cell "2000" [ref=e6485]:
+            - generic [ref=e6487]: "2000"
+          - cell "1000" [ref=e6488]:
+            - generic [ref=e6490]: "1000"
+          - cell [ref=e6491]
+          - cell "編集する" [ref=e6493]:
+            - button "編集する" [ref=e6495] [cursor=pointer]
+        - row "339613 自社サイト LINE Administrator 2026-01-28 8:47 Administrator 2026-01-28 8:47 ERIKA ERIKA iPhone 15 Pro 256GB 美品 本査定前交渉中 82000 73000 編集する" [ref=e6496]:
+          - cell [ref=e6497]:
+            - link "レコードの詳細を表示する" [ref=e6498] [cursor=pointer]:
+              - /url: /k/11/show#record=339613&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339612&l.prev=339614
+          - cell "339613" [ref=e6500]:
+            - generic [ref=e6502]: "339613"
+          - cell "自社サイト" [ref=e6503]:
+            - generic [ref=e6505]: 自社サイト
+          - cell "LINE" [ref=e6506]:
+            - generic [ref=e6508]: LINE
+          - cell "Administrator" [ref=e6509]:
+            - button "Administrator" [ref=e6511] [cursor=pointer]:
+              - img [ref=e6512]
+              - text: Administrator
+          - cell "2026-01-28 8:47" [ref=e6513]:
+            - generic [ref=e6515]: 2026-01-28 8:47
+          - cell "Administrator" [ref=e6516]:
+            - button "Administrator" [ref=e6518] [cursor=pointer]:
+              - img [ref=e6519]
+              - text: Administrator
+          - cell "2026-01-28 8:47" [ref=e6520]:
+            - generic [ref=e6522]: 2026-01-28 8:47
+          - cell "ERIKA" [ref=e6523]:
+            - generic [ref=e6525]: ERIKA
+          - cell "ERIKA" [ref=e6526]:
+            - generic [ref=e6528]: ERIKA
+          - cell "iPhone 15 Pro" [ref=e6529]:
+            - generic [ref=e6531]: iPhone 15 Pro
+          - cell "256GB" [ref=e6532]:
+            - generic [ref=e6534]: 256GB
+          - cell "美品" [ref=e6535]:
+            - generic [ref=e6537]: 美品
+          - cell [ref=e6538]
+          - cell [ref=e6540]
+          - cell "本査定前交渉中" [ref=e6542]:
+            - generic [ref=e6544]: 本査定前交渉中
+          - cell [ref=e6545]
+          - cell [ref=e6547]
+          - cell [ref=e6549]
+          - cell "82000" [ref=e6551]:
+            - generic [ref=e6553]: "82000"
+          - cell "73000" [ref=e6554]:
+            - generic [ref=e6556]: "73000"
+          - cell [ref=e6557]
+          - cell "編集する" [ref=e6559]:
+            - button "編集する" [ref=e6561] [cursor=pointer]
+        - row "339612 自社サイト LINE Administrator 2026-01-28 8:44 Administrator 2026-01-28 8:44 沙織 沙織 iPhone 12 Pro 128GB 使用感あり 本査定前交渉中 26000 23000 編集する" [ref=e6562]:
+          - cell [ref=e6563]:
+            - link "レコードの詳細を表示する" [ref=e6564] [cursor=pointer]:
+              - /url: /k/11/show#record=339612&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339611&l.prev=339613
+          - cell "339612" [ref=e6566]:
+            - generic [ref=e6568]: "339612"
+          - cell "自社サイト" [ref=e6569]:
+            - generic [ref=e6571]: 自社サイト
+          - cell "LINE" [ref=e6572]:
+            - generic [ref=e6574]: LINE
+          - cell "Administrator" [ref=e6575]:
+            - button "Administrator" [ref=e6577] [cursor=pointer]:
+              - img [ref=e6578]
+              - text: Administrator
+          - cell "2026-01-28 8:44" [ref=e6579]:
+            - generic [ref=e6581]: 2026-01-28 8:44
+          - cell "Administrator" [ref=e6582]:
+            - button "Administrator" [ref=e6584] [cursor=pointer]:
+              - img [ref=e6585]
+              - text: Administrator
+          - cell "2026-01-28 8:44" [ref=e6586]:
+            - generic [ref=e6588]: 2026-01-28 8:44
+          - cell "沙織" [ref=e6589]:
+            - generic [ref=e6591]: 沙織
+          - cell "沙織" [ref=e6592]:
+            - generic [ref=e6594]: 沙織
+          - cell "iPhone 12 Pro" [ref=e6595]:
+            - generic [ref=e6597]: iPhone 12 Pro
+          - cell "128GB" [ref=e6598]:
+            - generic [ref=e6600]: 128GB
+          - cell "使用感あり" [ref=e6601]:
+            - generic [ref=e6603]: 使用感あり
+          - cell [ref=e6604]
+          - cell [ref=e6606]
+          - cell "本査定前交渉中" [ref=e6608]:
+            - generic [ref=e6610]: 本査定前交渉中
+          - cell [ref=e6611]
+          - cell [ref=e6613]
+          - cell [ref=e6615]
+          - cell "26000" [ref=e6617]:
+            - generic [ref=e6619]: "26000"
+          - cell "23000" [ref=e6620]:
+            - generic [ref=e6622]: "23000"
+          - cell [ref=e6623]
+          - cell "編集する" [ref=e6625]:
+            - button "編集する" [ref=e6627] [cursor=pointer]
+        - row "339611 自社サイト LINE Administrator 2026-01-28 8:21 Administrator 2026-01-28 10:07 Shunsuke Takama 高間俊輔 iPhone 12 mini 64GB 美品 梱包キット発送完了 11000 9000 編集する" [ref=e6628]:
+          - cell [ref=e6629]:
+            - link "レコードの詳細を表示する" [ref=e6630] [cursor=pointer]:
+              - /url: /k/11/show#record=339611&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339610&l.prev=339612
+          - cell "339611" [ref=e6632]:
+            - generic [ref=e6634]: "339611"
+          - cell "自社サイト" [ref=e6635]:
+            - generic [ref=e6637]: 自社サイト
+          - cell "LINE" [ref=e6638]:
+            - generic [ref=e6640]: LINE
+          - cell "Administrator" [ref=e6641]:
+            - button "Administrator" [ref=e6643] [cursor=pointer]:
+              - img [ref=e6644]
+              - text: Administrator
+          - cell "2026-01-28 8:21" [ref=e6645]:
+            - generic [ref=e6647]: 2026-01-28 8:21
+          - cell "Administrator" [ref=e6648]:
+            - button "Administrator" [ref=e6650] [cursor=pointer]:
+              - img [ref=e6651]
+              - text: Administrator
+          - cell "2026-01-28 10:07" [ref=e6652]:
+            - generic [ref=e6654]: 2026-01-28 10:07
+          - cell "Shunsuke Takama" [ref=e6655]:
+            - generic [ref=e6657]: Shunsuke Takama
+          - cell "高間俊輔" [ref=e6658]:
+            - generic [ref=e6660]: 高間俊輔
+          - cell "iPhone 12 mini" [ref=e6661]:
+            - generic [ref=e6663]: iPhone 12 mini
+          - cell "64GB" [ref=e6664]:
+            - generic [ref=e6666]: 64GB
+          - cell "美品" [ref=e6667]:
+            - generic [ref=e6669]: 美品
+          - cell [ref=e6670]
+          - cell [ref=e6672]
+          - cell "梱包キット発送完了" [ref=e6674]:
+            - generic [ref=e6676]: 梱包キット発送完了
+          - cell [ref=e6677]
+          - cell [ref=e6679]
+          - cell [ref=e6681]
+          - cell "11000" [ref=e6683]:
+            - generic [ref=e6685]: "11000"
+          - cell "9000" [ref=e6686]:
+            - generic [ref=e6688]: "9000"
+          - cell [ref=e6689]
+          - cell "編集する" [ref=e6691]:
+            - button "編集する" [ref=e6693] [cursor=pointer]
+        - row "339610 自社サイト LINE Administrator 2026-01-28 8:05 Administrator 2026-01-28 8:05 平井奎伍（けいご） 平井奎伍（けいご） iPhone 14 Pro 128GB 美品 本査定前交渉中 56000 49000 編集する" [ref=e6694]:
+          - cell [ref=e6695]:
+            - link "レコードの詳細を表示する" [ref=e6696] [cursor=pointer]:
+              - /url: /k/11/show#record=339610&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339609&l.prev=339611
+          - cell "339610" [ref=e6698]:
+            - generic [ref=e6700]: "339610"
+          - cell "自社サイト" [ref=e6701]:
+            - generic [ref=e6703]: 自社サイト
+          - cell "LINE" [ref=e6704]:
+            - generic [ref=e6706]: LINE
+          - cell "Administrator" [ref=e6707]:
+            - button "Administrator" [ref=e6709] [cursor=pointer]:
+              - img [ref=e6710]
+              - text: Administrator
+          - cell "2026-01-28 8:05" [ref=e6711]:
+            - generic [ref=e6713]: 2026-01-28 8:05
+          - cell "Administrator" [ref=e6714]:
+            - button "Administrator" [ref=e6716] [cursor=pointer]:
+              - img [ref=e6717]
+              - text: Administrator
+          - cell "2026-01-28 8:05" [ref=e6718]:
+            - generic [ref=e6720]: 2026-01-28 8:05
+          - cell "平井奎伍（けいご）" [ref=e6721]:
+            - generic [ref=e6723]: 平井奎伍（けいご）
+          - cell "平井奎伍（けいご）" [ref=e6724]:
+            - generic [ref=e6726]: 平井奎伍（けいご）
+          - cell "iPhone 14 Pro" [ref=e6727]:
+            - generic [ref=e6729]: iPhone 14 Pro
+          - cell "128GB" [ref=e6730]:
+            - generic [ref=e6732]: 128GB
+          - cell "美品" [ref=e6733]:
+            - generic [ref=e6735]: 美品
+          - cell [ref=e6736]
+          - cell [ref=e6738]
+          - cell "本査定前交渉中" [ref=e6740]:
+            - generic [ref=e6742]: 本査定前交渉中
+          - cell [ref=e6743]
+          - cell [ref=e6745]
+          - cell [ref=e6747]
+          - cell "56000" [ref=e6749]:
+            - generic [ref=e6751]: "56000"
+          - cell "49000" [ref=e6752]:
+            - generic [ref=e6754]: "49000"
+          - cell [ref=e6755]
+          - cell "編集する" [ref=e6757]:
+            - button "編集する" [ref=e6759] [cursor=pointer]
+        - row "339609 自社サイト LINE Administrator 2026-01-28 8:04 Administrator 2026-01-28 8:04 笹山一星 笹山一星 iPhone 17 Pro Max 256GB 新品・未開封 本査定前交渉中 はい 208500 194500 編集する" [ref=e6760]:
+          - cell [ref=e6761]:
+            - link "レコードの詳細を表示する" [ref=e6762] [cursor=pointer]:
+              - /url: /k/11/show#record=339609&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC&l.next=339608&l.prev=339610
+          - cell "339609" [ref=e6764]:
+            - generic [ref=e6766]: "339609"
+          - cell "自社サイト" [ref=e6767]:
+            - generic [ref=e6769]: 自社サイト
+          - cell "LINE" [ref=e6770]:
+            - generic [ref=e6772]: LINE
+          - cell "Administrator" [ref=e6773]:
+            - button "Administrator" [ref=e6775] [cursor=pointer]:
+              - img [ref=e6776]
+              - text: Administrator
+          - cell "2026-01-28 8:04" [ref=e6777]:
+            - generic [ref=e6779]: 2026-01-28 8:04
+          - cell "Administrator" [ref=e6780]:
+            - button "Administrator" [ref=e6782] [cursor=pointer]:
+              - img [ref=e6783]
+              - text: Administrator
+          - cell "2026-01-28 8:04" [ref=e6784]:
+            - generic [ref=e6786]: 2026-01-28 8:04
+          - cell "笹山一星" [ref=e6787]:
+            - generic [ref=e6789]: 笹山一星
+          - cell "笹山一星" [ref=e6790]:
+            - generic [ref=e6792]: 笹山一星
+          - cell "iPhone 17 Pro Max" [ref=e6793]:
+            - generic [ref=e6795]: iPhone 17 Pro Max
+          - cell "256GB" [ref=e6796]:
+            - generic [ref=e6798]: 256GB
+          - cell "新品・未開封" [ref=e6799]:
+            - generic [ref=e6801]: 新品・未開封
+          - cell [ref=e6802]
+          - cell [ref=e6804]
+          - cell "本査定前交渉中" [ref=e6806]:
+            - generic [ref=e6808]: 本査定前交渉中
+          - cell "はい" [ref=e6809]:
+            - generic [ref=e6811]: はい
+          - cell [ref=e6812]
+          - cell [ref=e6814]
+          - cell "208500" [ref=e6816]:
+            - generic [ref=e6818]: "208500"
+          - cell "194500" [ref=e6819]:
+            - generic [ref=e6821]: "194500"
+          - cell [ref=e6822]
+          - cell "編集する" [ref=e6824]:
+            - button "編集する" [ref=e6826] [cursor=pointer]
+        - row "339608 自社サイト LINE Administrator 2026-01-28 7:54 Administrator 2026-01-28 7:54 oosan08 oosan08 iPhone 12 mini 128GB 使用感あり 本査定前交渉中 600 500 編集する" [ref=e6827]:
+          - cell [ref=e6828]:
+            - link "レコードの詳細を表示する" [ref=e6829] [cursor=pointer]:
+              - /url: /k/11/show#record=339608&l.view=5520280&l.q&l.sort_0=f5520192&l.order_0=DESC
+          - cell "339608" [ref=e6831]:
+            - generic [ref=e6833]: "339608"
+          - cell "自社サイト" [ref=e6834]:
+            - generic [ref=e6836]: 自社サイト
+          - cell "LINE" [ref=e6837]:
+            - generic [ref=e6839]: LINE
+          - cell "Administrator" [ref=e6840]:
+            - button "Administrator" [ref=e6842] [cursor=pointer]:
+              - img [ref=e6843]
+              - text: Administrator
+          - cell "2026-01-28 7:54" [ref=e6844]:
+            - generic [ref=e6846]: 2026-01-28 7:54
+          - cell "Administrator" [ref=e6847]:
+            - button "Administrator" [ref=e6849] [cursor=pointer]:
+              - img [ref=e6850]
+              - text: Administrator
+          - cell "2026-01-28 7:54" [ref=e6851]:
+            - generic [ref=e6853]: 2026-01-28 7:54
+          - cell "oosan08" [ref=e6854]:
+            - generic [ref=e6856]: oosan08
+          - cell "oosan08" [ref=e6857]:
+            - generic [ref=e6859]: oosan08
+          - cell "iPhone 12 mini" [ref=e6860]:
+            - generic [ref=e6862]: iPhone 12 mini
+          - cell "128GB" [ref=e6863]:
+            - generic [ref=e6865]: 128GB
+          - cell "使用感あり" [ref=e6866]:
+            - generic [ref=e6868]: 使用感あり
+          - cell [ref=e6869]
+          - cell [ref=e6871]
+          - cell "本査定前交渉中" [ref=e6873]:
+            - generic [ref=e6875]: 本査定前交渉中
+          - cell [ref=e6876]
+          - cell [ref=e6878]
+          - cell [ref=e6880]
+          - cell "600" [ref=e6882]:
+            - generic [ref=e6884]: "600"
+          - cell "500" [ref=e6885]:
+            - generic [ref=e6887]: "500"
+          - cell [ref=e6888]
+          - cell "編集する" [ref=e6890]:
+            - button "編集する" [ref=e6892] [cursor=pointer]
+    - generic [ref=e244]:
+      - generic [ref=e6893]: 1 - 100 （337229件中）
+      - button "次へ" [ref=e247] [cursor=pointer]

@@ -1,0 +1,5 @@
+<html>
+<script type="text/javascript">
+parent.location.href = "/sys_err.html"
+</script>
+</html>

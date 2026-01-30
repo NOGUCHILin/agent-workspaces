@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # claude-code-worktrees
 
 マルチユーザー対応のworktree開発環境
@@ -59,10 +60,50 @@ ls -d repo/workspaces/$USER_NAME 2>/dev/null && echo "✓ Workspace exists" || e
 ```
 
 ### 3. worktreeで作業
+=======
+# agent-workspaces
+
+統一されたマルチユーザーworktree開発環境
+
+## 構造
+
+```
+agent-workspaces/
+├── workspaces/
+│   ├── _template/           # 新規ユーザー用テンプレート
+│   └── {username}/          # 各ユーザーのワークスペース
+│       ├── .claude/         # Claude Code設定
+│       ├── .mcp.json        # MCP設定
+│       ├── CLAUDE.md
+│       └── repos/           # 管理するリポジトリ群
+├── _shared/                 # 共有リソース
+│   ├── rules/
+│   └── skills/
+└── scripts/                 # セットアップスクリプト
+```
+
+## 使い方
+
+### 新規ユーザー作成
+
+```bash
+./scripts/setup-workspace.sh <username>
+```
+
+### リポジトリ追加
+
+```bash
+cd workspaces/<username>
+../../scripts/add-repo.sh <repo-url> [branch]
+```
+
+### worktreeで作業
+>>>>>>> faf3090f0d14357e6cb9e5dfbd7cca24c197c899
 
 ```bash
 cd repos/<repo-name>/worktrees/<branch>
 ```
+<<<<<<< HEAD
 
 ---
 
@@ -71,3 +112,5 @@ cd repos/<repo-name>/worktrees/<branch>
 リポジトリオーナー（NOGUCHILin）のみ:
 - 他ユーザーの作業は自動コミット＆プッシュされる
 - 自分の作業は手動コミット
+=======
+>>>>>>> faf3090f0d14357e6cb9e5dfbd7cca24c197c899
