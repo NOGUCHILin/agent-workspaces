@@ -7,6 +7,17 @@ description: 朝の金額KPI入力。LINE Official Account Managerから配信�
 
 毎朝行う金額KPIの入力作業を自動化するスキル。
 
+## 実行モード選択
+
+**スキル実行時に、まずユーザーに以下の選択肢を提示すること（AskUserQuestion）:**
+
+- **高速モード（推奨）**: `morning_kpi_fast.py` を使用。Playwright高速化ルール準拠（リソースブロック・動的待機・セッション再利用）で処理する。
+  ```
+  uv run python scripts/morning_kpi_fast.py
+  uv run python scripts/morning_kpi_fast.py --dry-run  # 確認のみ
+  ```
+- **通常モード**: 以下の手順に沿って手動 or `morning_kpi.py` で処理する。
+
 ## 概要
 
 - **目的**: 前日のKPIデータを各ソースから取得し、Googleスプレッドシートの金額KPIシートに入力

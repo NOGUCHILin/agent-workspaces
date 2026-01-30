@@ -1,0 +1,9 @@
+[project]
+name = "morning-kpi-input"
+version = "0.1.0"
+description = "朝の金額KPI入力自動化"
+requires-python = ">=3.10"
+dependencies = [
+    "playwright>=1.40.0",
+    "python-dotenv>=1.0.0",
+]
