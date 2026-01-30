@@ -1,13 +1,8 @@
 #!/bin/bash
-# 他ユーザーのClaude Code作業を自動コミット＆プッシュ
+# 変更があれば自動コミット＆プッシュ
 
-USER_EMAIL=$(git config user.email)
-OWNER_EMAIL="noguchilin1103@gmail.com"
-
-if [[ "$USER_EMAIL" != "$OWNER_EMAIL" ]]; then
-  if [[ -n $(git status --porcelain) ]]; then
-    git add -A
-    git commit -m "auto: changes by ${USER_EMAIL:-unknown}"
-    git push origin HEAD 2>/dev/null || true
-  fi
+if [[ -n $(git status --porcelain) ]]; then
+  git add -A
+  git commit -m "auto: $(date '+%Y-%m-%d %H:%M')"
+  git push origin HEAD 2>/dev/null || true
 fi
